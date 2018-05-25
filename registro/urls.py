@@ -15,6 +15,6 @@ urlpatterns = patterns('',
     url(r'^borrar_reporte/(?P<pk>\d+)$', login_required(views.Borrar_reporte.as_view()), name='borrar_reporte'),
     ##### Filtros #####
     url(r'^filtros$', login_required(views.Filtros.as_view()), name='filtros'),
-    url(r'^filtros/abril_2018$', filtros_abril_2018, name='filtros_abril_2018'),
-    url(r'^filtros/mayo_2018$', filtros_mayo_2018, name='filtros_mayo_2018'),
+    url(r'^filtros/abril_2018$', login_required(filtros_abril_2018), name='filtros_abril_2018'),
+    url(r'^filtros/mayo_2018$', login_required(filtros_mayo_2018), name='filtros_mayo_2018'),
 )

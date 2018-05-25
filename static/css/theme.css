@@ -240,3 +240,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   background-color: #275a9b;*/
   border-color: #ddd;
 }
+
+.col-sm-3 {
+  border: ridge 1px lightgray;
+}

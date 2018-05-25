@@ -78,6 +78,54 @@ class ReporteForm(forms.ModelForm):
         'required': 'True',
     }), required = True)
 
+    nombre_trab_2 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), required = True)
+
+    cargo_trab_2 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), choices = cargos)
+
+    act_rea_trab_2 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), required = True)
+
+    enlaces_trab_2 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), required = True)
+
+    nombre_trab_3 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), required = True)
+
+    cargo_trab_3 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), choices = cargos)
+
+    act_rea_trab_3 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), required = True)
+
+    enlaces_trab_3 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), required = True)
+
     class Meta:
 
         model = Reporte
