@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {% load staticfiles %}
+    <link rel="icon" href="{% static 'img/cenditel-logo.png' %}">
+    <title>
+      {% block titulo %}Base{% endblock %}
+    </title>
+    <!-- Bootstrap Styles - css
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link href="{% static 'css/ie10-viewport-bug-workaround.css' %}" rel="stylesheet">
+    <!-- Others - js
+    ================================================== -->
+    <script src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
+    <script src="{% static 'js/holder.min.js' %}"></script>
+    <!-- Jquery - js
+    ================================================== -->
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/jquery-1.12.4.js' %}"></script>
+    <!-- Bootstrap - js
+    ================================================== -->
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- Bug fix - js
+    ================================================== -->
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+    <!-- DatePicker
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'datepicker/css/jquery-ui.css' %}" type="text/css"/>
+    <script src="{% static 'datepicker/jquery-ui.js' %}" type="text/javascript"></script>
+    <!-- DataTables JS
+    ================================================== -->
+    <script src="{% static 'datatables/js/jquery.dataTables.min.js' %}" type="text/javascript"></script>
+    <link href="{% static 'datatables/css/jquery.dataTables.min.css' %}" rel="stylesheet" type="text/css" />
+    <!-- Scripts - js
+    ================================================== -->
+    <script src="{% static 'js/scripts.js' %}" type="text/javascript"></script>
+    <!-- Import CSS files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'datatables/css/jquery.dataTables.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'datatables/css/dataTables.min.css' %}">
+    <!-- Import JS files -->  
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/jquery.dataTables.min.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/dataTables.buttons.min.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/buttons.flash.min.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/jszip.min.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/pdfmake.min.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/vfs_fonts.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/buttons.html5.min.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'datatables/js/buttons.print.min.js' %}"></script>
+    <!-- Styles - css
+    ================================================== -->
+    <link href="{% static 'css/theme.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    
+    <!-- navbar cintillo
+    ================================================== -->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-cintillo">
+    <div class="container">
+      <div align="center">
+        <img class="cintillo_up" src="{% static 'img/cintillo_2018.png' %}" width="100%"></img>
+      </div>
+    </div>
+    </nav>
+    <!-- navbar cintillo end -->
+
+    <!-- Container class
+    ================================================== -->
+    <div class="container theme-showcase" role="main">
+
+      <br />
+      
+      <!-- Well class
+      ================================================== -->
+      <div class="well">
+
+        <div class="jumbotron">
+          <div align="center">
+            <a href="/index">
+              <img src="{% static 'img/cenditel-logo-red.png' %}" width="100px"></img>
+            </a>
+            <h2>Control de Bienes de CENDITEL</h2>
+          </div>
+        </div>
+
+        {% if request.user.is_authenticated %}
+        <!-- Navbar class
+        ================================================== -->
+        <nav class="navbar navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/index">
+                <i class="glyphicon glyphicon-home"></i>
+                Inicio
+              </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+
+              <!-- Actividades dropdown
+              ================================================== -->
+              <ul class="nav navbar-nav">
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <i class="glyphicon glyphicon-tasks"></i>
+                    &nbsp;Bienes <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="{% url 'registro:registrar_bien' %}">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                          Registrar Bien
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{% url 'registro:consultar_bien' %}">
+                        <i class="glyphicon glyphicon-list"></i>
+                        &nbsp;Listar Bien
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+              </ul>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <i class="glyphicon glyphicon-user"></i>
+                    {% if request.user.is_authenticated %}
+                      Bienvenido: {{ user.username }} <span class="caret"></span>
+                    {% else %}
+                      Bienvenido: Anónimo <span class="caret"></span>
+                    {% endif %}
+                  </a>
+                  {% if request.user.is_authenticated %}
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="/logout">
+                        <i class="glyphicon glyphicon-log-out"></i>
+                        Salir
+                      </a>
+                    </li>
+                  </ul>
+                  {% endif %}
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </nav>
+        <!-- End Navbar class -->
+        {% else %}
+        {% endif %}
+
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-success alert-dismissable">
+              <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                <strong>
+                  {% if message.tags %}{% endif %}
+                  {{ message }}
+                </strong>
+            </div>
+          {% endfor %}
+        {% endif %}
+
+        <div class="cuerpo">
+        {% block cuerpo %}
+        {% endblock %}
+        </div>
+      </div>
+
+      <!-- End Well class -->
+
+      <div class="well">
+        <div align="center">
+          <b>
+            <a href="http://www.cenditel.gob.ve" target="_blank">
+              <b>Desarrollado en el Centro Nacional de Desarrollo e Investigacion en Tecnologias Libres - CENDITEL</b>
+            </a>
+            <br />
+            <br />
+            <a href="http://conocimientolibre.cenditel.gob.ve/licencias/" target="_blank">
+              <img src="{% static 'img/lc-lc.png' %}" width="100px"></img>
+            </a>
+            <a href="http://conocimientolibre.cenditel.gob.ve/licencia-de-software-v-1-3/" target="_blank">
+              <img src="{% static 'img/lc-ls-icon.png' %}" width="100px"></img>
+            </a>
+          </b>
+        </div>
+      </div>
+
+    </div>
+    <!-- End Container class -->
+
+  </body>
+</html>

@@ -1,0 +1,76 @@
+{% extends "base/base.html" %}
+{% block titulo %}Lista de Bienes{% endblock %}
+{% block cuerpo %}
+<h1>Lista de Bienes</h1>
+
+<br />
+
+<table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
+  <thead>
+    <tr>
+      <th>N</th>
+      <th>Asignado a</th>
+      <th>Código de inventario del Bien</th>
+      <th>Número de puesto asignado al Bien</th>
+      <th>Situación Jurídica del Bien</th>
+      <th>Descripción del bien</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Serial</th>
+      <th>Color</th>
+      <th>Estado</th>
+      <th>Año</th>
+      <th>Observaciones</th>
+      <th>Características Técnicas</th>
+      <th>Valor del Bien</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>N</th>
+      <th>Asignado a</th>
+      <th>Código de inventario del Bien</th>
+      <th>Número de puesto asignado al Bien</th>
+      <th>Situación Jurídica del Bien</th>
+      <th>Descripción del bien</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Serial</th>
+      <th>Color</th>
+      <th>Estado</th>
+      <th>Año</th>
+      <th>Observaciones</th>
+      <th>Características Técnicas</th>
+      <th>Valor del Bien</th>
+      <th>Acciones</th>
+    </tr>
+  </tfoot>
+  <tbody>
+  {% for x in object_list %}
+  <tr>
+    <td></td>
+    <td>{{ x.campo0 }}</td>
+    <td>{{ x.campo1 }}</td>
+    <td>{{ x.campo2 }}</td>
+    <td>{{ x.campo3 }}</td>
+    <td>{{ x.campo4 }}</td>
+    <td>{{ x.campo5 }}</td>
+    <td>{{ x.campo6 }}</td>
+    <td>{{ x.campo7 }}</td>
+    <td>{{ x.campo8 }}</td>
+    <td>{{ x.campo9 }}</td>
+    <td>{{ x.campo10 }}</td>
+    <td>{{ x.campo11 }}</td>
+    <td>{{ x.campo12 }}</td>
+    <td>{{ x.campo13 }}</td>
+    <td>
+      <a href="{% url 'registro:editar_bien' x.id %}"><i class="glyphicon glyphicon-pencil"></i></a>
+      &nbsp; | &nbsp;
+      <a href="{% url 'registro:borrar_bien' x.id %}"><i class="glyphicon glyphicon-trash"></i></a>
+    </td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

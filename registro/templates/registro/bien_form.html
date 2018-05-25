@@ -1,0 +1,117 @@
+{% extends "base/base.html" %}
+{% block titulo %}Registrar Bien{% endblock %}
+{% block cuerpo %}
+<h1>Registrar Bien</h1>
+
+<br />
+
+
+<form method="post">{% csrf_token %}
+  <!-- Row
+  ================================================== -->
+  <div class="row">
+    
+    <!-- Left Column
+    ================================================== -->
+    <div class="col-sm-6">
+
+      <div class="well well-form">
+        <b>{{ form.campo0.label }}</b>
+        <br />
+        {{ form.campo0 }}
+      </div>
+
+      <div class="well well-form">
+        <b>{{ form.campo1.label }}</b>
+        <br />
+        {{ form.campo1 }}
+      </div>
+
+      <div class="well well-form">
+        <b>{{ form.campo2.label }}</b>
+        <br />
+        {{ form.campo2 }}
+      </div>
+
+      <div class="well well-form">
+        <b>{{ form.campo3.label }}</b>
+        <br />
+        {{ form.campo3 }}
+      </div>
+
+      <div class="well well-form">
+        <b>{{ form.campo4.label }}</b>
+        <br />
+        {{ form.campo4 }}
+      </div>
+
+      <div class="well well-form">
+        <b>{{ form.campo5.label }}</b>
+        <br />
+        {{ form.campo5 }}
+      </div>
+
+      <div class="well well-form">
+        <b>{{ form.campo6.label }}</b>
+        <br />
+        {{ form.campo6 }}
+      </div>
+
+      <div class="well well-form">
+        <b>{{ form.campo7.label }}</b>
+        <br />
+        {{ form.campo7 }}
+      </div>
+
+      <div class="well well-form">
+        <b>{{ form.campo8.label }}</b>
+        <br />
+        {{ form.campo8 }}
+      </div>
+
+    </div><!-- End Left Column -->
+
+    <!-- Right Column
+    ================================================== -->
+    <div class="col-sm-6">
+
+      <div class="well well-form">
+        <b>{{ form.campo9.label }}</b>
+        <br />
+        {{ form.campo9 }}
+      </div>
+
+      <div class="well well-form">
+        <b>{{ form.campo10.label }}</b>
+        <br />
+        {{ form.campo10 }}
+      </div>
+
+      <div class="well well-form">
+        <b>{{ form.campo11.label }}</b>
+        <br />
+        {{ form.campo11 }}
+      </div>
+
+      <div class="well well-form">
+        <b>{{ form.campo12.label }}</b>
+        <br />
+        {{ form.campo12 }}
+      </div>
+
+      <div class="well well-form">
+        <b>{{ form.campo13.label }}</b>
+        <br />
+        {{ form.campo13 }}
+      </div>
+
+    </div><!-- End Right Column -->
+
+  </div><!-- End Row -->
+
+  <a href="/"><button type="button" class="btn btn-primary">Volver</button></a>
+  <button class="btn btn-info" type="reset">Limpiar</button>
+  <button class="btn btn-success" type="submit">Registrar</button>
+</form>
+
+{% endblock %}
