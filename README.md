@@ -16,7 +16,7 @@ Usaremos # para los comandos como superusuario
 
 Usaremos $ para los comandos como usuario regular
 
-```python
+```
 
 $ cd reporte_mensual_proyecto
 
@@ -31,4 +31,4 @@ $ python manage.py runserver
 
 ## Capturas
 
-![captura-1.png](capturae-1.png "capturae-1.png")
+![captura-1.png](captura-1.png "captura-1.png")
