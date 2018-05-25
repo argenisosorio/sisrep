@@ -1,69 +1,85 @@
 {% extends "base/base.html" %}
 {% block titulo %}Detalle de Reporte{% endblock %}
 {% block cuerpo %}
-<h1>Detalle de Reporte</h1>
-
+<br />
+<h2>Reporte de {{ reporte.nombre_proyecto }} de {{ reporte.mes }} del {{ reporte.ano }}</h2>
 <br />
 
 <form method="post">{% csrf_token %}
 
-  <div class="well well-formm">
-    <b>Nombre del Proyecto</b>
-    <br />
-    <br />
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <b>Nombre del Proyecto</b>
+    </h3>
+  </div>
+  <div class="panel-body">
     {{ reporte.nombre_proyecto }}
   </div>
+</div>
 
   <div class="row">
     <div class="col-sm-6">
-      <div class="well well-formm">
-        <b>Nombre del Cara Visible</b>
-        <br />
-        <br />
-        {{ reporte.nombre_caravisible }}
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title"><b>Nombre del Cara Visible</b></h3>
+        </div>
+        <div class="panel-body">
+          {{ reporte.nombre_caravisible }}
+        </div>
       </div>
     </div>
     <div class="col-sm-6">
-      <div class="well well-formm">
-        <b>Director de Proyecto</b>
-        <br />
-        <br />
-        {{ reporte.nombre_director }}
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title"><b>Director de Proyecto</b></h3>
+        </div>
+        <div class="panel-body">
+          {{ reporte.nombre_director }}
+        </div>
       </div>
     </div>
   </div>
 
   <div class="row">
     <div class="col-sm-6">
-      <div class="well well-formm">
-        <b>Mes</b>
-        <br />
-        <br />
-        {{ reporte.mes }}
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title"><b>Mes</b></h3>
+        </div>
+        <div class="panel-body">
+          {{ reporte.mes }}
+        </div>
       </div>
     </div>
     <div class="col-sm-6">
-      <div class="well well-formm">
-        <b>Año</b>
-        <br />
-        <br />
-        {{ reporte.ano }}
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title"><b>Año</b></h3>
+        </div>
+        <div class="panel-body">
+          {{ reporte.ano }}
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="well well-formm">
-    <b>Descripción General del Avance del Proyecto</b>
-    <br />
-    <br />
-    {{ reporte.desc_avance }}
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title"><b>Descripción General del Avance del Proyecto</b></h3>
+    </div>
+    <div class="panel-body">
+      {{ reporte.desc_avance }}
+    </div>
   </div>
 
-  <div class="well well-formm">
-    <b>Dificultades y Obstáculos</b>
-    <br />
-    <br />
-    {{ reporte.obstaculos }}
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title"><b>Dificultades y Obstáculos</b></h3>
+    </div>
+    <div class="panel-body">
+      {{ reporte.obstaculos }}
+    </div>
   </div>
 
 <br />
