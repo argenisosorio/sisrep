@@ -60,11 +60,11 @@ class ReporteForm(forms.ModelForm):
         'required': 'True',
     }), required = True)
 
-    rol_trab_1 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+    cargo_trab_1 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
-    }), choices = roles)
+    }), choices = cargos)
 
     act_rea_trab_1 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
         'class':'form-control input-md',

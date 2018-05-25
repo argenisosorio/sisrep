@@ -20,7 +20,7 @@ anos = (
     ('2018','2018'),
     ('2019','2019'),
 )
-roles = (
+cargos = (
     ('-', '-'),
     ('Analista de Desarrollo','Analista de Desarrollo'),
     ('Analista de Apropiación','Analista de Apropiación'),
