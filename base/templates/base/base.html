@@ -78,14 +78,11 @@
       ================================================== -->
       <div class="well">
 
-        <div class="jumbotron">
-          <div align="center">
-            <a href="/index">
-              <img src="{% static 'img/cenditel-logo-red.png' %}" width="100px"></img>
-            </a>
-            <h2>Registro de Actividades de los Proyectos de CENDITEL</h2>
-          </div>
-        </div>
+        <a href="/">
+          <img class="banner_principal" src="{% static 'img/banner_principal.jpg' %}" width="100%"></img>  
+        </a>
+        <br />
+        <br />
 
         {% if request.user.is_authenticated %}
         <!-- Navbar class

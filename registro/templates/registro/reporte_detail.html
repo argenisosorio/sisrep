@@ -4,19 +4,17 @@
 <br />
 <h2>Reporte de {{ reporte.nombre_proyecto }} de {{ reporte.mes }} del {{ reporte.ano }}</h2>
 <br />
-
-<form method="post">{% csrf_token %}
-
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">
-      <b>Nombre del Proyecto</b>
-    </h3>
+<div align="justify">
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        <b>Nombre del Proyecto</b>
+      </h3>
+    </div>
+    <div class="panel-body">
+      {{ reporte.nombre_proyecto }}
+    </div>
   </div>
-  <div class="panel-body">
-    {{ reporte.nombre_proyecto }}
-  </div>
-</div>
 
   <div class="row">
     <div class="col-sm-6">
@@ -82,215 +80,67 @@
     </div>
   </div>
 
-<br />
+  <br />
+  <h3>Integrantes del equipo</h3>
 
-<h3>Equipo de trabajo</h3>
-
-  <!-- Well trabajador 1
-  ================================================== -->
-  <div class="well">
-
-    <!-- Row
-    ================================================== -->
-    <div class="row">
-      
-      <!-- Left Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-formm">
-          <b>Nombre del trabajador</b>
-          <br />
-          <br />
+  <table class="tabla_trabajadores" border="1px" style="width:100%">
+    <thead>
+      <tr>
+        <th><b>N</b></th>
+        <th><b>Nombre del trabajador</b></th>
+        <th><b>Cargo</b></th>
+        <th><b>Actividades realizadas</b></th>
+        <th><b>Enlaces de verificación</b></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>
           {{ reporte.nombre_trab_1 }}
-        </div>
-
-      </div><!-- End Left Column -->
-
-      <!-- Center Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-formm">
-          <b>Cargo</b>
-          <br />
-          <br />
+        </td>
+        <td>
           {{ reporte.cargo_trab_1 }}
-        </div>
-
-      </div><!-- End Center Column -->
-
-      <!-- Center Column 2
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-formm">
-          <b>Actividades realizadas</b>
-          <br />
-          <br />
+        </td>
+        <td>
           {{ reporte.act_rea_trab_1 }}
-        </div>
-
-      </div><!-- End Center Column 2 -->
-      
-      <!-- Right Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-formm">
-          <b>Enlaces de verificación</b>
-          <br />
-          <br />
+        </td>
+        <td>
           {{ reporte.enlaces_trab_1 }}
-        </div>
-
-      </div><!-- End Right Column -->
-
-    </div><!-- End Row -->
-
-  </div>
-  <!-- End Well trabajador 1
-  ================================================== -->
-
-  <br />
-
-  <!-- Well trabajador 2
-  ================================================== -->
-  <div class="well">
-
-    <!-- Row
-    ================================================== -->
-    <div class="row">
-      
-      <!-- Left Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-formm">
-          <b>Nombre del trabajador</b>
-          <br />
-          <br />
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>
           {{ reporte.nombre_trab_2 }}
-        </div>
-
-      </div><!-- End Left Column -->
-
-      <!-- Center Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-formm">
-          <b>Cargo</b>
-          <br />
-          <br />
+        </td>
+        <td>
           {{ reporte.cargo_trab_2 }}
-        </div>
-
-      </div><!-- End Center Column -->
-
-      <!-- Center Column 2
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-formm">
-          <b>Actividades realizadas</b>
-          <br />
-          <br />
+        </td>
+        <td>
           {{ reporte.act_rea_trab_2 }}
-        </div>
-
-      </div><!-- End Center Column 2 -->
-      
-      <!-- Right Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-formm">
-          <b>Enlaces de verificación</b>
-          <br />
-          <br />
+        </td>
+        <td>
           {{ reporte.enlaces_trab_2 }}
-        </div>
-
-      </div><!-- End Right Column -->
-
-    </div>
-
-  </div>
-  <!-- End Well trabajador 2
-  ================================================== -->
-
-  <br />
-
-  <!-- Well trabajador 3
-  ================================================== -->
-  <div class="well">
-
-    <!-- Row
-    ================================================== -->
-    <div class="row">
-      
-      <!-- Left Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-formm">
-          <b>Nombre del trabajador</b>
-          <br />
-          <br />
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>
           {{ reporte.nombre_trab_3 }}
-        </div>
-
-      </div><!-- End Left Column -->
-
-      <!-- Center Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-formm">
-          <b>Cargo</b>
-          <br />
-          <br />
+        </td>
+        <td>
           {{ reporte.cargo_trab_3 }}
-        </div>
-
-      </div><!-- End Center Column -->
-
-      <!-- Center Column 2
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-formm">
-          <b>Actividades realizadas</b>
-          <br />
-          <br />
+        </td>
+        <td>
           {{ reporte.act_rea_trab_3 }}
-        </div>
-
-      </div><!-- End Center Column 2 -->
-      
-      <!-- Right Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-formm">
-          <b>Enlaces de verificación</b>
-          <br />
-          <br />
+        </td>
+        <td>
           {{ reporte.enlaces_trab_3 }}
-        </div>
-
-      </div><!-- End Right Column -->
-
-    </div>
-
-  </div>
-  <!-- End Well trabajador 1
-  ================================================== -->
-
-  <a href="/"><button type="button" class="btn btn-primary">Volver</button></a>
-  <button class="btn btn-info" type="reset">Limpiar</button>
-  <button class="btn btn-success" type="submit">Registrar</button>
-</form>
-
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+</div>
 {% endblock %}
