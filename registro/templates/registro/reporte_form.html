@@ -7,7 +7,7 @@
 
 <form method="post">{% csrf_token %}
 
-  <div class="well well-form">
+  <div class="">
     <b>{{ form.nombre_proyecto.label }}</b>
     <br />
     {{ form.nombre_proyecto }}
@@ -18,7 +18,7 @@
 
   <div class="row">
     <div class="col-sm-6">
-      <div class="well well-form">
+      <div class="">
         <b>{{ form.nombre_caravisible.label }}</b>
         <br />
         {{ form.nombre_caravisible }}
@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="col-sm-6">
-      <div class="well well-form">
+      <div class="">
         <b>{{ form.nombre_director.label }}</b>
         <br />
         {{ form.nombre_director }}
@@ -41,7 +41,7 @@
 
   <div class="row">
     <div class="col-sm-6">
-      <div class="well well-form">
+      <div class="">
         <b>{{ form.mes.label }}</b>
         <br />
         {{ form.mes }}
@@ -51,7 +51,7 @@
       </div>
     </div>
     <div class="col-sm-6">
-      <div class="well well-form">
+      <div class="">
         <b>{{ form.ano.label }}</b>
         <br />
         {{ form.ano }}
@@ -62,7 +62,7 @@
     </div>
   </div>
 
-  <div class="well well-form">
+  <div class="">
     <b>{{ form.desc_avance.label }}</b>
     <br />
     {{ form.desc_avance }}
@@ -71,7 +71,7 @@
     {% endif %}
   </div>
 
-  <div class="well well-form">
+  <div class="">
     <b>{{ form.obstaculos.label }}</b>
     <br />
     {{ form.obstaculos }}
@@ -84,235 +84,103 @@
 
 <h3>Integrantes del equipo</h3>
 
-  <!-- Well trabajador 1
-  ================================================== -->
-  <div class="well">
-
-    <!-- Row
-    ================================================== -->
-    <div class="row">
-      
-      <!-- Left Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-form">
-          <b>{{ form.nombre_trab_1.label }}</b>
-          <br />
+  <table class="tabla_trabajadores" border="1px" style="width:100%">
+    <thead>
+      <tr>
+        <th><b>N</b></th>
+        <th><b>Nombre del trabajador</b></th>
+        <th><b>Cargo</b></th>
+        <th><b>Actividades realizadas</b></th>
+        <th><b>Enlaces de verificación</b></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>
           {{ form.nombre_trab_1 }}
           {% if form.nombre_trab_1.errors %}
             <p>{{ form.nombre_trab_1.errors}}</p>
           {% endif %}
-        </div>
-
-      </div><!-- End Left Column -->
-
-      <!-- Center Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-form">
-          <b>{{ form.cargo_trab_1.label }}</b>
-          <br />
+        </td>
+        <td>
           {{ form.cargo_trab_1 }}
           {% if form.cargo_trab_1.errors %}
             <p>{{ form.cargo_trab_1.errors}}</p>
           {% endif %}
-        </div>
-
-      </div><!-- End Center Column -->
-
-      <!-- Center Column 2
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-form">
-          <b>{{ form.act_rea_trab_1.label }}</b>
-          <br />
+        </td>
+        <td>
           {{ form.act_rea_trab_1 }}
           {% if form.act_rea_trab_1.errors %}
             <p>{{ form.act_rea_trab_1.errors}}</p>
           {% endif %}
-        </div>
-
-      </div><!-- End Center Column 2 -->
-      
-      <!-- Right Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-form">
-          <b>{{ form.enlaces_trab_1.label }}</b>
-          <br />
+        </td>
+        <td>
           {{ form.enlaces_trab_1 }}
           {% if form.enlaces_trab_1.errors %}
             <p>{{ form.enlaces_trab_1.errors}}</p>
           {% endif %}
-        </div>
-
-      </div><!-- End Right Column -->
-
-    </div><!-- End Row -->
-
-  </div>
-  <!-- End Well trabajador 1
-  ================================================== -->
-
-  <br />
-
-  <!-- Well trabajador 2
-  ================================================== -->
-  <div class="well">
-
-    <!-- Row
-    ================================================== -->
-    <div class="row">
-      
-      <!-- Left Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-form">
-          <b>{{ form.nombre_trab_2.label }}</b>
-          <br />
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>
           {{ form.nombre_trab_2 }}
           {% if form.nombre_trab_2.errors %}
             <p>{{ form.nombre_trab_2.errors}}</p>
           {% endif %}
-        </div>
-
-      </div><!-- End Left Column -->
-
-      <!-- Center Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-form">
-          <b>{{ form.cargo_trab_2.label }}</b>
-          <br />
+        </td>
+        <td>
           {{ form.cargo_trab_2 }}
           {% if form.cargo_trab_2.errors %}
             <p>{{ form.cargo_trab_2.errors}}</p>
           {% endif %}
-        </div>
-
-      </div><!-- End Center Column -->
-
-      <!-- Center Column 2
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-form">
-          <b>{{ form.act_rea_trab_2.label }}</b>
-          <br />
+        </td>
+        <td>
           {{ form.act_rea_trab_2 }}
           {% if form.act_rea_trab_2.errors %}
             <p>{{ form.act_rea_trab_2.errors}}</p>
           {% endif %}
-        </div>
-
-      </div><!-- End Center Column 2 -->
-      
-      <!-- Right Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-form">
-          <b>{{ form.enlaces_trab_2.label }}</b>
-          <br />
+        </td>
+        <td>
           {{ form.enlaces_trab_2 }}
           {% if form.enlaces_trab_2.errors %}
             <p>{{ form.enlaces_trab_2.errors}}</p>
           {% endif %}
-        </div>
-
-      </div><!-- End Right Column -->
-
-    </div>
-
-  </div>
-  <!-- End Well trabajador 2
-  ================================================== -->
-
-  <br />
-
-  <!-- Well trabajador 3
-  ================================================== -->
-  <div class="well">
-
-    <!-- Row
-    ================================================== -->
-    <div class="row">
-      
-      <!-- Left Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-form">
-          <b>{{ form.nombre_trab_3.label }}</b>
-          <br />
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>
           {{ form.nombre_trab_3 }}
           {% if form.nombre_trab_3.errors %}
             <p>{{ form.nombre_trab_3.errors}}</p>
           {% endif %}
-        </div>
-
-      </div><!-- End Left Column -->
-
-      <!-- Center Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-form">
-          <b>{{ form.cargo_trab_3.label }}</b>
-          <br />
+        </td>
+        <td>
           {{ form.cargo_trab_3 }}
           {% if form.cargo_trab_3.errors %}
             <p>{{ form.cargo_trab_3.errors}}</p>
           {% endif %}
-        </div>
-
-      </div><!-- End Center Column -->
-
-      <!-- Center Column 2
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-form">
-          <b>{{ form.act_rea_trab_3.label }}</b>
-          <br />
+        </td>
+        <td>
           {{ form.act_rea_trab_3 }}
           {% if form.act_rea_trab_3.errors %}
             <p>{{ form.act_rea_trab_3.errors}}</p>
           {% endif %}
-        </div>
-
-      </div><!-- End Center Column 2 -->
-      
-      <!-- Right Column
-      ================================================== -->
-      <div class="col-sm-3">
-
-        <div class="well well-form">
-          <b>{{ form.enlaces_trab_3.label }}</b>
-          <br />
+        </td>
+        <td>
           {{ form.enlaces_trab_3 }}
           {% if form.enlaces_trab_3.errors %}
             <p>{{ form.enlaces_trab_3.errors}}</p>
           {% endif %}
-        </div>
-
-      </div><!-- End Right Column -->
-
-    </div>
-
-  </div>
-  <!-- End Well trabajador 1
-  ================================================== -->
-
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
   <a href="/"><button type="button" class="btn btn-primary">Volver</button></a>
   <button class="btn btn-info" type="reset">Limpiar</button>
   <button class="btn btn-success" type="submit">Registrar</button>
 </form>
-
 {% endblock %}
