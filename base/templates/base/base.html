@@ -83,14 +83,14 @@
             <a href="/index">
               <img src="{% static 'img/cenditel-logo-red.png' %}" width="100px"></img>
             </a>
-            <h2>Registro de actividades de los Proyectos de CENDITEL</h2>
+            <h2>Registro de Actividades de los Proyectos de CENDITEL</h2>
           </div>
         </div>
 
         {% if request.user.is_authenticated %}
         <!-- Navbar class
         ================================================== -->
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-inverse">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -112,7 +112,7 @@
 
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <i class="glyphicon glyphicon-tasks"></i>
+                    <i class="glyphicon glyphicon-file"></i>
                     &nbsp;Reportes <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
