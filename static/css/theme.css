@@ -109,8 +109,10 @@ ul.errorlist {
 .glyphicon.glyphicon-pencil {
   font-size: 20px;
 }
-
 .glyphicon.glyphicon-trash {
+  font-size: 20px;
+}
+.glyphicon.glyphicon-search {
   font-size: 20px;
 }
 

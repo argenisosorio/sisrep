@@ -8,7 +8,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.views import generic
 from django.http import HttpResponseRedirect, HttpResponse
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render, render_to_response, get_object_or_404
 from django.views.generic import *
 from django.core.urlresolvers import *
 from django.db.models import Count
@@ -67,6 +67,15 @@ class Borrar_reporte(SuccessMessageMixin,DeleteView):
         """
         messages.success(self.request, self.success_message)
         return super(Borrar_reporte, self).delete(request, *args, **kwargs)
+
+
+def Detallar_reporte(request, pk):
+    """
+    Función que permite consultar la información de un
+    reporte específico.
+    """
+    reporte = get_object_or_404(Reporte, pk=pk)
+    return render (request, 'registro/reporte_detail.html', {'reporte': reporte})
 
 ###################
 ##### Filtros #####
