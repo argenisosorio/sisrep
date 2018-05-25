@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
-from registro.models import Bien
+from registro.models import Reporte
 
-admin.site.register(Bien)
+admin.site.register(Reporte)

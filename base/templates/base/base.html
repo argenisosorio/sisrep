@@ -83,7 +83,7 @@
             <a href="/index">
               <img src="{% static 'img/cenditel-logo-red.png' %}" width="100px"></img>
             </a>
-            <h2>Control de Bienes de CENDITEL</h2>
+            <h2>Registro de actividades de los Proyectos de CENDITEL</h2>
           </div>
         </div>
 
@@ -113,19 +113,19 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     <i class="glyphicon glyphicon-tasks"></i>
-                    &nbsp;Bienes <span class="caret"></span>
+                    &nbsp;Reportes <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
                     <li>
-                      <a href="{% url 'registro:registrar_bien' %}">
+                      <a href="{% url 'registro:registrar_reporte' %}">
                         <i class="glyphicon glyphicon-pencil"></i>
-                          Registrar Bien
+                          Registrar Reporte
                       </a>
                     </li>
                     <li>
-                      <a href="{% url 'registro:consultar_bien' %}">
+                      <a href="{% url 'registro:consultar_reporte' %}">
                         <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Listar Bien
+                        &nbsp;Listar Reportes
                       </a>
                     </li>
                   </ul>
@@ -183,7 +183,7 @@
 
       <!-- End Well class -->
 
-      <div class="well">
+      <div class="well well-footer">
         <div align="center">
           <b>
             <a href="http://www.cenditel.gob.ve" target="_blank">

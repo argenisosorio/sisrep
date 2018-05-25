@@ -8,8 +8,8 @@ from django.contrib.auth.decorators import login_required
 
 urlpatterns = patterns('',
     url(r'^index$', login_required(Index.as_view()), name='index'),
-    url(r'^consultar_bien$', login_required(views.Consultar_bien.as_view()), name='consultar_bien'),
-    url(r'^registrar_bien$', login_required(views.Registrar_bien.as_view()), name='registrar_bien'),
-    url(r'^editar_bien/(?P<pk>\d+)$', login_required(views.Editar_bien.as_view()), name='editar_bien'),
-    url(r'^borrar_bien/(?P<pk>\d+)$', login_required(views.Borrar_bien.as_view()), name='borrar_bien'),
+    url(r'^consultar_reporte$', login_required(views.Consultar_reporte.as_view()), name='consultar_reporte'),
+    url(r'^registrar_reporte$', login_required(views.Registrar_reporte.as_view()), name='registrar_reporte'),
+    url(r'^editar_reporte/(?P<pk>\d+)$', login_required(views.Editar_reporte.as_view()), name='editar_reporte'),
+    url(r'^borrar_reporte/(?P<pk>\d+)$', login_required(views.Borrar_reporte.as_view()), name='borrar_reporte'),
 )

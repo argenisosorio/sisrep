@@ -1,0 +1,11 @@
+{% extends "base/base.html" %}
+{% block titulo %}Borrar Reporte{% endblock %}
+{% block cuerpo %}
+<form method="post">{% csrf_token %}
+  ¿Estás seguro que quieres eliminar a: "<b>{{ object }}"</b>?
+  <br />
+  <br />
+  <a href="/consultar_reporte"><button type="button" class="btn btn-primary">Volver</button></a>
+  <button class="btn btn-danger" type="submit">Borrar</button>
+</form>
+{% endblock %}
