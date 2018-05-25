@@ -2,7 +2,7 @@
 {% block titulo %}Borrar Reporte{% endblock %}
 {% block cuerpo %}
 <form method="post">{% csrf_token %}
-  ¿Estás seguro que quieres eliminar a: "<b>{{ object }}"</b>?
+  ¿Estás seguro que quieres eliminar el reporte de: <b>{{ object.nombre_proyecto }} de {{ object.mes }} del {{ object.ano }}</b>?
   <br />
   <br />
   <a href="/consultar_reporte"><button type="button" class="btn btn-primary">Volver</button></a>

@@ -9,20 +9,20 @@
   <thead>
     <tr>
       <th>N</th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
+      <th>Nombre del Proyecto</th>
+      <th>Nombre del Cara Visible</th>
+      <th>Mes</th>
+      <th>Año</th>
       <th>Acciones</th>
     </tr>
   </thead>
   <tfoot>
     <tr>
       <th>N</th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
+      <th>Nombre del Proyecto</th>
+      <th>Nombre del Cara Visible</th>
+      <th>Mes</th>
+      <th>Año</th>
       <th>Acciones</th>
     </tr>
   </tfoot>
@@ -30,10 +30,10 @@
   {% for x in object_list %}
   <tr>
     <td></td>
-    <td>{{ x.campo0 }}</td>
-    <td>{{ x.campo1 }}</td>
-    <td>{{ x.campo2 }}</td>
-    <td>{{ x.campo3 }}</td>
+    <td>{{ x.nombre_proyecto }}</td>
+    <td>{{ x.nombre_caravisible }}</td>
+    <td>{{ x.mes }}</td>
+    <td>{{ x.ano }}</td>
     <td>
       <a href="{% url 'registro:editar_reporte' x.id %}"><i class="glyphicon glyphicon-pencil"></i></a>
       &nbsp; | &nbsp;

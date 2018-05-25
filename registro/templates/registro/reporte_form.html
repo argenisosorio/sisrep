@@ -6,49 +6,72 @@
 <br />
 
 <form method="post">{% csrf_token %}
-  <!-- Row
-  ================================================== -->
-  <div class="row">
-    
-    <!-- Left Column
-    ================================================== -->
-    <div class="col-sm-6">
 
-      <div class="well well-form">
-        <b>{{ form.campo0.label }}</b>
-        <br />
-        {{ form.campo0 }}
-      </div>
+  <div class="well well-form">
+    <b>{{ form.nombre_proyecto.label }}</b>
+    <br />
+    {{ form.nombre_proyecto }}
+  </div>
 
-      <div class="well well-form">
-        <b>{{ form.campo1.label }}</b>
-        <br />
-        {{ form.campo1 }}
-      </div>
+  <div class="well well-form">
+    <b>{{ form.nombre_caravisible.label }}</b>
+    <br />
+    {{ form.nombre_caravisible }}
+  </div>
 
-      <div class="well well-form">
-        <b>{{ form.campo2.label }}</b>
-        <br />
-        {{ form.campo2 }}
-      </div>
+  <div class="well well-form">
+    <b>{{ form.nombre_director.label }}</b>
+    <br />
+    {{ form.nombre_director }}
+  </div>
 
-      <div class="well well-form">
-        <b>{{ form.campo3.label }}</b>
-        <br />
-        {{ form.campo3 }}
-      </div>
+  <div class="well well-form">
+    <b>{{ form.mes.label }}</b>
+    <br />
+    {{ form.mes }}
+  </div>
 
-    </div><!-- End Left Column -->
+  <div class="well well-form">
+    <b>{{ form.ano.label }}</b>
+    <br />
+    {{ form.ano }}
+  </div>
 
-    <!-- Right Column
-    ================================================== -->
-    <div class="col-sm-6">
-     
-     <h1>Derecha</h1>
+  <div class="well well-form">
+    <b>{{ form.desc_avance.label }}</b>
+    <br />
+    {{ form.desc_avance }}
+  </div>
 
-    </div><!-- End Right Column -->
+  <div class="well well-form">
+    <b>{{ form.obstaculos.label }}</b>
+    <br />
+    {{ form.obstaculos }}
+  </div>
 
-  </div><!-- End Row -->
+  <div class="well well-form">
+    <b>{{ form.nombre_trab_1.label }}</b>
+    <br />
+    {{ form.nombre_trab_1 }}
+  </div>
+
+  <div class="well well-form">
+    <b>{{ form.rol_trab_1.label }}</b>
+    <br />
+    {{ form.rol_trab_1 }}
+  </div>
+
+  <div class="well well-form">
+    <b>{{ form.act_rea_trab_1.label }}</b>
+    <br />
+    {{ form.act_rea_trab_1 }}
+  </div>
+
+  <div class="well well-form">
+    <b>{{ form.enlaces_trab_1.label }}</b>
+    <br />
+    {{ form.enlaces_trab_1 }}
+  </div>
 
   <a href="/"><button type="button" class="btn btn-primary">Volver</button></a>
   <button class="btn btn-info" type="reset">Limpiar</button>

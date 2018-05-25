@@ -28,3 +28,7 @@ $ bash reset_db.sh
 
 $ python manage.py runserver
 ```
+
+## Capturas
+
+![captura-1.png](capturae-1.png "capturae-1.png")

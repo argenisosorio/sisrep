@@ -6,42 +6,77 @@ from django.forms import (
 )
 from datetime import *
 from django.contrib.admin.widgets import AdminDateWidget
-
-estados = (
-    ('-', '-'),
-    ('Operativo','Operativo'),
-    ('Averiado','Averiado'),
-    ('En reparación','En reparación'),
-    ('Desuso','Desuso'),
-    ('Desincorporado','Desincorporado'),
-)
+from base.constantes import *
 
 class ReporteForm(forms.ModelForm):
     """
     Formulario con los campos de un Reporte de actividades de un proyecto.
     """
-    campo0 = forms.CharField(label='0', widget=TextInput(attrs={
+    nombre_proyecto = forms.CharField(label='Nombre del Proyecto', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        #'placeholder': des_campo4,
-    }), required = False)
+        'required': 'True',
+    }), required = True)
 
-    campo1 = forms.CharField(label='1', widget=TextInput(attrs={
+    nombre_caravisible = forms.CharField(label='Nombre completo del Cara Visible', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        #'placeholder': des_campo4,
-    }), required = False)
+        'required': 'True',
+    }), required = True)
 
-    campo2 = forms.ChoiceField(label='2', widget=Select(attrs={
+    nombre_director = forms.ChoiceField(label='Director de Proyecto', widget=Select(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-    }), choices = estados)
+        'required': 'True',
+    }), choices = directores)
 
-    campo3 = forms.CharField(label='3', widget=Textarea(attrs={
+    mes = forms.ChoiceField(label='Mes', widget=Select(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        #'placeholder': des_campo12,
-    }), required = False)
+        'required': 'True',
+    }), choices = meses)
+
+    ano = forms.ChoiceField(label='Año', widget=Select(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), choices = anos)
+
+    desc_avance = forms.CharField(label='Descripción General del Avance del Proyecto', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), required = True)
+
+    obstaculos = forms.CharField(label='Dificultades y Obstáculos', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), required = True)
+
+    nombre_trab_1 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), required = True)
+
+    rol_trab_1 = forms.ChoiceField(label='Rol', widget=Select(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), choices = roles)
+
+    act_rea_trab_1 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), required = True)
+
+    enlaces_trab_1 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), required = True)
 
     class Meta:
 
