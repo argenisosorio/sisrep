@@ -1,0 +1,38 @@
+<table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
+  <thead>
+    <tr>
+      <th>N</th>
+      <th>Nombre del Proyecto</th>
+      <th>Nombre del Cara Visible</th>
+      <th>Mes</th>
+      <th>Año</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>N</th>
+      <th>Nombre del Proyecto</th>
+      <th>Nombre del Cara Visible</th>
+      <th>Mes</th>
+      <th>Año</th>
+      <th>Acciones</th>
+    </tr>
+  </tfoot>
+  <tbody>
+  {% for x in object_list %}
+  <tr>
+    <td></td>
+    <td>{{ x.nombre_proyecto }}</td>
+    <td>{{ x.nombre_caravisible }}</td>
+    <td>{{ x.mes }}</td>
+    <td>{{ x.ano }}</td>
+    <td>
+      <a href="{% url 'registro:editar_reporte' x.id %}"><i class="glyphicon glyphicon-pencil"></i></a>
+      &nbsp; | &nbsp;
+      <a href="{% url 'registro:borrar_reporte' x.id %}"><i class="glyphicon glyphicon-trash"></i></a>
+    </td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>

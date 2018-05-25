@@ -21,9 +21,9 @@ class Index(TemplateView):
     """
     template_name = "registro/index.html"
 
-##############################
+################################
 ##### Crud de los Reportes #####
-##############################
+################################
 
 class Consultar_reporte(ListView):
     """
@@ -67,3 +67,37 @@ class Borrar_reporte(SuccessMessageMixin,DeleteView):
         """
         messages.success(self.request, self.success_message)
         return super(Borrar_reporte, self).delete(request, *args, **kwargs)
+
+###################
+##### Filtros #####
+###################
+
+class Filtros(TemplateView):
+    """
+    Plantilla que muestra la lista de años y meses para filtrar.
+    """
+    template_name = "registro/filtros.html"
+
+
+def filtros_mayo_2018(request, template_name='registro/mayo_2018.html'):
+    """
+    Función que permite filtrar los datos de Mayo del 2018.
+    """
+    a = Reporte.objects.filter(ano__icontains='2018')
+    b = a.filter(mes__icontains='Mayo')
+    data = {}
+    data['object_list'] = b
+    print data
+    return render(request,template_name, data)
+
+
+def filtros_abril_2018(request, template_name='registro/abril_2018.html'):
+    """
+    Función que permite filtrar los datos de Mayo del 2018.
+    """
+    a = Reporte.objects.filter(ano__icontains='2018')
+    b = a.filter(mes__icontains='Abril')
+    data = {}
+    data['object_list'] = b
+    print data
+    return render(request,template_name, data)

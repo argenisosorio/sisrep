@@ -11,66 +11,99 @@
     <b>{{ form.nombre_proyecto.label }}</b>
     <br />
     {{ form.nombre_proyecto }}
+    {% if form.nombre_proyecto.errors %}
+      <p>{{ form.nombre_proyecto.errors}}</p>
+    {% endif %}
   </div>
 
   <div class="well well-form">
     <b>{{ form.nombre_caravisible.label }}</b>
     <br />
     {{ form.nombre_caravisible }}
+    {% if form.nombre_caravisible.errors %}
+      <p>{{ form.nombre_caravisible.errors}}</p>
+    {% endif %}
   </div>
 
   <div class="well well-form">
     <b>{{ form.nombre_director.label }}</b>
     <br />
     {{ form.nombre_director }}
+    {% if form.nombre_director.errors %}
+      <p>{{ form.nombre_director.errors}}</p>
+    {% endif %}
   </div>
 
   <div class="well well-form">
     <b>{{ form.mes.label }}</b>
     <br />
     {{ form.mes }}
+    {% if form.mes.errors %}
+      <p>{{ form.mes.errors}}</p>
+    {% endif %}
   </div>
 
   <div class="well well-form">
     <b>{{ form.ano.label }}</b>
     <br />
     {{ form.ano }}
+    {% if form.ano.errors %}
+      <p>{{ form.ano.errors}}</p>
+    {% endif %}
   </div>
 
   <div class="well well-form">
     <b>{{ form.desc_avance.label }}</b>
     <br />
     {{ form.desc_avance }}
+    {% if form.desc_avance.errors %}
+      <p>{{ form.desc_avance.errors}}</p>
+    {% endif %}
   </div>
 
   <div class="well well-form">
     <b>{{ form.obstaculos.label }}</b>
     <br />
     {{ form.obstaculos }}
+    {% if form.obstaculos.errors %}
+      <p>{{ form.obstaculos.errors}}</p>
+    {% endif %}
   </div>
 
   <div class="well well-form">
     <b>{{ form.nombre_trab_1.label }}</b>
     <br />
     {{ form.nombre_trab_1 }}
+    {% if form.nombre_trab_1.errors %}
+      <p>{{ form.nombre_trab_1.errors}}</p>
+    {% endif %}
   </div>
 
   <div class="well well-form">
     <b>{{ form.rol_trab_1.label }}</b>
     <br />
     {{ form.rol_trab_1 }}
+    {% if form.rol_trab_1.errors %}
+      <p>{{ form.rol_trab_1.errors}}</p>
+    {% endif %}
   </div>
 
   <div class="well well-form">
     <b>{{ form.act_rea_trab_1.label }}</b>
     <br />
     {{ form.act_rea_trab_1 }}
+    {% if form.act_rea_trab_1.errors %}
+      <p>{{ form.act_rea_trab_1.errors}}</p>
+    {% endif %}
   </div>
 
   <div class="well well-form">
     <b>{{ form.enlaces_trab_1.label }}</b>
     <br />
     {{ form.enlaces_trab_1 }}
+    {% if form.enlaces_trab_1.errors %}
+      <p>{{ form.enlaces_trab_1.errors}}</p>
+    {% endif %}
   </div>
 
   <a href="/"><button type="button" class="btn btn-primary">Volver</button></a>

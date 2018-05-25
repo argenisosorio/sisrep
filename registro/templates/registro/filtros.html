@@ -1,0 +1,155 @@
+{% extends "base/base.html" %}
+{% block titulo %}Filtros{% endblock %}
+{% block cuerpo %}
+{% load staticfiles %}
+<div align="center">
+  <br />
+  <h1>Filtro de reportes por año y mes</h1>
+</div>
+
+<br />
+
+<!-- Collapsible Panel 2018
+================================================== -->
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1">
+          <h3>
+            <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+            Año 2018
+          </h3>
+        </a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="list-group">
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Enero
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Febrero
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Marzo
+          </a>
+          <a href="{% url 'registro:filtros_abril_2018' %}" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Abril
+          </a>
+          <a href="{% url 'registro:filtros_mayo_2018' %}" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Mayo
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Junio
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Julio
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Agosto
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Septiembre
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Octubre
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Noviembre
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Diciembre
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Collapsible Panel 2018 -->
+
+<!-- Collapsible Panel 2019
+================================================== -->
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1">
+          <h3>
+            <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+            Año 2019
+          </h3>
+        </a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="list-group">
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Enero
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Febrero
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Marzo
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Abril
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Mayo
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Junio
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Julio
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Agosto
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Septiembre
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Octubre
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Noviembre
+          </a>
+          <a href="#" class="list-group-item">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+            Diciembre
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Collapsible Panel 2019 -->
+{% endblock %}

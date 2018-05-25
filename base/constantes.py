@@ -22,8 +22,11 @@ anos = (
 )
 roles = (
     ('-', '-'),
-    ('Analista','Analista'),
-    ('Desarrollador','Desarrollador'),
+    ('Analista de Desarrollo','Analista de Desarrollo'),
+    ('Analista de Apropiación','Analista de Apropiación'),
+    ('Analista de Reflexión','Analista de Reflexión'),
+    ('Analista de Investigación','Analista de Investigación'),
+    ('Analista de Administración','Analista de Administración'),
 )
 directores = (
     ('-', '-'),

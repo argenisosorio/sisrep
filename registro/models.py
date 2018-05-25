@@ -17,8 +17,8 @@ class Reporte(models.Model):
     obstaculos = models.CharField(max_length=5000, blank=True,null=True)
     nombre_trab_1 = models.CharField(max_length=400, blank=True,null=True)
     rol_trab_1 = models.CharField(max_length=400, blank=True,null=True)
-    act_rea_trab_1 = models.CharField(max_length=400, blank=True,null=True)
-    enlaces_trab_1 = models.CharField(max_length=400, blank=True,null=True)
+    act_rea_trab_1 = models.CharField(max_length=5000, blank=True,null=True)
+    enlaces_trab_1 = models.CharField(max_length=5000, blank=True,null=True)
 
     def __unicode__(self):
         return self.nombre_proyecto

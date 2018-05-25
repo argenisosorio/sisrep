@@ -60,7 +60,7 @@ class ReporteForm(forms.ModelForm):
         'required': 'True',
     }), required = True)
 
-    rol_trab_1 = forms.ChoiceField(label='Rol', widget=Select(attrs={
+    rol_trab_1 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',

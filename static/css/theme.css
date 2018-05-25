@@ -234,3 +234,9 @@ fieldset[disabled] .navbar-inverse .btn-link:hover,
 fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #444;
 }
+
+.panel-default > .panel-heading {
+  /*color: #FFFFFF;
+  background-color: #275a9b;*/
+  border-color: #ddd;
+}
