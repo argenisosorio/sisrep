@@ -89,6 +89,10 @@ class Buscar_reporte(TemplateView):
 
 
 def busqueda(request):
+    """
+    Función que recibe los parámetros enviados desde el formulario de
+    búsqueda de reportes y filtra los reportes con querysets.
+    """
     if 'ano' in request.GET and request.GET['ano'] and 'mes' in request.GET and request.GET['mes']:
         ano = request.GET['ano']
         mes = request.GET['mes']
@@ -97,3 +101,4 @@ def busqueda(request):
         return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
     else:
         return HttpResponse('Por favor introduce un termino de búsqueda.')
+

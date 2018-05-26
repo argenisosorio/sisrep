@@ -17,7 +17,4 @@ urlpatterns = patterns('',
     ##### Filtros de búsqueda #####
     url(r'^buscar/$', login_required(views.Buscar_reporte.as_view()), name='buscar'),
     url(r'^busqueda/$', busqueda, name='busqueda'),
-    #url(r'^filtros$', login_required(views.Filtros.as_view()), name='filtros'),
-    #url(r'^filtros/abril_2018$', login_required(filtros_abril_2018), name='filtros_abril_2018'),
-    #url(r'^filtros/mayo_2018$', login_required(filtros_mayo_2018), name='filtros_mayo_2018'),
 )
