@@ -105,7 +105,7 @@ ul.errorlist {
   -moz-box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
   box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
 }
-
+/*
 .glyphicon.glyphicon-pencil {
   font-size: 20px;
 }
@@ -115,6 +115,7 @@ ul.errorlist {
 .glyphicon.glyphicon-search {
   font-size: 20px;
 }
+*/
 
 .well-form {
   background: #eee;

@@ -77,36 +77,23 @@ def Detallar_reporte(request, pk):
     reporte = get_object_or_404(Reporte, pk=pk)
     return render (request, 'registro/reporte_detail.html', {'reporte': reporte})
 
-###################
-##### Filtros #####
-###################
+###############################
+##### Filtros de búsqueda #####
+###############################
 
-class Filtros(TemplateView):
+class Buscar_reporte(TemplateView):
     """
-    Plantilla que muestra la lista de años y meses para filtrar.
+    Plantilla que tiene el formulario para buscar reportes.
     """
-    template_name = "registro/filtros.html"
-
-
-def filtros_mayo_2018(request, template_name='registro/mayo_2018.html'):
-    """
-    Función que permite filtrar los datos de Mayo del 2018.
-    """
-    a = Reporte.objects.filter(ano__icontains='2018')
-    b = a.filter(mes__icontains='Mayo')
-    data = {}
-    data['object_list'] = b
-    print data
-    return render(request,template_name, data)
+    template_name = "registro/buscar.html"
 
 
-def filtros_abril_2018(request, template_name='registro/abril_2018.html'):
-    """
-    Función que permite filtrar los datos de Mayo del 2018.
-    """
-    a = Reporte.objects.filter(ano__icontains='2018')
-    b = a.filter(mes__icontains='Abril')
-    data = {}
-    data['object_list'] = b
-    print data
-    return render(request,template_name, data)
+def busqueda(request):
+    if 'ano' in request.GET and request.GET['ano'] and 'mes' in request.GET and request.GET['mes']:
+        ano = request.GET['ano']
+        mes = request.GET['mes']
+        reportes_ano = Reporte.objects.filter(ano__icontains=ano)
+        reportes = reportes_ano.filter(mes__icontains=mes)
+        return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+    else:
+        return HttpResponse('Por favor introduce un termino de búsqueda.')

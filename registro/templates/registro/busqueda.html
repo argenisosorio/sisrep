@@ -1,0 +1,58 @@
+{% extends "base/base.html" %}
+{% block titulo %}Resultados de la búsqueda{% endblock %}
+{% block cuerpo %}
+<br />
+<h1>Resultados de la búsqueda</h1>
+<br />
+
+{% if reportes %}
+  <p>Estas buscado reportes del Año <strong>{{ query }}</strong> en el Mes de <strong>{{ query2}}</strong></p>
+  <p>Reportes encontrados: <strong>{{ reportes|length }}</strong>
+  <br />
+  <br />
+  <table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
+    <thead>
+      <tr>
+        <th>N</th>
+        <th>Nombre del Proyecto</th>
+        <th>Nombre del Cara Visible</th>
+        <th>Mes</th>
+        <th>Año</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th>N</th>
+        <th>Nombre del Proyecto</th>
+        <th>Nombre del Cara Visible</th>
+        <th>Mes</th>
+        <th>Año</th>
+        <th>Acciones</th>
+      </tr>
+    </tfoot>
+    <tbody>
+    {% for x in reportes %}
+    <tr>
+      <td></td>
+      <td>{{ x.nombre_proyecto }}</td>
+      <td>{{ x.nombre_caravisible }}</td>
+      <td>{{ x.mes }}</td>
+      <td>{{ x.ano }}</td>
+      <td>
+        <a href="{% url 'registro:editar_reporte' x.id %}"><i class="glyphicon glyphicon-pencil"></i></a>
+        &nbsp; | &nbsp;
+        <a href="{% url 'registro:detallar_reporte' x.id %}"><i class="glyphicon glyphicon-eye-open"></i></a>
+        &nbsp; | &nbsp;
+        <a href="{% url 'registro:borrar_reporte' x.id %}"><i class="glyphicon glyphicon-trash"></i></a>
+      </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <p>Ningún reporte coincide con el criterio de búsqueda.</p>
+  <br />
+  <a href="{% url 'registro:buscar' %}"><button type="button" class="btn btn-primary">Buscar de nuevo</button></a>
+{% endif %}
+{% endblock %}

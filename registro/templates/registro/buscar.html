@@ -1,0 +1,36 @@
+{% extends "base/base.html" %}
+{% block titulo %}Buscar Reportes{% endblock %}
+{% block cuerpo %}
+<br />
+<h1>Buscar Reportes</h1>
+<br />
+
+<form action="{% url 'registro:busqueda' %}" method="get">
+  <label>Por Año</label>
+  <br />
+  <select class="form form-control" name="ano">
+    <option value="-">-</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>
+  </select>
+  <br />
+  <label>Por Mes</label>
+  <br />
+  <select class="form form-control" name="mes">
+    <option value="-">-</option>
+    <option value="Enero">Enero</option>
+    <option value="Febrero">Febrero</option>
+    <option value="Marzo">Marzo</option>
+    <option value="Abril">Abril</option>
+    <option value="Mayo">Mayo</option>
+    <option value="Junio">Junio</option>
+    <option value="Julio">Julio</option>
+    <option value="Agosto">Agosto</option>
+    <option value="Septiembre">Septiembre</option>
+    <option value="Octubre">Octubre</option>
+    <option value="Noviembre">Noviembre</option>
+    <option value="Diciembre">Diciembre</option>
+  </select>
+  <button class="btn btn-success" type="submit">Buscar</button>
+</form>
+{% endblock %}
