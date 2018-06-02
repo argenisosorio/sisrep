@@ -8,16 +8,16 @@
 <form action="{% url 'registro:busqueda' %}" method="get">
   <label>Por Año</label>
   <br />
-  <select class="form form-control" name="ano">
-    <option value="-">-</option>
+  <select class="form form-control" name="ano" required>
+    <option value=""></option>
     <option value="2018">2018</option>
     <option value="2019">2019</option>
   </select>
   <br />
   <label>Por Mes</label>
   <br />
-  <select class="form form-control" name="mes">
-    <option value="-">-</option>
+  <select class="form form-control" name="mes" required>
+    <option value=""></option>
     <option value="Enero">Enero</option>
     <option value="Febrero">Febrero</option>
     <option value="Marzo">Marzo</option>
