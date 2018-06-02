@@ -8,6 +8,7 @@ class Reporte(models.Model):
     """
     Modelo de un Reporte de actividades de un proyecto.
     """
+    autor = models.CharField(max_length=400, blank=True,null=True)
     nombre_proyecto = models.CharField(max_length=400, blank=True,null=True)
     nombre_caravisible = models.CharField(max_length=4000, blank=True,null=True)
     nombre_director = models.CharField(max_length=400, blank=True,null=True)
@@ -27,9 +28,10 @@ class Reporte(models.Model):
     cargo_trab_3 = models.CharField(max_length=400, blank=True,null=True)
     act_rea_trab_3 = models.CharField(max_length=5000, blank=True,null=True)
     enlaces_trab_3 = models.CharField(max_length=5000, blank=True,null=True)
+    fecha_registro_reporte = models.DateField(default=datetime.now)
 
     def __unicode__(self):
-        return self.nombre_proyecto
+        return self.autor
 
     def get_absolute_url(self):
         return reverse('registro:editar_reporte', kwargs={'pk': self.pk})

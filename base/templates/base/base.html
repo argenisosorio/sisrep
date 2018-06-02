@@ -179,6 +179,18 @@
           {% endfor %}
         {% endif %}
 
+        {% if messages_alert %}
+          {% for message in messages_alert %}
+            <div class="alert alert-danger alert-dismissable">
+              <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                <strong>
+                  {% if message.tags %}{% endif %}
+                  {{ message }}
+                </strong>
+            </div>
+          {% endfor %}
+        {% endif %}
+
         <div class="cuerpo">
         {% block cuerpo %}
         {% endblock %}

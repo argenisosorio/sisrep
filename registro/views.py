@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.http import HttpResponse
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from registro.models import Reporte
 from forms import ReporteForm
@@ -13,6 +13,8 @@ from django.views.generic import *
 from django.core.urlresolvers import *
 from django.db.models import Count
 from django.template import RequestContext
+from django.contrib.auth.models import User
+from django.shortcuts import redirect
 
 
 class Index(TemplateView):
@@ -69,13 +71,31 @@ class Borrar_reporte(SuccessMessageMixin,DeleteView):
         return super(Borrar_reporte, self).delete(request, *args, **kwargs)
 
 
-def Detallar_reporte(request, pk):
+class Detallar_reporte(DetailView):
     """
-    Función que permite consultar la información de un
-    reporte específico.
+    Clase que muestra la lista de entradas de la bitácora
     """
-    reporte = get_object_or_404(Reporte, pk=pk)
-    return render (request, 'registro/reporte_detail.html', {'reporte': reporte})
+    model = Reporte
+    template_name = "registro/reporte_detail.html"
+
+    def get(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        context = self.get_context_data(object=self.object)
+        print context
+        #print "----"
+        #print Reporte.objects.get(autor=request.user)
+        #print "----"
+        #print self.request.user
+        #x = str(Reporte.objects.all()[0])
+        if str(self.object) == str(self.request.user):
+            return self.render_to_response(context)
+        else:
+            context = {}
+            messages_alert = ['No tiene permisos para ver el reporte']
+            #return self.render_to_response({'context': context, 'messages': messages})
+            return render_to_response("registro/index.html",{'context': context, 'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            #return HttpResponse('No tiene permisos')
+            #return redirect('registro:index')
 
 ###############################
 ##### Filtros de búsqueda #####

@@ -13,8 +13,8 @@ $("document").ready(function () {
 |----------------------------------------------------------------------
 */
 $("document").ready(function () {
-  $(".alert-success").fadeTo(3000, 800).slideUp(50, function(){
-    $(".alert-success").effect('blind');
+  $(".alert").fadeTo(3000, 800).slideUp(50, function(){
+    $(".alert").effect('blind');
   });
 });
 

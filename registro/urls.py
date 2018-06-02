@@ -13,7 +13,7 @@ urlpatterns = patterns('',
     url(r'^registrar_reporte$', login_required(views.Registrar_reporte.as_view()), name='registrar_reporte'),
     url(r'^editar_reporte/(?P<pk>\d+)$', login_required(views.Editar_reporte.as_view()), name='editar_reporte'),
     url(r'^borrar_reporte/(?P<pk>\d+)$', login_required(views.Borrar_reporte.as_view()), name='borrar_reporte'),
-    url(r'^detallar_reporte/(?P<pk>\d+)$', login_required(views.Detallar_reporte), name='detallar_reporte'),
+    url(r'^detallar_reporte/(?P<pk>\d+)$', login_required(views.Detallar_reporte.as_view()), name='detallar_reporte'),
     ##### Filtros de búsqueda #####
     url(r'^buscar/$', login_required(views.Buscar_reporte.as_view()), name='buscar'),
     url(r'^busqueda/$', busqueda, name='busqueda'),

@@ -260,3 +260,11 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .tabla_trabajadores td {
   padding: 10px;
 }
+
+#id_autor {
+  display: none;
+}
+
+#id_fecha_registro_reporte {
+  display: none;
+}

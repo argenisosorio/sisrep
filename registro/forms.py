@@ -12,6 +12,12 @@ class ReporteForm(forms.ModelForm):
     """
     Formulario con los campos de un Reporte de actividades de un proyecto.
     """
+    autor = forms.CharField(label='Autor', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), required = True)
+
     nombre_proyecto = forms.CharField(label='Nombre del Proyecto', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',

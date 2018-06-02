@@ -5,18 +5,43 @@
 <h2>Reporte de {{ reporte.nombre_proyecto }} de {{ reporte.mes }} del {{ reporte.ano }}</h2>
 <br />
 <div align="justify">
-  <div class="panel panel-info">
-    <div class="panel-heading">
-      <h3 class="panel-title">
-        <b>Nombre del Proyecto</b>
-      </h3>
+
+  <!-- Row class
+  ================================================== -->
+  <div class="row">
+
+    <div class="col-sm-6">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <b>Nombre del Proyecto</b>
+          </h3>
+        </div>
+        <div class="panel-body">
+          {{ reporte.nombre_proyecto }}
+        </div>
+      </div>
     </div>
-    <div class="panel-body">
-      {{ reporte.nombre_proyecto }}
+    <div class="col-sm-6">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <b>Registrado</b>
+          </h3>
+        </div>
+        <div class="panel-body">
+          {{ reporte.fecha_registro_reporte }}
+        </div>
+      </div>
     </div>
   </div>
+  <!-- End Row class
+  ================================================== -->
 
+  <!-- Row class
+  ================================================== -->
   <div class="row">
+
     <div class="col-sm-6">
       <div class="panel panel-info">
         <div class="panel-heading">
@@ -38,7 +63,11 @@
       </div>
     </div>
   </div>
+  <!-- End Row class
+  ================================================== -->
 
+  <!-- Row class
+  ================================================== -->
   <div class="row">
     <div class="col-sm-6">
       <div class="panel panel-info">
@@ -61,6 +90,8 @@
       </div>
     </div>
   </div>
+  <!-- End Row class
+  ================================================== -->
 
   <div class="panel panel-info">
     <div class="panel-heading">
