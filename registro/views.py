@@ -104,11 +104,10 @@ class Detallar_reporte(DetailView):
     model = Reporte
     template_name = "registro/reporte_detail.html"
 
+    """
     def get(self, request, *args, **kwargs):
-        """
         Método que redirecciona a /index si el usuario
         que intenta ver el reporte no es el autor/creador.
-        """
         self.object = self.get_object()
         context = self.get_context_data(object=self.object)
         if str(self.object) == str(self.request.user):
@@ -117,6 +116,7 @@ class Detallar_reporte(DetailView):
             context = {}
             messages_alert = ['No tiene permisos para ver el reporte']
             return render_to_response("registro/index.html",{'context': context, 'messages_alert': messages_alert}, context_instance=RequestContext(request))
+    """
 
 ###############################
 ##### Filtros de búsqueda #####
