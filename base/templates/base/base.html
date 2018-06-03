@@ -133,6 +133,15 @@
                     </li>
                   </ul>
                 </li>
+                {% if user.is_superuser %}
+                <li>
+                  <a href="{% url 'bitacora:bitacora' %}">
+                    <i class="glyphicon glyphicon-sunglasses"></i>
+                    &nbsp;Bitácora de eventos
+                  </a>
+                </li>
+                {% else %}
+                {% endif %}
               </ul>
 
               <ul class="nav navbar-nav navbar-right">

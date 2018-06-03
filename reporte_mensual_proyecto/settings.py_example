@@ -67,6 +67,7 @@ INSTALLED_APPS = (
     'base',
     'usuarios',
     'registro',
+    'bitacora',
 )
 
 MIDDLEWARE_CLASSES = (
