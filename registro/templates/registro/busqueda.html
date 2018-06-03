@@ -42,13 +42,19 @@
       <td>{{ x.mes }}</td>
       <td>{{ x.ano }}</td>
       <td>{{ x.fecha_registro_reporte }}</td>
-      <td>
-        <a href="{% url 'registro:editar_reporte' x.id %}"><i class="glyphicon glyphicon-pencil"></i></a>
-        &nbsp; | &nbsp;
-        <a href="{% url 'registro:detallar_reporte' x.id %}"><i class="glyphicon glyphicon-eye-open"></i></a>
-        &nbsp; | &nbsp;
-        <a href="{% url 'registro:borrar_reporte' x.id %}"><i class="glyphicon glyphicon-trash"></i></a>
-      </td>
+      {% if x.autor == user.username %}
+        <td>
+          <a href="{% url 'registro:editar_reporte' x.id %}"><i class="glyphicon glyphicon-pencil"></i></a>
+          &nbsp; | &nbsp;
+          <a href="{% url 'registro:detallar_reporte' x.id %}"><i class="glyphicon glyphicon-eye-open"></i></a>
+          &nbsp; | &nbsp;
+          <a href="{% url 'registro:borrar_reporte' x.id %}"><i class="glyphicon glyphicon-trash"></i></a>
+        </td>
+      {% else %}
+        <td>
+          <a href="{% url 'registro:detallar_reporte' x.id %}"><i class="glyphicon glyphicon-eye-open"></i></a>
+        </td>
+      {% endif %}
     </tr>
     {% endfor %}
     </tbody>
