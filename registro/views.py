@@ -53,6 +53,18 @@ class Editar_reporte(SuccessMessageMixin,UpdateView):
     success_url = reverse_lazy('registro:consultar_reporte')
     success_message = "Se actualizo el reporte con éxito"
 
+    def get(self, request, *args, **kwargs):
+        """
+        Método que redirecciona a /index si el usuario
+        que intenta editar el reporte no es el autor/creador.
+        """
+        self.object = self.get_object()
+        if str(self.object) == str(self.request.user):
+            return super(Editar_reporte, self).get(request, *args, **kwargs)
+        else:
+            messages_alert = ['No tiene permisos para ver el reporte']
+            return render_to_response("registro/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+
 
 class Borrar_reporte(SuccessMessageMixin,DeleteView):
     """
@@ -61,6 +73,20 @@ class Borrar_reporte(SuccessMessageMixin,DeleteView):
     model = Reporte
     success_url = reverse_lazy('registro:consultar_reporte')
     success_message = "Se elimino el reporte con éxito"
+
+    def get(self, request, *args, **kwargs):
+        """
+        Método que redirecciona a /index si el usuario
+        que intenta borrar el reporte no es el autor/creador.
+        """
+        self.object = self.get_object()
+        context = self.get_context_data(object=self.object)
+        self.object = self.get_object()
+        if str(self.object) == str(self.request.user):
+            return self.render_to_response(context)
+        else:
+            messages_alert = ['No tiene permisos para ver el reporte']
+            return render_to_response("registro/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
     def delete(self, request, *args, **kwargs):
         """
@@ -79,23 +105,18 @@ class Detallar_reporte(DetailView):
     template_name = "registro/reporte_detail.html"
 
     def get(self, request, *args, **kwargs):
+        """
+        Método que redirecciona a /index si el usuario
+        que intenta ver el reporte no es el autor/creador.
+        """
         self.object = self.get_object()
         context = self.get_context_data(object=self.object)
-        print context
-        #print "----"
-        #print Reporte.objects.get(autor=request.user)
-        #print "----"
-        #print self.request.user
-        #x = str(Reporte.objects.all()[0])
         if str(self.object) == str(self.request.user):
             return self.render_to_response(context)
         else:
             context = {}
             messages_alert = ['No tiene permisos para ver el reporte']
-            #return self.render_to_response({'context': context, 'messages': messages})
             return render_to_response("registro/index.html",{'context': context, 'messages_alert': messages_alert}, context_instance=RequestContext(request))
-            #return HttpResponse('No tiene permisos')
-            #return redirect('registro:index')
 
 ###############################
 ##### Filtros de búsqueda #####
