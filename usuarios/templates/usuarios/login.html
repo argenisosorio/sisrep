@@ -8,9 +8,17 @@
     <b>Usuario</b><br />
     {{ form.username }}
     <br />
+    {% if form.username.errors %}
+      <p>{{ form.username.errors}}</p>
+    {% endif %}
+    <br />
     <b>Contraseña</b>
     <br />
     {{ form.password }}
+    <br />
+    {% if form.password.errors %}
+      <p>{{ form.password.errors}}</p>
+    {% endif %}
     <br />
     <button class="btn btn-success" type="submit">Iniciar sesión</button>
   </form>
