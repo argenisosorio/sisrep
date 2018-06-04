@@ -106,9 +106,16 @@ class Borrar_reporte(SuccessMessageMixin,DeleteView):
 
     def delete(self, request, *args, **kwargs):
         """
-        Función que permite mandar un mensaje al
-        template cuando se borra un reporte.
+        Función que permite mandar un mensaje al template
+        cuando se borra un reporte y registra en la Bitácora que
+        se elimino un reporte.
         """
+        usuario = str(self.request.user)
+        accion = "Elimino un Reporte"
+        myDate = datetime.now()
+        formatedDate = myDate.strftime("%d-%m-%Y %H:%M")
+        fecha_humana = str(formatedDate)
+        Bitacora.objects.create(usuario=usuario, accion=accion, fecha=fecha_humana)
         messages.success(self.request, self.success_message)
         return super(Borrar_reporte, self).delete(request, *args, **kwargs)
 

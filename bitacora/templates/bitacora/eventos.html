@@ -26,10 +26,14 @@
   <tbody>
   {% for x in object_list %}
   <tr>
-    <td>{{ x.id }}</td>
-    <td>{{ x.usuario }}</td>
-    <td>{{ x.accion }}</td>
-    <td>{{ x.fecha }}</td>
+    <td class="bit_usuario">{{ x.id }}</td>
+    <td class="bit_usuario">{{ x.usuario }}</td>
+    {% if x.accion == "Registro un Reporte" %}
+      <td class="reg">Registro un Reporte</td>
+    {% else %}
+      <td class="del">Elimino un Reporte</td>
+    {% endif %}
+    <td class="bit_fecha">{{ x.fecha }}</td>
   </tr>
   {% endfor %}
   </tbody>

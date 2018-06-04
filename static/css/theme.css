@@ -268,3 +268,16 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 #id_fecha_registro_reporte {
   display: none;
 }
+
+.reg {
+  background: #b9ffb9;
+}
+.del {
+  background: #ffbebe;
+}
+.bit_usuario {
+  background: #f0f0f0;
+}
+.bit_fecha {
+  background: #f0f0f0;
+}
