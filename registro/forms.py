@@ -24,7 +24,7 @@ class ReporteForm(forms.ModelForm):
         'required': 'True',
     }), required = True)
 
-    nombre_caravisible = forms.CharField(label='Nombre completo del Cara Visible', widget=TextInput(attrs={
+    nombre_caravisible = forms.CharField(label='Nombre completo del/la Cara Visible', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',

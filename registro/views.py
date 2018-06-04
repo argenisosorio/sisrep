@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.views.generic import TemplateView, ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from registro.models import Reporte
+from bitacora.models import Bitacora
 from forms import ReporteForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
@@ -15,6 +16,7 @@ from django.db.models import Count
 from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
+from datetime import datetime
 
 
 class Index(TemplateView):
@@ -42,6 +44,20 @@ class Registrar_reporte(SuccessMessageMixin,CreateView):
     form_class = ReporteForm
     success_url = reverse_lazy('registro:consultar_reporte')
     success_message = "Se registro el reporte con éxito"
+
+    def form_valid(self, form):
+        """
+        Método que permite guardar un evento en la Bitácora cuando
+        se registra un Reporte en el sistema.
+        """
+        usuario = str(self.request.user)
+        accion = "Registro un Reporte"
+        myDate = datetime.now()
+        formatedDate = myDate.strftime("%d-%m-%Y %H:%M")
+        fecha_humana = str(formatedDate)
+        Bitacora.objects.create(usuario=usuario, accion=accion, fecha=fecha_humana)
+        self.object = form.save()
+        return super(Registrar_reporte, self).form_valid(form)
 
 
 class Editar_reporte(SuccessMessageMixin,UpdateView):

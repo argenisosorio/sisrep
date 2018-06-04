@@ -9,7 +9,9 @@ class Bitacora(models.Model):
     Clase que contiene los campos del modelo de la
     bitácota que guarda los eventos de los usuarios.
     """
-    entrada = models.CharField(max_length=200)
+    usuario = models.CharField(max_length=200)
+    accion = models.CharField(max_length=200)
+    fecha = models.CharField(max_length=200)
 
     def __unicode__(self):
-        return self.entrada
+        return self.accion
