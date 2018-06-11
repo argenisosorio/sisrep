@@ -2,9 +2,9 @@
 from django.http import HttpResponse
 from django.views.generic import TemplateView, ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from registro.models import Reporte, Proyecto, Caravisible
+from registro.models import Reporte, Proyecto, Caravisible, Director
 from bitacora.models import Bitacora
-from forms import ReporteForm, ProyectoForm, CaravisibleForm
+from forms import ReporteForm, ProyectoForm, CaravisibleForm, DirectorForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.views import generic
@@ -101,7 +101,6 @@ class Consultar_cara_visible(ListView):
     Clase que permite consultar la lista de Caras Visibles.
     """
     model = Caravisible
-    template_name = "registro/caravisible_list.html"
 
 
 class Registrar_cara_visible(SuccessMessageMixin,CreateView):
@@ -110,7 +109,6 @@ class Registrar_cara_visible(SuccessMessageMixin,CreateView):
     """
     model = Caravisible
     form_class = CaravisibleForm
-    template_name = "registro/caravisible_form.html"
     success_url = reverse_lazy('registro:consultar_cara_visible')
     success_message = "Se registro el cara visible con éxito"
 
@@ -121,7 +119,6 @@ class Editar_cara_visible(SuccessMessageMixin,UpdateView):
     """
     model = Caravisible
     form_class = CaravisibleForm
-    template_name = "registro/caravisible_form.html"
     success_url = reverse_lazy('registro:consultar_cara_visible')
     success_message = "Se actualizo el cara visible con éxito"
 
@@ -131,13 +128,57 @@ class Borrar_cara_visible(SuccessMessageMixin,DeleteView):
     Clase que permite borrar un Cara Visible registrado en el sistema.
     """
     model = Caravisible
-    template_name = "registro/caravisible_confirm_delete.html"
     success_url = reverse_lazy('registro:consultar_cara_visible')
     success_message = "Se elimino el cara visible con éxito"
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message)
-        return super(Borrar_proyecto, self).delete(request, *args, **kwargs)
+        return super(Borrar_cara_visible, self).delete(request, *args, **kwargs)
+
+
+##################################
+##### Crud de los Directores #####
+##################################
+
+class Consultar_director(ListView):
+    """
+    Clase que permite consultar la lista de Directores.
+    """
+    model = Director
+    template_name = "registro/director_list.html"
+
+
+class Registrar_director(SuccessMessageMixin,CreateView):
+    """
+    Clase que permite registrar un Director.
+    """
+    model = Director
+    form_class = DirectorForm
+    success_url = reverse_lazy('registro:consultar_director')
+    success_message = "Se registro el director con éxito"
+
+
+class Editar_director(SuccessMessageMixin,UpdateView):
+    """
+    Clase que permite editar la data guardada de un Director.
+    """
+    model = Director
+    form_class = DirectorForm
+    success_url = reverse_lazy('registro:consultar_director')
+    success_message = "Se actualizo el director con éxito"
+
+
+class Borrar_director(SuccessMessageMixin,DeleteView):
+    """
+    Clase que permite borrar un Cara Visible registrado en el sistema.
+    """
+    model = Director
+    success_url = reverse_lazy('registro:consultar_director')
+    success_message = "Se elimino el direcotr con éxito"
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(Borrar_director, self).delete(request, *args, **kwargs)
 
 
 ################################

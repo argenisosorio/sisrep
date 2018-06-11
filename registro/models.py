@@ -30,6 +30,19 @@ class Caravisible(models.Model):
         return reverse('registro:editar_cara_visible', kwargs={'pk': self.pk})
 
 
+class Director(models.Model):
+    """
+    Modelo que contiene los campos de un Director.
+    """
+    nombre_director = models.CharField(max_length=400, blank=True,null=True)
+
+    def __unicode__(self):
+        return self.nombre_director
+
+    def get_absolute_url(self):
+        return reverse('registro:editar_director', kwargs={'pk': self.pk})
+
+
 class Reporte(models.Model):
     """
     Modelo de un Reporte de actividades de un proyecto.

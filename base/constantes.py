@@ -28,11 +28,3 @@ cargos = (
     ('Analista de Investigación','Analista de Investigación'),
     ('Analista de Administración','Analista de Administración'),
 )
-directores = (
-    ('-', '-'),
-    ('Cipriano Alvarado','Cipriano Alvarado'),
-    ('Argenis Osorio','Argenis Osorio'),
-    ('Julie Vera','Julie Vera'),
-    ('Santiago Roca','Santiago Roca'),
-    ('Adriana Fandiño','Adriana Fandiño'),
-)

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django import forms
-from registro.models import Reporte, Proyecto, Caravisible
+from registro.models import Reporte, Proyecto, Caravisible, Director
 from django.forms import (
     TextInput, CharField, Select, RadioSelect, Textarea, CheckboxInput, DateTimeField
 )
@@ -41,6 +41,22 @@ class CaravisibleForm(forms.ModelForm):
         fields = '__all__'
 
 
+class DirectorForm(forms.ModelForm):
+    """
+    Formulario con los campos de un Director.
+    """
+    nombre_director = forms.CharField(label='Nombre del Director', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), required = True)
+
+    class Meta:
+
+        model = Director
+        fields = '__all__'
+
+
 class ReporteForm(forms.ModelForm):
     """
     Formulario con los campos de un Reporte de actividades de un proyecto.
@@ -55,6 +71,9 @@ class ReporteForm(forms.ModelForm):
         super(ReporteForm, self).__init__(*args, **kwargs)
         lista_proyectos = Proyecto.objects.all().values_list('nombre_proyecto','nombre_proyecto')
         lista_caravisibles = Caravisible.objects.all().values_list('nombre_caravisible','nombre_caravisible')
+        lista_directores = Director.objects.all().values_list('nombre_director','nombre_director')
+        #print lista_directores
+        #print "-----------"
 
         self.fields['nombre_proyecto'] = forms.ChoiceField(label="Nombre del Proyecto", widget=Select(attrs={
             'class':'form-control input-md',
@@ -66,17 +85,16 @@ class ReporteForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
+        self.fields['nombre_director'] = forms.ChoiceField(label="Nombre del Director", widget=Select(attrs={
+            'class':'form-control input-md',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices=lista_directores)
+
     autor = forms.CharField(label='Autor', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
     }), required = True)
-
-    nombre_director = forms.ChoiceField(label='Director de Proyecto', widget=Select(attrs={
-        'class':'form-control input-md',
-        'style': 'min-width: 0; width: 100%; display: inline;',
-        'required': 'True',
-    }), choices = directores)
 
     mes = forms.ChoiceField(label='Mes', widget=Select(attrs={
         'class':'form-control input-md',

@@ -1,0 +1,36 @@
+{% extends "base/base.html" %}
+{% block titulo %}Lista de Directores{% endblock %}
+{% block cuerpo %}
+<br />
+<h1>Lista de Directores</h1>
+<br />
+
+<table border="1px" id="example" class="display">
+  <thead>
+    <tr>
+      <th>N</th>
+      <th>Nombre del Director</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>N</th>
+      <th>Nombre del Director</th>
+      <th>Acciones</th>
+    </tr>
+  </tfoot>
+  <tbody>
+  {% for x in object_list %}
+  <tr>
+    <td></td>
+    <td>{{ x.nombre_director }}</td>
+    <td>
+      <a href="{% url 'registro:editar_director' x.id %}"><i class="glyphicon glyphicon-pencil"></i></a>
+      &nbsp; | &nbsp;
+      <a href="{% url 'registro:borrar_director' x.id %}"><i class="glyphicon glyphicon-trash"></i></a>
+    </td>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
