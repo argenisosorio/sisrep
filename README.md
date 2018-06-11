@@ -12,9 +12,9 @@ Django==1.8.8
 
 ## Instalación del entorno de desarrollo
 
-Usaremos # para los comandos como superusuario
+We will use # for commands as superuser
 
-Usaremos $ para los comandos como usuario regular
+We will use $ for commands as a regular user
 
 ```
 

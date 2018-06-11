@@ -8,6 +8,11 @@ from django.contrib.auth.decorators import login_required
 
 urlpatterns = patterns('',
     url(r'^index$', login_required(Index.as_view()), name='index'),
+    ##### Crud de los proyectos ######
+    url(r'^consultar_proyecto$', login_required(views.Consultar_proyecto.as_view()), name='consultar_proyecto'),
+    url(r'^registrar_proyecto$', login_required(views.Registrar_proyecto.as_view()), name='registrar_proyecto'),
+    url(r'^editar_proyecto/(?P<pk>\d+)$', login_required(views.Editar_proyecto.as_view()), name='editar_proyecto'),
+    url(r'^borrar_proyecto/(?P<pk>\d+)$', login_required(views.Borrar_proyecto.as_view()), name='borrar_proyecto'),
     ##### Crud de los reportes ######
     url(r'^consultar_reporte$', login_required(views.Consultar_reporte.as_view()), name='consultar_reporte'),
     url(r'^registrar_reporte$', login_required(views.Registrar_reporte.as_view()), name='registrar_reporte'),

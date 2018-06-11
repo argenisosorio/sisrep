@@ -1,0 +1,12 @@
+{% extends "base/base.html" %}
+{% block titulo %}Borrar Proyecto{% endblock %}
+{% block cuerpo %}
+<br />
+<form method="post">{% csrf_token %}
+  ¿Estás seguro que quieres eliminar el Proyecto: <b>{{ object.nombre_proyecto }}</b>?
+  <br />
+  <br />
+  <a href="{% url 'registro:consultar_proyecto' %}"><button type="button" class="btn btn-primary">Volver</button></a>
+  <button class="btn btn-danger" type="submit">Borrar</button>
+</form>
+{% endblock %}

@@ -1,10 +1,42 @@
 {% extends "base/base.html" %}
 {% block titulo %}Detalle de Reporte{% endblock %}
 {% block cuerpo %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+<script>
+    function pruebaDivAPdf() {
+        var pdf = new jsPDF('p', 'pt', 'letter');
+        source = $('#imprimir')[0];
+
+        specialElementHandlers = {
+            '#bypassme': function (element, renderer) {
+                return true
+            }
+        };
+        margins = {
+            top: 80,
+            bottom: 60,
+            left: 40,
+            width: 522
+        };
+
+        pdf.fromHTML(
+            source, 
+            margins.left, // x coord
+            margins.top, { // y coord
+                'width': margins.width, 
+                'elementHandlers': specialElementHandlers
+            },
+
+            function (dispose) {
+                pdf.save('Prueba.pdf');
+            }, margins
+        );
+    }
+</script>
 <br />
 <h2>Reporte de {{ reporte.nombre_proyecto }} de {{ reporte.mes }} del {{ reporte.ano }}</h2>
 <br />
-<div align="justify">
+<div id="imprimir" align="justify">
 
   <!-- Row class
   ================================================== -->
@@ -174,4 +206,6 @@
   </table>
   <br />
 </div>
+<br />
+<a href="javascript:pruebaDivAPdf()" class="button">Exportar PDF</a>
 {% endblock %}

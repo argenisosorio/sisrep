@@ -1,0 +1,25 @@
+{% extends "base/base.html" %}
+{% block titulo %}Registrar Proyecto{% endblock %}
+{% block cuerpo %}
+<br />
+<h1>Registrar Proyecto</h1>
+<br />
+
+<form method="post">{% csrf_token %}
+
+  <div class="">
+    <b>{{ form.nombre_proyecto.label }}</b>
+    <br />
+    {{ form.nombre_proyecto }}
+    {% if form.nombre_proyecto.errors %}
+      <p>{{ form.nombre_proyecto.errors}}</p>
+    {% endif %}
+  </div>
+
+  <br />
+
+  <a href="{% url 'registro:index' %}"><button type="button" class="btn btn-primary">Volver</button></a>
+  <button class="btn btn-info" type="reset">Limpiar</button>
+  <button class="btn btn-success" type="submit">Registrar</button>
+</form>
+{% endblock %}

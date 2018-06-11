@@ -4,6 +4,19 @@ from django.core.urlresolvers import reverse
 from datetime import datetime
 
 
+class Proyecto(models.Model):
+    """
+    Modelo que contiene los campos de un Proyecto.
+    """
+    nombre_proyecto = models.CharField(max_length=400, blank=True,null=True)
+
+    def __unicode__(self):
+        return self.nombre_proyecto
+
+    def get_absolute_url(self):
+        return reverse('registro:editar_reporte', kwargs={'pk': self.pk})
+
+
 class Reporte(models.Model):
     """
     Modelo de un Reporte de actividades de un proyecto.

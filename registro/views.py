@@ -2,9 +2,9 @@
 from django.http import HttpResponse
 from django.views.generic import TemplateView, ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from registro.models import Reporte
+from registro.models import Reporte, Proyecto
 from bitacora.models import Bitacora
-from forms import ReporteForm
+from forms import ReporteForm, ProyectoForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.views import generic
@@ -24,6 +24,51 @@ class Index(TemplateView):
     Plantilla de inicio del sistema
     """
     template_name = "registro/index.html"
+
+
+#################################
+##### Crud de los Proyectos #####
+#################################
+
+class Consultar_proyecto(ListView):
+    """
+    Clase que permite consultar la lista de Proyectos.
+    """
+    model = Proyecto
+
+
+class Registrar_proyecto(SuccessMessageMixin,CreateView):
+    """
+    Clase que permite registrar un Proyecto en el sistema.
+    """
+    model = Proyecto
+    form_class = ProyectoForm
+    success_url = reverse_lazy('registro:consultar_proyecto')
+    success_message = "Se registro el proyecto con éxito"
+
+
+class Editar_proyecto(SuccessMessageMixin,UpdateView):
+    """
+    Clase que permite editar la data guardada de un Proyecto.
+    """
+    model = Proyecto
+    form_class = ProyectoForm
+    success_url = reverse_lazy('registro:consultar_proyecto')
+    success_message = "Se actualizo el proyecto con éxito"
+
+
+class Borrar_proyecto(SuccessMessageMixin,DeleteView):
+    """
+    Clase que permite borrar un reporte registrado en el sistema.
+    """
+    model = Proyecto
+    success_url = reverse_lazy('registro:consultar_proyecto')
+    success_message = "Se elimino el proyecto con éxito"
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(Borrar_proyecto, self).delete(request, *args, **kwargs)
+
 
 ################################
 ##### Crud de los Reportes #####
@@ -165,4 +210,3 @@ def busqueda(request):
         return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
     else:
         return HttpResponse('Por favor introduce un termino de búsqueda.')
-
