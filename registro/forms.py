@@ -29,13 +29,21 @@ class ReporteForm(forms.ModelForm):
     """
     Formulario con los campos de un Reporte de actividades de un proyecto.
     """
-    autor = forms.CharField(label='Autor', widget=TextInput(attrs={
-        'class':'form-control input-md',
-        'style': 'min-width: 0; width: 100%; display: inline;',
-        'required': 'True',
-    }), required = True)
 
-    nombre_proyecto = forms.CharField(label='Nombre del Proyecto', widget=TextInput(attrs={
+    def __init__(self, *args, **kwargs):
+        """
+        Método que carga la data de los proyectos registrados
+        del modelo Proyecto en el campo nombre_proyecto del
+        modelo Reporte.
+        """
+        super(ReporteForm, self).__init__(*args, **kwargs)
+        lista_proyectos = Proyecto.objects.all().values_list('nombre_proyecto','nombre_proyecto')
+        self.fields['nombre_proyecto'] = forms.ChoiceField(label="Nombre del Proyecto", widget=Select(attrs={
+            'class':'form-control input-md',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices=lista_proyectos)
+
+    autor = forms.CharField(label='Autor', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
