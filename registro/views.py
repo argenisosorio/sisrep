@@ -231,11 +231,14 @@ class Editar_reporte(SuccessMessageMixin,UpdateView):
         que intenta editar el reporte no es el autor/creador.
         """
         self.object = self.get_object()
-        if str(self.object) == str(self.request.user):
+        if request.user.is_staff:
             return super(Editar_reporte, self).get(request, *args, **kwargs)
         else:
-            messages_alert = ['No tiene permisos para editar el reporte']
-            return render_to_response("registro/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            if str(self.object) == str(self.request.user):
+                return super(Editar_reporte, self).get(request, *args, **kwargs)
+            else:
+                messages_alert = ['No tiene permisos para editar el reporte']
+                return render_to_response("registro/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Borrar_reporte(SuccessMessageMixin,DeleteView):
