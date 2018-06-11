@@ -1,0 +1,12 @@
+{% extends "base/base.html" %}
+{% block titulo %}Borrar Caravisible{% endblock %}
+{% block cuerpo %}
+<br />
+<form method="post">{% csrf_token %}
+  ¿Estás seguro que quieres eliminar el Cara Visible: <b>{{ object.nombre_caravisible }}</b>?
+  <br />
+  <br />
+  <a href="{% url 'registro:consultar_cara_visible' %}"><button type="button" class="btn btn-primary">Volver</button></a>
+  <button class="btn btn-danger" type="submit">Borrar</button>
+</form>
+{% endblock %}

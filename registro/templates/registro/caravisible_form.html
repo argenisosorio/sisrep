@@ -1,0 +1,25 @@
+{% extends "base/base.html" %}
+{% block titulo %}Registrar Cara Visible{% endblock %}
+{% block cuerpo %}
+<br />
+<h1>Registrar Cara Visible</h1>
+<br />
+
+<form method="post">{% csrf_token %}
+
+  <div class="">
+    <b>{{ form.nombre_caravisible.label }}</b>
+    <br />
+    {{ form.nombre_caravisible }}
+    {% if form.nombre_caravisible.errors %}
+      <p>{{ form.nombre_caravisible.errors}}</p>
+    {% endif %}
+  </div>
+
+  <br />
+
+  <a href="{% url 'registro:index' %}"><button type="button" class="btn btn-primary">Volver</button></a>
+  <button class="btn btn-info" type="reset">Limpiar</button>
+  <button class="btn btn-success" type="submit">Registrar</button>
+</form>
+{% endblock %}

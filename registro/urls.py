@@ -13,6 +13,11 @@ urlpatterns = patterns('',
     url(r'^registrar_proyecto$', login_required(views.Registrar_proyecto.as_view()), name='registrar_proyecto'),
     url(r'^editar_proyecto/(?P<pk>\d+)$', login_required(views.Editar_proyecto.as_view()), name='editar_proyecto'),
     url(r'^borrar_proyecto/(?P<pk>\d+)$', login_required(views.Borrar_proyecto.as_view()), name='borrar_proyecto'),
+    ##### Crud de los cara visibles ######
+    url(r'^consultar_cara_visible$', login_required(views.Consultar_cara_visible.as_view()), name='consultar_cara_visible'),
+    url(r'^registrar_cara_visible$', login_required(views.Registrar_cara_visible.as_view()), name='registrar_cara_visible'),
+    url(r'^editar_cara_visible/(?P<pk>\d+)$', login_required(views.Editar_cara_visible.as_view()), name='editar_cara_visible'),
+    url(r'^borrar_cara_visible/(?P<pk>\d+)$', login_required(views.Borrar_cara_visible.as_view()), name='borrar_cara_visible'),
     ##### Crud de los reportes ######
     url(r'^consultar_reporte$', login_required(views.Consultar_reporte.as_view()), name='consultar_reporte'),
     url(r'^registrar_reporte$', login_required(views.Registrar_reporte.as_view()), name='registrar_reporte'),

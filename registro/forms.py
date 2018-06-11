@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django import forms
-from registro.models import Reporte, Proyecto
+from registro.models import Reporte, Proyecto, Caravisible
 from django.forms import (
     TextInput, CharField, Select, RadioSelect, Textarea, CheckboxInput, DateTimeField
 )
@@ -25,6 +25,22 @@ class ProyectoForm(forms.ModelForm):
         fields = '__all__'
 
 
+class CaravisibleForm(forms.ModelForm):
+    """
+    Formulario con los campos de un Cara Visible.
+    """
+    nombre_caravisible = forms.CharField(label='Nombre del Cara Visible', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), required = True)
+
+    class Meta:
+
+        model = Caravisible
+        fields = '__all__'
+
+
 class ReporteForm(forms.ModelForm):
     """
     Formulario con los campos de un Reporte de actividades de un proyecto.
@@ -38,18 +54,19 @@ class ReporteForm(forms.ModelForm):
         """
         super(ReporteForm, self).__init__(*args, **kwargs)
         lista_proyectos = Proyecto.objects.all().values_list('nombre_proyecto','nombre_proyecto')
+        lista_caravisibles = Caravisible.objects.all().values_list('nombre_caravisible','nombre_caravisible')
+
         self.fields['nombre_proyecto'] = forms.ChoiceField(label="Nombre del Proyecto", widget=Select(attrs={
             'class':'form-control input-md',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_proyectos)
 
-    autor = forms.CharField(label='Autor', widget=TextInput(attrs={
-        'class':'form-control input-md',
-        'style': 'min-width: 0; width: 100%; display: inline;',
-        'required': 'True',
-    }), required = True)
+        self.fields['nombre_caravisible'] = forms.ChoiceField(label="Nombre del Cara Visible", widget=Select(attrs={
+            'class':'form-control input-md',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices=lista_caravisibles)
 
-    nombre_caravisible = forms.CharField(label='Nombre completo del/la Cara Visible', widget=TextInput(attrs={
+    autor = forms.CharField(label='Autor', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',

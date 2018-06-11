@@ -17,6 +17,19 @@ class Proyecto(models.Model):
         return reverse('registro:editar_reporte', kwargs={'pk': self.pk})
 
 
+class Caravisible(models.Model):
+    """
+    Modelo que contiene los campos de un Proyecto.
+    """
+    nombre_caravisible = models.CharField(max_length=400, blank=True,null=True)
+
+    def __unicode__(self):
+        return self.nombre_caravisible
+
+    def get_absolute_url(self):
+        return reverse('registro:editar_cara_visible', kwargs={'pk': self.pk})
+
+
 class Reporte(models.Model):
     """
     Modelo de un Reporte de actividades de un proyecto.
