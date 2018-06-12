@@ -22,13 +22,7 @@ class LoginView(FormView):
     """
     template_name = 'usuarios/login.html'
     form_class = LoginForm
-
-    def get_success_url(self):
-        """
-        Método que envía al usuario al index cuando 
-        se inicia sesión correctamente.
-        """
-        return reverse_lazy('registro:index')
+    success_url = reverse_lazy('registro:index')
 
     def form_valid(self, form):
         """
