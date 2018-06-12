@@ -10,7 +10,10 @@ from django import forms
 
 
 class LoginForm(AuthenticationForm):
-
+    """
+    Clase que gestiona los campos del formulario de
+    inicio de sesión de usuarios del sistema.
+    """
     username = forms.CharField(widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 25%; display: inline;',

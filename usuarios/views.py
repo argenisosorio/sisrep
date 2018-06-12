@@ -16,13 +16,25 @@ from .forms import LoginForm
 
 
 class LoginView(FormView):
+    """
+    Clase que gestiona el formulario de inicio de
+    sesión de los usuarios del sistema.
+    """
     template_name = 'usuarios/login.html'
     form_class = LoginForm
 
     def get_success_url(self):
+        """
+        Método que envía al usuario al index cuando 
+        se inicia sesión correctamente.
+        """
         return reverse_lazy('registro:index')
 
     def form_valid(self, form):
+        """
+        Método que valida si la data enviada en el
+        formulario es válida para el inicio de sesión.
+        """
         usuario = form.cleaned_data['username']
         contrasena = form.cleaned_data['password']
         usuario = authenticate(username=usuario, password=contrasena)
@@ -31,7 +43,16 @@ class LoginView(FormView):
 
 
 class Logout(View):
+    """
+    Clase que gestiona el cierre de sesión
+    de los usuarios del sistema.
+    """
 
     def get(self, request):
+        """
+        Método que cierra la sesión del usuario
+        y redirecciona al formulario de inicio
+        de sesión.
+        """
         logout(request)
         return redirect('usuarios:login')
