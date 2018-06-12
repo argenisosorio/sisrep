@@ -236,7 +236,7 @@
                   {% if request.user.is_authenticated %}
                   <ul class="dropdown-menu">
                     <li>
-                      <a href="/logout">
+                      <a href="{% url 'usuarios:logout' %}">
                         <i class="glyphicon glyphicon-log-out"></i>
                         Salir
                       </a>
