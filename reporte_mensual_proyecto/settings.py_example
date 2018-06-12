@@ -52,6 +52,7 @@ SECRET_KEY = '-@4u^*ute8%syyko$&+=g50yr=*hw@#srk1a2pxusm(2bvppg1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+#DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -86,7 +87,7 @@ ROOT_URLCONF = 'reporte_mensual_proyecto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['base/templates/base'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
