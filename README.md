@@ -4,20 +4,39 @@
 
 <hr />
 
-## Paquetes requeridos
+## Paquetes de Python requeridos
 ```
-Python==2.7
 Django==1.8.8
+Python==2.7
 ```
 
-## Instalación del entorno de desarrollo
+Usaremos $ para describir los comandos que se usaran con usuario regular.
 
-We will use # for commands as superuser
+Usaremos # para describir los comandos que se usaran con superusuario. 
 
-We will use $ for commands as a regular user
+## Instalación de paquetes para crear entornos virtuales
+```
+# apt-get install install python-setuptools python-dev
 
+# apt-get install python-virtualenv virtualenvwrapper
 ```
 
+## Crear un entorno virtual de python
+```
+$ virtualenv mi_env
+
+$ source mi_env/bin/activate
+```
+
+## Instalación de requerimientos
+```
+$ cd reporte_mensual_proyecto
+
+$ pip install -r requirements.txt 
+```
+
+## Desplegar el proyecto localmente
+```
 $ cd reporte_mensual_proyecto
 
 $ cp settings.py_example settings.py
@@ -30,5 +49,4 @@ $ python manage.py runserver
 ```
 
 ## Capturas
-
 ![captura-1.jpg](captura-1.jpg "captura-1.jpg")
