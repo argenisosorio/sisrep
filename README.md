@@ -10,9 +10,15 @@ Django==1.8.8
 Python==2.7
 ```
 
+<br />
+
+<b>Nota:</b>
+<br />
 Usaremos $ para describir los comandos que se usaran con usuario regular.
 
 Usaremos # para describir los comandos que se usaran con superusuario. 
+
+<br />
 
 ## Instalación de paquetes para crear entornos virtuales
 ```
@@ -21,6 +27,8 @@ Usaremos # para describir los comandos que se usaran con superusuario.
 # apt-get install python-virtualenv virtualenvwrapper
 ```
 
+<br />
+
 ## Crear un entorno virtual de python
 ```
 $ virtualenv mi_env
@@ -28,12 +36,16 @@ $ virtualenv mi_env
 $ source mi_env/bin/activate
 ```
 
+<br />
+
 ## Instalación de requerimientos
 ```
 $ cd reporte_mensual_proyecto
 
 $ pip install -r requirements.txt 
 ```
+
+<br />
 
 ## Desplegar el proyecto localmente
 ```
@@ -47,6 +59,8 @@ $ bash reset_db.sh
 
 $ python manage.py runserver
 ```
+
+<br />
 
 ## Capturas
 ![captura-1.jpg](captura-1.jpg "captura-1.jpg")
