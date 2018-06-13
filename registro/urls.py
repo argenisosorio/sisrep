@@ -31,5 +31,5 @@ urlpatterns = patterns('',
     url(r'^detallar_reporte/(?P<pk>\d+)$', login_required(views.Detallar_reporte.as_view()), name='detallar_reporte'),
     ##### Filtros de búsqueda #####
     url(r'^buscar/$', login_required(views.Buscar_reporte.as_view()), name='buscar'),
-    url(r'^busqueda/$', busqueda, name='busqueda'),
+    url(r'^busqueda/$', login_required(views.busqueda), name='busqueda'),
 )

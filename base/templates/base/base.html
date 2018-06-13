@@ -236,6 +236,12 @@
                   {% if request.user.is_authenticated %}
                   <ul class="dropdown-menu">
                     <li>
+                      <a href="{% url 'usuarios:change_password' %}">
+                        <i class="glyphicon glyphicon-wrench"></i>
+                        Cambiar contraseña
+                      </a>
+                    </li>
+                    <li>
                       <a href="{% url 'usuarios:logout' %}">
                         <i class="glyphicon glyphicon-log-out"></i>
                         Salir

@@ -8,11 +8,15 @@ from django.views.generic import FormView, RedirectView, CreateView, UpdateView,
 from django.core.urlresolvers import reverse_lazy
 from django.core.urlresolvers import reverse
 from .models import *
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
+from django.template import RequestContext
 from django.contrib.auth import forms, login, logout, authenticate
 from django.views.generic import View
 from django.contrib.auth.models import User
 from .forms import LoginForm
+from django.contrib.auth.forms import (
+    AuthenticationForm, PasswordChangeForm, PasswordResetForm, SetPasswordForm,
+)
 
 
 class LoginView(FormView):
@@ -50,3 +54,21 @@ class Logout(View):
         """
         logout(request)
         return redirect('usuarios:login')
+
+
+def change_password(request):
+    """
+    Función que gestiona el cambio de contraseña
+    de un usuario autenticado en el sistema.
+    """
+    form = PasswordChangeForm(user=request.user)
+    if request.method == 'POST':
+        form = PasswordChangeForm(user=request.user, data=request.POST)
+        if form.is_valid():
+            form.save()
+            #messages = ['Cambio de contraseña exitoso']
+            #return render_to_response("registro/index.html",{'messages': messages}, context_instance=RequestContext(request))
+            return redirect('usuarios:login')
+        else:
+            print "No se realizó el cambio de contraseña"
+    return render(request, 'usuarios/change_password.html', {'form': form})
