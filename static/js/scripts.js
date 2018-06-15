@@ -83,30 +83,4 @@ $(document).ready(function() {
           cell.innerHTML = i+1;
         });
       }).draw();
-    /*
-    |--------------------------------------------------
-    | Funcion que carga los botones para exportar data.
-    |--------------------------------------------------
-    */
-    new $.fn.dataTable.Buttons(t, {
-    buttons: [
-      /*{
-        extend: 'copyHtml5',
-      },*/
-      {
-        extend: 'csvHtml5',
-        //fieldBoundary: '',
-      },
-      {
-        extend: 'excelHtml5',
-      },
-      {
-        extend: 'pdfHtml5',
-      },
-      /*{
-        extend: 'print',
-      },*/
-      ],
-    });
-    t.buttons().container().appendTo(t.table().container());
 });

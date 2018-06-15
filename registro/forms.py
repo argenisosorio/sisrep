@@ -180,6 +180,146 @@ class ReporteForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
+    nombre_trab_4 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    cargo_trab_4 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), choices = cargos, required = False)
+
+    act_rea_trab_4 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlaces_trab_4 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    nombre_trab_5 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    cargo_trab_5 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), choices = cargos, required = False)
+
+    act_rea_trab_5 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlaces_trab_5 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    nombre_trab_6 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    cargo_trab_6 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), choices = cargos, required = False)
+
+    act_rea_trab_6 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlaces_trab_6 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    nombre_trab_7 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    cargo_trab_7 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), choices = cargos, required = False)
+
+    act_rea_trab_7 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlaces_trab_7 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    nombre_trab_8 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    cargo_trab_8 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), choices = cargos, required = False)
+
+    act_rea_trab_8 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlaces_trab_8 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    nombre_trab_9 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    cargo_trab_9 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), choices = cargos, required = False)
+
+    act_rea_trab_9 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlaces_trab_9 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    nombre_trab_10 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    cargo_trab_10 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), choices = cargos, required = False)
+
+    act_rea_trab_10 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlaces_trab_10 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
     class Meta:
 
         model = Reporte
