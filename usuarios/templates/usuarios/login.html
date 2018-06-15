@@ -2,7 +2,8 @@
 {% block titulo %}Iniciar sesión{% endblock %}
 {% block cuerpo %}
 <div align="center">
-  <h3>Iniciar sesión</h3>
+  <br />
+  <h1>Iniciar sesión</h1>
   <form action="{% url 'usuarios:login' %}" method="post">{% csrf_token %}
     <br />
     <b>Usuario</b><br />
