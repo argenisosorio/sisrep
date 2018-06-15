@@ -4,10 +4,19 @@
 
 <hr />
 
+## Paquetes del Sistema Operativo requeridos
+```
+postgresql
+libpq-dev
+python-psycopg2
+```
+
 ## Paquetes de Python requeridos
 ```
 Django==1.8.8
 Python==2.7
+postgres
+psycopg2
 ```
 
 <br />
@@ -40,6 +49,8 @@ $ source mi_env/bin/activate
 
 ## Instalación de requerimientos
 ```
+# apt-get install postgresql libpq-dev python-psycopg2
+
 $ cd reporte_mensual_proyecto
 
 $ pip install -r requirements.txt 
@@ -54,7 +65,16 @@ $ cd reporte_mensual_proyecto
 $ cp settings.py_example settings.py
 
 $ cd ..
+```
 
+## Creación del usuario y la base de datos del sistema desde la consola de postgresql
+```
+postgres=# CREATE USER admin PASSWORD '123456';
+
+postgres=# CREATE DATABASE reporte OWNER admin;
+```
+
+```
 $ bash reset_db.sh
 
 $ python manage.py runserver
