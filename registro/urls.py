@@ -7,7 +7,6 @@ from django.contrib.auth.decorators import login_required
 
 
 urlpatterns = patterns('',
-    url(r'^index$', login_required(Index.as_view()), name='index'),
     ##### Crud de los proyectos ######
     url(r'^consultar_proyecto$', login_required(views.Consultar_proyecto.as_view()), name='consultar_proyecto'),
     url(r'^registrar_proyecto$', login_required(views.Registrar_proyecto.as_view()), name='registrar_proyecto'),

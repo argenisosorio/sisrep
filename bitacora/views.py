@@ -14,7 +14,7 @@ class Bitacora(ListView):
 
     def get(self, request, *args, **kwargs):
         """
-        Método que redirecciona a /index si el usuario
+        Método que redirecciona a index si el usuario
         que intenta ver la bitácora no es superusuario.
         """
         self.object_list = self.get_queryset()
@@ -33,7 +33,7 @@ class Bitacora(ListView):
             return self.render_to_response(context)
         else:
             messages_alert = ['No tiene permisos para ver la Bitácora']
-            return render_to_response("registro/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
     def get_queryset(self):
         """

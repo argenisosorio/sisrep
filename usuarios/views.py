@@ -19,6 +19,13 @@ from django.contrib.auth.forms import (
 )
 
 
+class Index(TemplateView):
+    """
+    Plantilla de inicio del sistema
+    """
+    template_name = "usuarios/index.html"
+
+
 class LoginView(FormView):
     """
     Clase que gestiona el formulario de inicio de
@@ -26,7 +33,7 @@ class LoginView(FormView):
     """
     template_name = 'usuarios/login.html'
     form_class = LoginForm
-    success_url = reverse_lazy('registro:index')
+    success_url = reverse_lazy('usuarios:index')
 
     def form_valid(self, form):
         """
@@ -67,7 +74,7 @@ def change_password(request):
         if form.is_valid():
             form.save()
             #messages = ['Cambio de contraseña exitoso']
-            #return render_to_response("registro/index.html",{'messages': messages}, context_instance=RequestContext(request))
+            #return render_to_response("usuarios/index.html",{'messages': messages}, context_instance=RequestContext(request))
             return redirect('usuarios:login')
         else:
             print "No se realizó el cambio de contraseña"
