@@ -84,3 +84,17 @@ $(document).ready(function() {
         });
       }).draw();
 });
+
+/*
+|--------------------------------------------------------------------------
+| Función que convierte los textos que sean enlaces en enlaces funcionales.
+|--------------------------------------------------------------------------
+*/
+$("document").ready(function () {
+  var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+  var exp2 =/(^|[^\/])(www\.[\S]+(\b|$))/gim;
+  $(".area_enlaces").each(function (index){
+    var text1=$(this).text().replace(exp, "<a href='$1'>$1</a>");
+    $(this).html(text1.replace(exp2, '$1<a target="_blank"href="http://$2">$2</a>'));
+  });
+});
