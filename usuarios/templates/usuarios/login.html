@@ -8,6 +8,7 @@
     <br />
     <b>Usuario</b><br />
     {{ form.username }}
+    <span class="glyphicon glyphicon-user"></span>
     <br />
     {% if form.username.errors %}
       <p>{{ form.username.errors}}</p>
@@ -16,13 +17,16 @@
     <b>Contraseña</b>
     <br />
     {{ form.password }}
+    <span class="glyphicon glyphicon-lock"></span>
     <br />
     {% if form.password.errors %}
       <p>{{ form.password.errors}}</p>
     {% endif %}
     <br />
-    <button class="btn btn-success" type="submit">Iniciar sesión</button>
+    <button class="btn btn-success" type="submit">
+      Entrar&nbsp;<span class="glyphicon glyphicon-log-in"></span>
+    </button>
+    <br />
   </form>
 </div>
-<br />
 {% endblock %}
