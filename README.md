@@ -4,14 +4,14 @@
 
 <hr />
 
-<h3>Paquetes del Sistema Operativo requeridos</h3>
+## Paquetes del Sistema Operativo requeridos
 ```
 postgresql
 libpq-dev
 python-psycopg2
 ```
 
-<h3>Paquetes de Python requeridos</h3>
+## Paquetes de Python requeridos
 ```
 Django==1.8.8
 Python==2.7
@@ -27,21 +27,21 @@ Usaremos $ para describir los comandos que se usaran con usuario regular.
 
 Usaremos # para describir los comandos que se usaran con superusuario. 
 
-<h3>Instalar los paquetes para crear entornos virtuales de Python</h3>
+## Instalar los paquetes para crear entornos virtuales de Python
 ```
 # apt-get install install python-setuptools python-dev
 
 # apt-get install python-virtualenv virtualenvwrapper
 ```
 
-<h3>Crear un entorno virtual de Python</h3>
+## Crear un entorno virtual de Python
 ```
 $ virtualenv mi_env
 
 $ source mi_env/bin/activate
 ```
 
-<h3> Instalar los requerimientos del Sistema Operativo y de Python</h3>
+##  Instalar los requerimientos del Sistema Operativo y de Python
 ```
 # apt-get install postgresql libpq-dev python-psycopg2
 
@@ -50,7 +50,7 @@ $ cd reporte_mensual_proyecto
 $ pip install -r requirements.txt 
 ```
 
-<h3>Establecer el archivo de configuración principal del sistema</h3>
+## Establecer el archivo de configuración principal del sistema
 ```
 $ cd reporte_mensual_proyecto
 
@@ -59,19 +59,19 @@ $ cp settings.py_example settings.py
 $ cd ..
 ```
 
-<h3>Crear un usuario y la base de datos del sistema desde la consola de postgresql</h3>
+## Crear un usuario y la base de datos del sistema desde la consola de postgresql
 ```
 postgres=# CREATE USER mi_usuario PASSWORD 'mi_contrasena';
 
 postgres=# CREATE DATABASE mi_base_de_datos OWNER mi_usuario;
 ```
 
-<h3>Ejecutar las migraciones y correr el servidor de desarrollo</h3>
+## Ejecutar las migraciones y correr el servidor de desarrollo
 ```
 $ bash reset_db.sh
 
 $ python manage.py runserver
 ```
 
-<h3>Capturas</h3>
+## Capturas
 ![captura-1.jpg](captura-1.jpg "captura-1.jpg")
