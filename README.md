@@ -1,4 +1,4 @@
-<h1>Sistema para reportar mensualmente los avances de un proyecto</h1>
+<h1>SISREP - Sistema de Reportes de Actividades de los Proyectos de CENDITEL</h1>
 
 <b>Creado por Argenis Osorio en la Fundación CENDITEL</b>
 
