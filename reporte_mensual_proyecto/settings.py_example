@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 """
-Nombre del software: Software - Sistema para reportar mensualmente los avances de un proyecto.
+Nombre del software: SISREP - Sistema para reportar las actividades de los Proyectos de CENDITEL.
 
 Descripción: Sistema para reportar mensualmente los avances de un proyecto.
 
@@ -23,7 +23,7 @@ Autor: Ing. Argenis Osorio, Director de Desarrollo de la Fundación CENDITEL.
 La Fundación Centro Nacional de Desarrollo e Investigación en Tecnologías Libres (CENDITEL),
 ente adscrito al Ministerio del Poder Popular para Educación Universitaria, Ciencia y Tecnología
 (MPPEUCT), concede permiso para usar, copiar, modificar y distribuir libremente y sin fines
-comerciales el "Software - Sistema para reportar mensualmente los avances de un proyecto", sin garantía
+comerciales el "SISREP - Sistema para reportar las actividades de los Proyectos de CENDITEL", sin garantía
 alguna, preservando el reconocimiento moral de los autores y manteniendo los mismos principios
 para las obras derivadas, de conformidad con los términos y condiciones de la licencia de
 software de la Fundación CENDITEL.
@@ -32,7 +32,7 @@ El software es una creación intelectual necesaria para el desarrollo económico
 de la nación, por tanto, esta licencia tiene la pretensión de preservar la libertad de
 este conocimiento para que contribuya a la consolidación de la soberanía nacional.
 
-Cada vez que copie y distribuya el "Software - Sistema para reportar mensualmente los avances de un proyecto"
+Cada vez que copie y distribuya el "SISREP - Sistema para reportar las actividades de los Proyectos de CENDITEL"
 debe acompañarlo de una copia de la licencia. Para más información sobre los términos y condiciones
 de la licencia visite la siguiente dirección electrónica:
 http://conocimientolibre.cenditel.gob.ve/licencia-de-software-v-1-3/

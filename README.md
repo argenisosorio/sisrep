@@ -1,6 +1,6 @@
-<h1>Sistema para reportar mensualmente los avances de un proyecto</h1>
+<h1>SISREP - Sistema para reportar las actividades de los Proyectos de CENDITEL</h1>
 
-<b>Creado por Argenis Osorio en la Fundación CENDITEL</b>
+<b>Creado por el Ing. Argenis Osorio, Investigador de la Fundación CENDITEL</b>
 
 <hr />
 
@@ -19,7 +19,7 @@ postgres
 psycopg2
 ```
 
-<br />
+<h2>Ejecutar los siguientes comandos en secuencia para desplegar el proyecto en un entorno de desarrollo</h2>
 
 <b>Nota:</b>
 <br />
@@ -27,27 +27,21 @@ Usaremos $ para describir los comandos que se usaran con usuario regular.
 
 Usaremos # para describir los comandos que se usaran con superusuario. 
 
-<br />
-
-## Instalación de paquetes para crear entornos virtuales
+## Instalar los paquetes para crear entornos virtuales de Python
 ```
 # apt-get install install python-setuptools python-dev
 
 # apt-get install python-virtualenv virtualenvwrapper
 ```
 
-<br />
-
-## Crear un entorno virtual de python
+## Crear un entorno virtual de Python
 ```
 $ virtualenv mi_env
 
 $ source mi_env/bin/activate
 ```
 
-<br />
-
-## Instalación de requerimientos
+##  Instalar los requerimientos del Sistema Operativo y de Python
 ```
 # apt-get install postgresql libpq-dev python-psycopg2
 
@@ -56,9 +50,7 @@ $ cd reporte_mensual_proyecto
 $ pip install -r requirements.txt 
 ```
 
-<br />
-
-## Desplegar el proyecto localmente
+## Establecer el archivo de configuración principal del sistema
 ```
 $ cd reporte_mensual_proyecto
 
@@ -67,20 +59,19 @@ $ cp settings.py_example settings.py
 $ cd ..
 ```
 
-## Creación del usuario y la base de datos del sistema desde la consola de postgresql
+## Crear un usuario y la base de datos del sistema desde la consola de postgresql
 ```
-postgres=# CREATE USER admin PASSWORD '123456';
+postgres=# CREATE USER mi_usuario PASSWORD 'mi_contrasena';
 
-postgres=# CREATE DATABASE reporte OWNER admin;
+postgres=# CREATE DATABASE mi_base_de_datos OWNER mi_usuario;
 ```
 
+## Ejecutar las migraciones y correr el servidor de desarrollo
 ```
 $ bash reset_db.sh
 
 $ python manage.py runserver
 ```
-
-<br />
 
 ## Capturas
 ![captura-1.jpg](captura-1.jpg "captura-1.jpg")
