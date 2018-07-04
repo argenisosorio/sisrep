@@ -1,4 +1,4 @@
-<h1>SISREP - Sistema de Reportes de Actividades de los Proyectos de CENDITEL</h1>
+<h1>SISREP - Sistema para reportar las actividades de los Proyectos de CENDITEL</h1>
 
 <b>Creado por el Ing. Argenis Osorio, Investigador de la Fundación CENDITEL</b>
 
