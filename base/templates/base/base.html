@@ -189,12 +189,27 @@
                     &nbsp;Reportes <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
-                    <li>
-                      <a href="{% url 'registro:registrar_reporte' %}">
-                        <i class="glyphicon glyphicon-pencil"></i>
-                          Registrar Reporte
-                      </a>
-                    </li>
+                    {% if user.is_superuser and user.is_staff and user.is_active %}
+                      <li>
+                        <a href="{% url 'registro:registrar_reporte' %}">
+                          <i class="glyphicon glyphicon-pencil"></i>
+                            &nbsp;Registrar Reporte
+                        </a>
+                      </li>
+                    {% else %}
+                      {% if user.is_staff and user.is_active %}
+                      {% else %}
+                        {% if user.is_active %}
+                          <li>
+                            <a href="{% url 'registro:registrar_reporte' %}">
+                              <i class="glyphicon glyphicon-pencil"></i>
+                                &nbsp;Registrar Reporte
+                            </a>
+                          </li>
+                        {% else %}
+                        {% endif %}
+                      {% endif %}
+                    {% endif %}
                     <li>
                       <a href="{% url 'registro:consultar_reporte' %}">
                         <i class="glyphicon glyphicon-list"></i>
