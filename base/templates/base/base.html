@@ -227,9 +227,19 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     <i class="glyphicon glyphicon-user"></i>
                     {% if request.user.is_authenticated %}
-                      Bienvenido: {{ user.username }} <span class="caret"></span>
-                    {% else %}
-                      Bienvenido: Anónimo <span class="caret"></span>
+                      {% if user.is_superuser and user.is_staff and user.is_active %}
+                        {{ user.username }} (Administrador) <span class="caret"></span>
+                      {% else %}
+                        {% if user.is_staff and user.is_active %}
+                          {{ user.username }} (Director) <span class="caret"></span>
+                        {% else %}
+                          {% if user.is_active %}
+                            {{ user.username }} (Cara Visible) <span class="caret"></span>
+                          {% else %}
+                            xxx
+                          {% endif %}
+                        {% endif %}
+                      {% endif %}
                     {% endif %}
                   </a>
                   {% if request.user.is_authenticated %}
