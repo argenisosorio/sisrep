@@ -31,7 +31,7 @@ class Consultar_proyecto(ListView):
 
     def get(self, request, *args, **kwargs):
         """
-        Método que valida si el usuario es staff para ver la lista de objetos.
+        Método que valida si el usuario es admin para ver la lista de objetos.
         """
         self.object_list = self.get_queryset()
         allow_empty = self.get_allow_empty()
@@ -45,7 +45,7 @@ class Consultar_proyecto(ListView):
                 raise Http404(_("Empty list and '%(class_name)s.allow_empty' is False.")
                         % {'class_name': self.__class__.__name__})
         context = self.get_context_data()
-        if request.user.is_staff:
+        if request.user.is_superuser:
             return self.render_to_response(context)
         else:
             messages_alert = ['No tiene permisos para listar los proyectos']
@@ -63,11 +63,11 @@ class Registrar_proyecto(SuccessMessageMixin,CreateView):
 
     def get(self, request, *args, **kwargs):
         """
-        Méroto que valida si el usuario autenticado es staff
+        Méroto que valida si el usuario autenticado es admin
         para poder registrar un proyecto.
         """
         self.object = None
-        if request.user.is_staff:
+        if request.user.is_superuser:
             return super(Registrar_proyecto, self).get(request, *args, **kwargs)
         else:
             messages_alert = ['No tiene permisos para registrar un proyecto']
@@ -86,10 +86,10 @@ class Editar_proyecto(SuccessMessageMixin,UpdateView):
     def get(self, request, *args, **kwargs):
         """
         Método que redirecciona a index si el usuario
-        que intenta editar el proyecto no es staff.
+        que intenta editar el proyecto no es admin.
         """
         self.object = self.get_object()
-        if request.user.is_staff:
+        if request.user.is_superuser:
             return super(Editar_proyecto, self).get(request, *args, **kwargs)
         else:
             if str(self.object) == str(self.request.user):
@@ -114,12 +114,12 @@ class Borrar_proyecto(SuccessMessageMixin,DeleteView):
     def get(self, request, *args, **kwargs):
         """
         Método que redirecciona a index si el usuario
-        que intenta borrar el proyecto no es staff.
+        que intenta borrar el proyecto no es admin.
         """
         self.object = self.get_object()
         context = self.get_context_data(object=self.object)
         self.object = self.get_object()
-        if request.user.is_staff:
+        if request.user.is_superuser:
             return self.render_to_response(context)
         else:
             if str(self.object) == str(self.request.user):
@@ -141,7 +141,7 @@ class Consultar_cara_visible(ListView):
 
     def get(self, request, *args, **kwargs):
         """
-        Método que valida si el usuario es staff para ver la lista de objetos.
+        Método que valida si el usuario es admin para ver la lista de objetos.
         """
         self.object_list = self.get_queryset()
         allow_empty = self.get_allow_empty()
@@ -155,7 +155,7 @@ class Consultar_cara_visible(ListView):
                 raise Http404(_("Empty list and '%(class_name)s.allow_empty' is False.")
                         % {'class_name': self.__class__.__name__})
         context = self.get_context_data()
-        if request.user.is_staff:
+        if request.user.is_superuser:
             return self.render_to_response(context)
         else:
             messages_alert = ['No tiene permisos para listar los caras visibles']
@@ -173,11 +173,11 @@ class Registrar_cara_visible(SuccessMessageMixin,CreateView):
 
     def get(self, request, *args, **kwargs):
         """
-        Méroto que valida si el usuario autenticado es staff
+        Méroto que valida si el usuario autenticado es admin
         para poder registrar un cara visible.
         """
         self.object = None
-        if request.user.is_staff:
+        if request.user.is_superuser:
             return super(Registrar_cara_visible, self).get(request, *args, **kwargs)
         else:
             messages_alert = ['No tiene permisos para registrar un cara visible']
@@ -196,10 +196,10 @@ class Editar_cara_visible(SuccessMessageMixin,UpdateView):
     def get(self, request, *args, **kwargs):
         """
         Método que redirecciona a index si el usuario
-        que intenta editar el cara visible no es staff.
+        que intenta editar el cara visible no es admin.
         """
         self.object = self.get_object()
-        if request.user.is_staff:
+        if request.user.is_superuser:
             return super(Editar_cara_visible, self).get(request, *args, **kwargs)
         else:
             if str(self.object) == str(self.request.user):
@@ -220,12 +220,12 @@ class Borrar_cara_visible(SuccessMessageMixin,DeleteView):
     def get(self, request, *args, **kwargs):
         """
         Método que redirecciona a index si el usuario
-        que intenta borrar el proyecto no es staff .
+        que intenta borrar el proyecto no es admin.
         """
         self.object = self.get_object()
         context = self.get_context_data(object=self.object)
         self.object = self.get_object()
-        if request.user.is_staff:
+        if request.user.is_superuser:
             return self.render_to_response(context)
         else:
             if str(self.object) == str(self.request.user):
@@ -252,7 +252,7 @@ class Consultar_director(ListView):
 
     def get(self, request, *args, **kwargs):
         """
-        Método que valida si el usuario es staff para ver la lista de objetos.
+        Método que valida si el usuario es admin para ver la lista de objetos.
         """
         self.object_list = self.get_queryset()
         allow_empty = self.get_allow_empty()
@@ -266,7 +266,7 @@ class Consultar_director(ListView):
                 raise Http404(_("Empty list and '%(class_name)s.allow_empty' is False.")
                         % {'class_name': self.__class__.__name__})
         context = self.get_context_data()
-        if request.user.is_staff:
+        if request.user.is_superuser:
             return self.render_to_response(context)
         else:
             messages_alert = ['No tiene permisos para listar los directores']
@@ -284,11 +284,11 @@ class Registrar_director(SuccessMessageMixin,CreateView):
 
     def get(self, request, *args, **kwargs):
         """
-        Méroto que valida si el usuario autenticado es staff
+        Méroto que valida si el usuario autenticado es admin
         para poder registrar un director.
         """
         self.object = None
-        if request.user.is_staff:
+        if request.user.is_superuser:
             return super(Registrar_director, self).get(request, *args, **kwargs)
         else:
             messages_alert = ['No tiene permisos para registrar un director']
@@ -307,10 +307,10 @@ class Editar_director(SuccessMessageMixin,UpdateView):
     def get(self, request, *args, **kwargs):
         """
         Método que redirecciona a index si el usuario
-        que intenta editar el proyecto no es staff.
+        que intenta editar el proyecto no es admin.
         """
         self.object = self.get_object()
-        if request.user.is_staff:
+        if request.user.is_superuser:
             return super(Editar_director, self).get(request, *args, **kwargs)
         else:
             if str(self.object) == str(self.request.user):
@@ -335,12 +335,12 @@ class Borrar_director(SuccessMessageMixin,DeleteView):
     def get(self, request, *args, **kwargs):
         """
         Método que redirecciona a index si el usuario
-        que intenta borrar el director no es staff.
+        que intenta borrar el director no es admin.
         """
         self.object = self.get_object()
         context = self.get_context_data(object=self.object)
         self.object = self.get_object()
-        if request.user.is_staff:
+        if request.user.is_superuser:
             return self.render_to_response(context)
         else:
             messages_alert = ['No tiene permisos para borrar el director']
@@ -397,7 +397,7 @@ class Editar_reporte(SuccessMessageMixin,UpdateView):
         que intenta editar el reporte no es el autor/creador.
         """
         self.object = self.get_object()
-        if request.user.is_staff:
+        if request.user.is_superuser:
             return super(Editar_reporte, self).get(request, *args, **kwargs)
         else:
             if str(self.object) == str(self.request.user):
@@ -455,7 +455,7 @@ class Detallar_reporte(DetailView):
     def get(self, request, *args, **kwargs):
         """
         Método que redirecciona a index si el usuario
-        que intenta ver el reporte no es el autor/creador o un admin.
+        que intenta ver el reporte no es el autor/creador o un director o admin.
         """
         self.object = self.get_object()
         context = self.get_context_data(object=self.object)
