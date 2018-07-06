@@ -26,10 +26,11 @@
         { text: '{{ reporte.ano }}\n\n', style: 'text_query' },
         // Descripción General del Avance del Proyecto
         { text: 'Descripción General del Avance del Proyecto:', style: 'subheader' },
-        { text: '{{ reporte.desc_avance }}\n\n', style: 'text_query' },
+        { text: `{{ reporte.desc_avance }}\n\n`, style: 'text_query' },
         // Dificultades y Obstáculos
         { text: 'Dificultades y Obstáculos:', style: 'subheader' },
-        { text: '{{ reporte.obstaculos }}\n\n', style: 'text_query' },
+        { text: `{{ reporte.obstaculos }}\n\n`, style: 'text_query' },
+        { text: 'Integrantes del equipo:', style: 'subheader' },
         // Tabla
         {
           table: {
@@ -46,15 +47,71 @@
                 '1',
                 '{{ reporte.nombre_trab_1 }}',
                 '{{ reporte.cargo_trab_1 }}',
-                '{{ reporte.act_rea_trab_1 }}',
-                '{{ reporte.enlaces_trab_1 }}',
+                `{{ reporte.act_rea_trab_1 }}`,
+                `{{ reporte.enlaces_trab_1 }}`,
               ],
               [
-                '1',
-                '{{ reporte.nombre_trab_1 }}',
-                '{{ reporte.cargo_trab_1 }}',
-                '{{ reporte.act_rea_trab_1 }}',
-                '{{ reporte.enlaces_trab_1 }}',
+                '2',
+                '{{ reporte.nombre_trab_2 }}',
+                '{{ reporte.cargo_trab_2 }}',
+                `{{ reporte.act_rea_trab_2 }}`,
+                `{{ reporte.enlaces_trab_2 }}`,
+              ],
+              [
+                '3',
+                '{{ reporte.nombre_trab_3 }}',
+                '{{ reporte.cargo_trab_3 }}',
+                `{{ reporte.act_rea_trab_3 }}`,
+                `{{ reporte.enlaces_trab_3 }}`,
+              ],
+              [
+                '4',
+                '{{ reporte.nombre_trab_4 }}',
+                '{{ reporte.cargo_trab_4 }}',
+                `{{ reporte.act_rea_trab_4 }}`,
+                `{{ reporte.enlaces_trab_4 }}`,
+              ],
+              [
+                '5',
+                '{{ reporte.nombre_trab_5 }}',
+                '{{ reporte.cargo_trab_5 }}',
+                `{{ reporte.act_rea_trab_5 }}`,
+                `{{ reporte.enlaces_trab_5 }}`,
+              ],
+              [
+                '6',
+                '{{ reporte.nombre_trab_6 }}',
+                '{{ reporte.cargo_trab_6 }}',
+                `{{ reporte.act_rea_trab_6 }}`,
+                `{{ reporte.enlaces_trab_6 }}`,
+              ],
+              [
+                '7',
+                '{{ reporte.nombre_trab_7 }}',
+                '{{ reporte.cargo_trab_7 }}',
+                `{{ reporte.act_rea_trab_7 }}`,
+                `{{ reporte.enlaces_trab_7 }}`,
+              ],
+              [
+                '8',
+                '{{ reporte.nombre_trab_8 }}',
+                '{{ reporte.cargo_trab_8 }}',
+                `{{ reporte.act_rea_trab_8 }}`,
+                `{{ reporte.enlaces_trab_8 }}`,
+              ],
+              [
+                '9',
+                '{{ reporte.nombre_trab_9 }}',
+                '{{ reporte.cargo_trab_9 }}',
+                `{{ reporte.act_rea_trab_9 }}`,
+                `{{ reporte.enlaces_trab_9 }}`,
+              ],
+              [
+                '10',
+                '{{ reporte.nombre_trab_10 }}',
+                '{{ reporte.cargo_trab_10 }}',
+                `{{ reporte.act_rea_trab_10 }}`,
+                `{{ reporte.enlaces_trab_10 }}`,
               ]
             ]
           }
