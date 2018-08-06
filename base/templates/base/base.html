@@ -110,77 +110,36 @@
               <ul class="nav navbar-nav">
 
                 {% if user.is_superuser %}
-                <!-- Proyectos dropdown
+                <!-- Ajustes dropdown
                 ================================================== -->
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <i class="glyphicon glyphicon-credit-card"></i>
-                    &nbsp;Proyectos <span class="caret"></span>
+                    <i class="glyphicon glyphicon-cog"></i>
+                    &nbsp;Ajustes <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
-                    <li>
-                      <a href="{% url 'registro:registrar_proyecto' %}">
-                        <i class="glyphicon glyphicon-pencil"></i>
-                          Registrar Proyecto
-                      </a>
-                    </li>
                     <li>
                       <a href="{% url 'registro:consultar_proyecto' %}">
                         <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Listar Proyectos
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- End Proyectos dropdown -->
-
-                <!-- Caras Visibles dropdown
-                ================================================== -->
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <i class="glyphicon glyphicon-user"></i>
-                    &nbsp;Caras Visibles <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="{% url 'registro:registrar_cara_visible' %}">
-                        <i class="glyphicon glyphicon-pencil"></i>
-                          Registrar Cara Visible
+                        &nbsp;Proyectos
                       </a>
                     </li>
                     <li>
                       <a href="{% url 'registro:consultar_cara_visible' %}">
                         <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Listar Caras Visibles
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- End Caras Visibles dropdown -->
-
-                <!-- Directores dropdown
-                ================================================== -->
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <i class="glyphicon glyphicon-user"></i>
-                    &nbsp;Directores <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="{% url 'registro:registrar_director' %}">
-                        <i class="glyphicon glyphicon-pencil"></i>
-                          Registrar Director
+                        &nbsp;Caras Visibles
                       </a>
                     </li>
                     <li>
                       <a href="{% url 'registro:consultar_director' %}">
                         <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Listar Directores
+                        &nbsp;Directores
                       </a>
                     </li>
                   </ul>
                 </li>
-                <!-- End Directores dropdown -->
+                <!-- End Ajustes dropdown -->
+
                 {% else %}
                 {% endif %}
 
