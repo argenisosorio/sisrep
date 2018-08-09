@@ -9,6 +9,7 @@
 postgresql
 libpq-dev
 python-psycopg2
+python-pip
 ```
 
 ## Paquetes de Python requeridos
