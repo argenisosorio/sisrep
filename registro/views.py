@@ -326,7 +326,7 @@ class Borrar_director(SuccessMessageMixin,DeleteView):
     """
     model = Director
     success_url = reverse_lazy('registro:consultar_director')
-    success_message = "Se elimino el direcotr con éxito"
+    success_message = "Se elimino el director con éxito"
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message)

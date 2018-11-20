@@ -105,19 +105,18 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
 
-              <!-- Actividades dropdown
-              ================================================== -->
               <ul class="nav navbar-nav">
 
-                {% if user.is_superuser %}
-                <!-- Carga inicial dropdown
+                <!-- SISREP dropdown
                 ================================================== -->
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     <i class="glyphicon glyphicon-cog"></i>
-                    &nbsp;Carga inicial <span class="caret"></span>
+                    &nbsp;SISREP <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
+                    {% if user.is_superuser %}
+                    <li class="dropdown-header">Carga inicial</li>
                     <li>
                       <a href="{% url 'registro:consultar_proyecto' %}">
                         <i class="glyphicon glyphicon-list"></i>
@@ -136,21 +135,8 @@
                         &nbsp;Directores
                       </a>
                     </li>
-                  </ul>
-                </li>
-                <!-- End Carga inicial dropdown -->
-
-                {% else %}
-                {% endif %}
-
-                <!-- Reportes dropdown
-                ================================================== -->
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <i class="glyphicon glyphicon-file"></i>
-                    &nbsp;Reportes <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu">
+                    {% endif %}
+                    <li class="dropdown-header">Reportes detallados</li>
                     {% if user.is_superuser and user.is_staff and user.is_active %}
                       <li>
                         <a href="{% url 'registro:registrar_reporte' %}">
@@ -186,7 +172,7 @@
                     </li>
                   </ul>
                 </li>
-                <!-- End Reportes dropdown -->
+                <!-- End SISREP dropdown -->
 
                 {% if user.is_superuser %}
                 <li>
