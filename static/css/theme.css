@@ -293,3 +293,10 @@ table.table_change_password td {
   border: none !important;
   padding-bottom: 15px;
 }
+
+.container-all {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}

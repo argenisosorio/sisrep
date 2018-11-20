@@ -16,8 +16,6 @@ meses = (
     ('Diciembre','Diciembre'),
 )
 anos = (
-    ('-', '-'),
-    ('2018','2018'),
     ('2019','2019'),
 )
 cargos = (
