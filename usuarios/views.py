@@ -19,13 +19,6 @@ from django.contrib.auth.forms import (
 )
 
 
-class Index(TemplateView):
-    """
-    Plantilla de inicio del sistema
-    """
-    template_name = "usuarios/index.html"
-
-
 class LoginView(FormView):
     """
     Clase que gestiona el formulario de inicio de
@@ -33,7 +26,7 @@ class LoginView(FormView):
     """
     template_name = 'usuarios/login.html'
     form_class = LoginForm
-    success_url = reverse_lazy('usuarios:index')
+    success_url = reverse_lazy('inicio:index')
 
     def form_valid(self, form):
         """
