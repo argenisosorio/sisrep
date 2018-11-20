@@ -4,6 +4,10 @@ rm -rf registro/migrations/
 
 echo "Removidas migraciones del registro"
 
+rm -rf safet/migrations/
+
+echo "Removidas migraciones del safet"
+
 rm -rf bitacora/migrations/
 
 echo "Removidas migraciones del la bitacora"
@@ -14,7 +18,11 @@ echo "Removidas la base de datos"
 
 python manage.py makemigrations registro
 
-echo "Migrados los registros"
+echo "Migrados los modelos del sisrep"
+
+python manage.py makemigrations safet
+
+echo "Migrados los modelos del safet"
 
 python manage.py makemigrations bitacora
 
