@@ -7,5 +7,5 @@ from django.contrib.auth.decorators import login_required
 
 
 urlpatterns = patterns('',
-    url(r'^bitacora$', login_required(views.Bitacora.as_view()), name='bitacora'),
+    url(r'^', login_required(views.Bitacora.as_view()), name='bitacora'),
 )
