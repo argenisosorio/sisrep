@@ -69,6 +69,7 @@ INSTALLED_APPS = (
     'inicio',
     'usuarios',
     'registro',
+    'safet',
     'bitacora',
 )
 

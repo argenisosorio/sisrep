@@ -1,0 +1,40 @@
+{% extends "base/base.html" %}
+{% block titulo %}Lista de Proyectos POA{% endblock %}
+{% block cuerpo %}
+<br />
+<h1>Lista de Proyectos POA</h1>
+<br />
+<a href="{% url 'safet:registrar_proyecto' %}">
+  <button class="btn btn-success">Registrar Proyecto</button>
+</a>
+<br />
+<br />
+<table border="1px" id="example" class="display">
+  <thead>
+    <tr>
+      <th>N</th>
+      <th>Nombre del Proyecto</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>N</th>
+      <th>Nombre del Proyecto</th>
+      <th>Acciones</th>
+    </tr>
+  </tfoot>
+  <tbody>
+  {% for x in object_list %}
+  <tr>
+    <td></td>
+    <td>{{ x.nombre_proyecto }}</td>
+    <td>
+      <a href="{% url 'safet:editar_proyecto' x.id %}" title="Editar"><i class="glyphicon glyphicon-pencil"></i></a>
+      &nbsp; | &nbsp;
+      <a href="{% url 'safet:borrar_proyecto' x.id %}" title="Borrar"><i class="glyphicon glyphicon-trash"></i></a>
+    </td>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
