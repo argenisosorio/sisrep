@@ -72,8 +72,6 @@ class ReporteForm(forms.ModelForm):
         lista_proyectos = Proyecto.objects.all().values_list('nombre_proyecto','nombre_proyecto')
         lista_caravisibles = Caravisible.objects.all().values_list('nombre_caravisible','nombre_caravisible')
         lista_directores = Director.objects.all().values_list('nombre_director','nombre_director')
-        #print lista_directores
-        #print "-----------"
 
         self.fields['nombre_proyecto'] = forms.ChoiceField(label="Nombre del Proyecto", widget=Select(attrs={
             'class':'form-control input-md',

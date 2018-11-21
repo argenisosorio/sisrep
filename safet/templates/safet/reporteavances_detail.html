@@ -1,0 +1,432 @@
+{% extends "base/base.html" %}
+{% block titulo %}Detalle del Reporte de Avances{% endblock %}
+{% block cuerpo %}
+<br />
+<h1>Reporte de Avances de {{ reporteavances.nombre_producto }}</h1>
+<br />
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <b>Nombre del Proyecto POA</b>
+    </h3>
+  </div>
+  <div class="panel-body">
+    {{ reporteavances.nombre_proyecto_poa }}
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <b>Nombre de la Acción Específica</b>
+    </h3>
+  </div>
+  <div class="panel-body">
+    {{ reporteavances.nombre_accion_especifica }}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>Nombre del Producto</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ reporteavances.nombre_producto }}
+      </div>
+    </div>
+
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>Nombre del Director</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ reporteavances.nombre_director }}
+      </div>
+    </div>
+
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>Fecha de entrega</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ reporteavances.fecha_entrega }}
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="col-sm-6">
+
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>Año de ejecución</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ reporteavances.ano_ejecucion }}
+      </div>
+    </div>
+
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>Nombre del Cara Visible</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ reporteavances.nombre_caravisible }}
+      </div>
+    </div>
+
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>Integrantes del equipo</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ reporteavances.integrantes_equipo }}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<h3>Lista de actividades</h3>
+
+<table class="tabla_trabajadores" border="1px" style="width:100%">
+  <thead>
+    <tr>
+      <th><b>N</b></th>
+      <th><b>Actividad</b></th>
+      <th><b>Responsable</b></th>
+      <th><b>Fecha de entrega</b></th>
+      <th><b>Porcentaje de la actividad</b></th>
+      <th><b>Porcentaje avance</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if reporteavances.nombre_act_1 %}
+    <tr>
+      <td>1</td>
+      <td>
+        {{ reporteavances.nombre_act_1 }}
+      </td>
+      <td>
+        {{ reporteavances.resp_act_1 }}
+      </td>
+      <td>
+        {{ reporteavances.fecha_entrega_act_1 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_act_1 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_avan_act_1 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if reporteavances.nombre_act_2 %}
+    <tr>
+      <td>2</td>
+      <td>
+        {{ reporteavances.nombre_act_2 }}
+      </td>
+      <td>
+        {{ reporteavances.resp_act_2 }}
+      </td>
+      <td>
+        {{ reporteavances.fecha_entrega_act_2 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_act_2 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_avan_act_2 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if reporteavances.nombre_act_3 %}
+    <tr>
+      <td>3</td>
+      <td>
+        {{ reporteavances.nombre_act_3 }}
+      </td>
+      <td>
+        {{ reporteavances.resp_act_3 }}
+      </td>
+      <td>
+        {{ reporteavances.fecha_entrega_act_3 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_act_3 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_avan_act_3 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if reporteavances.nombre_act_4 %}
+    <tr>
+      <td>4</td>
+      <td>
+        {{ reporteavances.nombre_act_4 }}
+      </td>
+      <td>
+        {{ reporteavances.resp_act_4 }}
+      </td>
+      <td>
+        {{ reporteavances.fecha_entrega_act_4 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_act_4 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_avan_act_4 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if reporteavances.nombre_act_5 %}
+    <tr>
+      <td>5</td>
+      <td>
+        {{ reporteavances.nombre_act_5 }}
+      </td>
+      <td>
+        {{ reporteavances.resp_act_5 }}
+      </td>
+      <td>
+        {{ reporteavances.fecha_entrega_act_5 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_act_5 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_avan_act_5 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if reporteavances.nombre_act_6 %}
+    <tr>
+      <td>6</td>
+      <td>
+        {{ reporteavances.nombre_act_6 }}
+      </td>
+      <td>
+        {{ reporteavances.resp_act_6 }}
+      </td>
+      <td>
+        {{ reporteavances.fecha_entrega_act_6 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_act_6 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_avan_act_6 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if reporteavances.nombre_act_7 %}
+    <tr>
+      <td>7</td>
+      <td>
+        {{ reporteavances.nombre_act_7 }}
+      </td>
+      <td>
+        {{ reporteavances.resp_act_7 }}
+      </td>
+      <td>
+        {{ reporteavances.fecha_entrega_act_7 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_act_7 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_avan_act_7 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if reporteavances.nombre_act_8 %}
+    <tr>
+      <td>8</td>
+      <td>
+        {{ reporteavances.nombre_act_8 }}
+      </td>
+      <td>
+        {{ reporteavances.resp_act_8 }}
+      </td>
+      <td>
+        {{ reporteavances.fecha_entrega_act_8 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_act_8 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_avan_act_8 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if reporteavances.nombre_act_9 %}
+    <tr>
+      <td>9</td>
+      <td>
+        {{ reporteavances.nombre_act_9 }}
+      </td>
+      <td>
+        {{ reporteavances.resp_act_9 }}
+      </td>
+      <td>
+        {{ reporteavances.fecha_entrega_act_9 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_act_9 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_avan_act_9 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if reporteavances.nombre_act_10 %}
+    <tr>
+      <td>10</td>
+      <td>
+        {{ reporteavances.nombre_act_10 }}
+      </td>
+      <td>
+        {{ reporteavances.resp_act_10 }}
+      </td>
+      <td>
+        {{ reporteavances.fecha_entrega_act_10 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_act_10 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_avan_act_10 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if reporteavances.nombre_act_11 %}
+    <tr>
+      <td>11</td>
+      <td>
+        {{ reporteavances.nombre_act_11 }}
+      </td>
+      <td>
+        {{ reporteavances.resp_act_11 }}
+      </td>
+      <td>
+        {{ reporteavances.fecha_entrega_act_11 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_act_11 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_avan_act_11 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if reporteavances.nombre_act_12 %}
+    <tr>
+      <td>12</td>
+      <td>
+        {{ reporteavances.nombre_act_12 }}
+      </td>
+      <td>
+        {{ reporteavances.resp_act_12 }}
+      </td>
+      <td>
+        {{ reporteavances.fecha_entrega_act_12 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_act_12 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_avan_act_12 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if reporteavances.nombre_act_13 %}
+    <tr>
+      <td>13</td>
+      <td>
+        {{ reporteavances.nombre_act_13 }}
+      </td>
+      <td>
+        {{ reporteavances.resp_act_13 }}
+      </td>
+      <td>
+        {{ reporteavances.fecha_entrega_act_13 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_act_13 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_avan_act_13 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if reporteavances.nombre_act_14 %}
+    <tr>
+      <td>14</td>
+      <td>
+        {{ reporteavances.nombre_act_14 }}
+      </td>
+      <td>
+        {{ reporteavances.resp_act_14 }}
+      </td>
+      <td>
+        {{ reporteavances.fecha_entrega_act_14 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_act_14 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_avan_act_14 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if reporteavances.nombre_act_15 %}
+    <tr>
+      <td>15</td>
+      <td>
+        {{ reporteavances.nombre_act_15 }}
+      </td>
+      <td>
+        {{ reporteavances.resp_act_15 }}
+      </td>
+      <td>
+        {{ reporteavances.fecha_entrega_act_15 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_act_15 }}
+      </td>
+      <td>
+        {{ reporteavances.porc_avan_act_15 }}
+      </td>
+    </tr>
+    {% endif %}
+  </tbody>
+</table>
+<br />
+<b>Porcentaje avance</b>: {{ reporteavances.sumatoria_por_avan }} %
+<div class="progress">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ reporteavances.sumatoria_por_avan }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ reporteavances.sumatoria_por_avan }}%;">
+  </div>
+</div>
+<hr />
+<a href="{% url 'safet:editar_reporte_avances' reporteavances.id %}">
+  <button class="btn btn-info">Editar</button>
+</a>
+{% endblock %}

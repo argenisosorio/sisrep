@@ -2,9 +2,9 @@
 from django.http import HttpResponse
 from django.views.generic import TemplateView, ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from safet.models import ProyectoPoa, AccionEspecifica
+from safet.models import ProyectoPoa, AccionEspecifica, ReporteAvances
 from bitacora.models import Bitacora
-from forms import ProyectoPoaForm, AccionEspecificaForm
+from forms import ProyectoPoaForm, AccionEspecificaForm, ReporteAvancesForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.views import generic
@@ -235,3 +235,40 @@ class Borrar_accion(SuccessMessageMixin,DeleteView):
             else:
                 messages_alert = ['No tiene permisos para borrar la Acción Específica']
                 return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+
+
+###########################################
+##### Crud de los Reportes de Avances #####
+###########################################
+
+class Consultar_reporte_avances(ListView):
+    """
+    Clase que permite listar los Reportes de Avances.
+    """
+    model = ReporteAvances
+
+
+class Registrar_reporte_avances(CreateView):
+    """
+    Clase que permite registrar un Reporte de Avances.
+    """
+    model = ReporteAvances
+    form_class = ReporteAvancesForm
+    success_url = reverse_lazy('safet:consultar_reporte_avances')
+
+
+class Editar_reporte_avances(UpdateView):
+    """
+    Clase que permite editar los datos de un Reporte de Avances.
+    """
+    model = ReporteAvances
+    form_class = ReporteAvancesForm
+    success_url = reverse_lazy('safet:consultar_reporte_avances')
+
+
+class Detallar_reporte_avances(DetailView):
+    """
+    Clase que permite detallar los datos de un Reporte de Avances.
+    """
+    model = ReporteAvances
+    template_name = "safet/reporteavances_detail.html"

@@ -200,7 +200,7 @@
                     <li class="dropdown-header">Reportes de avances</li>
                     {% if user.is_superuser and user.is_staff and user.is_active %}
                       <li>
-                        <a href="{% url 'registro:registrar_reporte' %}">
+                        <a href="{% url 'safet:registrar_reporte_avances' %}">
                           <i class="glyphicon glyphicon-pencil"></i>
                             &nbsp;Registrar Reporte
                         </a>
@@ -210,7 +210,7 @@
                       {% else %}
                         {% if user.is_active %}
                           <li>
-                            <a href="{% url 'registro:registrar_reporte' %}">
+                            <a href="{% url 'safet:registrar_reporte_avances' %}">
                               <i class="glyphicon glyphicon-pencil"></i>
                                 &nbsp;Registrar Reporte
                             </a>
@@ -220,15 +220,9 @@
                       {% endif %}
                     {% endif %}
                     <li>
-                      <a href="{% url 'registro:consultar_reporte' %}">
+                      <a href="{% url 'safet:consultar_reporte_avances' %}">
                         <i class="glyphicon glyphicon-list"></i>
                         &nbsp;Listar Reportes
-                      </a>
-                    </li>
-                    <li>
-                      <a href="{% url 'registro:buscar' %}">
-                        <i class="glyphicon glyphicon-search"></i>
-                        &nbsp;Buscar Reportes
                       </a>
                     </li>
                   </ul>

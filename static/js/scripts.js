@@ -98,3 +98,21 @@ $("document").ready(function () {
     $(this).html(text1.replace(exp2, '$1<a target="_blank"href="http://$2">$2</a>'));
   });
 });
+
+/*
+|--------------------------------------------------------------------------------------
+| Función que permite cargar el calendario en el formulario de los Reportes de Avances.
+|--------------------------------------------------------------------------------------
+*/
+$("document").ready(function () {
+  $(function() {
+    $("#id_fecha_entrega").datepicker ({
+      dateFormat: "dd/mm/yy",
+      dayNames: [ "Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado" ],
+      dayNamesMin: [ "Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa" ],
+      firstDay: 1,
+      gotoCurrent: true,
+      monthNames: [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Deciembre" ]
+    });
+  });
+});

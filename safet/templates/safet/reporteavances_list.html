@@ -1,0 +1,31 @@
+{% extends "base/base.html" %}
+{% block titulo %}Lista de Reportes de Avances{% endblock %}
+{% block cuerpo %}
+<br />
+<h1>Lista de Reportes de Avances</h1>
+<br />
+
+{% if object_list %}
+  {% for x in object_list %}
+  <div class="well well-white">
+    <b>Nombre del Producto:</b> {{ x.nombre_proyecto }}
+    <br />
+    <b>Porcentaje avance</b>: {{ x.sumatoria_por_avan }} %
+    <div class="progress">
+      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ x.sumatoria_por_avan }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ x.sumatoria_por_avan }}%;">
+      </div>
+    </div>
+    <hr />
+    <a href="{% url 'safet:editar_reporte_avances' x.id %}">
+      <button class="btn btn-info">Editar</button>
+    </a>
+    <a href="{% url 'safet:detallar_reporte_avances' x.id %}">
+      <button class="btn btn-primary">Detallar</button>
+    </a>
+  </div>
+  {% endfor %}
+  {% else %}
+    <br />
+    <b>No hay Productos registrados aún</b>
+  {% endif %}
+{% endblock %}
