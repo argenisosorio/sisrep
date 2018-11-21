@@ -2,9 +2,9 @@
 from django.http import HttpResponse
 from django.views.generic import TemplateView, ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from safet.models import ProyectoPoa
+from safet.models import ProyectoPoa, AccionEspecifica
 from bitacora.models import Bitacora
-from forms import ProyectoPoaForm
+from forms import ProyectoPoaForm, AccionEspecificaForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.views import generic
@@ -18,10 +18,9 @@ from django.contrib.auth.models import User
 from django.shortcuts import redirect
 from datetime import datetime
 
-
-#################################
-##### Crud de los Proyectos #####
-#################################
+#####################################
+##### Crud de los Proyectos POA #####
+#####################################
 
 class Consultar_proyecto(ListView):
     """
@@ -126,4 +125,113 @@ class Borrar_proyecto(SuccessMessageMixin,DeleteView):
                 return self.render_to_response(context)
             else:
                 messages_alert = ['No tiene permisos para borrar el Proyecto POA']
+                return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+
+######################################################
+##### Crud de las Acciones Específicas Proyectos #####
+######################################################
+
+class Consultar_accion(ListView):
+    """
+    Clase que permite consultar la lista de Acciones Específicas.
+    """
+    model = AccionEspecifica
+
+    def get(self, request, *args, **kwargs):
+        """
+        Método que valida si el usuario es admin para ver la lista de objetos.
+        """
+        self.object_list = self.get_queryset()
+        allow_empty = self.get_allow_empty()
+        if not allow_empty:
+            if (self.get_paginate_by(self.object_list) is not None
+                    and hasattr(self.object_list, 'exists')):
+                is_empty = not self.object_list.exists()
+            else:
+                is_empty = len(self.object_list) == 0
+            if is_empty:
+                raise Http404(_("Empty list and '%(class_name)s.allow_empty' is False.")
+                        % {'class_name': self.__class__.__name__})
+        context = self.get_context_data()
+        if request.user.is_superuser:
+            return self.render_to_response(context)
+        else:
+            messages_alert = ['No tiene permisos para listar las Acciones Específicas']
+            return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+
+
+class Registrar_accion(SuccessMessageMixin,CreateView):
+    """
+    Clase que permite registrar una Acción Específica.
+    """
+    model = AccionEspecifica
+    form_class = AccionEspecificaForm
+    success_url = reverse_lazy('safet:consultar_accion')
+    success_message = "Se registro la Acción Específica con éxito"
+
+    def get(self, request, *args, **kwargs):
+        """
+        Método que valida si el usuario autenticado es admin
+        para poder registrar una Acción Específica.
+        """
+        self.object = None
+        if request.user.is_superuser:
+            return super(Registrar_accion, self).get(request, *args, **kwargs)
+        else:
+            messages_alert = ['No tiene permisos para registrar una Acción Específica']
+            return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+
+
+class Editar_accion(SuccessMessageMixin,UpdateView):
+    """
+    Clase que permite editar la data guardada de una Acción Específica.
+    """
+    model = AccionEspecifica
+    form_class = AccionEspecificaForm
+    success_url = reverse_lazy('safet:consultar_accion')
+    success_message = "Se actualizo la Acción Específica con éxito"
+
+    def get(self, request, *args, **kwargs):
+        """
+        Método que redirecciona a index si el usuario
+        que intenta editar la Acción Específica no es admin.
+        """
+        self.object = self.get_object()
+        if request.user.is_superuser:
+            return super(Editar_accion, self).get(request, *args, **kwargs)
+        else:
+            if str(self.object) == str(self.request.user):
+                return super(Editar_accion, self).get(request, *args, **kwargs)
+            else:
+                messages_alert = ['No tiene permisos para editar la Acción Específica']
+                return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+
+
+class Borrar_accion(SuccessMessageMixin,DeleteView):
+    """
+    Clase que permite borrar una Acción Específica registrada en el sistema.
+    """
+    model = AccionEspecifica
+    success_url = reverse_lazy('safet:consultar_accion')
+    success_message = "Se elimino la Acción Específica con éxito"
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(Borrar_accion, self).delete(request, *args, **kwargs)
+
+    def get(self, request, *args, **kwargs):
+        """
+        Método que redirecciona a index si el usuario
+        que intenta borrar una Acción Específica no es admin.
+        """
+        self.object = self.get_object()
+        context = self.get_context_data(object=self.object)
+        self.object = self.get_object()
+        if request.user.is_superuser:
+            return self.render_to_response(context)
+        else:
+            if str(self.object) == str(self.request.user):
+                return self.render_to_response(context)
+            else:
+                messages_alert = ['No tiene permisos para borrar la Acción Específica']
                 return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))

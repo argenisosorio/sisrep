@@ -1,18 +1,18 @@
 {% extends "base/base.html" %}
-{% block titulo %}Registrar Proyecto POA{% endblock %}
+{% block titulo %}Registrar Acción Específica{% endblock %}
 {% block cuerpo %}
 <br />
-<h1>Registrar Proyecto POA</h1>
+<h1>Registrar Acción Específica</h1>
 <br />
 
 <form method="post">{% csrf_token %}
 
   <div class="">
-    <b>{{ form.nombre_proyecto.label }}</b>
+    <b>{{ form.nombre_accion.label }}</b>
     <br />
-    {{ form.nombre_proyecto }}
-    {% if form.nombre_proyecto.errors %}
-      <p>{{ form.nombre_proyecto.errors}}</p>
+    {{ form.nombre_accion }}
+    {% if form.nombre_accion.errors %}
+      <p>{{ form.nombre_accion.errors}}</p>
     {% endif %}
   </div>
 

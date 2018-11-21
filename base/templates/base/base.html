@@ -190,6 +190,12 @@
                         &nbsp;Proyectos POA
                       </a>
                     </li>
+                    <li>
+                      <a href="{% url 'safet:consultar_accion' %}">
+                        <i class="glyphicon glyphicon-list"></i>
+                        &nbsp;Acciones Específicas
+                      </a>
+                    </li>
                     {% endif %}
                     <li class="dropdown-header">Reportes de avances</li>
                     {% if user.is_superuser and user.is_staff and user.is_active %}

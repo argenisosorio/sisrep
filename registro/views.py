@@ -63,7 +63,7 @@ class Registrar_proyecto(SuccessMessageMixin,CreateView):
 
     def get(self, request, *args, **kwargs):
         """
-        Méroto que valida si el usuario autenticado es admin
+        Método que valida si el usuario autenticado es admin
         para poder registrar un proyecto.
         """
         self.object = None
@@ -284,7 +284,7 @@ class Registrar_director(SuccessMessageMixin,CreateView):
 
     def get(self, request, *args, **kwargs):
         """
-        Méroto que valida si el usuario autenticado es admin
+        Método que valida si el usuario autenticado es admin
         para poder registrar un director.
         """
         self.object = None
