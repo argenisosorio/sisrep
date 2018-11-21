@@ -6,5 +6,6 @@
 *.swp
 db.sqlite3
 registro/migrations
+safet/migrations
 bitacora/migrations
 reporte_mensual_proyecto/settings.py
