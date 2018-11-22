@@ -236,7 +236,6 @@ class Borrar_accion(SuccessMessageMixin,DeleteView):
                 messages_alert = ['No tiene permisos para borrar la Acción Específica']
                 return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
-
 ###########################################
 ##### Crud de los Reportes de Avances #####
 ###########################################

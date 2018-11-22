@@ -49,7 +49,7 @@ class Consultar_proyecto(ListView):
             return self.render_to_response(context)
         else:
             messages_alert = ['No tiene permisos para listar los proyectos']
-            return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Registrar_proyecto(SuccessMessageMixin,CreateView):
@@ -71,7 +71,7 @@ class Registrar_proyecto(SuccessMessageMixin,CreateView):
             return super(Registrar_proyecto, self).get(request, *args, **kwargs)
         else:
             messages_alert = ['No tiene permisos para registrar un proyecto']
-            return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Editar_proyecto(SuccessMessageMixin,UpdateView):
@@ -96,7 +96,7 @@ class Editar_proyecto(SuccessMessageMixin,UpdateView):
                 return super(Editar_proyecto, self).get(request, *args, **kwargs)
             else:
                 messages_alert = ['No tiene permisos para editar el proyecto']
-                return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Borrar_proyecto(SuccessMessageMixin,DeleteView):
@@ -126,7 +126,7 @@ class Borrar_proyecto(SuccessMessageMixin,DeleteView):
                 return self.render_to_response(context)
             else:
                 messages_alert = ['No tiene permisos para borrar el reporte']
-                return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 ######################################
@@ -159,7 +159,7 @@ class Consultar_cara_visible(ListView):
             return self.render_to_response(context)
         else:
             messages_alert = ['No tiene permisos para listar los caras visibles']
-            return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Registrar_cara_visible(SuccessMessageMixin,CreateView):
@@ -181,7 +181,7 @@ class Registrar_cara_visible(SuccessMessageMixin,CreateView):
             return super(Registrar_cara_visible, self).get(request, *args, **kwargs)
         else:
             messages_alert = ['No tiene permisos para registrar un cara visible']
-            return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Editar_cara_visible(SuccessMessageMixin,UpdateView):
@@ -206,7 +206,7 @@ class Editar_cara_visible(SuccessMessageMixin,UpdateView):
                 return super(Editar_cara_visible, self).get(request, *args, **kwargs)
             else:
                 messages_alert = ['No tiene permisos para editar el cara visble']
-                return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Borrar_cara_visible(SuccessMessageMixin,DeleteView):
@@ -232,7 +232,7 @@ class Borrar_cara_visible(SuccessMessageMixin,DeleteView):
                 return self.render_to_response(context)
             else:
                 messages_alert = ['No tiene permisos para borrar el cara visible']
-                return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message)
@@ -270,7 +270,7 @@ class Consultar_director(ListView):
             return self.render_to_response(context)
         else:
             messages_alert = ['No tiene permisos para listar los directores']
-            return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Registrar_director(SuccessMessageMixin,CreateView):
@@ -292,7 +292,7 @@ class Registrar_director(SuccessMessageMixin,CreateView):
             return super(Registrar_director, self).get(request, *args, **kwargs)
         else:
             messages_alert = ['No tiene permisos para registrar un director']
-            return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Editar_director(SuccessMessageMixin,UpdateView):
@@ -317,7 +317,7 @@ class Editar_director(SuccessMessageMixin,UpdateView):
                 return super(Editar_director, self).get(request, *args, **kwargs)
             else:
                 messages_alert = ['No tiene permisos para editar el director']
-                return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Borrar_director(SuccessMessageMixin,DeleteView):
@@ -344,7 +344,7 @@ class Borrar_director(SuccessMessageMixin,DeleteView):
             return self.render_to_response(context)
         else:
             messages_alert = ['No tiene permisos para borrar el director']
-            return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 ################################
@@ -404,7 +404,7 @@ class Editar_reporte(SuccessMessageMixin,UpdateView):
                 return super(Editar_reporte, self).get(request, *args, **kwargs)
             else:
                 messages_alert = ['No tiene permisos para editar el reporte']
-                return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 """
@@ -427,7 +427,7 @@ class Borrar_reporte(SuccessMessageMixin,DeleteView):
                 return self.render_to_response(context)
             else:
                 messages_alert = ['No tiene permisos para borrar el reporte']
-                return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
     def delete(self, request, *args, **kwargs):
         Función que permite mandar un mensaje al template
@@ -466,7 +466,7 @@ class Detallar_reporte(DetailView):
                 return self.render_to_response(context)
             else:
                 messages_alert = ['No tiene permisos para ver el reporte']
-                return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 ###############################
