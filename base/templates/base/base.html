@@ -107,16 +107,15 @@
 
               <ul class="nav navbar-nav">
 
-                <!-- Reporte de Actividades dropdown
+                <!-- Carga inicial dropdown
                 ================================================== -->
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     <i class="glyphicon glyphicon-cog"></i>
-                    &nbsp;Reporte de Actividades <span class="caret"></span>
+                    &nbsp;Carga inicial <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
                     {% if user.is_superuser %}
-                    <li class="dropdown-header">Carga inicial</li>
                     <li>
                       <a href="{% url 'safet:consultar_proyecto' %}">
                         <i class="glyphicon glyphicon-list"></i>
@@ -148,6 +147,18 @@
                       </a>
                     </li>
                     {% endif %}
+                  </ul>
+                </li>
+                <!-- End Carga inicial dropdown -->
+
+                <!-- Reporte de Actividades dropdown
+                ================================================== -->
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <i class="glyphicon glyphicon-file"></i>
+                    &nbsp;Reporte de Actividades <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
                     <li class="dropdown-header">Reportes detallados</li>
                     {% if user.is_superuser and user.is_staff and user.is_active %}
                       <li>
@@ -190,7 +201,7 @@
                 ================================================== -->
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <i class="glyphicon glyphicon-cog"></i>
+                    <i class="glyphicon glyphicon-file"></i>
                     &nbsp;Reporte de Avances <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
