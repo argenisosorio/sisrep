@@ -100,13 +100,14 @@ $("document").ready(function () {
 });
 
 /*
-|--------------------------------------------------------------------------------------
-| Función que permite cargar el calendario en el formulario de los Reportes de Avances.
-|--------------------------------------------------------------------------------------
+|-------------------------------------------------------------
+| Función que permite cargar el calendario en el formulario de
+| los Reportes de Avances en los campos de fechas.
+|-------------------------------------------------------------
 */
 $("document").ready(function () {
   $(function() {
-    $("#id_fecha_entrega").datepicker ({
+    $(".fechas").datepicker ({
       dateFormat: "dd/mm/yy",
       dayNames: [ "Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado" ],
       dayNamesMin: [ "Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa" ],

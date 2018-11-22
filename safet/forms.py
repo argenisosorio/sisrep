@@ -93,7 +93,7 @@ class ReporteAvancesForm(forms.ModelForm):
     }), choices = anos)
 
     fecha_entrega = forms.CharField(label='Fecha de entrega', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md fechas',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
     }), required = True)
@@ -258,77 +258,77 @@ class ReporteAvancesForm(forms.ModelForm):
 
     # Fechas de entrega de las actividades del proyecto.
     fecha_entrega_act_1 = forms.CharField(label='Fecha de entrega de la Actividad 1', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md fechas',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_2 = forms.CharField(label='Fecha de entrega de la Actividad 2', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md fechas',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_3 = forms.CharField(label='Fecha de entrega de la Actividad 3', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md fechas',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_4 = forms.CharField(label='Fecha de entrega de la Actividad 4', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md fechas',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_5 = forms.CharField(label='Fecha de entrega de la Actividad 5', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md fechas',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_6 = forms.CharField(label='Fecha de entrega de la Actividad 6', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md fechas',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_7 = forms.CharField(label='Fecha de entrega de la Actividad 7', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md fechas',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_8 = forms.CharField(label='Fecha de entrega de la Actividad 8', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md fechas',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_9 = forms.CharField(label='Fecha de entrega de la Actividad 9', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md fechas',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_10 = forms.CharField(label='Fecha de entrega de la Actividad 10', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md fechas',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_11 = forms.CharField(label='Fecha de entrega de la Actividad 11', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md fechas',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_12 = forms.CharField(label='Fecha de entrega de la Actividad 12', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md fechas',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_13 = forms.CharField(label='Fecha de entrega de la Actividad 13', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md fechas',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_14 = forms.CharField(label='Fecha de entrega de la Actividad 14', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md fechas',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_15 = forms.CharField(label='Fecha de entrega de la Actividad 15', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md fechas',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
