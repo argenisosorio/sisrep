@@ -13,7 +13,7 @@ class ProyectoForm(forms.ModelForm):
     """
     Formulario con los campos de un Proyecto.
     """
-    nombre_proyecto = forms.CharField(label='Nombre del Proyecto', widget=TextInput(attrs={
+    nombre_proyecto = forms.CharField(label='Nombre del Producto', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
