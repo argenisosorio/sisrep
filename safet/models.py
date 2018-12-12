@@ -37,6 +37,7 @@ class ReporteAvances(models.Model):
     nombre_proyecto_poa = models.CharField(max_length=4000, blank=True,null=True)
     nombre_accion_especifica = models.CharField(max_length=4000, blank=True,null=True)
     nombre_producto = models.CharField(max_length=4000, blank=True,null=True)
+    tipo_producto = models.CharField(max_length=4000, blank=True,null=True)
     ano_ejecucion = models.CharField(max_length=4000, blank=True,null=True)
     fecha_entrega = models.CharField(max_length=4000, blank=True,null=True)
     nombre_caravisible = models.CharField(max_length=4000, blank=True,null=True)

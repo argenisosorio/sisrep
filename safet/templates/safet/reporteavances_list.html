@@ -5,27 +5,45 @@
 <h1>Lista de Reportes de Avances</h1>
 <br />
 
-{% if object_list %}
+<table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
+  <thead>
+    <tr>
+      <th>N</th>
+      <th>Nombre del Producto</th>
+      <th>Nombre del Cara Visible</th>
+      <th>Año de Ejecución</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>N</th>
+      <th>Nombre del Producto</th>
+      <th>Nombre del Cara Visible</th>
+      <th>Año de Ejecución</th>
+      <th>Acciones</th>
+    </tr>
+  </tfoot>
+  <tbody>
   {% for x in object_list %}
-  <div class="well well-white">
-    <b>Nombre del Producto:</b> {{ x.nombre_producto }}
-    <br />
-    <b>Porcentaje avance</b>: {{ x.sumatoria_por_avan }} %
-    <div class="progress">
-      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ x.sumatoria_por_avan }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ x.sumatoria_por_avan }}%;">
-      </div>
-    </div>
-    <hr />
-    <a href="{% url 'safet:editar_reporte_avances' x.id %}">
-      <button class="btn btn-info">Editar</button>
-    </a>
-    <a href="{% url 'safet:detallar_reporte_avances' x.id %}">
-      <button class="btn btn-primary">Detallar</button>
-    </a>
-  </div>
+  <tr>
+    <td></td>
+    <td>{{ x.nombre_producto }}</td>
+    <td>{{ x.nombre_caravisible }}</td>
+    <td>{{ x.ano_ejecucion }}</td>
+    {% if user.is_staff %}
+      <td>
+        <a href="{% url 'safet:editar_reporte_avances' x.id %}" title="Editar">
+          <i class="glyphicon glyphicon-pencil"></i>
+        </a>
+        &nbsp; | &nbsp;
+        <a href="{% url 'safet:detallar_reporte_avances' x.id %}" title="Detallar">
+          <i class="glyphicon glyphicon-eye-open"></i>
+        </a>
+      </td>
+    {% endif %}
+  </tr>
   {% endfor %}
-  {% else %}
-    <br />
-    <b>No hay Productos registrados aún</b>
-  {% endif %}
+  </tbody>
+</table>
 {% endblock %}

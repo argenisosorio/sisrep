@@ -98,6 +98,12 @@ class ReporteAvancesForm(forms.ModelForm):
         'required': 'True',
     }), required = True)
 
+    tipo_producto = forms.CharField(label='Tipo de Producto', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), required = True)
+
     integrantes_equipo = forms.CharField(label='Integrantes del equipo', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
