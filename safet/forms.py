@@ -86,6 +86,12 @@ class ReporteAvancesForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_carasvisibles)
 
+    autor = forms.CharField(label='Autor', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), required = True)
+
     ano_ejecucion = forms.ChoiceField(label='Año de Ejecución', widget=Select(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',

@@ -34,6 +34,7 @@ class ReporteAvances(models.Model):
     """
     Modelo que contiene los campos de un Reporte de Avances.
     """
+    autor = models.CharField(max_length=400, blank=True,null=True)
     nombre_proyecto_poa = models.CharField(max_length=4000, blank=True,null=True)
     nombre_accion_especifica = models.CharField(max_length=4000, blank=True,null=True)
     nombre_producto = models.CharField(max_length=4000, blank=True,null=True)
