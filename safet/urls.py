@@ -22,4 +22,8 @@ urlpatterns = patterns('',
     url(r'^registrar_reporte_avances$', login_required(views.Registrar_reporte_avances.as_view()), name='registrar_reporte_avances'),
     url(r'^editar_reporte_avances/(?P<pk>\d+)$', login_required(views.Editar_reporte_avances.as_view()), name='editar_reporte_avances'),
     url(r'^detallar_reporte_avances/(?P<pk>\d+)$', login_required(views.Detallar_reporte_avances.as_view()), name='detallar_reporte_avances'),
+    url(r'^registrar_reporte_avances_software$', login_required(views.Registrar_reporte_avances_software.as_view()), name='registrar_reporte_avances_software'),
+    url(r'^registrar_reporte_avances_cur_lin$', login_required(views.Registrar_reporte_avances_cur_lin.as_view()), name='registrar_reporte_avances_cur_lin'),
+    url(r'^registrar_reporte_avances_jornada$', login_required(views.Registrar_reporte_avances_jornada.as_view()), name='registrar_reporte_avances_jornada'),
+
 )

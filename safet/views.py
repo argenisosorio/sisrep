@@ -4,7 +4,7 @@ from django.views.generic import TemplateView, ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from safet.models import ProyectoPoa, AccionEspecifica, ReporteAvances
 from bitacora.models import Bitacora
-from forms import ProyectoPoaForm, AccionEspecificaForm, ReporteAvancesForm
+from forms import ProyectoPoaForm, AccionEspecificaForm, ReporteAvancesForm, ReporteAvancesSoftwareForm, ReporteAvancesCursoLineaForm, ReporteAvancesJornadaForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.views import generic
@@ -253,6 +253,39 @@ class Registrar_reporte_avances(CreateView):
     """
     model = ReporteAvances
     form_class = ReporteAvancesForm
+    success_url = reverse_lazy('safet:consultar_reporte_avances')
+
+
+class Registrar_reporte_avances_software(CreateView):
+    """
+    Clase que permite registrar un Reporte de Avances de un producto
+    del tipo Software.
+    """
+    model = ReporteAvances
+    form_class = ReporteAvancesSoftwareForm
+    template_name = "safet/reporteavances_software_form.html"
+    success_url = reverse_lazy('safet:consultar_reporte_avances')
+
+
+class Registrar_reporte_avances_cur_lin(CreateView):
+    """
+    Clase que permite registrar un Reporte de Avances de un producto
+    del tipo Curso en Línea.
+    """
+    model = ReporteAvances
+    form_class = ReporteAvancesCursoLineaForm
+    template_name = "safet/reporteavances_cur_lin_form.html"
+    success_url = reverse_lazy('safet:consultar_reporte_avances')
+
+
+class Registrar_reporte_avances_jornada(CreateView):
+    """
+    Clase que permite registrar un Reporte de Avances de un producto
+    del tipo Jornada.
+    """
+    model = ReporteAvances
+    form_class = ReporteAvancesJornadaForm
+    template_name = "safet/reporteavances_jornada_form.html"
     success_url = reverse_lazy('safet:consultar_reporte_avances')
 
 
