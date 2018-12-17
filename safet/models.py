@@ -130,7 +130,7 @@ class ReporteAvances(models.Model):
         return sumatoria_por_avan
 
     def __unicode__(self):
-        return self.nombre_producto
+        return self.autor
 
     def get_absolute_url(self):
         return reverse('safet:editar_reporte_avances', kwargs={'pk': self.pk})

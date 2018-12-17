@@ -4,7 +4,7 @@ from django.views.generic import TemplateView, ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from safet.models import ProyectoPoa, AccionEspecifica, ReporteAvances
 from bitacora.models import Bitacora
-from forms import ProyectoPoaForm, AccionEspecificaForm, ReporteAvancesForm, ReporteAvancesSoftwareForm, ReporteAvancesCursoLineaForm, ReporteAvancesJornadaForm
+from forms import ProyectoPoaForm, AccionEspecificaForm, ReporteAvancesForm, ReporteAvancesSoftwareForm, ReporteAvancesCursoLineaForm, ReporteAvancesJornadaForm, ReporteAvancesCVForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.views import generic
@@ -48,7 +48,7 @@ class Consultar_proyecto(ListView):
             return self.render_to_response(context)
         else:
             messages_alert = ['No tiene permisos para listar los Proyectos POA']
-            return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Registrar_proyecto(SuccessMessageMixin,CreateView):
@@ -70,7 +70,7 @@ class Registrar_proyecto(SuccessMessageMixin,CreateView):
             return super(Registrar_proyecto, self).get(request, *args, **kwargs)
         else:
             messages_alert = ['No tiene permisos para registrar un Proyecto POA']
-            return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Editar_proyecto(SuccessMessageMixin,UpdateView):
@@ -95,7 +95,7 @@ class Editar_proyecto(SuccessMessageMixin,UpdateView):
                 return super(Editar_proyecto, self).get(request, *args, **kwargs)
             else:
                 messages_alert = ['No tiene permisos para editar el Proyecto POA']
-                return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Borrar_proyecto(SuccessMessageMixin,DeleteView):
@@ -125,7 +125,7 @@ class Borrar_proyecto(SuccessMessageMixin,DeleteView):
                 return self.render_to_response(context)
             else:
                 messages_alert = ['No tiene permisos para borrar el Proyecto POA']
-                return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 ######################################################
 ##### Crud de las Acciones Específicas Proyectos #####
@@ -157,7 +157,7 @@ class Consultar_accion(ListView):
             return self.render_to_response(context)
         else:
             messages_alert = ['No tiene permisos para listar las Acciones Específicas']
-            return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Registrar_accion(SuccessMessageMixin,CreateView):
@@ -179,7 +179,7 @@ class Registrar_accion(SuccessMessageMixin,CreateView):
             return super(Registrar_accion, self).get(request, *args, **kwargs)
         else:
             messages_alert = ['No tiene permisos para registrar una Acción Específica']
-            return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Editar_accion(SuccessMessageMixin,UpdateView):
@@ -204,7 +204,7 @@ class Editar_accion(SuccessMessageMixin,UpdateView):
                 return super(Editar_accion, self).get(request, *args, **kwargs)
             else:
                 messages_alert = ['No tiene permisos para editar la Acción Específica']
-                return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Borrar_accion(SuccessMessageMixin,DeleteView):
@@ -234,11 +234,11 @@ class Borrar_accion(SuccessMessageMixin,DeleteView):
                 return self.render_to_response(context)
             else:
                 messages_alert = ['No tiene permisos para borrar la Acción Específica']
-                return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
-###########################################
-##### Crud de los Reportes de Avances #####
-###########################################
+##############################################################
+##### Crud de los Reportes de Avances para los Analistas #####
+##############################################################
 
 class Consultar_reporte_avances(ListView):
     """
@@ -247,13 +247,25 @@ class Consultar_reporte_avances(ListView):
     model = ReporteAvances
 
 
-class Registrar_reporte_avances(CreateView):
+class Registrar_reporte_avances(SuccessMessageMixin,CreateView):
     """
     Clase que permite registrar un Reporte de Avances.
     """
     model = ReporteAvances
     form_class = ReporteAvancesForm
     success_url = reverse_lazy('safet:consultar_reporte_avances')
+
+    def get(self, request, *args, **kwargs):
+        """
+        Método que valida si el usuario autenticado es admin
+        para poder registrar un Reporte de Avances.
+        """
+        self.object = None
+        if request.user.is_superuser:
+            return super(Registrar_reporte_avances, self).get(request, *args, **kwargs)
+        else:
+            messages_alert = ['No tiene permisos para registrar un Reporte de Avances']
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Registrar_reporte_avances_software(CreateView):
@@ -266,6 +278,18 @@ class Registrar_reporte_avances_software(CreateView):
     template_name = "safet/reporteavances_software_form.html"
     success_url = reverse_lazy('safet:consultar_reporte_avances')
 
+    def get(self, request, *args, **kwargs):
+        """
+        Método que valida si el usuario autenticado es admin
+        para poder registrar un Reporte de Avances.
+        """
+        self.object = None
+        if request.user.is_superuser:
+            return super(Registrar_reporte_avances_software, self).get(request, *args, **kwargs)
+        else:
+            messages_alert = ['No tiene permisos para registrar un Reporte de Avances']
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+
 
 class Registrar_reporte_avances_cur_lin(CreateView):
     """
@@ -276,6 +300,18 @@ class Registrar_reporte_avances_cur_lin(CreateView):
     form_class = ReporteAvancesCursoLineaForm
     template_name = "safet/reporteavances_cur_lin_form.html"
     success_url = reverse_lazy('safet:consultar_reporte_avances')
+
+    def get(self, request, *args, **kwargs):
+        """
+        Método que valida si el usuario autenticado es admin
+        para poder registrar un Reporte de Avances.
+        """
+        self.object = None
+        if request.user.is_superuser:
+            return super(Registrar_reporte_avances_cur_lin, self).get(request, *args, **kwargs)
+        else:
+            messages_alert = ['No tiene permisos para registrar un Reporte de Avances']
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Registrar_reporte_avances_jornada(CreateView):
@@ -288,14 +324,38 @@ class Registrar_reporte_avances_jornada(CreateView):
     template_name = "safet/reporteavances_jornada_form.html"
     success_url = reverse_lazy('safet:consultar_reporte_avances')
 
+    def get(self, request, *args, **kwargs):
+        """
+        Método que valida si el usuario autenticado es admin
+        para poder registrar un Reporte de Avances.
+        """
+        self.object = None
+        if request.user.is_superuser:
+            return super(Registrar_reporte_avances_jornada, self).get(request, *args, **kwargs)
+        else:
+            messages_alert = ['No tiene permisos para registrar un Reporte de Avances']
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
-class Editar_reporte_avances(UpdateView):
+
+class Editar_reporte_avances(SuccessMessageMixin,UpdateView):
     """
     Clase que permite editar los datos de un Reporte de Avances.
     """
     model = ReporteAvances
     form_class = ReporteAvancesForm
     success_url = reverse_lazy('safet:consultar_reporte_avances')
+
+    def get(self, request, *args, **kwargs):
+        """
+        Método que redirecciona a index si el usuario
+        que intenta editar el proyecto no es admin.
+        """
+        self.object = self.get_object()
+        if request.user.is_superuser:
+            return super(Editar_reporte_avances, self).get(request, *args, **kwargs)
+        else:
+            messages_alert = ['No tiene permisos para editar el Reporte de Avances']
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Detallar_reporte_avances(DetailView):
@@ -304,3 +364,54 @@ class Detallar_reporte_avances(DetailView):
     """
     model = ReporteAvances
     template_name = "safet/reporteavances_detail.html"
+
+def get(self, request, *args, **kwargs):
+        """
+        Método que redirecciona a index si el usuario
+        que intenta ver el reporte no es admin.
+        """
+        self.object = self.get_object()
+        context = self.get_context_data(object=self.object)
+        if request.user.is_staff:
+            return self.render_to_response(context)
+        else:
+            messages_alert = ['No tiene permisos para ver el reporte de Avances Porcentuales']
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+
+
+#######################################################
+##### Crud de los Reportes de Avances para los CV #####
+#######################################################
+
+class Consultar_reporte_avances_cv(ListView):
+    """
+    Clase que permite listar los Reportes de Avances.
+    """
+    model = ReporteAvances
+    template_name = "safet/reporteavances_list_cv.html"
+
+
+class Editar_reporte_avances_cv(SuccessMessageMixin,UpdateView):
+    """
+    Clase que permite editar los datos de un Reporte de Avances.
+    """
+    model = ReporteAvances
+    form_class = ReporteAvancesCVForm
+    success_url = reverse_lazy('safet:consultar_reporte_avances_cv')
+    template_name = "safet/reporteavances_form_cv.html"
+
+
+    def get(self, request, *args, **kwargs):
+        """
+        Método que redirecciona a index si el usuario
+        que intenta editar el reporte no es el autor/creador.
+        """
+        self.object = self.get_object()
+        if request.user.is_superuser:
+            return super(Editar_reporte_avances_cv, self).get(request, *args, **kwargs)
+        else:
+            if str(self.object) == str(self.request.user):
+                return super(Editar_reporte_avances_cv, self).get(request, *args, **kwargs)
+            else:
+                messages_alert = ['No tiene permisos para editar el reporte']
+                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
