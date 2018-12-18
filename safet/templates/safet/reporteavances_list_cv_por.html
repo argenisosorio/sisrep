@@ -1,0 +1,23 @@
+{% extends "base/base.html" %}
+{% block titulo %}Lista de Productos con sus avances porcentuales{% endblock %}
+{% block cuerpo %}
+<br />
+<h1>Lista de Productos con sus avances porcentuales</h1>
+<br />
+{% if object_list %}
+  {% for x in object_list %}
+    <div class="well">
+      <b>{{ x.nombre_producto }}</b>
+      <br />
+      <b>Porcentaje avance</b>: {{ x.sumatoria_por_avan }} %
+      <div class="progress">
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ x.sumatoria_por_avan }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ x.sumatoria_por_avan }}%;">
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% else %}
+  <br />
+  <b>No hay proyectos registrados aún</b>
+{% endif %}
+{% endblock %}

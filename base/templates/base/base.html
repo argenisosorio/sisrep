@@ -195,6 +195,12 @@
                         &nbsp;Listar Reportes
                       </a>
                     </li>
+                    <li>
+                      <a href="{% url 'safet:consultar_reporte_avances_cv_por' %}">
+                        <i class="glyphicon glyphicon-list"></i>
+                        &nbsp;Reporte gráfico
+                      </a>
+                    </li>
                     {% else %}
                       {% if user.is_staff and user.is_active %}
                       <li>

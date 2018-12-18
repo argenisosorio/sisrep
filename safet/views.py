@@ -416,3 +416,14 @@ class Editar_reporte_avances_cv(SuccessMessageMixin,UpdateView):
             else:
                 messages_alert = ['No tiene permisos para editar el reporte']
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+
+#################################
+##### Reportes porcentuales #####
+#################################
+
+class Consultar_reporte_avances_cv_por(ListView):
+    """
+    Clase que permite listar los Reportes de Avances con sus porcentajes.
+    """
+    model = ReporteAvances
+    template_name = "safet/reporteavances_list_cv_por.html"

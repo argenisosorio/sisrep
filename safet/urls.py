@@ -28,4 +28,6 @@ urlpatterns = patterns('',
     ##### Crud de los Reportes de Avances para los CV ######
     url(r'^consultar_reporte_avances_cv$', login_required(views.Consultar_reporte_avances_cv.as_view()), name='consultar_reporte_avances_cv'),
     url(r'^editar_reporte_avances_cv/(?P<pk>\d+)$', login_required(views.Editar_reporte_avances_cv.as_view()), name='editar_reporte_avances_cv'),
+    ##### Reportes porcentuales #####
+    url(r'^consultar_reporte_avances_cv_por$', login_required(views.Consultar_reporte_avances_cv_por.as_view()), name='consultar_reporte_avances_cv_por'),
 )
