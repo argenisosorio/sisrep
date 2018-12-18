@@ -6,15 +6,18 @@
 <br />
 {% if object_list %}
   {% for x in object_list %}
-    <div class="well">
-      <b>{{ x.nombre_producto }}</b>
+  <div class="row">
+    <div class="col-sm-6">
+      <b>{{ x.nombre_producto }} - {{ x.sumatoria_por_avan }} %</b>
       <br />
-      <b>Porcentaje avance</b>: {{ x.sumatoria_por_avan }} %
       <div class="progress">
         <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ x.sumatoria_por_avan }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ x.sumatoria_por_avan }}%;">
         </div>
       </div>
     </div>
+    <div class="col-sm-6">
+    </div>
+  </div>
   {% endfor %}
 {% else %}
   <br />
