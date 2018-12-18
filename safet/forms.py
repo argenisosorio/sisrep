@@ -2054,91 +2054,91 @@ class ReporteAvancesCVForm(forms.ModelForm):
     nombre_act_1 = forms.CharField(label='Nombre de la Actividad 1', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'disabled': 'disabled',
+        #'disabled': 'disabled',
     }), required = False)
 
     nombre_act_2 = forms.CharField(label='Nombre de la Actividad 2', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'disabled': 'disabled',
+        #'disabled': 'disabled',
     }), required = False)
 
     nombre_act_3 = forms.CharField(label='Nombre de la Actividad 3', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'disabled': 'disabled',
+        #'disabled': 'disabled',
     }), required = False)
 
     nombre_act_4 = forms.CharField(label='Nombre de la Actividad 4', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'disabled': 'disabled',
+        #'disabled': 'disabled',
     }), required = False)
 
     nombre_act_5 = forms.CharField(label='Nombre de la Actividad 5', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'disabled': 'disabled',
+        #'disabled': 'disabled',
     }), required = False)
 
     nombre_act_6 = forms.CharField(label='Nombre de la Actividad 6', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'disabled': 'disabled',
+        #'disabled': 'disabled',
     }), required = False)
 
     nombre_act_7 = forms.CharField(label='Nombre de la Actividad 7', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'disabled': 'disabled',
+        #'disabled': 'disabled',
     }), required = False)
 
     nombre_act_8 = forms.CharField(label='Nombre de la Actividad 8', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'disabled': 'disabled',
+        #'disabled': 'disabled',
     }), required = False)
 
     nombre_act_9 = forms.CharField(label='Nombre de la Actividad 9', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'disabled': 'disabled',
+        #'disabled': 'disabled',
     }), required = False)
 
     nombre_act_10 = forms.CharField(label='Nombre de la Actividad 10', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'disabled': 'disabled',
+        #'disabled': 'disabled',
     }), required = False)
 
     nombre_act_11 = forms.CharField(label='Nombre de la Actividad 11', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'disabled': 'disabled',
+        #'disabled': 'disabled',
     }), required = False)
 
     nombre_act_12 = forms.CharField(label='Nombre de la Actividad 12', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'disabled': 'disabled',
+        #'disabled': 'disabled',
     }), required = False)
 
     nombre_act_13 = forms.CharField(label='Nombre de la Actividad 13', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'disabled': 'disabled',
+        #'disabled': 'disabled',
     }), required = False)
 
     nombre_act_14 = forms.CharField(label='Nombre de la Actividad 14', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'disabled': 'disabled',
+        #'disabled': 'disabled',
     }), required = False)
 
     nombre_act_15 = forms.CharField(label='Nombre de la Actividad 15', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'disabled': 'disabled',
+        #'disabled': 'disabled',
     }), required = False)
 
     # Nombres de las actividades del proyecto.

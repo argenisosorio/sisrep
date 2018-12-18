@@ -399,6 +399,7 @@ class Editar_reporte_avances_cv(SuccessMessageMixin,UpdateView):
     form_class = ReporteAvancesCVForm
     success_url = reverse_lazy('safet:consultar_reporte_avances_cv')
     template_name = "safet/reporteavances_form_cv.html"
+    success_message = "Se actualizó el reporte con éxito"
 
 
     def get(self, request, *args, **kwargs):
