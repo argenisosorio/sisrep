@@ -117,3 +117,13 @@ $("document").ready(function () {
     });
   });
 });
+
+/*
+|-------------------------------------------------
+| Función que permite desabilitar el cursor cuando
+| se posa este sobre el campo.
+|-------------------------------------------------
+*/
+$("document").ready(function () {
+  $(".disabled-input").css("pointer-events", "none");
+});

@@ -300,3 +300,7 @@ table.table_change_password td {
   margin-right: auto;
   margin-left: auto;
 }
+
+.disabled-input {
+  background: lightgray;
+}
