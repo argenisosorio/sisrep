@@ -84,7 +84,7 @@ class ReporteAvancesForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_carasvisibles)
 
-    autor = forms.CharField(label='Autor', widget=TextInput(attrs={
+    autor = forms.CharField(label='Nombre de usuario', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
@@ -343,77 +343,77 @@ class ReporteAvancesForm(forms.ModelForm):
     }), required = False)
 
     # Porcentaje de las actividades del proyecto.
-    porc_act_1 = forms.CharField(label='Porcentaje de la Actividad 1', widget=TextInput(attrs={
+    porc_act_1 = forms.CharField(label='Porcentaje asignado 1', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_2 = forms.CharField(label='Porcentaje de la Actividad 2', widget=TextInput(attrs={
+    porc_act_2 = forms.CharField(label='Porcentaje asignado 2', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_3 = forms.CharField(label='Porcentaje de la Actividad 3', widget=TextInput(attrs={
+    porc_act_3 = forms.CharField(label='Porcentaje asignado 3', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_4 = forms.CharField(label='Porcentaje de la Actividad 4', widget=TextInput(attrs={
+    porc_act_4 = forms.CharField(label='Porcentaje asignado 4', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_5 = forms.CharField(label='Porcentaje de la Actividad 5', widget=TextInput(attrs={
+    porc_act_5 = forms.CharField(label='Porcentaje asignado 5', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_6 = forms.CharField(label='Porcentaje de la Actividad 6', widget=TextInput(attrs={
+    porc_act_6 = forms.CharField(label='Porcentaje asignado 6', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_7 = forms.CharField(label='Porcentaje de la Actividad 7', widget=TextInput(attrs={
+    porc_act_7 = forms.CharField(label='Porcentaje asignado 7', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_8 = forms.CharField(label='Porcentaje de la Actividad 8', widget=TextInput(attrs={
+    porc_act_8 = forms.CharField(label='Porcentaje asignado 8', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_9 = forms.CharField(label='Porcentaje de la Actividad 9', widget=TextInput(attrs={
+    porc_act_9 = forms.CharField(label='Porcentaje asignado 9', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_10 = forms.CharField(label='Porcentaje de la Actividad 10', widget=TextInput(attrs={
+    porc_act_10 = forms.CharField(label='Porcentaje asignado 10', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_11 = forms.CharField(label='Porcentaje de la Actividad 11', widget=TextInput(attrs={
+    porc_act_11 = forms.CharField(label='Porcentaje asignado 11', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_12 = forms.CharField(label='Porcentaje de la Actividad 12', widget=TextInput(attrs={
+    porc_act_12 = forms.CharField(label='Porcentaje asignado 12', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_13 = forms.CharField(label='Porcentaje de la Actividad 13', widget=TextInput(attrs={
+    porc_act_13 = forms.CharField(label='Porcentaje asignado 13', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_14 = forms.CharField(label='Porcentaje de la Actividad 14', widget=TextInput(attrs={
+    porc_act_14 = forms.CharField(label='Porcentaje asignado 14', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_15 = forms.CharField(label='Porcentaje de la Actividad 15', widget=TextInput(attrs={
+    porc_act_15 = forms.CharField(label='Porcentaje asignado 15', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
@@ -558,7 +558,7 @@ class ReporteAvancesSoftwareForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_carasvisibles)
 
-    autor = forms.CharField(label='Autor', widget=TextInput(attrs={
+    autor = forms.CharField(label='Nombre de usuario', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
@@ -831,77 +831,77 @@ class ReporteAvancesSoftwareForm(forms.ModelForm):
     }), required = False)
 
     # Porcentaje de las actividades del proyecto.
-    porc_act_1 = forms.CharField(label='Porcentaje de la Actividad 1', widget=TextInput(attrs={
+    porc_act_1 = forms.CharField(label='Porcentaje asignado 1', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_2 = forms.CharField(label='Porcentaje de la Actividad 2', widget=TextInput(attrs={
+    porc_act_2 = forms.CharField(label='Porcentaje asignado 2', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_3 = forms.CharField(label='Porcentaje de la Actividad 3', widget=TextInput(attrs={
+    porc_act_3 = forms.CharField(label='Porcentaje asignado 3', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_4 = forms.CharField(label='Porcentaje de la Actividad 4', widget=TextInput(attrs={
+    porc_act_4 = forms.CharField(label='Porcentaje asignado 4', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_5 = forms.CharField(label='Porcentaje de la Actividad 5', widget=TextInput(attrs={
+    porc_act_5 = forms.CharField(label='Porcentaje asignado 5', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_6 = forms.CharField(label='Porcentaje de la Actividad 6', widget=TextInput(attrs={
+    porc_act_6 = forms.CharField(label='Porcentaje asignado 6', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_7 = forms.CharField(label='Porcentaje de la Actividad 7', widget=TextInput(attrs={
+    porc_act_7 = forms.CharField(label='Porcentaje asignado 7', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_8 = forms.CharField(label='Porcentaje de la Actividad 8', widget=TextInput(attrs={
+    porc_act_8 = forms.CharField(label='Porcentaje asignado 8', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_9 = forms.CharField(label='Porcentaje de la Actividad 9', widget=TextInput(attrs={
+    porc_act_9 = forms.CharField(label='Porcentaje asignado 9', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_10 = forms.CharField(label='Porcentaje de la Actividad 10', widget=TextInput(attrs={
+    porc_act_10 = forms.CharField(label='Porcentaje asignado 10', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_11 = forms.CharField(label='Porcentaje de la Actividad 11', widget=TextInput(attrs={
+    porc_act_11 = forms.CharField(label='Porcentaje asignado 11', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_12 = forms.CharField(label='Porcentaje de la Actividad 12', widget=TextInput(attrs={
+    porc_act_12 = forms.CharField(label='Porcentaje asignado 12', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_13 = forms.CharField(label='Porcentaje de la Actividad 13', widget=TextInput(attrs={
+    porc_act_13 = forms.CharField(label='Porcentaje asignado 13', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_14 = forms.CharField(label='Porcentaje de la Actividad 14', widget=TextInput(attrs={
+    porc_act_14 = forms.CharField(label='Porcentaje asignado 14', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_15 = forms.CharField(label='Porcentaje de la Actividad 15', widget=TextInput(attrs={
+    porc_act_15 = forms.CharField(label='Porcentaje asignado 15', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
@@ -1046,7 +1046,7 @@ class ReporteAvancesCursoLineaForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_carasvisibles)
 
-    autor = forms.CharField(label='Autor', widget=TextInput(attrs={
+    autor = forms.CharField(label='Nombre de usuario', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
@@ -1316,77 +1316,77 @@ class ReporteAvancesCursoLineaForm(forms.ModelForm):
     }), required = False)
 
     # Porcentaje de las actividades del proyecto.
-    porc_act_1 = forms.CharField(label='Porcentaje de la Actividad 1', widget=TextInput(attrs={
+    porc_act_1 = forms.CharField(label='Porcentaje asignado 1', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_2 = forms.CharField(label='Porcentaje de la Actividad 2', widget=TextInput(attrs={
+    porc_act_2 = forms.CharField(label='Porcentaje asignado 2', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_3 = forms.CharField(label='Porcentaje de la Actividad 3', widget=TextInput(attrs={
+    porc_act_3 = forms.CharField(label='Porcentaje asignado 3', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_4 = forms.CharField(label='Porcentaje de la Actividad 4', widget=TextInput(attrs={
+    porc_act_4 = forms.CharField(label='Porcentaje asignado 4', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_5 = forms.CharField(label='Porcentaje de la Actividad 5', widget=TextInput(attrs={
+    porc_act_5 = forms.CharField(label='Porcentaje asignado 5', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_6 = forms.CharField(label='Porcentaje de la Actividad 6', widget=TextInput(attrs={
+    porc_act_6 = forms.CharField(label='Porcentaje asignado 6', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_7 = forms.CharField(label='Porcentaje de la Actividad 7', widget=TextInput(attrs={
+    porc_act_7 = forms.CharField(label='Porcentaje asignado 7', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_8 = forms.CharField(label='Porcentaje de la Actividad 8', widget=TextInput(attrs={
+    porc_act_8 = forms.CharField(label='Porcentaje asignado 8', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_9 = forms.CharField(label='Porcentaje de la Actividad 9', widget=TextInput(attrs={
+    porc_act_9 = forms.CharField(label='Porcentaje asignado 9', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_10 = forms.CharField(label='Porcentaje de la Actividad 10', widget=TextInput(attrs={
+    porc_act_10 = forms.CharField(label='Porcentaje asignado 10', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_11 = forms.CharField(label='Porcentaje de la Actividad 11', widget=TextInput(attrs={
+    porc_act_11 = forms.CharField(label='Porcentaje asignado 11', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_12 = forms.CharField(label='Porcentaje de la Actividad 12', widget=TextInput(attrs={
+    porc_act_12 = forms.CharField(label='Porcentaje asignado 12', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_13 = forms.CharField(label='Porcentaje de la Actividad 13', widget=TextInput(attrs={
+    porc_act_13 = forms.CharField(label='Porcentaje asignado 13', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_14 = forms.CharField(label='Porcentaje de la Actividad 14', widget=TextInput(attrs={
+    porc_act_14 = forms.CharField(label='Porcentaje asignado 14', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_15 = forms.CharField(label='Porcentaje de la Actividad 15', widget=TextInput(attrs={
+    porc_act_15 = forms.CharField(label='Porcentaje asignado 15', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
@@ -1531,7 +1531,7 @@ class ReporteAvancesJornadaForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_carasvisibles)
 
-    autor = forms.CharField(label='Autor', widget=TextInput(attrs={
+    autor = forms.CharField(label='Nombre de usuario', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
@@ -1797,77 +1797,77 @@ class ReporteAvancesJornadaForm(forms.ModelForm):
     }), required = False)
 
     # Porcentaje de las actividades del proyecto.
-    porc_act_1 = forms.CharField(label='Porcentaje de la Actividad 1', widget=TextInput(attrs={
+    porc_act_1 = forms.CharField(label='Porcentaje asignado 1', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_2 = forms.CharField(label='Porcentaje de la Actividad 2', widget=TextInput(attrs={
+    porc_act_2 = forms.CharField(label='Porcentaje asignado 2', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_3 = forms.CharField(label='Porcentaje de la Actividad 3', widget=TextInput(attrs={
+    porc_act_3 = forms.CharField(label='Porcentaje asignado 3', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_4 = forms.CharField(label='Porcentaje de la Actividad 4', widget=TextInput(attrs={
+    porc_act_4 = forms.CharField(label='Porcentaje asignado 4', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_5 = forms.CharField(label='Porcentaje de la Actividad 5', widget=TextInput(attrs={
+    porc_act_5 = forms.CharField(label='Porcentaje asignado 5', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_6 = forms.CharField(label='Porcentaje de la Actividad 6', widget=TextInput(attrs={
+    porc_act_6 = forms.CharField(label='Porcentaje asignado 6', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_7 = forms.CharField(label='Porcentaje de la Actividad 7', widget=TextInput(attrs={
+    porc_act_7 = forms.CharField(label='Porcentaje asignado 7', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_8 = forms.CharField(label='Porcentaje de la Actividad 8', widget=TextInput(attrs={
+    porc_act_8 = forms.CharField(label='Porcentaje asignado 8', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_9 = forms.CharField(label='Porcentaje de la Actividad 9', widget=TextInput(attrs={
+    porc_act_9 = forms.CharField(label='Porcentaje asignado 9', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_10 = forms.CharField(label='Porcentaje de la Actividad 10', widget=TextInput(attrs={
+    porc_act_10 = forms.CharField(label='Porcentaje asignado 10', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_11 = forms.CharField(label='Porcentaje de la Actividad 11', widget=TextInput(attrs={
+    porc_act_11 = forms.CharField(label='Porcentaje asignado 11', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_12 = forms.CharField(label='Porcentaje de la Actividad 12', widget=TextInput(attrs={
+    porc_act_12 = forms.CharField(label='Porcentaje asignado 12', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_13 = forms.CharField(label='Porcentaje de la Actividad 13', widget=TextInput(attrs={
+    porc_act_13 = forms.CharField(label='Porcentaje asignado 13', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_14 = forms.CharField(label='Porcentaje de la Actividad 14', widget=TextInput(attrs={
+    porc_act_14 = forms.CharField(label='Porcentaje asignado 14', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_15 = forms.CharField(label='Porcentaje de la Actividad 15', widget=TextInput(attrs={
+    porc_act_15 = forms.CharField(label='Porcentaje asignado 15', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
@@ -2015,7 +2015,7 @@ class ReporteAvancesCVForm(forms.ModelForm):
             #'disabled': 'disabled',
         }), choices=lista_carasvisibles)
 
-    autor = forms.CharField(label='Autor', widget=TextInput(attrs={
+    autor = forms.CharField(label='Nombre de usuario', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: none;',
         'required': 'True',
@@ -2294,77 +2294,77 @@ class ReporteAvancesCVForm(forms.ModelForm):
     }), required = False)
 
     # Porcentaje de las actividades del proyecto.
-    porc_act_1 = forms.CharField(label='Porcentaje de la Actividad 1', widget=TextInput(attrs={
+    porc_act_1 = forms.CharField(label='Porcentaje asignado 1', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_2 = forms.CharField(label='Porcentaje de la Actividad 2', widget=TextInput(attrs={
+    porc_act_2 = forms.CharField(label='Porcentaje asignado 2', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_3 = forms.CharField(label='Porcentaje de la Actividad 3', widget=TextInput(attrs={
+    porc_act_3 = forms.CharField(label='Porcentaje asignado 3', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_4 = forms.CharField(label='Porcentaje de la Actividad 4', widget=TextInput(attrs={
+    porc_act_4 = forms.CharField(label='Porcentaje asignado 4', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_5 = forms.CharField(label='Porcentaje de la Actividad 5', widget=TextInput(attrs={
+    porc_act_5 = forms.CharField(label='Porcentaje asignado 5', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_6 = forms.CharField(label='Porcentaje de la Actividad 6', widget=TextInput(attrs={
+    porc_act_6 = forms.CharField(label='Porcentaje asignado 6', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_7 = forms.CharField(label='Porcentaje de la Actividad 7', widget=TextInput(attrs={
+    porc_act_7 = forms.CharField(label='Porcentaje asignado 7', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_8 = forms.CharField(label='Porcentaje de la Actividad 8', widget=TextInput(attrs={
+    porc_act_8 = forms.CharField(label='Porcentaje asignado 8', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_9 = forms.CharField(label='Porcentaje de la Actividad 9', widget=TextInput(attrs={
+    porc_act_9 = forms.CharField(label='Porcentaje asignado 9', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_10 = forms.CharField(label='Porcentaje de la Actividad 10', widget=TextInput(attrs={
+    porc_act_10 = forms.CharField(label='Porcentaje asignado 10', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_11 = forms.CharField(label='Porcentaje de la Actividad 11', widget=TextInput(attrs={
+    porc_act_11 = forms.CharField(label='Porcentaje asignado 11', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_12 = forms.CharField(label='Porcentaje de la Actividad 12', widget=TextInput(attrs={
+    porc_act_12 = forms.CharField(label='Porcentaje asignado 12', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_13 = forms.CharField(label='Porcentaje de la Actividad 13', widget=TextInput(attrs={
+    porc_act_13 = forms.CharField(label='Porcentaje asignado 13', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_14 = forms.CharField(label='Porcentaje de la Actividad 14', widget=TextInput(attrs={
+    porc_act_14 = forms.CharField(label='Porcentaje asignado 14', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    porc_act_15 = forms.CharField(label='Porcentaje de la Actividad 15', widget=TextInput(attrs={
+    porc_act_15 = forms.CharField(label='Porcentaje asignado 15', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)

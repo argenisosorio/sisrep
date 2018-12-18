@@ -2,12 +2,12 @@
 {% block titulo %}Lista de Productos con sus avances porcentuales{% endblock %}
 {% block cuerpo %}
 <br />
-<h1>Lista de Productos con sus avances porcentuales</h1>
+<h1>Porcentaje de avance de los productos</h1>
 <br />
 {% if object_list %}
   {% for x in object_list %}
-  <div class="row">
-    <div class="col-sm-6">
+  <div class="rows">
+    <div class="col-sm-6ss">
       <b>{{ x.nombre_producto }} - {{ x.sumatoria_por_avan }} %</b>
       <br />
       <div class="progress">
@@ -15,7 +15,7 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-6sss">
     </div>
   </div>
   {% endfor %}

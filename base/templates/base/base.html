@@ -184,10 +184,9 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     <i class="glyphicon glyphicon-file"></i>
-                    &nbsp;Avances porcentuales <span class="caret"></span>
+                    &nbsp;Reporte de Avances <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-header">Reportes de avances</li>
                     {% if user.is_superuser and user.is_staff and user.is_active %}
                     <li>
                       <a href="{% url 'safet:consultar_reporte_avances' %}">
@@ -230,7 +229,7 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     <i class="glyphicon glyphicon-file"></i>
-                    &nbsp;Avances de Actividades <span class="caret"></span>
+                    &nbsp;Reporte de Actividades <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
                     <li class="dropdown-header">Reportes detallados</li>
