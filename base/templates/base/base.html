@@ -120,13 +120,13 @@
                     <li>
                       <a href="{% url 'safet:consultar_proyecto' %}">
                         <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Proyectos POA
+                        &nbsp;Proyectos poa
                       </a>
                     </li>
                     <li>
                       <a href="{% url 'safet:consultar_accion' %}">
                         <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Acciones Específicas
+                        &nbsp;Acciones específicas
                       </a>
                     </li>
                     <li>
@@ -138,7 +138,7 @@
                     <li>
                       <a href="{% url 'registro:consultar_cara_visible' %}">
                         <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Caras Visibles
+                        &nbsp;Caras visibles
                       </a>
                     </li>
                     <li>
@@ -147,7 +147,7 @@
                         &nbsp;Directores
                       </a>
                     </li>
-                    <li class="dropdown-header">Productos</li>
+                    <li class="dropdown-header">Registrar reporte de avances</li>
                     <li>
                       <a href="{% url 'safet:registrar_reporte_avances' %}">
                         <i class="glyphicon glyphicon-pencil"></i>
@@ -184,20 +184,20 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     <i class="glyphicon glyphicon-file"></i>
-                    &nbsp;Reporte de Avances <span class="caret"></span>
+                    &nbsp;Reporte de avances <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
                     {% if user.is_superuser and user.is_staff and user.is_active %}
                     <li>
                       <a href="{% url 'safet:consultar_reporte_avances' %}">
                         <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Listar Reportes
+                        &nbsp;Listar reportes
                       </a>
                     </li>
                     <li>
                       <a href="{% url 'safet:consultar_reporte_avances_cv_por' %}">
-                        <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Reporte gráfico
+                        <i class="glyphicon glyphicon-equalizer"></i>
+                        &nbsp;Reporte gráfico de %
                       </a>
                     </li>
                     {% else %}
@@ -205,7 +205,7 @@
                       <li>
                         <a href="{% url 'safet:consultar_reporte_avances_cv' %}">
                           <i class="glyphicon glyphicon-list"></i>
-                          &nbsp;Listar Reportes
+                          &nbsp;Listar reportes
                         </a>
                       </li>
                       {% else %}
@@ -213,7 +213,7 @@
                         <li>
                           <a href="{% url 'safet:consultar_reporte_avances_cv' %}">
                             <i class="glyphicon glyphicon-list"></i>
-                            &nbsp;Listar Reportes
+                            &nbsp;Listar reportes
                           </a>
                         </li>
                         {% else %}
@@ -229,15 +229,14 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     <i class="glyphicon glyphicon-file"></i>
-                    &nbsp;Reporte de Actividades <span class="caret"></span>
+                    &nbsp;Reporte de actividades <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-header">Reportes detallados</li>
                     {% if user.is_superuser and user.is_staff and user.is_active %}
                       <li>
                         <a href="{% url 'registro:registrar_reporte' %}">
                           <i class="glyphicon glyphicon-pencil"></i>
-                            &nbsp;Registrar Reporte
+                            &nbsp;Registrar reporte
                         </a>
                       </li>
                     {% else %}
@@ -247,7 +246,7 @@
                           <li>
                             <a href="{% url 'registro:registrar_reporte' %}">
                               <i class="glyphicon glyphicon-pencil"></i>
-                                &nbsp;Registrar Reporte
+                                &nbsp;Registrar reporte
                             </a>
                           </li>
                         {% else %}
@@ -257,13 +256,13 @@
                     <li>
                       <a href="{% url 'registro:consultar_reporte' %}">
                         <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Listar Reportes
+                        &nbsp;Listar reportes
                       </a>
                     </li>
                     <li>
                       <a href="{% url 'registro:buscar' %}">
                         <i class="glyphicon glyphicon-search"></i>
-                        &nbsp;Buscar Reportes
+                        &nbsp;Buscar reportes
                       </a>
                     </li>
                   </ul>

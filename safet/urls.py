@@ -7,12 +7,12 @@ from django.contrib.auth.decorators import login_required
 
 
 urlpatterns = patterns('',
-    ##### Crud de los Proyectos POA ######
+    ##### Crud de los proyectos poa ######
     url(r'^consultar_proyecto$', login_required(views.Consultar_proyecto.as_view()), name='consultar_proyecto'),
     url(r'^registrar_proyecto$', login_required(views.Registrar_proyecto.as_view()), name='registrar_proyecto'),
     url(r'^editar_proyecto/(?P<pk>\d+)$', login_required(views.Editar_proyecto.as_view()), name='editar_proyecto'),
     url(r'^borrar_proyecto/(?P<pk>\d+)$', login_required(views.Borrar_proyecto.as_view()), name='borrar_proyecto'),
-    ##### Crud de las Acciones Específicas ######
+    ##### Crud de las acciones específicas ######
     url(r'^consultar_accion$', login_required(views.Consultar_accion.as_view()), name='consultar_accion'),
     url(r'^registrar_accion$', login_required(views.Registrar_accion.as_view()), name='registrar_accion'),
     url(r'^editar_accion/(?P<pk>\d+)$', login_required(views.Editar_accion.as_view()), name='editar_accion'),
@@ -29,5 +29,6 @@ urlpatterns = patterns('',
     url(r'^consultar_reporte_avances_cv$', login_required(views.Consultar_reporte_avances_cv.as_view()), name='consultar_reporte_avances_cv'),
     url(r'^editar_reporte_avances_cv/(?P<pk>\d+)$', login_required(views.Editar_reporte_avances_cv.as_view()), name='editar_reporte_avances_cv'),
     ##### Reportes porcentuales #####
-    url(r'^consultar_reporte_avances_cv_por$', login_required(views.Consultar_reporte_avances_cv_por.as_view()), name='consultar_reporte_avances_cv_por'),
+    url(r'^buscar/$', login_required(views.Buscar.as_view()), name='consultar_reporte_avances_cv_por'),
+    url(r'^busqueda/$', login_required(views.busqueda), name='busqueda'),
 )

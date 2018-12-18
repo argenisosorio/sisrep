@@ -1,9 +1,9 @@
 {% extends "base/base.html" %}
-{% block titulo %}Borrar Acción Específica{% endblock %}
+{% block titulo %}Borrar acción específica{% endblock %}
 {% block cuerpo %}
 <br />
 <form method="post">{% csrf_token %}
-  ¿Estás seguro que quieres eliminar la Acción Específica: <b>{{ object.nombre_accion }}</b>?
+  ¿Estás seguro que quieres eliminar la acción específica: <b>{{ object.nombre_accion }}</b>?
   <br />
   <br />
   <a href="{% url 'safet:consultar_accion' %}"><button type="button" class="btn btn-primary">Volver</button></a>

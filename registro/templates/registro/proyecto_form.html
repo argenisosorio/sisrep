@@ -1,8 +1,8 @@
 {% extends "base/base.html" %}
-{% block titulo %}Registrar Proyecto{% endblock %}
+{% block titulo %}Registrar producto{% endblock %}
 {% block cuerpo %}
 <br />
-<h1>Registrar Producto</h1>
+<h1>Registrar producto</h1>
 <br />
 
 <form method="post">{% csrf_token %}
@@ -18,7 +18,7 @@
 
   <br />
 
-  <a href="{% url 'inicio:index' %}"><button type="button" class="btn btn-primary">Volver</button></a>
+  <a href="{% url 'registro:consultar_proyecto' %}"><button type="button" class="btn btn-primary">Volver</button></a>
   <button class="btn btn-info" type="reset">Limpiar</button>
   <button class="btn btn-success" type="submit">Registrar</button>
 </form>

@@ -19,12 +19,12 @@ from django.shortcuts import redirect
 from datetime import datetime
 
 #####################################
-##### Crud de los Proyectos POA #####
+##### Crud de los proyectos poa #####
 #####################################
 
 class Consultar_proyecto(ListView):
     """
-    Clase que permite consultar la lista de Proyectos.
+    Clase que permite consultar la lista de proyectos poa.
     """
     model = ProyectoPoa
 
@@ -47,18 +47,18 @@ class Consultar_proyecto(ListView):
         if request.user.is_superuser:
             return self.render_to_response(context)
         else:
-            messages_alert = ['No tiene permisos para listar los Proyectos POA']
+            messages_alert = ['No tiene permisos para listar los proyectos poa']
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Registrar_proyecto(SuccessMessageMixin,CreateView):
     """
-    Clase que permite registrar un Proyecto en el sistema.
+    Clase que permite registrar un proyecto poa.
     """
     model = ProyectoPoa
     form_class = ProyectoPoaForm
     success_url = reverse_lazy('safet:consultar_proyecto')
-    success_message = "Se registro el Proyecto POA con éxito"
+    success_message = "Se registro el proyecto poa con éxito"
 
     def get(self, request, *args, **kwargs):
         """
@@ -69,18 +69,18 @@ class Registrar_proyecto(SuccessMessageMixin,CreateView):
         if request.user.is_superuser:
             return super(Registrar_proyecto, self).get(request, *args, **kwargs)
         else:
-            messages_alert = ['No tiene permisos para registrar un Proyecto POA']
+            messages_alert = ['No tiene permisos para registrar un proyecto poa']
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Editar_proyecto(SuccessMessageMixin,UpdateView):
     """
-    Clase que permite editar la data guardada de un Proyecto.
+    Clase que permite editar la data guardada de un proyecto poa.
     """
     model = ProyectoPoa
     form_class = ProyectoPoaForm
     success_url = reverse_lazy('safet:consultar_proyecto')
-    success_message = "Se actualizo el Proyecto POA con éxito"
+    success_message = "Se actualizo el proyecto poa con éxito"
 
     def get(self, request, *args, **kwargs):
         """
@@ -94,17 +94,17 @@ class Editar_proyecto(SuccessMessageMixin,UpdateView):
             if str(self.object) == str(self.request.user):
                 return super(Editar_proyecto, self).get(request, *args, **kwargs)
             else:
-                messages_alert = ['No tiene permisos para editar el Proyecto POA']
+                messages_alert = ['No tiene permisos para editar el proyecto poa']
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Borrar_proyecto(SuccessMessageMixin,DeleteView):
     """
-    Clase que permite borrar un reporte registrado en el sistema.
+    Clase que permite borrar un proyecto poa.
     """
     model = ProyectoPoa
     success_url = reverse_lazy('safet:consultar_proyecto')
-    success_message = "Se elimino el Proyecto POA con éxito"
+    success_message = "Se elimino el proyecto poa con éxito"
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message)
@@ -124,16 +124,16 @@ class Borrar_proyecto(SuccessMessageMixin,DeleteView):
             if str(self.object) == str(self.request.user):
                 return self.render_to_response(context)
             else:
-                messages_alert = ['No tiene permisos para borrar el Proyecto POA']
+                messages_alert = ['No tiene permisos para borrar el proyecto poa']
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
-######################################################
-##### Crud de las Acciones Específicas Proyectos #####
-######################################################
+#############################################
+##### Crud de las acciones específicas  #####
+#############################################
 
 class Consultar_accion(ListView):
     """
-    Clase que permite consultar la lista de Acciones Específicas.
+    Clase que permite consultar la lista de acciones específicas.
     """
     model = AccionEspecifica
 
@@ -156,13 +156,13 @@ class Consultar_accion(ListView):
         if request.user.is_superuser:
             return self.render_to_response(context)
         else:
-            messages_alert = ['No tiene permisos para listar las Acciones Específicas']
+            messages_alert = ['No tiene permisos para listar las acciones específicas']
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Registrar_accion(SuccessMessageMixin,CreateView):
     """
-    Clase que permite registrar una Acción Específica.
+    Clase que permite registrar una acción específica.
     """
     model = AccionEspecifica
     form_class = AccionEspecificaForm
@@ -172,24 +172,24 @@ class Registrar_accion(SuccessMessageMixin,CreateView):
     def get(self, request, *args, **kwargs):
         """
         Método que valida si el usuario autenticado es admin
-        para poder registrar una Acción Específica.
+        para poder registrar una acción específica.
         """
         self.object = None
         if request.user.is_superuser:
             return super(Registrar_accion, self).get(request, *args, **kwargs)
         else:
-            messages_alert = ['No tiene permisos para registrar una Acción Específica']
+            messages_alert = ['No tiene permisos para registrar una acción específica']
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Editar_accion(SuccessMessageMixin,UpdateView):
     """
-    Clase que permite editar la data guardada de una Acción Específica.
+    Clase que permite editar la data guardada de una acción específica.
     """
     model = AccionEspecifica
     form_class = AccionEspecificaForm
     success_url = reverse_lazy('safet:consultar_accion')
-    success_message = "Se actualizo la Acción Específica con éxito"
+    success_message = "Se actualizo la acción específica con éxito"
 
     def get(self, request, *args, **kwargs):
         """
@@ -203,17 +203,17 @@ class Editar_accion(SuccessMessageMixin,UpdateView):
             if str(self.object) == str(self.request.user):
                 return super(Editar_accion, self).get(request, *args, **kwargs)
             else:
-                messages_alert = ['No tiene permisos para editar la Acción Específica']
+                messages_alert = ['No tiene permisos para editar la acción específica']
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Borrar_accion(SuccessMessageMixin,DeleteView):
     """
-    Clase que permite borrar una Acción Específica registrada en el sistema.
+    Clase que permite borrar una acción específica.
     """
     model = AccionEspecifica
     success_url = reverse_lazy('safet:consultar_accion')
-    success_message = "Se elimino la Acción Específica con éxito"
+    success_message = "Se elimino la acción específica con éxito"
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message)
@@ -222,7 +222,7 @@ class Borrar_accion(SuccessMessageMixin,DeleteView):
     def get(self, request, *args, **kwargs):
         """
         Método que redirecciona a index si el usuario
-        que intenta borrar una Acción Específica no es admin.
+        que intenta borrar una acción específica no es admin.
         """
         self.object = self.get_object()
         context = self.get_context_data(object=self.object)
@@ -233,7 +233,7 @@ class Borrar_accion(SuccessMessageMixin,DeleteView):
             if str(self.object) == str(self.request.user):
                 return self.render_to_response(context)
             else:
-                messages_alert = ['No tiene permisos para borrar la Acción Específica']
+                messages_alert = ['No tiene permisos para borrar la acción específica']
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 ##############################################################
@@ -417,13 +417,26 @@ class Editar_reporte_avances_cv(SuccessMessageMixin,UpdateView):
                 messages_alert = ['No tiene permisos para editar el reporte']
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
-#################################
-##### Reportes porcentuales #####
-#################################
 
-class Consultar_reporte_avances_cv_por(ListView):
+###############################
+##### Filtros de búsqueda #####
+###############################
+
+class Buscar(TemplateView):
     """
-    Clase que permite listar los Reportes de Avances con sus porcentajes.
+    Plantilla que tiene el formulario para buscar productos.
     """
-    model = ReporteAvances
     template_name = "safet/reporteavances_list_cv_por.html"
+
+
+def busqueda(request):
+    """
+    Función que recibe los parámetros enviados desde el formulario de
+    búsqueda de por año y filtra los productos con querysets.
+    """
+    if 'ano' in request.GET and request.GET['ano']:
+        ano = request.GET['ano']
+        reportes_ano = ReporteAvances.objects.filter(ano_ejecucion__icontains=ano)
+        return render(request, 'safet/reporteavances_list_cv_por.html',  {'reportes': reportes_ano, 'query': ano})
+    else:
+        return HttpResponse('Por favor introduce un termino de búsqueda.')

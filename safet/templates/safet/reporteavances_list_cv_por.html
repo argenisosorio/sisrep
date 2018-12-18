@@ -1,26 +1,37 @@
 {% extends "base/base.html" %}
-{% block titulo %}Lista de Productos con sus avances porcentuales{% endblock %}
+{% block titulo %}Reporte gráfico de (%){% endblock %}
 {% block cuerpo %}
 <br />
-<h1>Porcentaje de avance de los productos</h1>
+<h1>Reporte gráfico de (%) de avances de los productos</h1>
 <br />
-{% if object_list %}
-  {% for x in object_list %}
-  <div class="rows">
-    <div class="col-sm-6ss">
-      <b>{{ x.nombre_producto }} - {{ x.sumatoria_por_avan }} %</b>
+<form action="{% url 'safet:busqueda' %}" method="get">
+  <label>Buscar productos por año</label>
+  <br />
+  <select class="form form-control" name="ano" required>
+    <option value="2019">2019</option>
+  </select>
+  <button class="btn btn-success" type="submit">Buscar</button>
+</form>
+<hr />
+{% if reportes %}
+  {% for x in reportes %}
+  <div class="row">
+    <div class="col-sm-1">
+      <b>{{ x.nombre_producto }}</b>
       <br />
+    </div>
+    <div class="col-sm-11">
       <div class="progress">
         <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ x.sumatoria_por_avan }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ x.sumatoria_por_avan }}%;">
+          {{ x.sumatoria_por_avan }} %
         </div>
       </div>
     </div>
-    <div class="col-sm-6sss">
-    </div>
   </div>
+  <br />
   {% endfor %}
 {% else %}
   <br />
-  <b>No hay proyectos registrados aún</b>
+  <b>No se encontraron productos</b>
 {% endif %}
 {% endblock %}

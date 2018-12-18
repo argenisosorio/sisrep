@@ -20,7 +20,7 @@ from datetime import datetime
 
 
 #################################
-##### Crud de los Proyectos #####
+##### Crud de los productos #####
 #################################
 
 class Consultar_proyecto(ListView):
@@ -48,40 +48,40 @@ class Consultar_proyecto(ListView):
         if request.user.is_superuser:
             return self.render_to_response(context)
         else:
-            messages_alert = ['No tiene permisos para listar los proyectos']
+            messages_alert = ['No tiene permisos para listar los productos']
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Registrar_proyecto(SuccessMessageMixin,CreateView):
     """
-    Clase que permite registrar un Proyecto en el sistema.
+    Clase que permite registrar un producto.
     """
     model = Proyecto
     form_class = ProyectoForm
     success_url = reverse_lazy('registro:consultar_proyecto')
-    success_message = "Se registro el proyecto con éxito"
+    success_message = "Se registro el producto con éxito"
 
     def get(self, request, *args, **kwargs):
         """
         Método que valida si el usuario autenticado es admin
-        para poder registrar un proyecto.
+        para poder registrar un producto.
         """
         self.object = None
         if request.user.is_superuser:
             return super(Registrar_proyecto, self).get(request, *args, **kwargs)
         else:
-            messages_alert = ['No tiene permisos para registrar un proyecto']
+            messages_alert = ['No tiene permisos para registrar un producto']
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Editar_proyecto(SuccessMessageMixin,UpdateView):
     """
-    Clase que permite editar la data guardada de un Proyecto.
+    Clase que permite editar la data guardada de un producto.
     """
     model = Proyecto
     form_class = ProyectoForm
     success_url = reverse_lazy('registro:consultar_proyecto')
-    success_message = "Se actualizo el proyecto con éxito"
+    success_message = "Se actualizo el producto con éxito"
 
     def get(self, request, *args, **kwargs):
         """
@@ -95,17 +95,17 @@ class Editar_proyecto(SuccessMessageMixin,UpdateView):
             if str(self.object) == str(self.request.user):
                 return super(Editar_proyecto, self).get(request, *args, **kwargs)
             else:
-                messages_alert = ['No tiene permisos para editar el proyecto']
+                messages_alert = ['No tiene permisos para editar el producto']
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Borrar_proyecto(SuccessMessageMixin,DeleteView):
     """
-    Clase que permite borrar un reporte registrado en el sistema.
+    Clase que permite borrar un producto registrado.
     """
     model = Proyecto
     success_url = reverse_lazy('registro:consultar_proyecto')
-    success_message = "Se elimino el proyecto con éxito"
+    success_message = "Se elimino el producto con éxito"
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message)
@@ -125,17 +125,17 @@ class Borrar_proyecto(SuccessMessageMixin,DeleteView):
             if str(self.object) == str(self.request.user):
                 return self.render_to_response(context)
             else:
-                messages_alert = ['No tiene permisos para borrar el reporte']
+                messages_alert = ['No tiene permisos para borrar el producto']
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 ######################################
-##### Crud de los Caras Visibles #####
+##### Crud de los caras visibles #####
 ######################################
 
 class Consultar_cara_visible(ListView):
     """
-    Clase que permite consultar la lista de Caras Visibles.
+    Clase que permite consultar la lista de caras visibles.
     """
     model = Caravisible
 
@@ -164,7 +164,7 @@ class Consultar_cara_visible(ListView):
 
 class Registrar_cara_visible(SuccessMessageMixin,CreateView):
     """
-    Clase que permite registrar un Cara Visible en el sistema.
+    Clase que permite registrar un cara visible en el sistema.
     """
     model = Caravisible
     form_class = CaravisibleForm
@@ -186,7 +186,7 @@ class Registrar_cara_visible(SuccessMessageMixin,CreateView):
 
 class Editar_cara_visible(SuccessMessageMixin,UpdateView):
     """
-    Clase que permite editar la data guardada de un Cara Visible.
+    Clase que permite editar la data guardada de un cara visible.
     """
     model = Caravisible
     form_class = CaravisibleForm
@@ -211,7 +211,7 @@ class Editar_cara_visible(SuccessMessageMixin,UpdateView):
 
 class Borrar_cara_visible(SuccessMessageMixin,DeleteView):
     """
-    Clase que permite borrar un Cara Visible registrado en el sistema.
+    Clase que permite borrar un cara visible registrado en el sistema.
     """
     model = Caravisible
     success_url = reverse_lazy('registro:consultar_cara_visible')
@@ -240,12 +240,12 @@ class Borrar_cara_visible(SuccessMessageMixin,DeleteView):
 
 
 ##################################
-##### Crud de los Directores #####
+##### Crud de los directores #####
 ##################################
 
 class Consultar_director(ListView):
     """
-    Clase que permite consultar la lista de Directores.
+    Clase que permite consultar la lista de directores.
     """
     model = Director
     template_name = "registro/director_list.html"
@@ -275,7 +275,7 @@ class Consultar_director(ListView):
 
 class Registrar_director(SuccessMessageMixin,CreateView):
     """
-    Clase que permite registrar un Director.
+    Clase que permite registrar un director.
     """
     model = Director
     form_class = DirectorForm
@@ -297,7 +297,7 @@ class Registrar_director(SuccessMessageMixin,CreateView):
 
 class Editar_director(SuccessMessageMixin,UpdateView):
     """
-    Clase que permite editar la data guardada de un Director.
+    Clase que permite editar la data guardada de un director.
     """
     model = Director
     form_class = DirectorForm
@@ -322,7 +322,7 @@ class Editar_director(SuccessMessageMixin,UpdateView):
 
 class Borrar_director(SuccessMessageMixin,DeleteView):
     """
-    Clase que permite borrar un Cara Visible registrado en el sistema.
+    Clase que permite borrar un director registrado en el sistema.
     """
     model = Director
     success_url = reverse_lazy('registro:consultar_director')

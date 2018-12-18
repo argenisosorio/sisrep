@@ -11,9 +11,9 @@ from base.constantes import *
 
 class ProyectoForm(forms.ModelForm):
     """
-    Formulario con los campos de un Proyecto.
+    Formulario con los campos de un producto.
     """
-    nombre_proyecto = forms.CharField(label='Nombre del Producto', widget=TextInput(attrs={
+    nombre_proyecto = forms.CharField(label='Nombre del producto', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
@@ -27,9 +27,9 @@ class ProyectoForm(forms.ModelForm):
 
 class CaravisibleForm(forms.ModelForm):
     """
-    Formulario con los campos de un Cara Visible.
+    Formulario con los campos de un cara visible.
     """
-    nombre_caravisible = forms.CharField(label='Nombre del Cara Visible', widget=TextInput(attrs={
+    nombre_caravisible = forms.CharField(label='Nombre del cara visible', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
@@ -43,9 +43,9 @@ class CaravisibleForm(forms.ModelForm):
 
 class DirectorForm(forms.ModelForm):
     """
-    Formulario con los campos de un Director.
+    Formulario con los campos de un director.
     """
-    nombre_director = forms.CharField(label='Nombre del Director', widget=TextInput(attrs={
+    nombre_director = forms.CharField(label='Nombre del director', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',

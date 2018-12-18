@@ -1,8 +1,8 @@
 {% extends "base/base.html" %}
-{% block titulo %}Registrar Reporte{% endblock %}
+{% block titulo %}Registrar reporte de actividades{% endblock %}
 {% block cuerpo %}
 <br />
-<h1>Registrar Reporte</h1>
+<h1>Registrar reporte de actividades</h1>
 <br />
 
 <form method="post">{% csrf_token %}
@@ -19,8 +19,6 @@
       <p>{{ form.nombre_proyecto.errors}}</p>
     {% endif %}
   </div>
-
-  <br />
 
   <div class="row">
     <div class="col-sm-6">
@@ -85,8 +83,6 @@
       <p>{{ form.obstaculos.errors}}</p>
     {% endif %}
   </div>
-
-<br />
 
 <h3>Integrantes del equipo</h3>
 
