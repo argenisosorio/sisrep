@@ -52,6 +52,12 @@ ul.errorlist {
   border-left: 4px solid green !important;
 }
 
+.notificacion-emergente {
+  margin-top: -12px;
+  position: absolute;
+  width: 90%;
+}
+
 #id_organizacion {
   min-width: 0;
   width: 100%;
