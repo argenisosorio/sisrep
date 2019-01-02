@@ -310,3 +310,7 @@ table.table_change_password td {
 .disabled-input {
   background: lightgray;
 }
+
+.progress-bar {
+  color: #000000 !important;
+}

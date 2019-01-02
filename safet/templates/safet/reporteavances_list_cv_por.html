@@ -17,15 +17,19 @@
   {% for x in reportes %}
   <div class="row">
     <div class="col-sm-1">
-      <b>{{ x.nombre_producto }}</b>
+      <a href="{% url 'safet:detallar_reporte_avances' x.id %}">
+        <b>{{ x.nombre_producto }}</b>
+      </a>
       <br />
     </div>
-    <div class="col-sm-11">
+    <div class="col-sm-5">
       <div class="progress">
         <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ x.sumatoria_por_avan }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ x.sumatoria_por_avan }}%;">
           {{ x.sumatoria_por_avan }} %
         </div>
       </div>
+    </div>
+    <div class="col-sm-6">
     </div>
   </div>
   <br />
