@@ -342,6 +342,82 @@ class ReporteAvancesForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
+    # Enlaces de verificación de las actividades del proyecto.
+    enlace_ver_act_1 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_2 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_3 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_4 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_5 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_6 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_7 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_8 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_9 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_10 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_11 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_12 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_13 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_14 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_15 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
     # Ponderación asignada (%) de la planificación.
     porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
@@ -830,6 +906,82 @@ class ReporteAvancesSoftwareForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
+    # Enlaces de verificación de las actividades del proyecto.
+    enlace_ver_act_1 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_2 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_3 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_4 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_5 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_6 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_7 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_8 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_9 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_10 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_11 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_12 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_13 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_14 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_15 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
     # Porcentaje de las actividades del proyecto.
     porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
@@ -1315,6 +1467,82 @@ class ReporteAvancesCursoLineaForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
+    # Enlaces de verificación de las actividades del proyecto.
+    enlace_ver_act_1 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_2 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_3 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_4 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_5 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_6 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_7 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_8 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_9 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_10 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_11 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_12 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_13 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_14 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_15 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
     # Porcentaje de las actividades del proyecto.
     porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
@@ -1716,6 +1944,82 @@ class ReporteAvancesJornadaForm(forms.ModelForm):
     }), required = False)
 
     resp_act_15 = forms.CharField(label='Nombre del responsable', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    # Enlaces de verificación de las actividades del proyecto.
+    enlace_ver_act_1 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_2 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_3 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_4 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_5 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_6 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_7 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_8 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_9 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_10 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_11 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_12 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_13 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_14 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_15 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
@@ -2213,6 +2517,82 @@ class ReporteAvancesCVForm(forms.ModelForm):
     }), required = False)
 
     resp_act_15 = forms.CharField(label='Nombre del responsable', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    # Enlaces de verificación de las actividades del proyecto.
+    enlace_ver_act_1 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_2 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_3 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_4 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_5 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_6 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_7 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_8 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_9 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_10 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_11 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_12 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_13 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_14 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlace_ver_act_15 = forms.CharField(label='Enlace de verificación', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
