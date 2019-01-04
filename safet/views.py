@@ -344,6 +344,7 @@ class Editar_reporte_avances(SuccessMessageMixin,UpdateView):
     model = ReporteAvances
     form_class = ReporteAvancesForm
     success_url = reverse_lazy('safet:consultar_reporte_avances')
+    success_message = "Se actualizó el reporte con éxito"
 
     def get(self, request, *args, **kwargs):
         """
