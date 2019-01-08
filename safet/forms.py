@@ -111,8 +111,8 @@ class ReporteAvancesForm(forms.ModelForm):
     integrantes_equipo = forms.CharField(label='Integrantes del equipo', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'required': 'True',
-    }), required = True)
+        #'required': 'True',
+    }), required = False)
 
     # Nombres de las actividades del proyecto.
     nombre_act_1 = forms.CharField(label='Nombre de la actividad', widget=TextInput(attrs={
@@ -662,8 +662,8 @@ class ReporteAvancesSoftwareForm(forms.ModelForm):
     integrantes_equipo = forms.CharField(label='Integrantes del equipo', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'required': 'True',
-    }), required = True)
+        #'required': 'True',
+    }), required = False)
 
     # Nombres de las actividades del proyecto.
     nombre_act_1 = forms.CharField(label='Nombre de la actividad', widget=TextInput(attrs={
@@ -1226,8 +1226,8 @@ class ReporteAvancesCursoLineaForm(forms.ModelForm):
     integrantes_equipo = forms.CharField(label='Integrantes del equipo', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'required': 'True',
-    }), required = True)
+        #'required': 'True',
+    }), required = False)
 
     # Nombres de las actividades del proyecto.
     nombre_act_1 = forms.CharField(label='Nombre de la actividad', widget=TextInput(attrs={
@@ -1787,8 +1787,8 @@ class ReporteAvancesJornadaForm(forms.ModelForm):
     integrantes_equipo = forms.CharField(label='Integrantes del equipo', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'required': 'True',
-    }), required = True)
+        #'required': 'True',
+    }), required = False)
 
     # Nombres de las actividades del proyecto.
     nombre_act_1 = forms.CharField(label='Nombre de la actividad', widget=TextInput(attrs={
@@ -2351,8 +2351,8 @@ class ReporteAvancesCVForm(forms.ModelForm):
     integrantes_equipo = forms.CharField(label='Integrantes del equipo', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'required': 'True',
-    }), required = True)
+        #'required': 'True',
+    }), required = False)
 
     # Nombres de las actividades del proyecto.
     nombre_act_1 = forms.CharField(label='Nombre de la actividad', widget=TextInput(attrs={
