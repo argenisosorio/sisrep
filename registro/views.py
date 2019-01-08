@@ -347,33 +347,33 @@ class Borrar_director(SuccessMessageMixin,DeleteView):
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
-################################
-##### Crud de los Reportes #####
-################################
+###############################################
+##### Crud de los reportes de actividades #####
+###############################################
 
 class Consultar_reporte(ListView):
     """
-    Clase que permite consultar la lista de reportes.
+    Clase que permite consultar la lista de reportes de actividades.
     """
     model = Reporte
 
 
 class Registrar_reporte(SuccessMessageMixin,CreateView):
     """
-    Clase que permite registrar un reporte en el sistema.
+    Clase que permite registrar un reporte de actividades en el sistema.
     """
     model = Reporte
     form_class = ReporteForm
     success_url = reverse_lazy('registro:consultar_reporte')
-    success_message = "Se registro el reporte con éxito"
+    success_message = "Se registro el reporte con éxitosssssss"
 
     def form_valid(self, form):
         """
         Método que permite guardar un evento en la Bitácora cuando
-        se registra un Reporte en el sistema.
+        se registra un reporte de actividades en el sistema.
         """
         usuario = str(self.request.user)
-        accion = "Registro un Reporte"
+        accion = "Registro un reporte de actividades"
         myDate = datetime.now()
         formatedDate = myDate.strftime("%d-%m-%Y %H:%M")
         fecha_humana = str(formatedDate)
