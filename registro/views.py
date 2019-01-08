@@ -365,7 +365,7 @@ class Registrar_reporte(SuccessMessageMixin,CreateView):
     model = Reporte
     form_class = ReporteForm
     success_url = reverse_lazy('registro:consultar_reporte')
-    success_message = "Se registro el reporte con éxitosssssss"
+    success_message = "Se registro el reporte de actividades con éxito"
 
     def form_valid(self, form):
         """
