@@ -4,7 +4,7 @@ from django.views.generic import TemplateView, ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from safet.models import ProyectoPoa, AccionEspecifica, ReporteAvances
 from bitacora.models import Bitacora
-from forms import ProyectoPoaForm, AccionEspecificaForm, ReporteAvancesForm, ReporteAvancesSoftwareForm, ReporteAvancesCursoLineaForm, ReporteAvancesJornadaForm, ReporteAvancesCVForm
+from forms import ProyectoPoaForm, AccionEspecificaForm, ReporteAvancesForm, ReporteAvancesSoftwareForm, ReporteAvancesCursoLineaForm, ReporteAvancesJornadaForm, ReporteAvancesCVForm, ReporteAvancesPublicacionForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.views import generic
@@ -316,8 +316,8 @@ class Registrar_reporte_avances_cur_lin(CreateView):
 
 class Registrar_reporte_avances_jornada(CreateView):
     """
-    Clase que permite registrar un Reporte de Avances de un producto
-    del tipo Jornada.
+    Clase que permite registrar un reporte de avances de un producto
+    del tipo jornada.
     """
     model = ReporteAvances
     form_class = ReporteAvancesJornadaForm
@@ -327,13 +327,36 @@ class Registrar_reporte_avances_jornada(CreateView):
     def get(self, request, *args, **kwargs):
         """
         Método que valida si el usuario autenticado es admin
-        para poder registrar un Reporte de Avances.
+        para poder registrar un reporte de avances.
         """
         self.object = None
         if request.user.is_superuser:
             return super(Registrar_reporte_avances_jornada, self).get(request, *args, **kwargs)
         else:
             messages_alert = ['No tiene permisos para registrar un Reporte de Avances']
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+
+
+class Registrar_reporte_avances_publicacion(CreateView):
+    """
+    Clase que permite registrar un reporte de avances de un producto
+    del tipo publicación.
+    """
+    model = ReporteAvances
+    form_class = ReporteAvancesPublicacionForm
+    template_name = "safet/reporteavances_publicacion_form.html"
+    success_url = reverse_lazy('safet:consultar_reporte_avances')
+
+    def get(self, request, *args, **kwargs):
+        """
+        Método que valida si el usuario autenticado es admin
+        para poder registrar un reporte de avances.
+        """
+        self.object = None
+        if request.user.is_superuser:
+            return super(Registrar_reporte_avances_publicacion, self).get(request, *args, **kwargs)
+        else:
+            messages_alert = ['No tiene permisos para registrar un reporte de avances']
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
