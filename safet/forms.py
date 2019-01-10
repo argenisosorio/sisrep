@@ -1269,13 +1269,13 @@ class ReporteAvancesCursoLineaForm(forms.ModelForm):
     nombre_act_7 = forms.CharField(label='Nombre de la actividad', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': 'Gestión de Certificados',
+        'value': 'Implementación del Curso',
     }), required = False)
 
     nombre_act_8 = forms.CharField(label='Nombre de la actividad', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': 'Implementación del Curso',
+        'value': 'Gestión de Certificados',
     }), required = False)
 
     nombre_act_9 = forms.CharField(label='Nombre de la actividad', widget=TextInput(attrs={
