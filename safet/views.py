@@ -403,6 +403,35 @@ def get(self, request, *args, **kwargs):
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
+class Borrar_reporte_avances(SuccessMessageMixin,DeleteView):
+    """
+    Clase que permite borrar un reporte de avances.
+    """
+    model = ReporteAvances
+    success_url = reverse_lazy('safet:consultar_reporte_avances')
+    success_message = "Se elimino el reporte de avances con éxito"
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(Borrar_reporte_avances, self).delete(request, *args, **kwargs)
+
+    def get(self, request, *args, **kwargs):
+        """
+        Método que redirecciona a index si el usuario
+        que intenta borrar el reporte de avances no es admin.
+        """
+        self.object = self.get_object()
+        context = self.get_context_data(object=self.object)
+        self.object = self.get_object()
+        if request.user.is_superuser:
+            return self.render_to_response(context)
+        else:
+            if str(self.object) == str(self.request.user):
+                return self.render_to_response(context)
+            else:
+                messages_alert = ['No tiene permisos para borrar el reporte de avances']
+                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+
 #######################################################
 ##### Crud de los Reportes de Avances para los CV #####
 #######################################################
