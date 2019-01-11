@@ -464,11 +464,71 @@
     </tr>
     {% endif %}
   </tbody>
+    <tr>
+      <td><b>Total</b></td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td class="suma">
+      </td>
+      <td>
+        {{ reporteavances.sumatoria_por_avan }} %
+      </td>
+      <td>
+      </td>
+    </tr>
 </table>
 <br />
-<b>Porcentaje de avance</b>: {{ reporteavances.sumatoria_por_avan }} %
-<div class="progress">
-  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ reporteavances.sumatoria_por_avan }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ reporteavances.sumatoria_por_avan }}%;">
+<div class="row">
+    <div class="col-sm-4">
+      <div class="texto_enlace_busqueda text-right">
+        <b>{{ reporteavances.nombre_producto }}</b>
+      </div>
+      <br />
+    </div>
+    <div class="col-sm-4">
+      <div class="progress">
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ reporteavances.sumatoria_por_avan }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ reporteavances.sumatoria_por_avan }}%;">
+          {{ reporteavances.sumatoria_por_avan }} %
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+    </div>
   </div>
-</div>
+<script type="text/javascript">
+$("document").ready(function (){
+  /*
+  |-------------------------------------------------------------
+  | Función que permite sumar los porcentajes de las actividades
+  | e imprimir el valor en el dom.
+  |-------------------------------------------------------------
+  */
+  var Lista = new Array; 
+  Lista.push({{ reporteavances.porc_act_1 }});
+  Lista.push({{ reporteavances.porc_act_2 }});
+  Lista.push({{ reporteavances.porc_act_3 }});
+  Lista.push({{ reporteavances.porc_act_4 }});
+  Lista.push({{ reporteavances.porc_act_5 }});
+  Lista.push({{ reporteavances.porc_act_6 }});
+  Lista.push({{ reporteavances.porc_act_7 }});
+  Lista.push({{ reporteavances.porc_act_8 }});
+  Lista.push({{ reporteavances.porc_act_9 }});
+  Lista.push({{ reporteavances.porc_act_10 }});
+  Lista.push({{ reporteavances.porc_act_11 }});
+  Lista.push({{ reporteavances.porc_act_12 }});
+  Lista.push({{ reporteavances.porc_act_13 }});
+  Lista.push({{ reporteavances.porc_act_14 }});
+  Lista.push({{ reporteavances.porc_act_15 }});
+  var contador = 0;
+  for (var i=0; i<Lista.length; i++){  
+    contador=contador+Lista[i];
+  }
+  suma_porc_act = contador;
+  $(".suma").html(suma_porc_act+" %");
+});
+</script>
 {% endblock %}

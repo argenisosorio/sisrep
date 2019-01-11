@@ -2,7 +2,8 @@
 {% block titulo %}Reporte gráfico de (%){% endblock %}
 {% block cuerpo %}
 <br />
-<h1>Reporte gráfico de (%) de avances de los productos</h1>
+<h1>Reporte gráfico de porcentaje de avances de los Productos</h1>
+
 <br />
 <form action="{% url 'safet:busqueda' %}" method="get">
   <label>Buscar productos por año</label>
@@ -14,7 +15,7 @@
 </form>
 <hr />
 <div align="center">
-  <h3>Porcentaje de avance de los proyectos</h3>
+  <h3>Porcentaje de avance de los Productos</h3>
 </div>
 <br />
 {% if reportes %}
