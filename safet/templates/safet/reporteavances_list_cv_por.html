@@ -13,26 +13,31 @@
   <button class="btn btn-success" type="submit">Buscar</button>
 </form>
 <hr />
+<div align="center">
+  <h3>Porcentaje de avance de los proyectos</h3>
+</div>
+<br />
 {% if reportes %}
   {% for x in reportes %}
   <div class="row">
-    <div class="col-sm-1">
-      <a href="{% url 'safet:detallar_reporte_avances' x.id %}">
-        <b>{{ x.nombre_producto }}</b>
-      </a>
+    <div class="col-sm-4">
+      <div class="texto_enlace_busqueda text-right">
+        <a href="{% url 'safet:detallar_reporte_avances' x.id %}">
+          <b>{{ x.nombre_producto }}</b>
+        </a>
+      </div>
       <br />
     </div>
-    <div class="col-sm-5">
+    <div class="col-sm-4">
       <div class="progress">
         <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ x.sumatoria_por_avan }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ x.sumatoria_por_avan }}%;">
           {{ x.sumatoria_por_avan }} %
         </div>
       </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
     </div>
   </div>
-  <br />
   {% endfor %}
 {% else %}
   <br />

@@ -314,3 +314,15 @@ table.table_change_password td {
 .progress-bar {
   color: #000000 !important;
 }
+
+.texto_enlace_busqueda {
+  font-size: 12px !important;
+}
+
+.progress {
+  height: 20px;
+  margin-bottom: 0px;
+  padding: 0px !important;
+  background-color: #f5f5f5;
+  /*border: ridge 1px red;*/
+}
