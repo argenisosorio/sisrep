@@ -433,7 +433,7 @@ class Borrar_reporte_avances(SuccessMessageMixin,DeleteView):
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 #######################################################
-##### Crud de los Reportes de Avances para los CV #####
+##### Crud de los reportes de avances para los cv #####
 #######################################################
 
 class Consultar_reporte_avances_cv(ListView):
@@ -454,6 +454,19 @@ class Editar_reporte_avances_cv(SuccessMessageMixin,UpdateView):
     template_name = "safet/reporteavances_form_cv.html"
     success_message = "Se actualizó el reporte con éxito"
 
+    def form_valid(self, form):
+        """
+        Método que permite guardar un evento en la Bitácora cuando
+        se registra un reporte de actividades en el sistema.
+        """
+        usuario = str(self.request.user)
+        accion = "Actualizo un reporte de avances"
+        myDate = datetime.now()
+        formatedDate = myDate.strftime("%d-%m-%Y %H:%M")
+        fecha_humana = str(formatedDate)
+        Bitacora.objects.create(usuario=usuario, accion=accion, fecha=fecha_humana)
+        self.object = form.save()
+        return super(Editar_reporte_avances_cv, self).form_valid(form)
 
     def get(self, request, *args, **kwargs):
         """
