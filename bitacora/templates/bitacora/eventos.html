@@ -30,6 +30,8 @@
     <td class="bit_usuario">{{ x.usuario }}</td>
     {% if x.accion == "Registro un reporte de actividades" %}
       <td class="reg">Registro un reporte de actividades</td>
+    {% elif x.accion == "Registro un Reporte" %}
+      <td class="reg">Registro un reporte de actividades</td>
     {% elif x.accion == "Actualizo un reporte de avances" %}
       <td class="reg">Actualizo un reporte de avances</td>
     {% else %}
