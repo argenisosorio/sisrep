@@ -1,11 +1,41 @@
 {% extends "base/base.html" %}
 {% block titulo %}Actualizar reporte de avances{% endblock %}
 {% block cuerpo %}
+<script type="text/javascript">
+$("document").ready(function (){
+  $(".activar").click(function(){
+    $(".myform").submit(function(e){
+      var campo1 = $("#id_porc_act_1").val();
+      var campo2 = $("#id_porc_act_2").val();
+      var campo3 = $("#id_porc_act_3").val();
+      var campo4 = $("#id_porc_act_4").val();
+      var campo5 = $("#id_porc_act_5").val();
+      var campo6 = $("#id_porc_act_6").val();
+      var campo7 = $("#id_porc_act_7").val();
+      var campo8 = $("#id_porc_act_8").val();
+      var campo9 = $("#id_porc_act_9").val();
+      var campo10 = $("#id_porc_act_10").val();
+      var campo11 = $("#id_porc_act_11").val();
+      var campo12 = $("#id_porc_act_12").val();
+      var campo13 = $("#id_porc_act_13").val();
+      var campo14 = $("#id_porc_act_14").val();
+      var campo15 = $("#id_porc_act_15").val();
+      var suma = parseInt(campo1)+parseInt(campo2)+parseInt(campo3)+parseInt(campo4)+parseInt(campo5)+parseInt(campo6)+parseInt(campo7)+parseInt(campo8)+parseInt(campo9)+parseInt(campo10)+parseInt(campo11)+parseInt(campo12)+parseInt(campo13)+parseInt(campo14)+parseInt(campo15);
+      if (suma <= 100){
+      }
+      else {
+        alert("El porcentaje asignado a las actividades excede el 100%");
+        e.preventDefault();
+      }
+    });
+  });
+});
+</script>
 <br />
 <h1>Actualizar reporte de avances</h1>
 <br />
 
-<form method="post">{% csrf_token %}
+<form class="myform" method="post">{% csrf_token %}
   <div class="well">
 
     <!--b>{{ form.autor.label }}</b-->
@@ -822,6 +852,6 @@
   </div>
   <!-- Accordion Panel Example end -->
 
-<button class="btn btn-success" type="submit">Guardar</button>
+<button class="btn btn-success activar" type="submit">Guardar</button>
 </form>
 {% endblock %}

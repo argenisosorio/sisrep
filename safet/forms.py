@@ -422,76 +422,91 @@ class ReporteAvancesForm(forms.ModelForm):
     porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_2 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_3 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_4 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_5 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_6 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_7 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_8 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_9 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_10 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_11 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_12 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_13 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_14 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_15 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     # Porcentaje de avance de la actividad.
@@ -986,76 +1001,91 @@ class ReporteAvancesSoftwareForm(forms.ModelForm):
     porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_2 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_3 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_4 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_5 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_6 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_7 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_8 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_9 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_10 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_11 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_12 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_13 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_14 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_15 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     # Porcentaje de avance de las actividades del proyecto.
@@ -1547,76 +1577,91 @@ class ReporteAvancesCursoLineaForm(forms.ModelForm):
     porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_2 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_3 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_4 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_5 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_6 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_7 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_8 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_9 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_10 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_11 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_12 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_13 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_14 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_15 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     # Porcentaje de avance de las actividades del proyecto.
@@ -2104,76 +2149,91 @@ class ReporteAvancesJornadaForm(forms.ModelForm):
     porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_2 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_3 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_4 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_5 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_6 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_7 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_8 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_9 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_10 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_11 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_12 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_13 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_14 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_15 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     # Porcentaje de avance de las actividades del proyecto.
@@ -2662,76 +2722,91 @@ class ReporteAvancesPublicacionForm(forms.ModelForm):
     porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_2 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_3 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_4 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_5 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_6 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_7 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_8 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_9 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_10 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_11 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_12 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_13 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_14 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     porc_act_15 = forms.CharField(label='Ponderación asignada (%)', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'value': '0',
     }), required = False)
 
     # Porcentaje de avance de las actividades del proyecto.
