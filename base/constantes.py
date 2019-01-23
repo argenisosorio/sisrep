@@ -25,5 +25,6 @@ cargos = (
     ('Analista de Reflexión','Analista de Reflexión'),
     ('Analista de Investigación','Analista de Investigación'),
     ('Analista de Administración','Analista de Administración'),
+    ('Analista de Soporte tecnológico','Analista de Soporte tecnológico'),
     ('Director','Director'),
 )
