@@ -76,9 +76,8 @@ def change_password(request):
         form = PasswordChangeForm(user=request.user, data=request.POST)
         if form.is_valid():
             form.save()
-            #messages = ['Cambio de contraseña exitoso']
-            #return render_to_response("usuarios/index.html",{'messages': messages}, context_instance=RequestContext(request))
-            return redirect('usuarios:login')
+            messages = ['Cambio de contraseña exitoso']
+            return render_to_response("usuarios/change_password_done.html",{'messages':messages})
         else:
             print "No se realizó el cambio de contraseña"
     return render(request, 'usuarios/change_password.html', {'form': form})
