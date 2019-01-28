@@ -13,13 +13,14 @@ from django.template import RequestContext
 from django.contrib.auth import forms, login, logout, authenticate
 from django.views.generic import View
 from django.contrib.auth.models import User
+from django.contrib.messages.views import SuccessMessageMixin
 from .forms import LoginForm
 from django.contrib.auth.forms import (
     AuthenticationForm, PasswordChangeForm, PasswordResetForm, SetPasswordForm,
 )
 
 
-class LoginView(FormView):
+class LoginView(SuccessMessageMixin,FormView):
     """
     Clase que gestiona el formulario de inicio de
     sesión de los usuarios del sistema.
@@ -27,6 +28,15 @@ class LoginView(FormView):
     template_name = 'usuarios/login.html'
     form_class = LoginForm
     success_url = reverse_lazy('inicio:index')
+    success_message = "Bienvenido al sistema."
+
+    def form_invalid(self, form):
+        """
+        Método que envía un mensaje al template del login cuando
+        las credenciales de acceso no son válidos.
+        """
+        messages_alert = ['El usuario o la contraseña no son válidos.']
+        return self.render_to_response(self.get_context_data(form=form,messages_alert=messages_alert))
 
     def form_valid(self, form):
         """
