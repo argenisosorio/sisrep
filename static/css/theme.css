@@ -293,6 +293,12 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .bit_fecha {
   background: #f0f0f0;
 }
+.td_si {
+  background: #b9ffb9;
+}
+.td_no {
+  background: #ffb9b9;
+}
 
 table.table_change_password td {
   text-align: right;

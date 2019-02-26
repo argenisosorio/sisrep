@@ -1,0 +1,77 @@
+{% extends "base/base.html" %}
+{% block titulo %}Lista de usuarios del sistema{% endblock %}
+{% block cuerpo %}
+<br />
+<h1>Lista de usuarios del sistema</h1>
+<br />
+<a href="{% url 'usuarios:register' %}">
+  <button class="btn btn-success">Registrar usuario</button>
+</a>
+<br />
+<br />
+<table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
+  <thead>
+    <tr>
+      <th>N</th>
+      <th>Nombre de usuario</th>
+      <th>Primer nombre</th>
+      <th>Primer apellido</th>
+      <th>Correo electrónico</th>
+      <th>Fecha de registro</th>
+      <th>Último acceso</th>
+      <th>¿Es Cara visible?</th>
+      <th>¿Es Director?</th>
+      <th>¿Es Analista?</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>N</th>
+      <th>Nombre de usuario</th>
+      <th>Primer nombre</th>
+      <th>Primer apellido</th>
+      <th>Correo electrónico</th>
+      <th>Fecha de registro</th>
+      <th>Último acceso</th>
+      <th>¿Es Cara visible?</th>
+      <th>¿Es Director?</th>
+      <th>¿Es Analista?</th>
+      <th>Acciones</th>
+    </tr>
+  </tfoot>
+  <tbody>
+  {% for user in object_list %}
+  <tr>
+    <td></td>
+    <td>{{ user.username }}</td>
+    <td>{{ user.first_name }}</td>
+    <td>{{ user.last_name }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.date_joined }}</td>
+    <td>{{ user.last_login }}</td>
+    {% if user.is_active == True %}
+      <td class="td_si">Sí</td>
+    {% else %}
+      <td class="td_no">No</td>
+    {% endif %}
+    {% if user.is_staff == True %}
+      <td class="td_si">Sí</td>
+    {% else %}
+      <td class="td_no">No</td>
+    {% endif %}
+    {% if user.is_superuser == True %}
+      <td class="td_si">Sí</td>
+    {% else %}
+      <td class="td_no">No</td>
+    {% endif %}
+    <td>
+      <a href="{% url 'usuarios:edit_user' user.pk %}" title="Editar"><i class="glyphicon glyphicon-pencil"></i></a>
+      &nbsp; | &nbsp;
+      <a href="{% url 'usuarios:delete_user' user.id %}" title="Borrar"><i class="glyphicon glyphicon-trash"></i></a>
+    </td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
