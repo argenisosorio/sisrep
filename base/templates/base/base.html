@@ -107,7 +107,7 @@
 
               <ul class="nav navbar-nav">
 
-                {% if user.is_superuser and user.is_staff and user.is_active %}
+                {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
                 <!-- Carga inicial dropdown
                 ================================================== -->
                 <li class="dropdown">
@@ -116,7 +116,7 @@
                     &nbsp;Carga inicial <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
-                    {% if user.is_superuser %}
+                    {% if request.user.is_superuser %}
                     <li>
                       <a href="{% url 'usuarios:list_users' %}">
                         <i class="glyphicon glyphicon-list"></i>
@@ -199,7 +199,7 @@
                     &nbsp;Reporte de avances <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
-                    {% if user.is_superuser and user.is_staff and user.is_active %}
+                    {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
                     <li>
                       <a href="{% url 'safet:consultar_reporte_avances' %}">
                         <i class="glyphicon glyphicon-list"></i>
@@ -213,7 +213,7 @@
                       </a>
                     </li>
                     {% else %}
-                      {% if user.is_staff and user.is_active %}
+                      {% if request.user.is_staff and request.user.is_active %}
                       <li>
                         <a href="{% url 'safet:consultar_reporte_avances_cv' %}">
                           <i class="glyphicon glyphicon-list"></i>
@@ -221,7 +221,7 @@
                         </a>
                       </li>
                       {% else %}
-                        {% if user.is_active %}
+                        {% if request.user.is_active %}
                         <li>
                           <a href="{% url 'safet:consultar_reporte_avances_cv' %}">
                             <i class="glyphicon glyphicon-list"></i>
@@ -244,7 +244,7 @@
                     &nbsp;Reporte de actividades <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
-                    {% if user.is_superuser and user.is_staff and user.is_active %}
+                    {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
                       <li>
                         <a href="{% url 'registro:registrar_reporte' %}">
                           <i class="glyphicon glyphicon-pencil"></i>
@@ -252,9 +252,9 @@
                         </a>
                       </li>
                     {% else %}
-                      {% if user.is_staff and user.is_active %}
+                      {% if request.user.is_staff and request.user.is_active %}
                       {% else %}
-                        {% if user.is_active %}
+                        {% if request.user.is_active %}
                           <li>
                             <a href="{% url 'registro:registrar_reporte' %}">
                               <i class="glyphicon glyphicon-pencil"></i>
@@ -281,7 +281,7 @@
                 </li>
                 <!-- End Reporte de Actividades dropdown -->
 
-                {% if user.is_superuser %}
+                {% if request.user.is_superuser %}
                 <li>
                   <a href="{% url 'bitacora:bitacora' %}">
                     <i class="glyphicon glyphicon-sunglasses"></i>
@@ -298,13 +298,13 @@
                     <i class="glyphicon glyphicon-user"></i>
                     {% if request.user.is_authenticated %}
                       {% if user.is_superuser and user.is_staff and user.is_active %}
-                        {{ user.username }} (Analista) <span class="caret"></span>
+                        {{ request.user.username }} (Analista) <span class="caret"></span>
                       {% else %}
                         {% if user.is_staff and user.is_active %}
-                          {{ user.username }} (Director) <span class="caret"></span>
+                          {{ request.user.username }} (Director) <span class="caret"></span>
                         {% else %}
                           {% if user.is_active %}
-                            {{ user.username }} (Cara Visible) <span class="caret"></span>
+                            {{ request.user.username }} (Cara Visible) <span class="caret"></span>
                           {% else %}
                             xxx
                           {% endif %}
@@ -367,7 +367,6 @@
         {% endblock %}
         </div>
       </div>
-
       <!-- End Well class -->
 
       <div class="well well-footer">

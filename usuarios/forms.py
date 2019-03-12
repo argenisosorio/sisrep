@@ -73,7 +73,7 @@ class MyRegistrationForm(UserCreationForm):
     is_staff = forms.BooleanField(label='Director',widget=CheckboxInput(attrs={
     }), required = False)
 
-    is_superuser = forms.BooleanField(label='Analista del sistema',widget=CheckboxInput(attrs={
+    is_superuser = forms.BooleanField(label='Analista',widget=CheckboxInput(attrs={
     }), required = False)
 
     class Meta:
@@ -111,7 +111,7 @@ class UserForm(forms.ModelForm):
     is_staff = forms.BooleanField(label='Director',widget=CheckboxInput(attrs={
     }), required = False)
 
-    is_superuser = forms.BooleanField(label='Analista del sistema',widget=CheckboxInput(attrs={
+    is_superuser = forms.BooleanField(label='Analista',widget=CheckboxInput(attrs={
     }), required = False)
 
     class Meta:
