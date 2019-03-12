@@ -170,7 +170,6 @@ class EditUser(SuccessMessageMixin, UpdateView):
         Método que redirecciona a index si el usuario
         que intenta editar el usuario no es admin.
         """
-        print self.request.user
         if request.user.is_superuser:
             return super(EditUser, self).get(request, *args, **kwargs)
         else:
