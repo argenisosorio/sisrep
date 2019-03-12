@@ -198,12 +198,8 @@ class DeleteUser(SuccessMessageMixin, DeleteView):
         """
         self.object = self.get_object()
         context = self.get_context_data(object=self.object)
-        self.object = self.get_object()
         if request.user.is_superuser:
             return self.render_to_response(context)
         else:
-            if str(self.object) == str(self.request.user):
-                return self.render_to_response(context)
-            else:
-                messages_alert = ['No tiene permisos para borrar el usuario']
-                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            messages_alert = ['No tiene permisos para borrar el usuario']
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
