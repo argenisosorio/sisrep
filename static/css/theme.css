@@ -2,7 +2,6 @@
   font-family: "OpenSans-Regular";
   src: url("../fonts/OpenSans-Regular.ttf");
 }
-
 body {
   font-family: "OpenSans-Regular", sans-serif;
   padding-top: 70px;
@@ -11,35 +10,28 @@ body {
   background-image: url("../img/intro.svg") !important;
   background-size: 100%;
 }
-
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
   margin-bottom: 20px;
 }
-
 .theme-showcase > p > .btn {
   margin: 5px 0;
 }
-
 .theme-showcase .navbar .container {
   width: auto;
 }
-
 .cuerpo {
   min-height: 200px;
 }
-
 table thead th {
   background: #a3baff;
   /*color: #ffffff;*/
 }
-
 table tfoot th {
   background: #a3baff;
   /*color: #ffffff;*/
 }
-
 ul.errorlist {
   border-left: 4px solid red !important;
   border: ridge 1px #ff5100;
@@ -47,31 +39,25 @@ ul.errorlist {
   border-radius: 3px;
   list-style: none outside none;
 }
-
 .alert.alert-success {
   border-left: 4px solid green !important;
 }
-
 .notificacion-emergente {
   margin-top: -12px;
   position: absolute;
   width: 90%;
 }
-
 #id_organizacion {
   min-width: 0;
   width: 100%;
   display: inline;
 }
-
 .form-control {
   margin-bottom: 25px !important;
 }
-
 .dt-buttons {
   margin-top: 40px;
 }
-
 .navbar.navbar-default {
   background-image: -webkit-linear-gradient(top, #fff 0%, #f8f8f8 100%);
   background-image: -o-linear-gradient(top, #fff 0%, #f8f8f8 100%);
@@ -81,10 +67,7 @@ ul.errorlist {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
   border-radius: 4px;
-  /*-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);*/
-  /*box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);*/
 }
-
 .navbar-cintillo {
   background: #275a9b !important;
   border-radius: 0px !important;
@@ -93,7 +76,6 @@ ul.errorlist {
   -moz-box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
   box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
 }
-
 .well {
   background: #FFFFFF;
   border: none !important;
@@ -102,37 +84,21 @@ ul.errorlist {
   -moz-box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
   box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
 }
-
 .well-footer {
   background: #275a9b;
   border-radius: 0px !important;
 }
-
 .well-footer a{
   color: #FFFFFF;
 }
-
 .banner_principal {
   -webkit-box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
   box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
 }
-/*
-.glyphicon.glyphicon-pencil {
-  font-size: 20px;
-}
-.glyphicon.glyphicon-trash {
-  font-size: 20px;
-}
-.glyphicon.glyphicon-search {
-  font-size: 20px;
-}
-*/
-
 .well-form {
   background: #eee;
 }
-
 .jumbotron {
   background: #d9edf7;
   border-radius: 0px !important;
@@ -140,9 +106,7 @@ ul.errorlist {
   -moz-box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
   box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
 }
-
 /* Navbar inverse */
-
 .navbar-inverse {
   background-color: #275a9b;
   border: none;
@@ -250,12 +214,11 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #444;
 }
 
-.panel-default > .panel-heading {
+panel-default > .panel-heading {
   /*color: #FFFFFF;
   background-color: #275a9b;*/
   border-color: #ddd;
 }
-
 .col-sm-3 {
   border: ridge 1px lightgray;
 }
@@ -272,15 +235,12 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .tabla_trabajadores td {
   padding: 10px;
 }
-
 #id_autor {
   display: none;
 }
-
 #id_fecha_registro_reporte {
   display: none;
 }
-
 .reg {
   background: #b9ffb9;
 }
@@ -299,32 +259,26 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .td_no {
   background: #ffb9b9;
 }
-
 table.table_change_password td {
   text-align: right;
   border: none !important;
   padding-bottom: 15px;
 }
-
 .container-all {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
-
 .disabled-input {
   background: lightgray;
 }
-
 .progress-bar {
   color: #000000 !important;
 }
-
 .texto_enlace_busqueda {
   font-size: 12px !important;
 }
-
 .progress {
   height: 20px;
   margin-bottom: 0px;

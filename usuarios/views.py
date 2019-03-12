@@ -127,13 +127,13 @@ class RegisterUser(CreateView):
     def get(self, request, *args, **kwargs):
         """
         Méroto que valida si el usuario autenticado es admin
-        para poder registrar un usuario del sistema.
+        para poder registrar un usuario.
         """
         self.object = None
         if request.user.is_superuser:
             return super(RegisterUser, self).get(request, *args, **kwargs)
         else:
-            messages_alert = ['No tiene permisos para registrar un usuario del sistema']
+            messages_alert = ['No tiene permisos para registrar un usuario']
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
     def form_valid(self, form):
@@ -157,7 +157,7 @@ class RegisterUser(CreateView):
 
 class EditUser(SuccessMessageMixin, UpdateView):
     """
-    Clase que gestiona la actualización de los datos de un usuario del sistema.
+    Clase que gestiona la actualización de los datos de un usuario.
     """
     model = User
     template_name = "usuarios/edit_user.html"
@@ -168,17 +168,13 @@ class EditUser(SuccessMessageMixin, UpdateView):
     def get(self, request, *args, **kwargs):
         """
         Método que redirecciona a index si el usuario
-        que intenta editar el usuario del sistema no es admin.
+        que intenta editar el usuario no es admin.
         """
-        self.object = self.get_object()
         if request.user.is_superuser:
             return super(EditUser, self).get(request, *args, **kwargs)
         else:
-            if str(self.object) == str(self.request.user):
-                return super(EditUser, self).get(request, *args, **kwargs)
-            else:
-                messages_alert = ['No tiene permisos para editar el usuario del sistema']
-                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            messages_alert = ['No tiene permisos para editar el usuario']
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class DeleteUser(SuccessMessageMixin, DeleteView):
@@ -197,7 +193,7 @@ class DeleteUser(SuccessMessageMixin, DeleteView):
     def get(self, request, *args, **kwargs):
         """
         Método que redirecciona a index si el usuario
-        que intenta borrar el usuario del sistema no es admin.
+        que intenta borrar el usuario no es admin.
         """
         self.object = self.get_object()
         context = self.get_context_data(object=self.object)
@@ -208,5 +204,5 @@ class DeleteUser(SuccessMessageMixin, DeleteView):
             if str(self.object) == str(self.request.user):
                 return self.render_to_response(context)
             else:
-                messages_alert = ['No tiene permisos para borrar el usuario del sistema']
+                messages_alert = ['No tiene permisos para borrar el usuario']
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))

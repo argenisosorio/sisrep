@@ -5,61 +5,68 @@
 <h1>Actualizar usuario</h1>
 <br />
 <form action="" method="post">{% csrf_token %}
-  <label>{{ form.username.label }}</label>
-  <br />
-  {{ form.username }}
-  {% if form.username.errors %}
-    <br />
-    <b>Alert: </b>{{ form.username.errors}}
-  {% endif %}
-  <br />
-  <label>{{ form.first_name.label }}</label>
-  <br />
-  {{ form.first_name }}
-  {% if form.first_name.errors %}
-    <br />
-    <b>Alert: </b>{{ form.first_name.errors}}
-  {% endif %}
-  <br />
-  <label>{{ form.last_name.label }}</label>
-  <br />
-  {{ form.last_name }}
-  {% if form.last_name.errors %}
-    <br />
-    <b>Alert: </b>{{ form.last_name.errors}}
-  {% endif %}
-  <br />
-  <label>{{ form.email.label }}</label>
-  <br />
-  {{ form.email }}
-  {% if form.email.errors %}
-    <br />
-    <b>Alert: </b>{{ form.email.errors}}
-  {% endif %}
-  <br />
-  <br />
-  <label>{{ form.is_active.label }}</label>
-  {{ form.is_active }}
-  {% if form.is_active.errors %}
-    <br />
-    <b>Alert: </b>{{ form.is_active.errors}}
-  {% endif %}
-  <br />
-  <br />
-  <label>{{ form.is_staff.label }}</label>
-  {{ form.is_staff }}
-  {% if form.is_staff.errors %}
-    <br />
-    <b>Alert: </b>{{ form.is_staff.errors}}
-  {% endif %}
-  <br />
-  <br />
-  <label>{{ form.is_superuser.label }}</label>
-  {{ form.is_superuser }}
-  {% if form.is_superuser.errors %}
-    <br />
-    <b>Alert: </b>{{ form.is_superuser.errors}}
-  {% endif %}
+  <div class="row">
+    <div class="col-sm-4">
+      <label>{{ form.username.label }}</label>
+      <br />
+      {{ form.username }}
+      {% if form.username.errors %}
+        <br />
+        <b>Alert: </b>{{ form.username.errors}}
+      {% endif %}
+      <br />
+      <label>{{ form.first_name.label }}</label>
+      <br />
+      {{ form.first_name }}
+      {% if form.first_name.errors %}
+        <br />
+        <b>Alert: </b>{{ form.first_name.errors}}
+      {% endif %}
+      <br />
+      <label>{{ form.last_name.label }}</label>
+      <br />
+      {{ form.last_name }}
+      {% if form.last_name.errors %}
+        <br />
+        <b>Alert: </b>{{ form.last_name.errors}}
+      {% endif %}
+      <br />
+      <br />
+      {{ form.is_active }}
+      <label>{{ form.is_active.label }}</label>
+      {% if form.is_active.errors %}
+        <br />
+        <b>Alert: </b>{{ form.is_active.errors}}
+      {% endif %}
+      <br />
+      <br />
+      {{ form.is_staff }}
+      <label>{{ form.is_staff.label }}</label>
+      {% if form.is_staff.errors %}
+        <br />
+        <b>Alert: </b>{{ form.is_staff.errors}}
+      {% endif %}
+      <br />
+      <br />
+      {{ form.is_superuser }}
+      <label>{{ form.is_superuser.label }}</label>
+      {% if form.is_superuser.errors %}
+        <br />
+        <b>Alert: </b>{{ form.is_superuser.errors}}
+      {% endif %}
+    </div>
+    <div class="col-sm-4">
+      <label>{{ form.email.label }}</label>
+      <br />
+      {{ form.email }}
+      {% if form.email.errors %}
+        <br />
+        <b>Alert: </b>{{ form.email.errors}}
+      {% endif %}
+    </div>
+    <div class="col-sm-4">
+    </div>
+  </div>
   <br />
   <br />
   <button class="btn btn-success" type="submit">Actualizar</button>
