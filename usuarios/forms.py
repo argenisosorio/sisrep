@@ -68,12 +68,15 @@ class MyRegistrationForm(UserCreationForm):
     }), required = True)
 
     is_active = forms.BooleanField(label='Cara visible',widget=CheckboxInput(attrs={
+        'class':'checkbox',
     }), required = False)
 
     is_staff = forms.BooleanField(label='Director',widget=CheckboxInput(attrs={
+        'class':'checkbox',
     }), required = False)
 
     is_superuser = forms.BooleanField(label='Analista',widget=CheckboxInput(attrs={
+        'class':'checkbox',
     }), required = False)
 
     class Meta:
@@ -106,12 +109,15 @@ class UserForm(forms.ModelForm):
     }), required = True)
 
     is_active = forms.BooleanField(label='Cara visible',widget=CheckboxInput(attrs={
+        'class':'checkbox',
     }), required = False)
 
     is_staff = forms.BooleanField(label='Director',widget=CheckboxInput(attrs={
+        'class':'checkbox',
     }), required = False)
 
     is_superuser = forms.BooleanField(label='Analista',widget=CheckboxInput(attrs={
+        'class':'checkbox',
     }), required = False)
 
     class Meta:
