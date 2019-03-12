@@ -3,7 +3,6 @@
 {% block cuerpo %}
 <br />
 <h1>Reporte de porcentajes de avance de los productos</h1>
-
 <br />
 <form action="{% url 'safet:busqueda' %}" method="get">
   <label>Buscar productos por año</label>
@@ -21,12 +20,12 @@
       <div class="col-sm-4">
       </div>
       <div class="col-sm-4">
-        <h3>Reporte de porcentajes de avance de los productos del año {{ ano }}</h3>
       </div>
       <div class="col-sm-4">
         <h4 class="text-right">Fecha: {{ fecha_humana }}</h4>
       </div>
     </div>
+    <h3 class="text-center">Reporte de porcentajes de avance de los productos del año {{ ano }}</h3>
     <br />
     <div class="row">
       <div class="col-sm-4">
