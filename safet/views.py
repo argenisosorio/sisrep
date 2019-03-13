@@ -460,7 +460,8 @@ class Editar_reporte_avances_cv(SuccessMessageMixin,UpdateView):
         se registra un reporte de actividades en el sistema.
         """
         usuario = str(self.request.user)
-        accion = "Actualizo un reporte de avances"
+        nombre_producto = self.object.nombre_producto
+        accion = "Actualizo un reporte de avances del producto: "+nombre_producto
         myDate = datetime.now()
         formatedDate = myDate.strftime("%d-%m-%Y %H:%M")
         fecha_humana = str(formatedDate)

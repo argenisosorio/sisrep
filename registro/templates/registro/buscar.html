@@ -1,20 +1,19 @@
 {% extends "base/base.html" %}
-{% block titulo %}Buscar Reportes{% endblock %}
+{% block titulo %}Buscar reportes de actividades{% endblock %}
 {% block cuerpo %}
 <br />
-<h1>Buscar Reportes</h1>
+<h1>Buscar reportes de actividades</h1>
 <br />
 
 <form action="{% url 'registro:busqueda' %}" method="get">
-  <label>Por Año</label>
+  <label>Por año</label>
   <br />
   <select class="form form-control" name="ano" required>
     <option value=""></option>
     <option value="2018">2018</option>
     <option value="2019">2019</option>
   </select>
-  <br />
-  <label>Por Mes</label>
+  <label>Por mes</label>
   <br />
   <select class="form form-control" name="mes" required>
     <option value=""></option>

@@ -1,5 +1,5 @@
 {% extends "base/base.html" %}
-{% block titulo %}Detalle de Reporte{% endblock %}
+{% block titulo %}Detalle de reporte{% endblock %}
 {% block cuerpo %}
 <script type="text/javascript">
   function export_report_to_pdf() {
@@ -10,17 +10,17 @@
           ,width: 520,
         },
         { text: '\nReporte de {{ reporte.nombre_proyecto }} de {{ reporte.mes }} del {{ reporte.ano }}\n\n',style: 'header'},
-        // Nombre del Proyecto
-        { text: 'Nombre del Proyecto:', style: 'subheader' },
+        // Producto
+        { text: 'Proyecto:', style: 'subheader' },
         { text: '{{ reporte.nombre_proyecto }}\n\n', style: 'text_query' },
         // Registrado
         { text: 'Registrado:', style: 'subheader' },
         { text: '{{ reporte.fecha_registro_reporte }}\n\n', style: 'text_query' },
-        // Nombre del Cara Visible
-        { text: 'Nombre del Cara Visible:', style: 'subheader'},
+        // Cara visible
+        { text: 'Cara Visible:', style: 'subheader'},
         { text: '{{ reporte.nombre_caravisible }}\n\n', style: 'text_query'},
-        // Director de Proyecto
-        { text: 'Director de Proyecto:', style: 'subheader' },
+        // Director
+        { text: 'Director:', style: 'subheader' },
         { text: '{{ reporte.nombre_director }}\n\n', style: 'text_query' },
         // Mes
         { text: 'Mes:', style: 'subheader' },
@@ -28,11 +28,11 @@
         // Año
         { text: 'Año:', style: 'subheader' },
         { text: '{{ reporte.ano }}\n\n', style: 'text_query' },
-        // Descripción General del Avance del Proyecto
-        { text: 'Descripción General del Avance del Proyecto:', style: 'subheader' },
+        // Descripción general del avance del producto
+        { text: 'Descripción general del avance del producto:', style: 'subheader' },
         { text: `{{ reporte.desc_avance }}\n\n`, style: 'text_query' },
-        // Dificultades y Obstáculos
-        { text: 'Dificultades y Obstáculos:', style: 'subheader' },
+        // Dificultades y obstáculos
+        { text: 'Dificultades y obstáculos:', style: 'subheader' },
         { text: `{{ reporte.obstaculos }}\n\n`, style: 'text_query' },
         { text: 'Integrantes del equipo:', style: 'subheader' },
         // Tabla
@@ -152,7 +152,7 @@
     <div class="panel panel-info">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <b>Nombre del Proyecto</b>
+          <b>Producto</b>
         </h3>
       </div>
       <div class="panel-body">
@@ -183,7 +183,7 @@
   <div class="col-sm-6">
     <div class="panel panel-info">
       <div class="panel-heading">
-        <h3 class="panel-title"><b>Nombre del Cara Visible</b></h3>
+        <h3 class="panel-title"><b>Cara Visible</b></h3>
       </div>
       <div class="panel-body">
         {{ reporte.nombre_caravisible }}
@@ -193,7 +193,7 @@
   <div class="col-sm-6">
     <div class="panel panel-info">
       <div class="panel-heading">
-        <h3 class="panel-title"><b>Director de Proyecto</b></h3>
+        <h3 class="panel-title"><b>Director</b></h3>
       </div>
       <div class="panel-body">
         {{ reporte.nombre_director }}
@@ -233,7 +233,7 @@
 
 <div class="panel panel-info">
   <div class="panel-heading">
-    <h3 class="panel-title"><b>Descripción General del Avance del Proyecto</b></h3>
+    <h3 class="panel-title"><b>Descripción general del avance del producto</b></h3>
   </div>
   <div class="panel-body">
     <div align="justify">
@@ -244,7 +244,7 @@
 
 <div class="panel panel-info">
   <div class="panel-heading">
-    <h3 class="panel-title"><b>Dificultades y Obstáculos</b></h3>
+    <h3 class="panel-title"><b>Dificultades y obstáculos</b></h3>
   </div>
   <div class="panel-body">
     <div align="justify">

@@ -372,13 +372,15 @@ class Registrar_reporte(SuccessMessageMixin,CreateView):
         Método que permite guardar un evento en la Bitácora cuando
         se registra un reporte de actividades en el sistema.
         """
+        self.object = form.save()
         usuario = str(self.request.user)
-        accion = "Registro un reporte de actividades"
+        nombre_proyecto = self.object.nombre_proyecto
+        print nombre_proyecto
+        accion = "Registro un reporte de actividades del producto: "+nombre_proyecto
         myDate = datetime.now()
         formatedDate = myDate.strftime("%d-%m-%Y %H:%M")
         fecha_humana = str(formatedDate)
         Bitacora.objects.create(usuario=usuario, accion=accion, fecha=fecha_humana)
-        self.object = form.save()
         return super(Registrar_reporte, self).form_valid(form)
 
 
