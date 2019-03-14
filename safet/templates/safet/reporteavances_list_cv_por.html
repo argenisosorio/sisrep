@@ -18,8 +18,9 @@
 <!-- Well class
 ================================================== -->
 <div class="well">
-  <h4 class="text-right">Fecha: {{ fecha_humana }}</h4>
-  <h3 class="text-center">Reporte de porcentajes de avance de los productos</h3>
+  <h3 class="text-right"><b>Fecha: {{ fecha_humana }}</b></h3>
+  <h2 class="text-center">Reporte de porcentajes de avance de los productos</h2>
+  <br />
   {% for x in reportes %}
   <div class="row">
     <div class="col-sm-4">
@@ -37,7 +38,6 @@
           <b>{{ x.nombre_producto }}</b>
         </a>
       </div>
-      <br />
     </div>
     <div class="col-sm-4">
       <div class="progress">
