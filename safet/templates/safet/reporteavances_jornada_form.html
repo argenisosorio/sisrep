@@ -487,7 +487,41 @@
       </div>
       <div id="collapse9" class="panel-collapse collapse">
         <div class="panel-body">
-          999
+          <b>{{ form.nombre_act_9.label }}</b>
+          {{ form.nombre_act_9 }}
+          {% if form.nombre_act_9.errors %}
+            <p>{{ form.nombre_act_9.errors}}</p>
+          {% endif %}
+
+          <b>{{ form.fecha_entrega_act_9.label }}</b>
+          {{ form.fecha_entrega_act_9 }}
+          {% if form.fecha_entrega_act_9.errors %}
+            <p>{{ form.fecha_entrega_act_9.errors}}</p>
+          {% endif %}
+
+          <b>{{ form.resp_act_9.label }}</b>
+          {{ form.resp_act_9 }}
+          {% if form.resp_act_9.errors %}
+            <p>{{ form.resp_act_9.errors}}</p>
+          {% endif %}
+
+          <b>{{ form.porc_act_9.label }}</b>
+          {{ form.porc_act_9 }}
+          {% if form.porc_act_9.errors %}
+            <p>{{ form.porc_act_9.errors}}</p>
+          {% endif %}
+
+          <b>{{ form.porc_avan_act_9.label }}</b>
+          {{ form.porc_avan_act_9 }}
+          {% if form.porc_avan_act_9.errors %}
+            <p>{{ form.porc_avan_act_9.errors}}</p>
+          {% endif %}
+
+          <b>{{ form.enlace_ver_act_9.label }}</b>
+          {{ form.enlace_ver_act_9 }}
+          {% if form.enlace_ver_avan_act_9.errors %}
+            <p>{{ form.enlace_ver_act_9.errors}}</p>
+          {% endif %}
         </div>
       </div>
     </div>
