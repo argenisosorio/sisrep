@@ -409,16 +409,19 @@ class Editar_reporte(SuccessMessageMixin,UpdateView):
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
-"""
 class Borrar_reporte(SuccessMessageMixin,DeleteView):
+    """
     Clase que permite borrar un reporte registrado en el sistema.
+    """
     model = Reporte
     success_url = reverse_lazy('registro:consultar_reporte')
     success_message = "Se elimino el reporte con éxito"
 
     def get(self, request, *args, **kwargs):
+        """
         Método que redirecciona a index si el usuario
         que intenta borrar el reporte no es staff o el autor/creador.
+        """
         self.object = self.get_object()
         context = self.get_context_data(object=self.object)
         self.object = self.get_object()
@@ -432,18 +435,13 @@ class Borrar_reporte(SuccessMessageMixin,DeleteView):
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
     def delete(self, request, *args, **kwargs):
+        """
         Función que permite mandar un mensaje al template
         cuando se borra un reporte y registra en la Bitácora que
         se elimino un reporte.
-        usuario = str(self.request.user)
-        accion = "Elimino un Reporte"
-        myDate = datetime.now()
-        formatedDate = myDate.strftime("%d-%m-%Y %H:%M")
-        fecha_humana = str(formatedDate)
-        Bitacora.objects.create(usuario=usuario, accion=accion, fecha=fecha_humana)
+        """
         messages.success(self.request, self.success_message)
         return super(Borrar_reporte, self).delete(request, *args, **kwargs)
-"""
 
 
 class Detallar_reporte(DetailView):
