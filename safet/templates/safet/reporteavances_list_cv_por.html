@@ -2,8 +2,7 @@
 {% block titulo %}Reporte gráfico de (%){% endblock %}
 {% block cuerpo %}
 <br />
-<h1>Reporte gráfico de porcentaje de avances de los Productos</h1>
-
+<h1>Reporte de porcentajes de avance de los productos</h1>
 <br />
 <form action="{% url 'safet:busqueda' %}" method="get">
   <label>Buscar productos por año</label>
@@ -13,13 +12,25 @@
   </select>
   <button class="btn btn-success" type="submit">Buscar</button>
 </form>
-<hr />
-<div align="center">
-  <h3>Porcentaje de avance de los Productos</h3>
-</div>
 <br />
+
 {% if reportes %}
+<!-- Well class
+================================================== -->
+<div class="well">
+  <h3 class="text-right"><b>Fecha: {{ fecha_humana }}</b></h3>
+  <h2 class="text-center">Reporte de porcentajes de avance de los productos</h2>
+  <br />
   {% for x in reportes %}
+  <div class="row">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+    </div>
+  </div>
+  <br />
   <div class="row">
     <div class="col-sm-4">
       <div class="texto_enlace_busqueda text-right">
@@ -27,7 +38,6 @@
           <b>{{ x.nombre_producto }}</b>
         </a>
       </div>
-      <br />
     </div>
     <div class="col-sm-4">
       <div class="progress">
@@ -40,6 +50,8 @@
     </div>
   </div>
   {% endfor %}
+</div>
+<!-- End well -->
 {% else %}
   <br />
   <b>No se encontraron productos</b>

@@ -124,6 +124,41 @@ $("document").ready(function () {
 | se posa este sobre el campo.
 |-------------------------------------------------
 */
-$("document").ready(function () {
+$("document").ready(function(){
   $(".disabled-input").css("pointer-events", "none");
+});
+
+/*
+|--------------------------------------------------
+| Función que permite marcar un chechbox y a su vez
+| marca y deshabilita los anteriores a este.
+|--------------------------------------------------
+*/
+$("document").ready(function(){
+  (function(){
+    var checkbox = document.querySelectorAll('.checkbox');
+    for (var i = checkbox.length - 1; i >= 0; i--) {
+      checkbox[i].addEventListener('change', function(){
+        if (this.checked) {
+          for (var j = 0; j <= checkbox.length - 1; j++) {
+            if (checkbox[j].id === this.id) {
+              break;
+            } else {
+              checkbox[j].checked = true;
+              checkbox[j].setAttribute('style','pointer-events:none');
+            }
+          }
+        } else {
+          for (var j = 0; j <= checkbox.length - 1; j++) {
+            if (checkbox[j].id === this.id) {
+              break;
+            } else {
+              checkbox[j].checked = false;
+              checkbox[j].setAttribute('style','');
+            }
+          }
+        }
+      }, true);
+    }
+  })();
 });

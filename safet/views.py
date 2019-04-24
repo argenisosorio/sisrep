@@ -254,6 +254,7 @@ class Registrar_reporte_avances(SuccessMessageMixin,CreateView):
     model = ReporteAvances
     form_class = ReporteAvancesForm
     success_url = reverse_lazy('safet:consultar_reporte_avances')
+    success_message = "Se registro el reporte de avances con éxito"
 
     def get(self, request, *args, **kwargs):
         """
@@ -264,11 +265,11 @@ class Registrar_reporte_avances(SuccessMessageMixin,CreateView):
         if request.user.is_superuser:
             return super(Registrar_reporte_avances, self).get(request, *args, **kwargs)
         else:
-            messages_alert = ['No tiene permisos para registrar un Reporte de Avances']
+            messages_alert = ['No tiene permisos para registrar un reporte de avances']
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
-class Registrar_reporte_avances_software(CreateView):
+class Registrar_reporte_avances_software(SuccessMessageMixin,CreateView):
     """
     Clase que permite registrar un Reporte de Avances de un producto
     del tipo Software.
@@ -277,6 +278,7 @@ class Registrar_reporte_avances_software(CreateView):
     form_class = ReporteAvancesSoftwareForm
     template_name = "safet/reporteavances_software_form.html"
     success_url = reverse_lazy('safet:consultar_reporte_avances')
+    success_message = "Se registro el reporte de avances con éxito"
 
     def get(self, request, *args, **kwargs):
         """
@@ -291,7 +293,7 @@ class Registrar_reporte_avances_software(CreateView):
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
-class Registrar_reporte_avances_cur_lin(CreateView):
+class Registrar_reporte_avances_cur_lin(SuccessMessageMixin,CreateView):
     """
     Clase que permite registrar un Reporte de Avances de un producto
     del tipo Curso en Línea.
@@ -300,6 +302,7 @@ class Registrar_reporte_avances_cur_lin(CreateView):
     form_class = ReporteAvancesCursoLineaForm
     template_name = "safet/reporteavances_cur_lin_form.html"
     success_url = reverse_lazy('safet:consultar_reporte_avances')
+    success_message = "Se registro el reporte de avances con éxito"
 
     def get(self, request, *args, **kwargs):
         """
@@ -314,7 +317,7 @@ class Registrar_reporte_avances_cur_lin(CreateView):
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
-class Registrar_reporte_avances_jornada(CreateView):
+class Registrar_reporte_avances_jornada(SuccessMessageMixin,CreateView):
     """
     Clase que permite registrar un reporte de avances de un producto
     del tipo jornada.
@@ -323,6 +326,7 @@ class Registrar_reporte_avances_jornada(CreateView):
     form_class = ReporteAvancesJornadaForm
     template_name = "safet/reporteavances_jornada_form.html"
     success_url = reverse_lazy('safet:consultar_reporte_avances')
+    success_message = "Se registro el reporte de avances con éxito"
 
     def get(self, request, *args, **kwargs):
         """
@@ -337,7 +341,7 @@ class Registrar_reporte_avances_jornada(CreateView):
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
-class Registrar_reporte_avances_publicacion(CreateView):
+class Registrar_reporte_avances_publicacion(SuccessMessageMixin,CreateView):
     """
     Clase que permite registrar un reporte de avances de un producto
     del tipo publicación.
@@ -346,6 +350,7 @@ class Registrar_reporte_avances_publicacion(CreateView):
     form_class = ReporteAvancesPublicacionForm
     template_name = "safet/reporteavances_publicacion_form.html"
     success_url = reverse_lazy('safet:consultar_reporte_avances')
+    success_message = "Se registro el reporte de avances con éxito"
 
     def get(self, request, *args, **kwargs):
         """
@@ -460,7 +465,8 @@ class Editar_reporte_avances_cv(SuccessMessageMixin,UpdateView):
         se registra un reporte de actividades en el sistema.
         """
         usuario = str(self.request.user)
-        accion = "Actualizo un reporte de avances"
+        nombre_producto = self.object.nombre_producto
+        accion = "Actualizo un reporte de avances del producto: "+nombre_producto
         myDate = datetime.now()
         formatedDate = myDate.strftime("%d-%m-%Y %H:%M")
         fecha_humana = str(formatedDate)
@@ -500,9 +506,14 @@ def busqueda(request):
     Función que recibe los parámetros enviados desde el formulario de
     búsqueda de por año y filtra los productos con querysets.
     """
+    myDate = datetime.now()
+    #formatedDate = myDate.strftime("%d-%m-%Y")
+    #fecha_humana = str(formatedDate)
+    fecha_humana = myDate
     if 'ano' in request.GET and request.GET['ano']:
         ano = request.GET['ano']
         reportes_ano = ReporteAvances.objects.filter(ano_ejecucion__icontains=ano)
-        return render(request, 'safet/reporteavances_list_cv_por.html',  {'reportes': reportes_ano, 'query': ano})
+        return render(request, 'safet/reporteavances_list_cv_por.html',
+            {'reportes':reportes_ano,'ano':ano,'fecha_humana':fecha_humana})
     else:
         return HttpResponse('Por favor introduce un termino de búsqueda.')

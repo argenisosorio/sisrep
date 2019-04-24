@@ -59,13 +59,13 @@ class DirectorForm(forms.ModelForm):
 
 class ReporteForm(forms.ModelForm):
     """
-    Formulario con los campos de un Reporte de actividades de un proyecto.
+    Formulario con los campos de un reporte de actividades de un reporte.
     """
 
     def __init__(self, *args, **kwargs):
         """
-        Método que carga la data de los proyectos registrados
-        del modelo Proyecto en el campo nombre_proyecto del
+        Método que carga la data de los proyectos, caras visibles y directores
+        registrados del modelo Proyecto en el campo nombre_proyecto del
         modelo Reporte.
         """
         super(ReporteForm, self).__init__(*args, **kwargs)
@@ -73,17 +73,17 @@ class ReporteForm(forms.ModelForm):
         lista_caravisibles = Caravisible.objects.all().values_list('nombre_caravisible','nombre_caravisible')
         lista_directores = Director.objects.all().values_list('nombre_director','nombre_director')
 
-        self.fields['nombre_proyecto'] = forms.ChoiceField(label="Nombre del Proyecto", widget=Select(attrs={
+        self.fields['nombre_proyecto'] = forms.ChoiceField(label="Producto", widget=Select(attrs={
             'class':'form-control input-md',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_proyectos)
 
-        self.fields['nombre_caravisible'] = forms.ChoiceField(label="Nombre del Cara Visible", widget=Select(attrs={
+        self.fields['nombre_caravisible'] = forms.ChoiceField(label="Cara visible", widget=Select(attrs={
             'class':'form-control input-md',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
-        self.fields['nombre_director'] = forms.ChoiceField(label="Nombre del Director", widget=Select(attrs={
+        self.fields['nombre_director'] = forms.ChoiceField(label="Director", widget=Select(attrs={
             'class':'form-control input-md',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_directores)
@@ -106,13 +106,13 @@ class ReporteForm(forms.ModelForm):
         'required': 'True',
     }), choices = anos)
 
-    desc_avance = forms.CharField(label='Descripción General del Avance del Proyecto', widget=Textarea(attrs={
+    desc_avance = forms.CharField(label='Descripción general del avance del producto', widget=Textarea(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
     }), required = True)
 
-    obstaculos = forms.CharField(label='Dificultades y Obstáculos', widget=Textarea(attrs={
+    obstaculos = forms.CharField(label='Dificultades y obstáculos', widget=Textarea(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
