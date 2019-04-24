@@ -286,3 +286,10 @@ table.table_change_password td {
   background-color: #f5f5f5;
   /*border: ridge 1px red;*/
 }
+
+.panel-group .panel-heading {
+  border-bottom: 0;
+  color: #333;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}
