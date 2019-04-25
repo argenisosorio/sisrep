@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from django.shortcuts import get_object_or_404, redirect
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views import generic
@@ -17,7 +18,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from .forms import LoginForm, MyRegistrationForm, UserForm
 from django.contrib.auth.forms import (
-    AuthenticationForm, PasswordChangeForm, PasswordResetForm, SetPasswordForm,
+    AuthenticationForm, PasswordChangeForm, PasswordResetForm, SetPasswordForm, AdminPasswordChangeForm
 )
 
 
@@ -202,3 +203,23 @@ class DeleteUser(SuccessMessageMixin, DeleteView):
         else:
             messages_alert = ['No tiene permisos para borrar el usuario']
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+
+
+def user_change_password(request,pk):
+    """
+    Función que gestiona la actualización de las contraseña de un usuario.
+    """
+    model = User
+    usuario = get_object_or_404(User, pk=pk)
+    print usuario
+    form = AdminPasswordChangeForm(user=usuario)
+    if request.method == 'POST':
+        form = AdminPasswordChangeForm(user=usuario, data=request.POST)
+        if form.is_valid():
+            form.save()
+            #messages = ['Se actualizó la contraseña del usuario con éxito']
+            #return render_to_response("inicio/index.html",{'messages':messages},context_instance=RequestContext(request))
+            return redirect('usuarios:list_users')
+        else:
+            print "No se realizó el cambio de contraseña"
+    return render(request, 'usuarios/user_change_password.html',{'form':form,'usuario':usuario})

@@ -13,4 +13,6 @@ urlpatterns = patterns('',
     url(r'^cambiar-contrasena/$', login_required(views.change_password), name='change_password'),
     url(r'^edit_user/(?P<pk>\d+)$', login_required(views.EditUser.as_view()), name='edit_user'),
     url(r'^delete_user/(?P<pk>\d+)$', login_required(views.DeleteUser.as_view()), name='delete_user'),
+    #url(r'^user_change_password/(?P<pk>\d+)$', login_required(views.UserChangePassword.as_view()), name='user_change_password'),
+    url(r'^user_change_password/(?P<pk>\d+)$', login_required(views.user_change_password), name='user_change_password'),
 )

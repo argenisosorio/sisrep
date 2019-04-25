@@ -69,6 +69,7 @@
   </div>
   <br />
   <br />
+  <a href="{% url 'usuarios:user_change_password' user.pk %}"><button type="button" class="btn btn-primary">Cambiar contraseña</button>
   <button class="btn btn-success" type="submit">Actualizar</button>
 </form>
 {% endblock %}
