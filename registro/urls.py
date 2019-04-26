@@ -26,6 +26,7 @@ urlpatterns = patterns('',
     url(r'^consultar_reporte$', login_required(views.Consultar_reporte.as_view()), name='consultar_reporte'),
     url(r'^registrar_reporte$', login_required(views.Registrar_reporte.as_view()), name='registrar_reporte'),
     url(r'^editar_reporte/(?P<pk>\d+)$', login_required(views.Editar_reporte.as_view()), name='editar_reporte'),
+    url(r'^editar_reporte_analista/(?P<pk>\d+)$', login_required(views.Editar_reporte_analista.as_view()), name='editar_reporte_analista'),
     url(r'^borrar_reporte/(?P<pk>\d+)$', login_required(views.Borrar_reporte.as_view()), name='borrar_reporte'),
     url(r'^detallar_reporte/(?P<pk>\d+)$', login_required(views.Detallar_reporte.as_view()), name='detallar_reporte'),
     ##### Filtros de búsqueda #####

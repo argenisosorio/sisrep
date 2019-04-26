@@ -17,6 +17,9 @@ from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
 from datetime import datetime
+#is_active = Cara visible
+#is_staff = Director
+#is_superuser = Analista
 
 
 #################################
@@ -407,6 +410,30 @@ class Editar_reporte(SuccessMessageMixin,UpdateView):
             else:
                 messages_alert = ['No tiene permisos para editar el reporte']
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+
+
+class Editar_reporte_analista(SuccessMessageMixin,UpdateView):
+    """
+    Clase que permite editar la data guardada de un reporte por parte
+    Analista del sistema.
+    """
+    model = Reporte
+    form_class = ReporteForm
+    template_name = "registro/reporte_form_update.html"
+    success_url = reverse_lazy('registro:consultar_reporte')
+    success_message = "Se actualizo el reporte con éxito"
+
+    def get(self, request, *args, **kwargs):
+        """
+        Método que redirecciona a index si el usuario
+        que intenta editar el reporte no es el autor/creador.
+        """
+        self.object = self.get_object()
+        if request.user.is_superuser:
+            return super(Editar_reporte_analista, self).get(request, *args, **kwargs)
+        else:
+            messages_alert = ['No tiene permisos para editar el reporte']
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
 class Borrar_reporte(SuccessMessageMixin,DeleteView):
