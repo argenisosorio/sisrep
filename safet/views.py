@@ -512,7 +512,7 @@ def busqueda(request):
     fecha_humana = myDate
     if 'ano' in request.GET and request.GET['ano']:
         ano = request.GET['ano']
-        reportes_ano = ReporteAvances.objects.filter(ano_ejecucion__icontains=ano)
+        reportes_ano = ReporteAvances.objects.order_by('nombre_producto').filter(ano_ejecucion__icontains=ano)
         return render(request, 'safet/reporteavances_list_cv_por.html',
             {'reportes':reportes_ano,'ano':ano,'fecha_humana':fecha_humana})
     else:
