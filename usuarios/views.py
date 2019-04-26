@@ -217,9 +217,12 @@ def user_change_password(request,pk):
         form = AdminPasswordChangeForm(user=usuario, data=request.POST)
         if form.is_valid():
             form.save()
-            #messages = ['Se actualizó la contraseña del usuario con éxito']
-            #return render_to_response("inicio/index.html",{'messages':messages},context_instance=RequestContext(request))
-            return redirect('usuarios:list_users')
+            messages = ['Se actualizó la contraseña del usuario con éxito']
+            usuarios = User.objects.all()
+            data = {}
+            data['object_list'] = usuarios
+            object_list = usuarios
+            return render_to_response("usuarios/list_users.html",{'messages':messages,'object_list':object_list},context_instance=RequestContext(request))
         else:
             print "No se realizó el cambio de contraseña"
     return render(request, 'usuarios/user_change_password.html',{'form':form,'usuario':usuario})
