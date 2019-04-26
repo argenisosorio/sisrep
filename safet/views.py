@@ -507,9 +507,9 @@ def busqueda(request):
     búsqueda de por año y filtra los productos con querysets.
     """
     myDate = datetime.now()
-    #formatedDate = myDate.strftime("%d-%m-%Y")
+    formatedDate = myDate.strftime("%d-%m-%Y")
     #fecha_humana = str(formatedDate)
-    fecha_humana = myDate
+    fecha_humana = formatedDate
     if 'ano' in request.GET and request.GET['ano']:
         ano = request.GET['ano']
         reportes_ano = ReporteAvances.objects.order_by('nombre_producto').filter(ano_ejecucion__icontains=ano)
