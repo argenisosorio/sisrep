@@ -46,7 +46,13 @@
           <a href="{% url 'registro:detallar_reporte' x.id %}" title="Detallar"><i class="glyphicon glyphicon-eye-open"></i></a>
         </td>
       {% else %}
-        <td>&nbsp;</td>
+        {% if request.user.is_staff %}
+          <td>
+            <a href="{% url 'registro:detallar_reporte' x.id %}" title="Detallar"><i class="glyphicon glyphicon-eye-open"></i></a>
+          </td>
+        {% else %}
+          <td></td>
+        {% endif %}
       {% endif %}
     {% endif %}
   </tr>
