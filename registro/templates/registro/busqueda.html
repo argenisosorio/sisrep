@@ -42,12 +42,14 @@
       <td>{{ x.mes }}</td>
       <td>{{ x.ano }}</td>
       <td>{{ x.fecha_registro_reporte }}</td>
-      {% if request.user.is_staff %}
-        <td>
-          <a href="{% url 'registro:detallar_reporte' x.id %}" title="Detallar"><i class="glyphicon glyphicon-eye-open"></i></a>
-          &nbsp; | &nbsp;
-          <a href="{% url 'registro:borrar_reporte' x.id %}" title="Borrar"><i class="glyphicon glyphicon-trash"></i></a>
-        </td>
+      {% if request.user.is_superuser %}
+      <td>
+        <a href="{% url 'registro:editar_reporte_analista' x.id %}" title="Editar"><i class="glyphicon glyphicon-pencil"></i></a>
+        &nbsp; | &nbsp;
+        <a href="{% url 'registro:detallar_reporte' x.id %}" title="Detallar"><i class="glyphicon glyphicon-eye-open"></i></a>
+        &nbsp; | &nbsp;
+        <a href="{% url 'registro:borrar_reporte' x.id %}" title="Borrar"><i class="glyphicon glyphicon-trash"></i></a>
+      </td>
       {% else %}
         {% if x.autor == request.user.username %}
           <td>
@@ -56,7 +58,13 @@
             <a href="{% url 'registro:detallar_reporte' x.id %}" title="Detallar"><i class="glyphicon glyphicon-eye-open"></i></a>
           </td>
         {% else %}
-          <td>&nbsp;</td>
+          {% if request.user.is_staff %}
+            <td>
+              <a href="{% url 'registro:detallar_reporte' x.id %}" title="Detallar"><i class="glyphicon glyphicon-eye-open"></i></a>
+            </td>
+          {% else %}
+            <td></td>
+          {% endif %}
         {% endif %}
       {% endif %}
     </tr>

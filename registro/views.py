@@ -385,8 +385,14 @@ class Consultar_reporte(ListView):
             if isinstance(ordering, six.string_types):
                 ordering = (ordering,)
             queryset = queryset.order_by(*ordering)
-        queryset = queryset.filter(autor=str(self.request.user))
-        return queryset
+        if self.request.user.is_superuser:
+            return queryset
+        else:
+            if self.request.user.is_staff:
+                return queryset
+            else:
+                queryset = queryset.filter(autor=str(self.request.user))
+                return queryset
 
 
 class Registrar_reporte(SuccessMessageMixin,CreateView):
