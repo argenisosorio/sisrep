@@ -45,7 +45,7 @@ ul.errorlist {
 .notificacion-emergente {
   margin-top: -12px;
   position: absolute;
-  width: 90%;
+  width: 95%;
 }
 #id_organizacion {
   min-width: 0;
@@ -286,7 +286,6 @@ table.table_change_password td {
   background-color: #f5f5f5;
   /*border: ridge 1px red;*/
 }
-
 .panel-group .panel-heading {
   border-bottom: 0;
   color: #333;

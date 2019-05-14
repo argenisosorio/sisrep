@@ -448,6 +448,39 @@ class Consultar_reporte_avances_cv(ListView):
     model = ReporteAvances
     template_name = "safet/reporteavances_list_cv.html"
 
+    def get_queryset(self):
+        """
+        Método que permite filtrar los reportes dependiendo del
+        tipo de usuario que esté autenticado.
+        """
+        if self.queryset is not None:
+            queryset = self.queryset
+            if isinstance(queryset, QuerySet):
+                queryset = queryset.all()
+        elif self.model is not None:
+            queryset = self.model._default_manager.all()
+        else:
+            raise ImproperlyConfigured(
+                "%(cls)s is missing a QuerySet. Define "
+                "%(cls)s.model, %(cls)s.queryset, or override "
+                "%(cls)s.get_queryset()." % {
+                    'cls': self.__class__.__name__
+                }
+            )
+        ordering = self.get_ordering()
+        if ordering:
+            if isinstance(ordering, six.string_types):
+                ordering = (ordering,)
+            queryset = queryset.order_by(*ordering)
+        if self.request.user.is_superuser:
+            return queryset
+        else:
+            if self.request.user.is_staff:
+                return queryset
+            else:
+                queryset = queryset.filter(autor=str(self.request.user))
+                return queryset
+
 
 class Editar_reporte_avances_cv(SuccessMessageMixin,UpdateView):
     """
