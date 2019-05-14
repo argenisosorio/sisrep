@@ -550,7 +550,15 @@ def busqueda(request):
         ano = request.GET['ano']
         mes = request.GET['mes']
         reportes_ano = Reporte.objects.filter(ano__icontains=ano)
-        reportes = reportes_ano.filter(mes__icontains=mes)
-        return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+        if request.user.is_superuser:
+            reportes = reportes_ano.filter(mes__icontains=mes)
+            return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+        else:
+            if request.user.is_staff:
+                reportes = reportes_ano.filter(mes__icontains=mes)
+                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+            else:
+                reportes = reportes_ano.filter(mes__icontains=mes, autor=str(request.user))
+                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
     else:
         return HttpResponse('Por favor introduce un termino de búsqueda.')
