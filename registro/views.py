@@ -362,9 +362,8 @@ class Consultar_reporte(ListView):
 
     def get_queryset(self):
         """
-        Return the list of items for this view.
-        The return value must be an iterable and may be an instance of
-        `QuerySet` in which case `QuerySet` specific behavior will be enabled.
+        Método que permite filtrar los reportes dependiendo del
+        tipo de usuario que esté autenticado.
         """
         if self.queryset is not None:
             queryset = self.queryset
