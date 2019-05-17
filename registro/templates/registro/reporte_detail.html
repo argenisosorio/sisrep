@@ -44,6 +44,7 @@
                 { text: 'N', bold: true },
                 { text: 'Nombre del trabajador', bold: true },
                 { text: 'Cargo', bold: true },
+                { text: 'Actividades asignadas', bold: true },
                 { text: 'Actividades realizadas', bold: true },
                 { text: 'Enlaces de verificación', bold: true },
               ],
@@ -51,6 +52,7 @@
                 '1',
                 '{{ reporte.nombre_trab_1 }}',
                 '{{ reporte.cargo_trab_1 }}',
+                '{{ reporte.act_asig_trab_1 }}',
                 `{{ reporte.act_rea_trab_1 }}`,
                 `{{ reporte.enlaces_trab_1 }}`,
               ],
@@ -58,6 +60,7 @@
                 '2',
                 '{{ reporte.nombre_trab_2 }}',
                 '{{ reporte.cargo_trab_2 }}',
+                '{{ reporte.act_asig_trab_2 }}',
                 `{{ reporte.act_rea_trab_2 }}`,
                 `{{ reporte.enlaces_trab_2 }}`,
               ],
@@ -65,6 +68,7 @@
                 '3',
                 '{{ reporte.nombre_trab_3 }}',
                 '{{ reporte.cargo_trab_3 }}',
+                '{{ reporte.act_asig_trab_3 }}',
                 `{{ reporte.act_rea_trab_3 }}`,
                 `{{ reporte.enlaces_trab_3 }}`,
               ],
@@ -72,6 +76,7 @@
                 '4',
                 '{{ reporte.nombre_trab_4 }}',
                 '{{ reporte.cargo_trab_4 }}',
+                '{{ reporte.act_asig_trab_4 }}',
                 `{{ reporte.act_rea_trab_4 }}`,
                 `{{ reporte.enlaces_trab_4 }}`,
               ],
@@ -79,6 +84,7 @@
                 '5',
                 '{{ reporte.nombre_trab_5 }}',
                 '{{ reporte.cargo_trab_5 }}',
+                '{{ reporte.act_asig_trab_5 }}',
                 `{{ reporte.act_rea_trab_5 }}`,
                 `{{ reporte.enlaces_trab_5 }}`,
               ],
@@ -86,6 +92,7 @@
                 '6',
                 '{{ reporte.nombre_trab_6 }}',
                 '{{ reporte.cargo_trab_6 }}',
+                '{{ reporte.act_asig_trab_6 }}',
                 `{{ reporte.act_rea_trab_6 }}`,
                 `{{ reporte.enlaces_trab_6 }}`,
               ],
@@ -93,6 +100,7 @@
                 '7',
                 '{{ reporte.nombre_trab_7 }}',
                 '{{ reporte.cargo_trab_7 }}',
+                '{{ reporte.act_asig_trab_7 }}',
                 `{{ reporte.act_rea_trab_7 }}`,
                 `{{ reporte.enlaces_trab_7 }}`,
               ],
@@ -100,6 +108,7 @@
                 '8',
                 '{{ reporte.nombre_trab_8 }}',
                 '{{ reporte.cargo_trab_8 }}',
+                '{{ reporte.act_asig_trab_8 }}',
                 `{{ reporte.act_rea_trab_8 }}`,
                 `{{ reporte.enlaces_trab_8 }}`,
               ],
@@ -107,6 +116,7 @@
                 '9',
                 '{{ reporte.nombre_trab_9 }}',
                 '{{ reporte.cargo_trab_9 }}',
+                '{{ reporte.act_asig_trab_9 }}',
                 `{{ reporte.act_rea_trab_9 }}`,
                 `{{ reporte.enlaces_trab_9 }}`,
               ],
@@ -114,6 +124,7 @@
                 '10',
                 '{{ reporte.nombre_trab_10 }}',
                 '{{ reporte.cargo_trab_10 }}',
+                '{{ reporte.act_asig_trab_10 }}',
                 `{{ reporte.act_rea_trab_10 }}`,
                 `{{ reporte.enlaces_trab_10 }}`,
               ]
@@ -262,6 +273,7 @@
       <th><b>N</b></th>
       <th><b>Nombre del trabajador</b></th>
       <th><b>Cargo</b></th>
+      <th><b>Actividades asignadas</b></th>
       <th><b>Actividades realizadas</b></th>
       <th><b>Enlaces de verificación</b></th>
     </tr>
@@ -471,6 +483,6 @@
 </table>
 <br />
 <div align="center">
-  <a href="javascript:export_report_to_pdf()"><button type="button" class="btn btn-success">Exportar en PDF</button></a>
+  <!--a href="javascript:export_report_to_pdf()"><button type="button" class="btn btn-success">Exportar en PDF</button></a-->
 </div>
 {% endblock %}

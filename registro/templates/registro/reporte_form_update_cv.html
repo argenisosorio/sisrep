@@ -1,0 +1,438 @@
+{% extends "base/base.html" %}
+{% block titulo %}Actualizar reporte de actividades{% endblock %}
+{% block cuerpo %}
+<br />
+<h1>Actualizar reporte de actividades</h1>
+<br />
+
+<form method="post">{% csrf_token %}
+   
+  <input id="id_autor" name="autor" required="True" type="text" value="{{ user.username }}" />
+
+  {{ form.fecha_registro_reporte }}
+
+  <div class="">
+    <b>{{ form.nombre_proyecto.label }}</b>
+    <br />
+    {{ form.nombre_proyecto }}
+    {% if form.nombre_proyecto.errors %}
+      <p>{{ form.nombre_proyecto.errors}}</p>
+    {% endif %}
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="">
+        <b>{{ form.nombre_caravisible.label }}</b>
+        <br />
+        {{ form.nombre_caravisible }}
+        {% if form.nombre_caravisible.errors %}
+          <p>{{ form.nombre_caravisible.errors}}</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="">
+        <b>{{ form.nombre_director.label }}</b>
+        <br />
+        {{ form.nombre_director }}
+        {% if form.nombre_director.errors %}
+          <p>{{ form.nombre_director.errors}}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="">
+        <b>{{ form.mes.label }}</b>
+        <br />
+        {{ form.mes }}
+        {% if form.mes.errors %}
+          <p>{{ form.mes.errors}}</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="">
+        <b>{{ form.ano.label }}</b>
+        <br />
+        {{ form.ano }}
+        {% if form.ano.errors %}
+          <p>{{ form.ano.errors}}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="">
+    <b>{{ form.desc_avance.label }}</b>
+    <br />
+    {{ form.desc_avance }}
+    {% if form.desc_avance.errors %}
+      <p>{{ form.desc_avance.errors}}</p>
+    {% endif %}
+  </div>
+
+  <div class="">
+    <b>{{ form.obstaculos.label }}</b>
+    <br />
+    {{ form.obstaculos }}
+    {% if form.obstaculos.errors %}
+      <p>{{ form.obstaculos.errors}}</p>
+    {% endif %}
+  </div>
+
+<h3>Integrantes del equipo</h3>
+
+  <table class="tabla_trabajadores" border="1px" style="width:100%">
+    <thead>
+      <tr>
+        <th><b>N</b></th>
+        <th><b>Nombre del trabajador</b></th>
+        <th><b>Cargo</b></th>
+        <th><b>Actividades asignadas</b></th>
+        <th><b>Actividades realizadas</b></th>
+        <th><b>Enlaces de verificación</b></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>
+          {{ form.nombre_trab_1 }}
+          {% if form.nombre_trab_1.errors %}
+            <p>{{ form.nombre_trab_1.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.cargo_trab_1 }}
+          {% if form.cargo_trab_1.errors %}
+            <p>{{ form.cargo_trab_1.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_asig_trab_1 }}
+          {% if form.act_asig_trab_1.errors %}
+            <p>{{ form.act_asig_trab_1.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_rea_trab_1 }}
+          {% if form.act_rea_trab_1.errors %}
+            <p>{{ form.act_rea_trab_1.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.enlaces_trab_1 }}
+          {% if form.enlaces_trab_1.errors %}
+            <p>{{ form.enlaces_trab_1.errors}}</p>
+          {% endif %}
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>
+          {{ form.nombre_trab_2 }}
+          {% if form.nombre_trab_2.errors %}
+            <p>{{ form.nombre_trab_2.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.cargo_trab_2 }}
+          {% if form.cargo_trab_2.errors %}
+            <p>{{ form.cargo_trab_2.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_asig_trab_2 }}
+          {% if form.act_asig_trab_2.errors %}
+            <p>{{ form.act_asig_trab_2.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_rea_trab_2 }}
+          {% if form.act_rea_trab_2.errors %}
+            <p>{{ form.act_rea_trab_2.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.enlaces_trab_2 }}
+          {% if form.enlaces_trab_2.errors %}
+            <p>{{ form.enlaces_trab_2.errors}}</p>
+          {% endif %}
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>
+          {{ form.nombre_trab_3 }}
+          {% if form.nombre_trab_3.errors %}
+            <p>{{ form.nombre_trab_3.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.cargo_trab_3 }}
+          {% if form.cargo_trab_3.errors %}
+            <p>{{ form.cargo_trab_3.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_asig_trab_3 }}
+          {% if form.act_asig_trab_3.errors %}
+            <p>{{ form.act_asig_trab_3.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_rea_trab_3 }}
+          {% if form.act_rea_trab_3.errors %}
+            <p>{{ form.act_rea_trab_3.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.enlaces_trab_3 }}
+          {% if form.enlaces_trab_3.errors %}
+            <p>{{ form.enlaces_trab_3.errors}}</p>
+          {% endif %}
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>
+          {{ form.nombre_trab_4 }}
+          {% if form.nombre_trab_4.errors %}
+            <p>{{ form.nombre_trab_4.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.cargo_trab_4 }}
+          {% if form.cargo_trab_4.errors %}
+            <p>{{ form.cargo_trab_.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_asig_trab_4 }}
+          {% if form.act_asig_trab_4.errors %}
+            <p>{{ form.act_asig_trab_4.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_rea_trab_4 }}
+          {% if form.act_rea_trab_4.errors %}
+            <p>{{ form.act_rea_trab_4.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.enlaces_trab_4 }}
+          {% if form.enlaces_trab_4.errors %}
+            <p>{{ form.enlaces_trab_4.errors}}</p>
+          {% endif %}
+        </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>
+          {{ form.nombre_trab_5 }}
+          {% if form.nombre_trab_5.errors %}
+            <p>{{ form.nombre_trab_5.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.cargo_trab_5 }}
+          {% if form.cargo_trab_5.errors %}
+            <p>{{ form.cargo_trab_5.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_asig_trab_5 }}
+          {% if form.act_asig_trab_5.errors %}
+            <p>{{ form.act_asig_trab_5.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_rea_trab_5 }}
+          {% if form.act_rea_trab_5.errors %}
+            <p>{{ form.act_rea_trab_5.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.enlaces_trab_5 }}
+          {% if form.enlaces_trab_5.errors %}
+            <p>{{ form.enlaces_trab_5.errors}}</p>
+          {% endif %}
+        </td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>
+          {{ form.nombre_trab_6 }}
+          {% if form.nombre_trab_6.errors %}
+            <p>{{ form.nombre_trab_6.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.cargo_trab_6 }}
+          {% if form.cargo_trab_6.errors %}
+            <p>{{ form.cargo_trab_6.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_asig_trab_6 }}
+          {% if form.act_asig_trab_6.errors %}
+            <p>{{ form.act_asig_trab_6.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_rea_trab_6 }}
+          {% if form.act_rea_trab_6.errors %}
+            <p>{{ form.act_rea_trab_6.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.enlaces_trab_6 }}
+          {% if form.enlaces_trab_6.errors %}
+            <p>{{ form.enlaces_trab_6.errors}}</p>
+          {% endif %}
+        </td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>
+          {{ form.nombre_trab_7 }}
+          {% if form.nombre_trab_7.errors %}
+            <p>{{ form.nombre_trab_7.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.cargo_trab_7 }}
+          {% if form.cargo_trab_7.errors %}
+            <p>{{ form.cargo_trab_7.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_asig_trab_7 }}
+          {% if form.act_asig_trab_7.errors %}
+            <p>{{ form.act_asig_trab_7.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_rea_trab_7 }}
+          {% if form.act_rea_trab_7.errors %}
+            <p>{{ form.act_rea_trab_7.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.enlaces_trab_7 }}
+          {% if form.enlaces_trab_7.errors %}
+            <p>{{ form.enlaces_trab_7.errors}}</p>
+          {% endif %}
+        </td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>
+          {{ form.nombre_trab_8 }}
+          {% if form.nombre_trab_8.errors %}
+            <p>{{ form.nombre_trab_8.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.cargo_trab_8 }}
+          {% if form.cargo_trab_8.errors %}
+            <p>{{ form.cargo_trab_8.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_asig_trab_8 }}
+          {% if form.act_asig_trab_8.errors %}
+            <p>{{ form.act_asig_trab_8.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_rea_trab_8 }}
+          {% if form.act_rea_trab_8.errors %}
+            <p>{{ form.act_rea_trab_8.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.enlaces_trab_8 }}
+          {% if form.enlaces_trab_8.errors %}
+            <p>{{ form.enlaces_trab_8.errors}}</p>
+          {% endif %}
+        </td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>
+          {{ form.nombre_trab_9 }}
+          {% if form.nombre_trab_9.errors %}
+            <p>{{ form.nombre_trab_9.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.cargo_trab_9 }}
+          {% if form.cargo_trab_9.errors %}
+            <p>{{ form.cargo_trab_9.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_asig_trab_9 }}
+          {% if form.act_asig_trab_9.errors %}
+            <p>{{ form.act_asig_trab_9.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_rea_trab_9 }}
+          {% if form.act_rea_trab_9.errors %}
+            <p>{{ form.act_rea_trab_9.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.enlaces_trab_9 }}
+          {% if form.enlaces_trab_9.errors %}
+            <p>{{ form.enlaces_trab_9.errors}}</p>
+          {% endif %}
+        </td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>
+          {{ form.nombre_trab_10 }}
+          {% if form.nombre_trab_10.errors %}
+            <p>{{ form.nombre_trab_10.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.cargo_trab_10 }}
+          {% if form.cargo_trab_10.errors %}
+            <p>{{ form.cargo_trab_10.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_asig_trab_10 }}
+          {% if form.act_asig_trab_10.errors %}
+            <p>{{ form.act_asig_trab_10.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_rea_trab_10 }}
+          {% if form.act_rea_trab_10.errors %}
+            <p>{{ form.act_rea_trab_10.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.enlaces_trab_10 }}
+          {% if form.enlaces_trab_10.errors %}
+            <p>{{ form.enlaces_trab_10.errors}}</p>
+          {% endif %}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  <a href="{% url 'inicio:index' %}"><button type="button" class="btn btn-primary">Volver</button></a>
+  <button class="btn btn-info" type="reset">Limpiar</button>
+  <button class="btn btn-success" type="submit">Actualizar</button>
+</form>
+{% endblock %}

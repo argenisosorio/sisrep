@@ -426,6 +426,7 @@ class Editar_reporte(SuccessMessageMixin,UpdateView):
     """
     model = Reporte
     form_class = ReporteForm
+    template_name = "registro/reporte_form_update_cv.html"
     success_url = reverse_lazy('registro:consultar_reporte')
     success_message = "Se actualizo el reporte con éxito"
 
