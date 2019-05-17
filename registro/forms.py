@@ -128,6 +128,11 @@ class ReporteForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), choices = cargos, required = False)
 
+    act_asig_trab_1 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
     act_rea_trab_1 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
@@ -147,6 +152,11 @@ class ReporteForm(forms.ModelForm):
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), choices = cargos, required = False)
+
+    act_asig_trab_2 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
 
     act_rea_trab_2 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
         'class':'form-control input-md',
@@ -168,6 +178,11 @@ class ReporteForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), choices = cargos, required = False)
 
+    act_asig_trab_3 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
     act_rea_trab_3 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
@@ -187,6 +202,11 @@ class ReporteForm(forms.ModelForm):
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), choices = cargos, required = False)
+
+    act_asig_trab_4 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
 
     act_rea_trab_4 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
         'class':'form-control input-md',
@@ -208,6 +228,11 @@ class ReporteForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), choices = cargos, required = False)
 
+    act_asig_trab_5 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
     act_rea_trab_5 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
@@ -227,6 +252,11 @@ class ReporteForm(forms.ModelForm):
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), choices = cargos, required = False)
+
+    act_asig_trab_6 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
 
     act_rea_trab_6 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
         'class':'form-control input-md',
@@ -248,6 +278,11 @@ class ReporteForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), choices = cargos, required = False)
 
+    act_asig_trab_7 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
     act_rea_trab_7 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
@@ -267,6 +302,11 @@ class ReporteForm(forms.ModelForm):
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), choices = cargos, required = False)
+
+    act_asig_trab_8 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
 
     act_rea_trab_8 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
         'class':'form-control input-md',
@@ -288,6 +328,11 @@ class ReporteForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), choices = cargos, required = False)
 
+    act_asig_trab_9 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
     act_rea_trab_9 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
@@ -307,6 +352,11 @@ class ReporteForm(forms.ModelForm):
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), choices = cargos, required = False)
+
+    act_asig_trab_10 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
 
     act_rea_trab_10 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
         'class':'form-control input-md',

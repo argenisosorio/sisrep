@@ -101,6 +101,7 @@
         <th><b>N</b></th>
         <th><b>Nombre del trabajador</b></th>
         <th><b>Cargo</b></th>
+        <th><b>Actividades asignadas</b></th>
         <th><b>Actividades realizadas</b></th>
         <th><b>Enlaces de verificación</b></th>
       </tr>
@@ -118,6 +119,12 @@
           {{ form.cargo_trab_1 }}
           {% if form.cargo_trab_1.errors %}
             <p>{{ form.cargo_trab_1.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_asig_trab_1 }}
+          {% if form.act_asig_trab_1.errors %}
+            <p>{{ form.act_asig_trab_1.errors}}</p>
           {% endif %}
         </td>
         <td>
@@ -148,6 +155,12 @@
           {% endif %}
         </td>
         <td>
+          {{ form.act_asig_trab_2 }}
+          {% if form.act_asig_trab_2.errors %}
+            <p>{{ form.act_asig_trab_2.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
           {{ form.act_rea_trab_2 }}
           {% if form.act_rea_trab_2.errors %}
             <p>{{ form.act_rea_trab_2.errors}}</p>
@@ -172,6 +185,12 @@
           {{ form.cargo_trab_3 }}
           {% if form.cargo_trab_3.errors %}
             <p>{{ form.cargo_trab_3.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_asig_trab_3 }}
+          {% if form.act_asig_trab_3.errors %}
+            <p>{{ form.act_asig_trab_3.errors}}</p>
           {% endif %}
         </td>
         <td>
@@ -202,6 +221,12 @@
           {% endif %}
         </td>
         <td>
+          {{ form.act_asig_trab_4 }}
+          {% if form.act_asig_trab_4.errors %}
+            <p>{{ form.act_asig_trab_4.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
           {{ form.act_rea_trab_4 }}
           {% if form.act_rea_trab_4.errors %}
             <p>{{ form.act_rea_trab_4.errors}}</p>
@@ -226,6 +251,12 @@
           {{ form.cargo_trab_5 }}
           {% if form.cargo_trab_5.errors %}
             <p>{{ form.cargo_trab_5.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_asig_trab_5 }}
+          {% if form.act_asig_trab_5.errors %}
+            <p>{{ form.act_asig_trab_5.errors}}</p>
           {% endif %}
         </td>
         <td>
@@ -256,6 +287,12 @@
           {% endif %}
         </td>
         <td>
+          {{ form.act_asig_trab_6 }}
+          {% if form.act_asig_trab_6.errors %}
+            <p>{{ form.act_asig_trab_6.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
           {{ form.act_rea_trab_6 }}
           {% if form.act_rea_trab_6.errors %}
             <p>{{ form.act_rea_trab_6.errors}}</p>
@@ -280,6 +317,12 @@
           {{ form.cargo_trab_7 }}
           {% if form.cargo_trab_7.errors %}
             <p>{{ form.cargo_trab_7.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_asig_trab_7 }}
+          {% if form.act_asig_trab_7.errors %}
+            <p>{{ form.act_asig_trab_7.errors}}</p>
           {% endif %}
         </td>
         <td>
@@ -310,6 +353,12 @@
           {% endif %}
         </td>
         <td>
+          {{ form.act_asig_trab_8 }}
+          {% if form.act_asig_trab_8.errors %}
+            <p>{{ form.act_asig_trab_8.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
           {{ form.act_rea_trab_8 }}
           {% if form.act_rea_trab_8.errors %}
             <p>{{ form.act_rea_trab_8.errors}}</p>
@@ -334,6 +383,12 @@
           {{ form.cargo_trab_9 }}
           {% if form.cargo_trab_9.errors %}
             <p>{{ form.cargo_trab_9.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
+          {{ form.act_asig_trab_9 }}
+          {% if form.act_asig_trab_9.errors %}
+            <p>{{ form.act_asig_trab_9.errors}}</p>
           {% endif %}
         </td>
         <td>
@@ -364,6 +419,12 @@
           {% endif %}
         </td>
         <td>
+          {{ form.act_asig_trab_10 }}
+          {% if form.act_asig_trab_10.errors %}
+            <p>{{ form.act_asig_trab_10.errors}}</p>
+          {% endif %}
+        </td>
+        <td>
           {{ form.act_rea_trab_10 }}
           {% if form.act_rea_trab_10.errors %}
             <p>{{ form.act_rea_trab_10.errors}}</p>
@@ -378,7 +439,6 @@
       </tr>
     </tbody>
   </table>
-  <br />
   <a href="{% url 'inicio:index' %}"><button type="button" class="btn btn-primary">Volver</button></a>
   <button class="btn btn-info" type="reset">Limpiar</button>
   <button class="btn btn-success" type="submit">Actualizar</button>
