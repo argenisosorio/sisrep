@@ -1,0 +1,63 @@
+{% extends "base/base.html" %}
+{% block titulo %}Reporte de avances{% endblock %}
+{% block cuerpo %}
+<h1 class="color-white">Reporte de avances</h1>
+<br />
+<!-- Navbar class
+================================================== -->
+<nav class="navbar navbar-inverse navbar-background">
+  <div class="container">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <!-- Reporte de Avances dropdown
+        ================================================== -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <div class="color-black">
+              <i class="glyphicon glyphicon-file"></i>
+              &nbsp;Reporte de avances <span class="caret"></span>
+            </div>
+          </a>
+          <ul class="dropdown-menu">
+            {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
+            <li>
+              <a href="{% url 'safet:consultar_reporte_avances' %}">
+                <i class="glyphicon glyphicon-list"></i>
+                &nbsp;Listar reportes
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'safet:consultar_reporte_avances_cv_por' %}">
+                <i class="glyphicon glyphicon-equalizer"></i>
+                &nbsp;Reporte de avance de los Productos
+              </a>
+            </li>
+            {% else %}
+              {% if request.user.is_staff and request.user.is_active %}
+              <li>
+                <a href="{% url 'safet:consultar_reporte_avances_cv' %}">
+                  <i class="glyphicon glyphicon-list"></i>
+                  &nbsp;Listar reportes
+                </a>
+              </li>
+              {% else %}
+                {% if request.user.is_active %}
+                <li>
+                  <a href="{% url 'safet:consultar_reporte_avances_cv' %}">
+                    <i class="glyphicon glyphicon-list"></i>
+                    &nbsp;Listar reportes
+                  </a>
+                </li>
+                {% else %}
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          </ul>
+        </li>
+        <!-- End Reporte de Avances dropdown -->
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Navbar class -->
+{% endblock %}

@@ -57,286 +57,136 @@
     ================================================== -->
     <link href="{% static 'css/theme.css' %}" rel="stylesheet">
   </head>
-  <body>
-    
-    <!-- navbar cintillo
-    ================================================== -->
-    <nav class="navbar navbar-default navbar-fixed-top navbar-cintillo">
-    <div class="container">
-      <div align="center">
-        <img class="cintillo_up" src="{% static 'img/cintillo_2019.png' %}" width="100%"></img>
+<body>
+
+<!-- Fixed navbar
+================================================== -->
+<nav class="navbar navbar-inverse navbar-fixed-edit">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="{% url 'inicio:index' %}">
+      SISREP - Sistema para reportar las actividades de los proyectos de CENDITEL
+    </a>
+  </div>
+  <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        {% if request.user.is_authenticated %}
+          <i class="glyphicon glyphicon-user"></i>
+          {% if user.is_superuser and user.is_staff and user.is_active %}
+            {{ request.user.username }} (Analista) <span class="caret"></span>
+          {% else %}
+            {% if user.is_staff and user.is_active %}
+              {{ request.user.username }} (Director) <span class="caret"></span>
+            {% else %}
+              {% if user.is_active %}
+                {{ request.user.username }} (Cara Visible) <span class="caret"></span>
+              {% else %}
+                xxx
+              {% endif %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      </a>
+      {% if request.user.is_authenticated %}
+      <ul class="dropdown-menu">
+        <li>
+          <a href="{% url 'usuarios:change_password' %}">
+            <i class="glyphicon glyphicon-wrench"></i>
+            Cambiar contraseña
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'usuarios:logout' %}">
+            <i class="glyphicon glyphicon-log-out"></i>
+            Salir
+          </a>
+        </li>
+      </ul>
+      {% endif %}
+    </li>
+  </ul>
+</nav>
+<!-- Fixed navbar end -->
+
+<!-- row class
+================================================== -->
+<div class="row">
+
+  <!-- col-2
+  ================================================== -->
+  <div class="col-sm-1 left-column">
+    <br />
+    {% if request.user.is_authenticated %}
+      <div class="text-center">
+        <a href="{% url 'inicio:index' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Inicio">
+          <i class="glyphicon glyphicon-home glyphicon-home-menu color-white"></i>
+        </a>
+        <br />
+        <br />
+        <br />
+        {% if request.user.is_superuser %}
+          <a href="{% url 'safet:inicio_carga_inicial' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Carga inicial">
+            <i class="glyphicon glyphicon-tasks glyphicon-tasks-menu color-white"></i>
+          </a>
+          <br />
+          <br />
+          <br />
+        {% else %}
+        {% endif %}
+        <a href="{% url 'safet:inicio_reporte_avances' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Reporte de avances">
+          <i class="glyphicon glyphicon-file glyphicon-file-menu color-white"></i>
+        </a>
+        <br />
+        <br />
+        <br />
+        <a href="{% url 'safet:inicio_reporte_actividades' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Reporte de actividades">
+          <i class="glyphicon glyphicon-duplicate glyphicon-duplicate-menu color-white"></i>
+        </a>
+        {% if request.user.is_superuser %}
+          <br />
+          <br />
+          <br />
+          <a href="{% url 'bitacora:bitacora' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Bitácora de eventos">
+            <i class="glyphicon glyphicon-sunglasses glyphicon-sunglasses-menu color-white"></i>
+          </a>
+        {% else %}
+        {% endif %}
+        <br />
+        <br />
+        <br />
+        <a href="{% url 'usuarios:logout' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Salir">
+          <i class="glyphicon glyphicon-off color-white"></i>
+        </a>
       </div>
-    </div>
-    </nav>
-    <!-- navbar cintillo end -->
+      {% else %}
+        <div class="text-center">
+          <a href="{% url 'inicio:index' %}">
+            <i class="glyphicon glyphicon-home glyphicon-home-menu color-white"></i>
+          </a>
+        </div>
+      {% endif %}
+  </div>
+  <!-- col-2 -->
+
+  <!-- col-10
+  ================================================== -->
+  <div class="col-sm-11 right-column">
 
     <!-- Container class
     ================================================== -->
     <div class="containerr container-all theme-showcase" role="main">
 
       <br />
-      
+
       <!-- Well class
       ================================================== -->
-      <div class="well">
-
-        <a href="{% url 'inicio:index' %}">
-          <img class="banner_principal" src="{% static 'img/banner_principal.jpg' %}" width="100%"></img>  
-        </a>
-        <br />
-        <br />
-
-        {% if request.user.is_authenticated %}
-        <!-- Navbar class
-        ================================================== -->
-        <nav class="navbar navbar-inverse">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="{% url 'inicio:index' %}">
-                <i class="glyphicon glyphicon-home"></i>
-                Inicio
-              </a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-
-              <ul class="nav navbar-nav">
-
-                {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
-                <!-- Carga inicial dropdown
-                ================================================== -->
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <i class="glyphicon glyphicon-cog"></i>
-                    &nbsp;Carga inicial <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    {% if request.user.is_superuser %}
-                    <li>
-                      <a href="{% url 'usuarios:list_users' %}">
-                        <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Usuarios
-                      </a>
-                    </li>
-                    <li>
-                      <a href="{% url 'safet:consultar_proyecto' %}">
-                        <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Proyectos poa
-                      </a>
-                    </li>
-                    <li>
-                      <a href="{% url 'safet:consultar_accion' %}">
-                        <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Acciones específicas
-                      </a>
-                    </li>
-                    <li>
-                      <a href="{% url 'registro:consultar_proyecto' %}">
-                        <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Productos
-                      </a>
-                    </li>
-                    <li>
-                      <a href="{% url 'registro:consultar_cara_visible' %}">
-                        <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Caras visibles
-                      </a>
-                    </li>
-                    <li>
-                      <a href="{% url 'registro:consultar_director' %}">
-                        <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Directores
-                      </a>
-                    </li>
-                    <li class="dropdown-header">Registrar reporte de avances</li>
-                    <li>
-                      <a href="{% url 'safet:registrar_reporte_avances' %}">
-                        <i class="glyphicon glyphicon-pencil"></i>
-                          &nbsp;Genérico
-                      </a>
-                    </li>
-                    <li>
-                      <a href="{% url 'safet:registrar_reporte_avances_software' %}">
-                        <i class="glyphicon glyphicon-pencil"></i>
-                          &nbsp;Software
-                      </a>
-                    </li>
-                    <li>
-                      <a href="{% url 'safet:registrar_reporte_avances_cur_lin' %}">
-                        <i class="glyphicon glyphicon-pencil"></i>
-                          &nbsp;Curso en Línea
-                      </a>
-                    </li>
-                    <li>
-                      <a href="{% url 'safet:registrar_reporte_avances_jornada' %}">
-                        <i class="glyphicon glyphicon-pencil"></i>
-                          &nbsp;Jornada
-                      </a>
-                    </li>
-                    <li>
-                      <a href="{% url 'safet:registrar_reporte_avances_publicacion' %}">
-                        <i class="glyphicon glyphicon-pencil"></i>
-                          &nbsp;Publicación
-                      </a>
-                    </li>
-                    {% endif %}
-                  </ul>
-                </li>
-                <!-- End Carga inicial dropdown -->
-                {% else %}
-                {% endif %}
-
-                <!-- Reporte de Avances dropdown
-                ================================================== -->
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <i class="glyphicon glyphicon-file"></i>
-                    &nbsp;Reporte de avances <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
-                    <li>
-                      <a href="{% url 'safet:consultar_reporte_avances' %}">
-                        <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Listar reportes
-                      </a>
-                    </li>
-                    <li>
-                      <a href="{% url 'safet:consultar_reporte_avances_cv_por' %}">
-                        <i class="glyphicon glyphicon-equalizer"></i>
-                        &nbsp;Reporte de avance de los Productos
-                      </a>
-                    </li>
-                    {% else %}
-                      {% if request.user.is_staff and request.user.is_active %}
-                      <li>
-                        <a href="{% url 'safet:consultar_reporte_avances_cv' %}">
-                          <i class="glyphicon glyphicon-list"></i>
-                          &nbsp;Listar reportes
-                        </a>
-                      </li>
-                      {% else %}
-                        {% if request.user.is_active %}
-                        <li>
-                          <a href="{% url 'safet:consultar_reporte_avances_cv' %}">
-                            <i class="glyphicon glyphicon-list"></i>
-                            &nbsp;Listar reportes
-                          </a>
-                        </li>
-                        {% else %}
-                        {% endif %}
-                      {% endif %}
-                    {% endif %}
-                  </ul>
-                </li>
-                <!-- End Reporte de Avances dropdown -->
-
-                <!-- Reporte de Actividades dropdown
-                ================================================== -->
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <i class="glyphicon glyphicon-file"></i>
-                    &nbsp;Reporte de actividades <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
-                      <li>
-                        <a href="{% url 'registro:registrar_reporte' %}">
-                          <i class="glyphicon glyphicon-pencil"></i>
-                            &nbsp;Registrar reporte
-                        </a>
-                      </li>
-                    {% else %}
-                      {% if request.user.is_staff and request.user.is_active %}
-                      {% else %}
-                        {% if request.user.is_active %}
-                          <li>
-                            <a href="{% url 'registro:registrar_reporte' %}">
-                              <i class="glyphicon glyphicon-pencil"></i>
-                                &nbsp;Registrar reporte
-                            </a>
-                          </li>
-                        {% else %}
-                        {% endif %}
-                      {% endif %}
-                    {% endif %}
-                    <li>
-                      <a href="{% url 'registro:consultar_reporte' %}">
-                        <i class="glyphicon glyphicon-list"></i>
-                        &nbsp;Listar reportes
-                      </a>
-                    </li>
-                    <li>
-                      <a href="{% url 'registro:buscar' %}">
-                        <i class="glyphicon glyphicon-search"></i>
-                        &nbsp;Buscar reportes
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- End Reporte de Actividades dropdown -->
-
-                {% if request.user.is_superuser %}
-                <li>
-                  <a href="{% url 'bitacora:bitacora' %}">
-                    <i class="glyphicon glyphicon-sunglasses"></i>
-                    &nbsp;Bitácora de eventos
-                  </a>
-                </li>
-                {% else %}
-                {% endif %}
-              </ul>
-
-              <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <i class="glyphicon glyphicon-user"></i>
-                    {% if request.user.is_authenticated %}
-                      {% if user.is_superuser and user.is_staff and user.is_active %}
-                        {{ request.user.username }} (Analista) <span class="caret"></span>
-                      {% else %}
-                        {% if user.is_staff and user.is_active %}
-                          {{ request.user.username }} (Director) <span class="caret"></span>
-                        {% else %}
-                          {% if user.is_active %}
-                            {{ request.user.username }} (Cara Visible) <span class="caret"></span>
-                          {% else %}
-                            xxx
-                          {% endif %}
-                        {% endif %}
-                      {% endif %}
-                    {% endif %}
-                  </a>
-                  {% if request.user.is_authenticated %}
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="{% url 'usuarios:change_password' %}">
-                        <i class="glyphicon glyphicon-wrench"></i>
-                        Cambiar contraseña
-                      </a>
-                    </li>
-                    <li>
-                      <a href="{% url 'usuarios:logout' %}">
-                        <i class="glyphicon glyphicon-log-out"></i>
-                        Salir
-                      </a>
-                    </li>
-                  </ul>
-                  {% endif %}
-                </li>
-              </ul>
-
-            </div>
-          </div>
-        </nav>
-        <!-- End Navbar class -->
-        {% else %}
-        {% endif %}
+      <div class="well-transparent">
 
         {% if messages %}
           {% for message in messages %}
@@ -369,26 +219,14 @@
       </div>
       <!-- End Well class -->
 
-      <div class="well well-footer">
-        <div align="center">
-          <b>
-            <a href="http://www.cenditel.gob.ve" target="_blank">
-              <b>Desarrollado en el Centro Nacional de Desarrollo e Investigacion en Tecnologias Libres - CENDITEL</b>
-            </a>
-            <br />
-            <br />
-            <a href="http://conocimientolibre.cenditel.gob.ve/licencias/" target="_blank">
-              <img src="{% static 'img/lc-lc.png' %}" width="100px"></img>
-            </a>
-            <a href="http://conocimientolibre.cenditel.gob.ve/licencia-de-software-v-1-3/" target="_blank">
-              <img src="{% static 'img/lc-ls-icon.png' %}" width="100px"></img>
-            </a>
-          </b>
-        </div>
-      </div>
-
     </div>
     <!-- End Container class -->
 
-  </body>
+  </div>
+  <!-- col-10 end -->
+
+</div>
+<!-- row class -->
+
+</body>
 </html>

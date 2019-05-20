@@ -1,4 +1,13 @@
 /*
+|----------------------------------------
+| Función que habilita el uso de popover.
+|----------------------------------------
+*/
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover();
+});
+
+/*
 |----------------------------------------------------------------
 | Función que desabilita la edición del campo de fecha_solicitud.
 |----------------------------------------------------------------

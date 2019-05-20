@@ -2,9 +2,8 @@
 {% block titulo %}Actualizar reporte de actividades{% endblock %}
 {% block cuerpo %}
 <br />
-<h1>Actualizar reporte de actividades</h1>
+<h1 class="color-white">Actualizar reporte de actividades</h1>
 <br />
-
 <form method="post">{% csrf_token %}
    
   <input id="id_autor" name="autor" required="True" type="text" value="{{ user.username }}" />

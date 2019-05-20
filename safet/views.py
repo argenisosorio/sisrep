@@ -18,6 +18,28 @@ from django.contrib.auth.models import User
 from django.shortcuts import redirect
 from datetime import datetime
 
+
+class IndexCargaInicial(TemplateView):
+    """
+    Plantilla de inicio del módulo de carga inicial
+    """
+    template_name = "safet/inicio_carga_inicial.html"
+
+
+class IndexReporte_avances(TemplateView):
+    """
+    Plantilla de inicio del módulo de reportes de avances.
+    """
+    template_name = "safet/inicio_reporte_avances.html"
+
+
+class IndexReporte_actividades(TemplateView):
+    """
+    Plantilla de inicio del módulo de reportes de actividades.
+    """
+    template_name = "safet/inicio_reporte_actividades.html"
+
+
 #####################################
 ##### Crud de los proyectos poa #####
 #####################################

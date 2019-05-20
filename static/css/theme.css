@@ -7,8 +7,13 @@ body {
   padding-top: 70px;
   padding-bottom: 30px;
   background: #aaaebc;
-  background-image: url("../img/intro.svg") !important;
-  background-size: 100%;
+  /*background-image: url("../img/intro.svg") !important;*/
+  /*background: url("../img/bg.jpg") no-repeat center center fixed;*/
+  background: url("../img/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 .theme-dropdown .dropdown-menu {
   position: static;
@@ -21,15 +26,30 @@ body {
 .theme-showcase .navbar .container {
   width: auto;
 }
+.left-column {
+  background-color: rgba(41, 41, 41, 0.29);
+  /*filter: blur(1px);*/
+  padding-left: 10px;
+  min-height: 1000px;
+  margin-top: -19px;
+  /*position: relative;*/
+  /*border: ridge 1px red;*/
+}
+.right-column {
+  /*margin-top: -72px;*/
+  /*background-color: #343a40 !important;*/
+  margin-top: -20px;
+  /*border: ridge 1px blue;*/
+}
 .cuerpo {
-  min-height: 200px;
+  min-height: 600px;
 }
 table thead th {
-  background: #a3baff;
+  background: gray;
   /*color: #ffffff;*/
 }
 table tfoot th {
-  background: #a3baff;
+  background: gray;
   /*color: #ffffff;*/
 }
 ul.errorlist {
@@ -58,6 +78,17 @@ ul.errorlist {
 .dt-buttons {
   margin-top: 40px;
 }
+.navbar-fixed-edit {
+  background-color: rgba(41, 41, 41, 0.29) !important;*/
+  /*filter: blur(1px);*/
+  border: none !important;
+  margin-top: -69px;
+  width: 100%;
+}
+.navbar-background {
+  background-color: rgba(41, 41, 41, 0.29) !important;*/
+  border: none !important;
+}
 .navbar.navbar-default {
   background-image: -webkit-linear-gradient(top, #fff 0%, #f8f8f8 100%);
   background-image: -o-linear-gradient(top, #fff 0%, #f8f8f8 100%);
@@ -77,12 +108,22 @@ ul.errorlist {
   box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
 }
 .well {
+  /*background: #FFFFFF;*/
+  background: rgba(41, 41, 41, 0.29);
+  border: none !important;
+  border-radius: 0px !important;
+  -webkit-box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
+}
+.well-white {
   background: #FFFFFF;
   border: none !important;
   border-radius: 0px !important;
   -webkit-box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
   box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
+  padding: 20px;
 }
 .well-footer {
   background: #275a9b;
@@ -223,6 +264,9 @@ panel-default > .panel-heading {
   border: ridge 1px lightgray;
 }
 
+.tabla_trabajadores {
+  background: #FFFFFF;
+}
 .tabla_trabajadores, th, td {
   border: 1px solid lightgray;
 }
@@ -291,4 +335,31 @@ table.table_change_password td {
   color: #333;
   background-color: #f5f5f5;
   border-color: #ddd;
+}
+.glyphicon-home-menu {
+  font-size: 50px;
+}
+.glyphicon-file-menu {
+  font-size: 50px;
+}
+.glyphicon-duplicate-menu {
+  font-size: 50px;
+}
+.glyphicon-tasks-menu {
+  font-size: 50px;
+}
+.glyphicon-sunglasses-menu {
+  font-size: 50px;
+}
+.glyphicon-off {
+  font-size: 50px;
+}
+.color-white {
+  color: #FFFFFF;
+}
+.color-blackk {
+  color: #000000;
+}
+.text-welcome {
+  font-size: 50px;
 }

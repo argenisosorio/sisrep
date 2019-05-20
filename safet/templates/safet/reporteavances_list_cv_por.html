@@ -2,7 +2,7 @@
 {% block titulo %}Reporte gráfico de (%){% endblock %}
 {% block cuerpo %}
 <br />
-<h1>Reporte de porcentajes de avance de los productos</h1>
+<h1 class="color-white">Reporte de porcentajes de avance de los productos</h1>
 <br />
 <form action="{% url 'safet:busqueda' %}" method="get">
   <label>Buscar productos por año</label>
@@ -17,7 +17,7 @@
 {% if reportes %}
 <!-- Well class
 ================================================== -->
-<div class="well">
+<div class="well-white">
   <h3 class="text-right"><b>Fecha: {{ fecha_humana }}</b></h3>
   <h2 class="text-center">Reporte de porcentajes de avance de los productos</h2>
   <br />

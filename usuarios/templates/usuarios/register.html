@@ -2,7 +2,7 @@
 {% block titulo %}Registrar usuario{% endblock %}
 {% block cuerpo %}
 <br />
-<h1>Registrar usuario</h1>
+<h1 class="color-white">Registrar usuario</h1>
 <br />
 <form action="{% url 'usuarios:register' %}" method="post">{% csrf_token %}
   <div class="row">

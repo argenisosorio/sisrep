@@ -1,0 +1,102 @@
+{% extends "base/base.html" %}
+{% block titulo %}Carga inicial{% endblock %}
+{% block cuerpo %}
+<h1 class="color-white">Carga inicial</h1>
+<br />
+<!-- Navbar class
+================================================== -->
+<nav class="navbar navbar-inverse navbar-background">
+  <div class="container">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
+        <!-- Carga inicial dropdown
+        ================================================== -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <div class="color-black">
+              <i class="glyphicon glyphicon-tasks"></i>
+              &nbsp;Carga inicial <span class="caret"></span>
+            </div>
+          </a>
+          <ul class="dropdown-menu">
+            {% if request.user.is_superuser %}
+            <li>
+              <a href="{% url 'usuarios:list_users' %}">
+                <i class="glyphicon glyphicon-list"></i>
+                &nbsp;Usuarios
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'safet:consultar_proyecto' %}">
+                <i class="glyphicon glyphicon-list"></i>
+                &nbsp;Proyectos poa
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'safet:consultar_accion' %}">
+                <i class="glyphicon glyphicon-list"></i>
+                &nbsp;Acciones específicas
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'registro:consultar_proyecto' %}">
+                <i class="glyphicon glyphicon-list"></i>
+                &nbsp;Productos
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'registro:consultar_cara_visible' %}">
+                <i class="glyphicon glyphicon-list"></i>
+                &nbsp;Caras visibles
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'registro:consultar_director' %}">
+                <i class="glyphicon glyphicon-list"></i>
+                &nbsp;Directores
+              </a>
+            </li>
+            <li class="dropdown-header">Registrar reporte de avances</li>
+            <li>
+              <a href="{% url 'safet:registrar_reporte_avances' %}">
+                <i class="glyphicon glyphicon-pencil"></i>
+                  &nbsp;Genérico
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'safet:registrar_reporte_avances_software' %}">
+                <i class="glyphicon glyphicon-pencil"></i>
+                  &nbsp;Software
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'safet:registrar_reporte_avances_cur_lin' %}">
+                <i class="glyphicon glyphicon-pencil"></i>
+                  &nbsp;Curso en Línea
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'safet:registrar_reporte_avances_jornada' %}">
+                <i class="glyphicon glyphicon-pencil"></i>
+                  &nbsp;Jornada
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'safet:registrar_reporte_avances_publicacion' %}">
+                <i class="glyphicon glyphicon-pencil"></i>
+                  &nbsp;Publicación
+              </a>
+            </li>
+            {% endif %}
+          </ul>
+        </li>
+        <!-- End Carga inicial dropdown -->
+        {% else %}
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Navbar class -->
+{% endblock %}
