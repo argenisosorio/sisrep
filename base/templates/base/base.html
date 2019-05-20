@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     {% load staticfiles %}
-    <link rel="icon" href="{% static 'img/cenditel-logo-red.png' %}">
+    <link rel="icon" href="{% static 'img/cenditel-logo-blue.png' %}">
     <title>
       {% block titulo %}Base{% endblock %}
     </title>
@@ -61,7 +61,7 @@
 
 <!-- Fixed navbar
 ================================================== -->
-<nav class="navbar navbar-inverse navbar-fixed-edit">
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-fixed-edit">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
       <span class="sr-only">Toggle navigation</span>
@@ -74,7 +74,7 @@
     </a>
   </div>
   <ul class="nav navbar-nav navbar-right">
-    <li class="dropdown">
+    <li class="dropdown dropdown-margin">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
         {% if request.user.is_authenticated %}
           <i class="glyphicon glyphicon-user"></i>
@@ -103,7 +103,7 @@
         </li>
         <li>
           <a href="{% url 'usuarios:logout' %}">
-            <i class="glyphicon glyphicon-log-out"></i>
+            <i class="glyphicon glyphicon-off"></i>
             Salir
           </a>
         </li>
@@ -161,7 +161,7 @@
         <br />
         <br />
         <a href="{% url 'usuarios:logout' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Salir">
-          <i class="glyphicon glyphicon-off color-white"></i>
+          <i class="glyphicon glyphicon-off glyphicon-off-menu color-white"></i>
         </a>
       </div>
       {% else %}
@@ -174,7 +174,7 @@
   </div>
   <!-- col-2 -->
 
-  <!-- col-10
+  <!-- col-11
   ================================================== -->
   <div class="col-sm-11 right-column">
 
@@ -218,15 +218,11 @@
         </div>
       </div>
       <!-- End Well class -->
-
     </div>
     <!-- End Container class -->
-
   </div>
   <!-- col-10 end -->
-
 </div>
 <!-- row class -->
-
 </body>
 </html>

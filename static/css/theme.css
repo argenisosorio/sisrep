@@ -31,18 +31,21 @@ body {
   /*filter: blur(1px);*/
   padding-left: 10px;
   min-height: 1000px;
-  margin-top: -19px;
-  /*position: relative;*/
+  margin-top: -20px;
+  position: fixed;
   /*border: ridge 1px red;*/
+  margin-left: 14px;
 }
 .right-column {
   /*margin-top: -72px;*/
   /*background-color: #343a40 !important;*/
   margin-top: -20px;
+  margin-left: 150px;
   /*border: ridge 1px blue;*/
 }
 .cuerpo {
   min-height: 600px;
+  /*border: ridge 1px blue;*/
 }
 table thead th {
   background: gray;
@@ -78,12 +81,15 @@ ul.errorlist {
 .dt-buttons {
   margin-top: 40px;
 }
+.navbar {
+  /*border: ridge 1px red !important;*/
+}
 .navbar-fixed-edit {
   background-color: rgba(41, 41, 41, 0.29) !important;*/
   /*filter: blur(1px);*/
   border: none !important;
-  margin-top: -69px;
-  width: 100%;
+  /*margin-top: -69px;
+  width: 99%;*/
 }
 .navbar-background {
   background-color: rgba(41, 41, 41, 0.29) !important;*/
@@ -152,9 +158,10 @@ ul.errorlist {
   background-color: #275a9b;
   border: none;
   border-radius: 0px;
+  /*
   -webkit-box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
-  box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);*/
 }
 .navbar-inverse .navbar-brand {
   color: #FFFFFF;
@@ -254,7 +261,10 @@ fieldset[disabled] .navbar-inverse .btn-link:hover,
 fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #444;
 }
-
+.navbar-inverse {
+  margin-left: 0px;
+  margin-right: 0px;
+}
 panel-default > .panel-heading {
   /*color: #FFFFFF;
   background-color: #275a9b;*/
@@ -351,7 +361,7 @@ table.table_change_password td {
 .glyphicon-sunglasses-menu {
   font-size: 50px;
 }
-.glyphicon-off {
+.glyphicon-off-menu {
   font-size: 50px;
 }
 .color-white {
@@ -362,4 +372,18 @@ table.table_change_password td {
 }
 .text-welcome {
   font-size: 50px;
+}
+.row {
+  margin-right: 0px;
+  /*width: 100%;*/
+  /*border: ridge 1px red;*/
+}
+.col-sm-1 {
+  /*border: ridge 1px blue;*/
+}
+.col-sm-11 {
+  /*border: ridge 1px green;*/
+}
+.dropdown-margin {
+  margin-right: 10px;
 }
