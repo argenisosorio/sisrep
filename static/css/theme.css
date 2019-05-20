@@ -387,3 +387,15 @@ table.table_change_password td {
 .dropdown-margin {
   margin-right: 10px;
 }
+.glyphicon-pencil {
+  color: gray;
+}
+.glyphicon-edit {
+  color: gray;
+}
+.glyphicon-trash {
+  color: gray;
+}
+.glyphicon-eye-open {
+  color: gray;
+}
