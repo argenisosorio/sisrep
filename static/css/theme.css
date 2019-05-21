@@ -29,19 +29,21 @@ body {
 .left-column {
   background-color: rgba(41, 41, 41, 0.29);
   /*filter: blur(1px);*/
-  padding-left: 10px;
+  /*padding-left: 10px;*/
   min-height: 1000px;
   margin-top: -20px;
   position: fixed;
   /*border: ridge 1px red;*/
   margin-left: 14px;
+  width: 70px;
 }
 .right-column {
   /*margin-top: -72px;*/
   /*background-color: #343a40 !important;*/
   margin-top: -20px;
-  margin-left: 160px;
+  margin-left: 90px;
   /*border: ridge 1px blue;*/
+  
 }
 .cuerpo {
   min-height: 600px;
@@ -347,22 +349,22 @@ table.table_change_password td {
   border-color: #ddd;
 }
 .glyphicon-home-menu {
-  font-size: 50px;
+  font-size: 30px;
 }
 .glyphicon-file-menu {
-  font-size: 50px;
+  font-size: 30px;
 }
 .glyphicon-duplicate-menu {
-  font-size: 50px;
+  font-size: 30px;
 }
 .glyphicon-tasks-menu {
-  font-size: 50px;
+  font-size: 30px;
 }
 .glyphicon-sunglasses-menu {
-  font-size: 50px;
+  font-size: 30px;
 }
 .glyphicon-off-menu {
-  font-size: 50px;
+  font-size: 30px;
 }
 .color-white {
   color: #FFFFFF;
