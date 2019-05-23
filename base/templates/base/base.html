@@ -105,7 +105,7 @@
         </li>
         <li>
           <a href="{% url 'usuarios:logout' %}">
-            <i class="glyphicon glyphicon-off"></i>
+            <i class="fa fa-sign-out"></i>
             Salir
           </a>
         </li>
@@ -127,14 +127,14 @@
     {% if request.user.is_authenticated %}
       <div class="text-center">
         <a href="{% url 'inicio:index' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Inicio">
-          <i class="glyphicon glyphicon-home glyphicon-home-menu color-white"></i>
+          <i class="fa fa-home color-white"></i>
         </a>
         <br />
         <br />
         <br />
         {% if request.user.is_superuser %}
           <a href="{% url 'safet:inicio_carga_inicial' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Carga inicial">
-            <i class="glyphicon glyphicon-tasks glyphicon-tasks-menu color-white"></i>
+            <i class="fa fa-tasks color-white"></i>
           </a>
           <br />
           <br />
@@ -142,20 +142,20 @@
         {% else %}
         {% endif %}
         <a href="{% url 'safet:inicio_reporte_avances' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Reporte de avances">
-          <i class="glyphicon glyphicon-file glyphicon-file-menu color-white"></i>
+          <i class="fa fa-line-chart color-white"></i>
         </a>
         <br />
         <br />
         <br />
         <a href="{% url 'safet:inicio_reporte_actividades' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Reporte de actividades">
-          <i class="glyphicon glyphicon-duplicate glyphicon-duplicate-menu color-white"></i>
+          <i class="fa fa-file-text color-white"></i>
         </a>
         {% if request.user.is_superuser %}
           <br />
           <br />
           <br />
           <a href="{% url 'bitacora:bitacora' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Bitácora de eventos">
-            <i class="glyphicon glyphicon-sunglasses glyphicon-sunglasses-menu color-white"></i>
+            <i class="fa fa-book color-white"></i>
           </a>
         {% else %}
         {% endif %}
@@ -163,13 +163,13 @@
         <br />
         <br />
         <a href="{% url 'usuarios:logout' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Salir">
-          <i class="glyphicon glyphicon-off glyphicon-off-menu color-white"></i>
+          <i class="fa fa-sign-out fa-sign-out-salir color-white"></i>
         </a>
       </div>
       {% else %}
         <div class="text-center">
           <a href="{% url 'inicio:index' %}">
-            <i class="glyphicon glyphicon-home glyphicon-home-menu color-white"></i>
+            <i class="fa fa-home color-white"></i>
           </a>
         </div>
       {% endif %}

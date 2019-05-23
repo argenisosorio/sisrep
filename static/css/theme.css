@@ -348,23 +348,23 @@ table.table_change_password td {
   background-color: #f5f5f5;
   border-color: #ddd;
 }
-.glyphicon-home-menu {
-  font-size: 30px;
+.fa-home {
+  font-size: 30px !important;
 }
-.glyphicon-file-menu {
-  font-size: 30px;
+.fa-file-text {
+  font-size: 30px !important;
 }
-.glyphicon-duplicate-menu {
-  font-size: 30px;
+.fa-sign-out-salir {
+  font-size: 30px !important;
 }
-.glyphicon-tasks-menu {
-  font-size: 30px;
+.fa-tasks {
+  font-size: 30px !important;
 }
-.glyphicon-sunglasses-menu {
-  font-size: 30px;
+.fa-line-chart {
+  font-size: 30px !important;
 }
-.glyphicon-off-menu {
-  font-size: 30px;
+.fa-book {
+  font-size: 30px !important;
 }
 .color-white {
   color: #FFFFFF;
