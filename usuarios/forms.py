@@ -67,6 +67,7 @@ class MyRegistrationForm(UserCreationForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = True)
 
+    """
     is_active = forms.BooleanField(label='Cara visible',widget=CheckboxInput(attrs={
         'class':'checkbox',
     }), required = False)
@@ -78,10 +79,22 @@ class MyRegistrationForm(UserCreationForm):
     is_superuser = forms.BooleanField(label='Analista',widget=CheckboxInput(attrs={
         'class':'checkbox',
     }), required = False)
+    """
+
+    usuarios = (
+        ('is_active', 'Cara visible'),
+        ('is_staff', 'Director'),
+        ('is_superuser', 'Analista'),    
+        )
+    
+    campo0 = forms.ChoiceField(label='Sección', widget=Select(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), choices = usuarios, required = False)
 
     class Meta:
         model = User
-        fields = ('username','password1','password2','first_name','last_name','email','is_staff','is_active','is_superuser')
+        fields = ('username','password1','password2','first_name','last_name','email','campo0')
 
 
 class UserForm(forms.ModelForm):
@@ -108,6 +121,7 @@ class UserForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = True)
 
+    """
     is_active = forms.BooleanField(label='Cara visible',widget=CheckboxInput(attrs={
         'class':'checkbox',
     }), required = False)
@@ -119,8 +133,19 @@ class UserForm(forms.ModelForm):
     is_superuser = forms.BooleanField(label='Analista',widget=CheckboxInput(attrs={
         'class':'checkbox',
     }), required = False)
+    """
+    usuarios = (
+        ('is_active', 'Cara visible'),
+        ('is_staff', 'Director'),
+        ('is_superuser', 'Analista'),    
+        )
+    
+    campo0 = forms.ChoiceField(label='Sección', widget=Select(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), choices = usuarios, required = False)
 
     class Meta:
         model = User
         exclude = ('password1','password2')
-        fields = ('username','first_name','last_name','email','is_staff','is_active','is_superuser')
+        fields = ('username','first_name','last_name','email','campo0')

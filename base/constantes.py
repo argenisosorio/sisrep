@@ -20,11 +20,12 @@ anos = (
 )
 cargos = (
     ('-', '-'),
-    ('Analista de Desarrollo','Analista de Desarrollo'),
-    ('Analista de Apropiación','Analista de Apropiación'),
-    ('Analista de Reflexión','Analista de Reflexión'),
-    ('Analista de Investigación','Analista de Investigación'),
     ('Analista de Administración','Analista de Administración'),
+    ('Analista de Apropiación','Analista de Apropiación'),
+    ('Analista de Auditoría', 'Analista de Auditoría'),
+    ('Analista de Desarrollo','Analista de Desarrollo'),
+    ('Analista de Investigación','Analista de Investigación'),
+    ('Analista de Reflexión','Analista de Reflexión'),
     ('Analista de Soporte tecnológico','Analista de Soporte tecnológico'),
     ('Director','Director'),
 )

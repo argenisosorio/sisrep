@@ -142,15 +142,19 @@ class RegisterUser(CreateView):
         Método gestiona la validación de los datos enviados en el
         formulario y envía un mensaje de confirmación.
         """
+
         self.object = form.save(commit=False)
         self.object.username = form.cleaned_data['username']
         self.object.first_name = form.cleaned_data['first_name']
         self.object.last_name = form.cleaned_data['last_name']
         self.object.password1 = form.cleaned_data['password1']
         self.object.password2 = form.cleaned_data['password2']
-        self.object.is_staff = form.cleaned_data['is_staff']
-        self.object.is_active = form.cleaned_data['is_active']
-        self.object.is_superuser = form.cleaned_data['is_superuser']
+        if form.cleaned_data['campo0'] == 'is_staff':
+            self.object.is_staff = True
+            #self.object.is_superuser = False
+        elif form.cleaned_data['campo0'] == 'is_superuser':
+            self.object.is_staff = True
+            self.object.is_superuser = True
         self.object.save()
         messages.success(self.request, self.success_message)
         return super(RegisterUser, self).form_valid(form)
@@ -177,6 +181,29 @@ class EditUser(SuccessMessageMixin, UpdateView):
             messages_alert = ['No tiene permisos para editar el usuario']
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
+    def form_valid(self, form):
+        """
+        Método gestiona la validación de los datos enviados en el
+        formulario y envía un mensaje de confirmación.
+        """
+
+        self.object = form.save(commit=False)
+        self.object.username = form.cleaned_data['username']
+        self.object.first_name = form.cleaned_data['first_name']
+        self.object.last_name = form.cleaned_data['last_name']
+        if form.cleaned_data['campo0'] == 'is_staff':
+            self.object.is_staff = True
+            #self.object.is_superuser = False
+        elif form.cleaned_data['campo0'] == 'is_superuser':
+            self.object.is_staff = True
+            self.object.is_superuser = True
+        else:
+            self.object.is_staff = False
+            self.object.is_superuser = False
+
+        self.object.save()
+        messages.success(self.request, self.success_message)
+        return super(EditUser, self).form_valid(form)
 
 class DeleteUser(SuccessMessageMixin, DeleteView):
     """

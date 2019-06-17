@@ -40,6 +40,7 @@
       {% endif %}
       <br />
       <br />
+      <!--
       {{ form.is_staff }}
       <label>{{ form.is_staff.label }}</label>
       {% if form.is_staff.errors %}
@@ -54,6 +55,7 @@
         <br />
         <b>Alert: </b>{{ form.is_superuser.errors}}
       {% endif %}
+      -->
    </div>
     <div class="col-sm-4">
       <label>{{ form.email.label }}</label>
@@ -85,6 +87,7 @@
   </div>
   <br />
   <br />
+  {{ form.campo0 }} 
   <button class="btn btn-success" type="submit">Registrar</button>
 </form>
 {% endblock %}

@@ -69,9 +69,9 @@ class ReporteForm(forms.ModelForm):
         modelo Reporte.
         """
         super(ReporteForm, self).__init__(*args, **kwargs)
-        lista_proyectos = Proyecto.objects.all().values_list('nombre_proyecto','nombre_proyecto')
-        lista_caravisibles = Caravisible.objects.all().values_list('nombre_caravisible','nombre_caravisible')
-        lista_directores = Director.objects.all().values_list('nombre_director','nombre_director')
+        lista_proyectos = Proyecto.objects.all().order_by('nombre_proyecto').values_list('nombre_proyecto','nombre_proyecto')
+        lista_caravisibles = Caravisible.objects.all().order_by('nombre_caravisible').values_list('nombre_caravisible','nombre_caravisible')
+        lista_directores = Director.objects.all().order_by('nombre_director').values_list('nombre_director','nombre_director')
 
         self.fields['nombre_proyecto'] = forms.ChoiceField(label="Producto", widget=Select(attrs={
             'class':'form-control input-md',
