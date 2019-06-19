@@ -7,6 +7,7 @@ from django.forms import (
     ModelForm, TextInput, EmailInput, CharField, EmailField, PasswordInput, Select, CheckboxInput
 )
 from django import forms
+from base.constantes import *
 
 
 class LoginForm(AuthenticationForm):
@@ -80,21 +81,14 @@ class MyRegistrationForm(UserCreationForm):
         'class':'checkbox',
     }), required = False)
     """
-
-    usuarios = (
-        ('is_active', 'Cara visible'),
-        ('is_staff', 'Director'),
-        ('is_superuser', 'Analista'),    
-        )
-    
-    campo0 = forms.ChoiceField(label='Sección', widget=Select(attrs={
+    rol = forms.ChoiceField(label='Rol', widget=Select(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-    }), choices = usuarios, required = False)
+    }), choices=usuarios,required=False)
 
     class Meta:
         model = User
-        fields = ('username','password1','password2','first_name','last_name','email','campo0')
+        fields = ('username','password1','password2','first_name','last_name','email','rol')
 
 
 class UserForm(forms.ModelForm):
@@ -134,18 +128,13 @@ class UserForm(forms.ModelForm):
         'class':'checkbox',
     }), required = False)
     """
-    usuarios = (
-        ('is_active', 'Cara visible'),
-        ('is_staff', 'Director'),
-        ('is_superuser', 'Analista'),    
-        )
-    
-    campo0 = forms.ChoiceField(label='Sección', widget=Select(attrs={
+
+    rol = forms.ChoiceField(label='Rol', widget=Select(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-    }), choices = usuarios, required = False)
+    }), choices=usuarios,required = False)
 
     class Meta:
         model = User
         exclude = ('password1','password2')
-        fields = ('username','first_name','last_name','email','campo0')
+        fields = ('username','first_name','last_name','email','rol')

@@ -26,6 +26,11 @@ cargos = (
     ('Analista de Desarrollo','Analista de Desarrollo'),
     ('Analista de Investigación','Analista de Investigación'),
     ('Analista de Reflexión','Analista de Reflexión'),
-    ('Analista de Soporte tecnológico','Analista de Soporte tecnológico'),
+    ('Analista de Soporte Tecnológico','Analista de Soporte Tecnológico'),
     ('Director','Director'),
+)
+usuarios = (
+    ('is_active', 'Cara visible'),
+    ('is_staff', 'Director'),
+    ('is_superuser', 'Analista'),
 )

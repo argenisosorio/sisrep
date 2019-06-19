@@ -120,60 +120,61 @@
 ================================================== -->
 <div class="row">
 
-  <!-- col-2   ================================================== --> 
+  <!-- col-1
+  ================================================== -->
   <div class="col-sm-1 left-column">
     <br />
     {% if request.user.is_authenticated %}
       <div class="text-center">
-        <a href="{% url 'inicio:index' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Inicio"> 
-        <i class="fa fa-home color-white"></i>        
+        <a href="{% url 'inicio:index' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Inicio">
+          <i class="fa fa-home color-white"></i>
         </a>
         <br />
         <br />
         <br />
-        {% if request.user.is_superuser %}           
-        <a href="{% url 'safet:inicio_carga_inicial' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Carga inicial">             
-        <i class="fa fa-tasks color-white"></i> 
+        {% if request.user.is_superuser %}
+        <a href="{% url 'safet:inicio_carga_inicial' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Carga inicial">
+          <i class="fa fa-tasks color-white"></i>
         </a>
         <br />
         <br />
         <br />
-        {% else %}         
+        {% else %}
         {% endif %}
-        <a href="{% url 'safet:inicio_reporte_avances' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Reporte de avances">           
-        <i class="fa fa-line-chart color-white"></i>
-        </a> 
+        <a href="{% url 'safet:inicio_reporte_avances' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Reporte de avances">
+          <i class="fa fa-line-chart color-white"></i>
+        </a>
         <br />
-        <br />         
+        <br />
         <br />
         <a href="{% url 'safet:inicio_reporte_actividades' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Reporte de actividades">
-        <i class="fa fa-file-text color-white"></i>
+          <i class="fa fa-file-text color-white"></i>
         </a>
         {% if request.user.is_superuser %}
         <br />
-        <br /> 
+        <br />
         <br />
         <a href="{% url 'bitacora:bitacora' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Bitácora de eventos">
-        <i class="fa fa-book color-white"></i>
+          <i class="fa fa-book color-white"></i>
         </a>
         {% else %}
         {% endif %}
         <br />
         <br />
         <br />
-        <a href="{% url 'usuarios:logout' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Salir">           
-        <i class="fa fa-sign-out fa-sign-out-salir color-white"></i>
+        <a href="{% url 'usuarios:logout' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Salir">
+          <i class="fa fa-sign-out fa-sign-out-salir color-white"></i>
         </a>
       </div>
-      {% else %}         
+      {% else %}
         <div class="text-center">
         <a href="{% url 'inicio:index' %}">
         <i class="fa fa-home color-white"></i>
         </a>
         </div>
-      {% endif %}   
-  </div>   
-<!-- col-2 -->
+      {% endif %}
+  </div>
+  <!-- End col-1 -->
 
   <!-- col-11
   ================================================== -->
@@ -219,11 +220,14 @@
         </div>
       </div>
       <!-- End Well class -->
+
     </div>
     <!-- End Container class -->
+
   </div>
-  <!-- col-10 end -->
+  <!-- End col-11 -->
+
 </div>
-<!-- row class -->
+<!-- End row class -->
 </body>
 </html>

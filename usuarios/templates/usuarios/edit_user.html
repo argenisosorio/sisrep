@@ -23,39 +23,9 @@
         <b>Alert: </b>{{ form.first_name.errors}}
       {% endif %}
       <br />
-      <label>{{ form.last_name.label }}</label>
+      <label>{{ form.rol.label }}</label>
       <br />
-      {{ form.last_name }}
-      {% if form.last_name.errors %}
-        <br />
-        <b>Alert: </b>{{ form.last_name.errors}}
-      {% endif %}
-      <br />
-      <br />
-      {{ form.is_active }}
-      <label>{{ form.is_active.label }}</label>
-      {% if form.is_active.errors %}
-        <br />
-        <b>Alert: </b>{{ form.is_active.errors}}
-      {% endif %}
-      <br />
-      <br />
-      <!--
-      {{ form.is_staff }}
-      <label>{{ form.is_staff.label }}</label>
-      {% if form.is_staff.errors %}
-        <br />
-        <b>Alert: </b>{{ form.is_staff.errors}}
-      {% endif %}
-      <br />
-      <br />
-      {{ form.is_superuser }}
-      <label>{{ form.is_superuser.label }}</label>
-      {% if form.is_superuser.errors %}
-        <br />
-        <b>Alert: </b>{{ form.is_superuser.errors}}
-      {% endif %}
-      -->
+      {{ form.rol }}
     </div>
     <div class="col-sm-4">
       <label>{{ form.email.label }}</label>
@@ -65,13 +35,18 @@
         <br />
         <b>Alert: </b>{{ form.email.errors}}
       {% endif %}
+      <br />
+      <label>{{ form.last_name.label }}</label>
+      <br />
+      {{ form.last_name }}
+      {% if form.last_name.errors %}
+        <br />
+        <b>Alert: </b>{{ form.last_name.errors}}
+      {% endif %}
     </div>
     <div class="col-sm-4">
     </div>
   </div>
-  <br />
-  <br />
-  {{ form.campo0 }} 
   <a href="{% url 'usuarios:user_change_password' user.pk %}"><button type="button" class="btn btn-primary">Cambiar contraseña</button>
   <button class="btn btn-success" type="submit">Actualizar</button>
 </form>

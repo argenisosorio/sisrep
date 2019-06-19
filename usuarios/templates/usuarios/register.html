@@ -23,49 +23,6 @@
         <b>Alert: </b>{{ form.first_name.errors}}
       {% endif %}
       <br />
-      <label>{{ form.last_name.label }}</label>
-      <br />
-      {{ form.last_name }}
-      {% if form.last_name.errors %}
-        <br />
-        <b>Alert: </b>{{ form.last_name.errors}}
-      {% endif %}
-      <br />
-      <br />
-      {{ form.is_active }}
-      <label>{{ form.is_active.label }}</label>
-      {% if form.is_active.errors %}
-        <br />
-        <b>Alert: </b>{{ form.is_active.errors}}
-      {% endif %}
-      <br />
-      <br />
-      <!--
-      {{ form.is_staff }}
-      <label>{{ form.is_staff.label }}</label>
-      {% if form.is_staff.errors %}
-        <br />
-        <b>Alert: </b>{{ form.is_staff.errors}}
-      {% endif %}
-      <br />
-      <br />
-      {{ form.is_superuser }}
-      <label>{{ form.is_superuser.label }}</label>
-      {% if form.is_superuser.errors %}
-        <br />
-        <b>Alert: </b>{{ form.is_superuser.errors}}
-      {% endif %}
-      -->
-   </div>
-    <div class="col-sm-4">
-      <label>{{ form.email.label }}</label>
-      <br />
-      {{ form.email }}
-      {% if form.email.errors %}
-        <br />
-        <b>Alert: </b>{{ form.email.errors}}
-      {% endif %}
-      <br />
       <label>{{ form.password1.label }}</label>
       <br />
       {{ form.password1 }}
@@ -82,12 +39,30 @@
         <b>Alert: </b>{{ form.password2.errors}}
       {% endif %}
     </div>
+    <div class="col-sm-4">
+      <label>{{ form.email.label }}</label>
+      <br />
+      {{ form.email }}
+      {% if form.email.errors %}
+        <br />
+        <b>Alert: </b>{{ form.email.errors}}
+      {% endif %}
+      <br />
+      <label>{{ form.last_name.label }}</label>
+      <br />
+      {{ form.last_name }}
+      {% if form.last_name.errors %}
+        <br />
+        <b>Alert: </b>{{ form.last_name.errors}}
+      {% endif %}
+      <br />
+      <label>{{ form.rol.label }}</label>
+      <br />
+      {{ form.rol }}
+    </div>
+    <div class="col-sm-4">
+    </div>
   </div>
-  <div class="col-sm-4">
-  </div>
-  <br />
-  <br />
-  {{ form.campo0 }} 
   <button class="btn btn-success" type="submit">Registrar</button>
 </form>
 {% endblock %}
