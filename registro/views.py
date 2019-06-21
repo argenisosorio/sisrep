@@ -418,7 +418,7 @@ class Editar_cargo(SuccessMessageMixin,UpdateView):
     def get(self, request, *args, **kwargs):
         """
         Método que redirecciona a index si el usuario
-        que intenta editar el proyecto no es admin.
+        que intenta editar el cargo no es admin.
         """
         self.object = self.get_object()
         if request.user.is_superuser:

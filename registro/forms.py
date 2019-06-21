@@ -56,6 +56,7 @@ class DirectorForm(forms.ModelForm):
         model = Director
         fields = '__all__'
 
+
 class CargoForm(forms.ModelForm):
     """
     Formulario con los campos de un cargo.
@@ -76,7 +77,6 @@ class ReporteForm(forms.ModelForm):
     """
     Formulario con los campos de un reporte de actividades de un reporte.
     """
-
     def __init__(self, *args, **kwargs):
         """
         Método que carga la data de los proyectos, caras visibles y directores
