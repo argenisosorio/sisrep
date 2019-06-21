@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django import forms
-from registro.models import Reporte, Proyecto, Caravisible, Director
+from registro.models import Reporte, Proyecto, Caravisible, Director, Cargo
 from django.forms import (
     TextInput, CharField, Select, RadioSelect, Textarea, CheckboxInput, DateTimeField
 )
@@ -54,6 +54,21 @@ class DirectorForm(forms.ModelForm):
     class Meta:
 
         model = Director
+        fields = '__all__'
+
+class CargoForm(forms.ModelForm):
+    """
+    Formulario con los campos de un cargo.
+    """
+    nombre_cargo = forms.CharField(label='Nombre del cargo', widget=TextInput(attrs={
+        'class':'form-control input-md',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'True',
+    }), required = True)
+
+    class Meta:
+
+        model = Cargo
         fields = '__all__'
 
 

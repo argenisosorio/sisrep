@@ -22,6 +22,11 @@ urlpatterns = patterns('',
     url(r'^registrar_director$', login_required(views.Registrar_director.as_view()), name='registrar_director'),
     url(r'^editar_director/(?P<pk>\d+)$', login_required(views.Editar_director.as_view()), name='editar_director'),
     url(r'^borrar_director/(?P<pk>\d+)$', login_required(views.Borrar_director.as_view()), name='borrar_director'),
+    ##### Crud de los cargos ######
+    url(r'^consultar_cargo$', login_required(views.Consultar_cargo.as_view()), name='consultar_cargo'),
+    url(r'^registrar_cargo$', login_required(views.Registrar_cargo.as_view()), name='registrar_cargo'),
+    url(r'^editar_cargo/(?P<pk>\d+)$', login_required(views.Editar_cargo.as_view()), name='editar_cargo'),
+    url(r'^borrar_cargo/(?P<pk>\d+)$', login_required(views.Borrar_cargo.as_view()), name='borrar_cargo'),
     ##### Crud de los reportes ######
     url(r'^consultar_reporte$', login_required(views.Consultar_reporte.as_view()), name='consultar_reporte'),
     url(r'^registrar_reporte$', login_required(views.Registrar_reporte.as_view()), name='registrar_reporte'),

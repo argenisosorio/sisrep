@@ -1,0 +1,40 @@
+{% extends "base/base.html" %}
+{% block titulo %}Lista de cargos{% endblock %}
+{% block cuerpo %}
+<br />
+<h1 class="color-white">Lista de cargos</h1>
+<br />
+<a href="{% url 'registro:registrar_cargo' %}">
+  <button class="btn btn-success">Registrar cargo</button>
+</a>
+<br />
+<br />
+<table border="1px" id="example" class="display">
+  <thead>
+    <tr>
+      <th>N</th>
+      <th>Nombre del cargo</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>N</th>
+      <th>Nombre del cargo</th>
+      <th>Acciones</th>
+    </tr>
+  </tfoot>
+  <tbody>
+  {% for x in object_list %}
+  <tr>
+    <td></td>
+    <td>{{ x.nombre_cargo }}</td>
+    <td>
+      <a href="{% url 'registro:editar_cargo' x.id %}" title="Editar"><i class="glyphicon glyphicon-pencil"></i></a>
+      &nbsp; | &nbsp;
+      <a href="{% url 'registro:borrar_cargo' x.id %}" title="Borrar"><i class="glyphicon glyphicon-trash"></i></a>
+    </td>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
