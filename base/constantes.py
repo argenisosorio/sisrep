@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 meses = (
     ('-', '-'),
     ('Enero','Enero'),
@@ -18,7 +17,6 @@ meses = (
 anos = (
     ('2019','2019'),
 )
-
 usuarios = (
     ('is_active', 'Cara visible'),
     ('is_staff', 'Director'),
