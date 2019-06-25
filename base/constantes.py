@@ -18,17 +18,7 @@ meses = (
 anos = (
     ('2019','2019'),
 )
-cargos = (
-    ('-', '-'),
-    ('Analista de Administración','Analista de Administración'),
-    ('Analista de Apropiación','Analista de Apropiación'),
-    ('Analista de Auditoría', 'Analista de Auditoría'),
-    ('Analista de Desarrollo','Analista de Desarrollo'),
-    ('Analista de Investigación','Analista de Investigación'),
-    ('Analista de Reflexión','Analista de Reflexión'),
-    ('Analista de Soporte Tecnológico','Analista de Soporte Tecnológico'),
-    ('Director','Director'),
-)
+
 usuarios = (
     ('is_active', 'Cara visible'),
     ('is_staff', 'Director'),

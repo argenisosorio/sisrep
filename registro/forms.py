@@ -87,6 +87,7 @@ class ReporteForm(forms.ModelForm):
         lista_proyectos = Proyecto.objects.all().order_by('nombre_proyecto').values_list('nombre_proyecto','nombre_proyecto')
         lista_caravisibles = Caravisible.objects.all().order_by('nombre_caravisible').values_list('nombre_caravisible','nombre_caravisible')
         lista_directores = Director.objects.all().order_by('nombre_director').values_list('nombre_director','nombre_director')
+        lista_cargos = Cargo.objects.all().order_by('nombre_cargo').values_list('nombre_cargo','nombre_cargo')
 
         self.fields['nombre_proyecto'] = forms.ChoiceField(label="Producto", widget=Select(attrs={
             'class':'form-control input-md',
@@ -102,6 +103,56 @@ class ReporteForm(forms.ModelForm):
             'class':'form-control input-md',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_directores)
+
+        self.fields['cargo_trab_1'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices = lista_cargos, required = False)
+        
+        self.fields['cargo_trab_2'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices = lista_cargos, required = False)
+        
+        self.fields['cargo_trab_3'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices = lista_cargos, required = False)
+        
+        self.fields['cargo_trab_4'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices = lista_cargos, required = False)
+        
+        self.fields['cargo_trab_5'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices = lista_cargos, required = False)
+        
+        self.fields['cargo_trab_6'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices = lista_cargos, required = False)
+        
+        self.fields['cargo_trab_7'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices = lista_cargos, required = False)
+        
+        self.fields['cargo_trab_8'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices = lista_cargos, required = False)
+        
+        self.fields['cargo_trab_9'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices = lista_cargos, required = False)
+        
+        self.fields['cargo_trab_10'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices = lista_cargos, required = False)
 
     autor = forms.CharField(label='Autor', widget=TextInput(attrs={
         'class':'form-control input-md',
@@ -138,11 +189,6 @@ class ReporteForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    cargo_trab_1 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-        'class':'form-control input-md',
-        'style': 'min-width: 0; width: 100%; display: inline;',
-    }), choices = cargos, required = False)
-
     act_asig_trab_1 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
@@ -162,11 +208,6 @@ class ReporteForm(forms.ModelForm):
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
-
-    cargo_trab_2 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-        'class':'form-control input-md',
-        'style': 'min-width: 0; width: 100%; display: inline;',
-    }), choices = cargos, required = False)
 
     act_asig_trab_2 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
         'class':'form-control input-md',
@@ -188,11 +229,6 @@ class ReporteForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    cargo_trab_3 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-        'class':'form-control input-md',
-        'style': 'min-width: 0; width: 100%; display: inline;',
-    }), choices = cargos, required = False)
-
     act_asig_trab_3 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
@@ -212,11 +248,6 @@ class ReporteForm(forms.ModelForm):
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
-
-    cargo_trab_4 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-        'class':'form-control input-md',
-        'style': 'min-width: 0; width: 100%; display: inline;',
-    }), choices = cargos, required = False)
 
     act_asig_trab_4 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
         'class':'form-control input-md',
@@ -238,11 +269,6 @@ class ReporteForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    cargo_trab_5 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-        'class':'form-control input-md',
-        'style': 'min-width: 0; width: 100%; display: inline;',
-    }), choices = cargos, required = False)
-
     act_asig_trab_5 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
@@ -262,11 +288,6 @@ class ReporteForm(forms.ModelForm):
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
-
-    cargo_trab_6 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-        'class':'form-control input-md',
-        'style': 'min-width: 0; width: 100%; display: inline;',
-    }), choices = cargos, required = False)
 
     act_asig_trab_6 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
         'class':'form-control input-md',
@@ -288,11 +309,6 @@ class ReporteForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    cargo_trab_7 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-        'class':'form-control input-md',
-        'style': 'min-width: 0; width: 100%; display: inline;',
-    }), choices = cargos, required = False)
-
     act_asig_trab_7 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
@@ -312,11 +328,6 @@ class ReporteForm(forms.ModelForm):
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
-
-    cargo_trab_8 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-        'class':'form-control input-md',
-        'style': 'min-width: 0; width: 100%; display: inline;',
-    }), choices = cargos, required = False)
 
     act_asig_trab_8 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
         'class':'form-control input-md',
@@ -338,11 +349,6 @@ class ReporteForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
-    cargo_trab_9 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-        'class':'form-control input-md',
-        'style': 'min-width: 0; width: 100%; display: inline;',
-    }), choices = cargos, required = False)
-
     act_asig_trab_9 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
@@ -362,11 +368,6 @@ class ReporteForm(forms.ModelForm):
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
-
-    cargo_trab_10 = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-        'class':'form-control input-md',
-        'style': 'min-width: 0; width: 100%; display: inline;',
-    }), choices = cargos, required = False)
 
     act_asig_trab_10 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
         'class':'form-control input-md',
