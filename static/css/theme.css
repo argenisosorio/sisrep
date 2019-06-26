@@ -403,21 +403,11 @@ table.table_change_password td {
 }
 
 .glyphicon-white {
-  color: #FFFFFF;
-}
-
-.glyphicon-white {
-  border: ridge 1px gray;
-  color: #FFFFFF !important;
   padding: 20px;
   width: 100px;
 }
 
-.glyphicon-white:hover {
-  background-color: rgba(41, 41, 41, 0.29);
-}
-
-.glyphicon-pencil-icon {
+.glyphicon-icon {
   font-size: 30px;
 }
 
