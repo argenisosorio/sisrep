@@ -15,18 +15,14 @@
 <br />
 {% else %}
   {% if request.user.is_staff and request.user.is_active %}
-  {% else %}
-    {% if request.user.is_active %}
-      <div class="glyphicon-white">
-        <a href="{% url 'registro:registrar_reporte' %}">
-          <div align="center">
-            <i class="glyphicon glyphicon-pencil glyphicon-icon glyphicon-pencil-white"></i>
-            Registrar reporte
-          </div>
-        </a>
-      </div>
-    {% else %}
-    {% endif %}
+    <div class="glyphicon-white">
+      <a href="{% url 'registro:registrar_reporte' %}">
+        <div align="center">
+          <i class="glyphicon glyphicon-pencil glyphicon-icon glyphicon-pencil-white"></i>
+          Registrar reporte
+        </div>
+      </a>
+    </div>
   {% endif %}
 {% endif %}
 <br />

@@ -15,7 +15,6 @@
         </a>
       </div>
       <br>
-  {% if request.user.is_superuser %}
       <div class="glyphicon-white">
         <a href="{% url 'safet:consultar_proyecto' %}">
           <div align="center">
@@ -60,7 +59,7 @@
           </div>
         </a>
       </div>
-    </div>  
+    </div>
     <div class="col-sm-2">
       <div class="glyphicon-white">
         <a href="{% url 'registro:consultar_cargo' %}">
@@ -123,7 +122,5 @@
       </div>
     </div>
   </div>
-  {% endif %}
 {% endif %}
-<!-- End Navbar class -->
 {% endblock %}
