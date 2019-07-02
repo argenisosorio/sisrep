@@ -13,27 +13,6 @@
   </a>
 </div>
 <br />
-{% else %}
-  {% if request.user.is_staff and request.user.is_active %}
-    <div class="glyphicon-white">
-      <a href="{% url 'registro:registrar_reporte' %}">
-        <div align="center">
-          <i class="glyphicon glyphicon-pencil glyphicon-icon glyphicon-pencil-white"></i>
-          Registrar reporte
-        </div>
-      </a>
-    </div>
-  {% endif %}
-{% endif %}
-<div class="glyphicon-white">
-  <a href="{% url 'registro:registrar_reporte' %}">
-    <div align="center">
-      <i class="glyphicon glyphicon-pencil glyphicon-icon glyphicon-pencil-white"></i>
-      Registrar reporte
-    </div>
-  </a>
-</div>
-<br />
 <div class="glyphicon-white">
   <a href="{% url 'registro:consultar_reporte' %}">
     <div align="center">
@@ -51,4 +30,54 @@
     </div>
   </a>
 </div>
+{% else %}
+  {% if request.user.is_staff and request.user.is_active %}
+  <div class="glyphicon-white">
+    <a href="{% url 'registro:consultar_reporte' %}">
+      <div align="center">
+        <i class="glyphicon glyphicon-list glyphicon-icon"></i>
+        Listar reportes
+      </div>
+    </a>
+  </div>
+  <br />
+  <div class="glyphicon-white">
+    <a href="{% url 'registro:buscar' %}">
+      <div align="center">
+        <i class="glyphicon glyphicon-search glyphicon-icon"></i>
+        Buscar reportes
+      </div>
+    </a>
+  </div>
+  {% else %}
+    {% if request.user.is_active %}
+    <div class="glyphicon-white">
+      <a href="{% url 'registro:registrar_reporte' %}">
+        <div align="center">
+          <i class="glyphicon glyphicon-pencil glyphicon-icon glyphicon-pencil-white"></i>
+          Registrar reporte
+        </div>
+      </a>
+    </div>
+    <br />
+    <div class="glyphicon-white">
+      <a href="{% url 'registro:consultar_reporte' %}">
+        <div align="center">
+          <i class="glyphicon glyphicon-list glyphicon-icon"></i>
+          Listar reportes
+        </div>
+      </a>
+    </div>
+    <br />
+    <div class="glyphicon-white">
+      <a href="{% url 'registro:buscar' %}">
+        <div align="center">
+          <i class="glyphicon glyphicon-search glyphicon-icon"></i>
+          Buscar reportes
+        </div>
+      </a>
+    </div>
+    {% endif %}
+  {% endif %}
+{% endif %}
 {% endblock %}
