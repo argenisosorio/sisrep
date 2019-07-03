@@ -19,9 +19,7 @@
       <th>Correo electrónico</th>
       <th>Fecha de registro</th>
       <th>Último acceso</th>
-      <th>Cara visible</th>
-      <th>Director</th>
-      <th>Analista</th>
+      <th>Tipo</th>
       <th>Acciones</th>
     </tr>
   </thead>
@@ -34,9 +32,7 @@
       <th>Correo electrónico</th>
       <th>Fecha de registro</th>
       <th>Último acceso</th>
-      <th>Cara visible</th>
-      <th>Director</th>
-      <th>Analista</th>
+      <th>Tipo</th>
       <th>Acciones</th>
     </tr>
   </tfoot>
@@ -50,20 +46,16 @@
     <td>{{ user.email }}</td>
     <td>{{ user.date_joined }}</td>
     <td>{{ user.last_login }}</td>
-    {% if user.is_active == True %}
-      <td class="td_si">Sí</td>
+    {% if user.is_superuser == True and user.is_staff == True and user.is_active == True %}
+      <td class="td_si">Analista</td>
     {% else %}
-      <td class="td_no">No</td>
-    {% endif %}
-    {% if user.is_staff == True %}
-      <td class="td_si">Sí</td>
-    {% else %}
-      <td class="td_no">No</td>
-    {% endif %}
-    {% if user.is_superuser == True %}
-      <td class="td_si">Sí</td>
-    {% else %}
-      <td class="td_no">No</td>
+      {% if user.is_superuser == False and user.is_staff == True and user.is_active == True %}
+        <td class="td_si">Director</td>
+      {% else %}
+        {% if user.is_superuser == False and user.is_staff == False and user.is_active == True %}
+          <td class="td_si">Cara visible</td>
+        {% endif %}
+      {% endif %}
     {% endif %}
     <td>
       <a href="{% url 'usuarios:edit_user' user.pk %}" title="Editar"><i class="glyphicon glyphicon-pencil"></i></a>
