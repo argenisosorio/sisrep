@@ -115,7 +115,6 @@ class UserForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = True)
 
-    """
     is_active = forms.BooleanField(label='Cara visible',widget=CheckboxInput(attrs={
         'class':'checkbox',
     }), required = False)
@@ -127,7 +126,6 @@ class UserForm(forms.ModelForm):
     is_superuser = forms.BooleanField(label='Analista',widget=CheckboxInput(attrs={
         'class':'checkbox',
     }), required = False)
-    """
 
     rol = forms.ChoiceField(label='Rol', widget=Select(attrs={
         'class':'form-control input-md',
@@ -137,4 +135,4 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         exclude = ('password1','password2')
-        fields = ('username','first_name','last_name','email','rol')
+        fields = ('username','first_name','last_name','email','rol','is_active','is_staff','is_superuser')

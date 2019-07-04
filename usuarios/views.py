@@ -127,7 +127,7 @@ class RegisterUser(CreateView):
 
     def get(self, request, *args, **kwargs):
         """
-        Méroto que valida si el usuario autenticado es admin
+        Método que valida si el usuario autenticado es admin
         para poder registrar un usuario.
         """
         self.object = None
@@ -210,6 +210,7 @@ class EditUser(SuccessMessageMixin, UpdateView):
         self.object.save()
         messages.success(self.request, self.success_message)
         return super(EditUser, self).form_valid(form)
+
 
 class DeleteUser(SuccessMessageMixin, DeleteView):
     """
