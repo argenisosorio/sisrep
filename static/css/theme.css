@@ -391,15 +391,59 @@ table.table_change_password td {
 }
 .glyphicon-pencil {
   color: gray;
+  border: ridge 1px gray;
+  padding: 5px;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+.glyphicon-pencil:hover {
+  color: #FFFFFF;
+  border: ridge 1px #FFFFFF;
+  padding: 5px;
+  background: gray;
+  border-radius: 5px;
 }
 .glyphicon-edit {
   color: gray;
+  border: ridge 1px gray;
+  padding: 5px;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+.glyphicon-edit:hover {
+  color: #FFFFFF;
+  border: ridge 1px #FFFFFF;
+  padding: 5px;
+  background: gray;
+  border-radius: 5px;
 }
 .glyphicon-trash {
   color: gray;
+  border: ridge 1px gray;
+  padding: 5px;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+.glyphicon-trash:hover {
+  color: #FFFFFF;
+  border: ridge 1px #FFFFFF;
+  padding: 5px;
+  background: gray;
+  border-radius: 5px;
 }
 .glyphicon-eye-open {
   color: gray;
+  border: ridge 1px gray;
+  padding: 5px;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+.glyphicon-eye-open:hover {
+  color: #FFFFFF;
+  border: ridge 1px #FFFFFF;
+  padding: 5px;
+  background: gray;
+  border-radius: 5px;
 }
 .glyphicon-white {
   padding: 20px;

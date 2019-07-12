@@ -57,10 +57,13 @@
         {% endif %}
       {% endif %}
     {% endif %}
-    <td>
-      <a href="{% url 'usuarios:edit_user' user.pk %}" title="Editar"><i class="glyphicon glyphicon-pencil"></i></a>
-      &nbsp; | &nbsp;
-      <a href="{% url 'usuarios:delete_user' user.id %}" title="Borrar"><i class="glyphicon glyphicon-trash"></i></a>
+    <td class="text-center td_botonera_tabla">
+      <div class="row">
+        <div class="col-sm-12">
+          <a href="{% url 'usuarios:edit_user' user.pk %}" title="Editar"><i class="glyphicon glyphicon-pencil"></i></a>
+          <a href="{% url 'usuarios:delete_user' user.id %}" title="Borrar"><i class="glyphicon glyphicon-trash"></i></a>
+        </div>
+      </div>
     </td>
   </tr>
   {% endfor %}

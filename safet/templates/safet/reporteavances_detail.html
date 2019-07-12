@@ -482,22 +482,22 @@
 </table>
 <br />
 <div class="row">
-    <div class="col-sm-4">
-      <div class="texto_enlace_busqueda text-right">
-        <b>{{ reporteavances.nombre_producto }}</b>
-      </div>
-      <br />
+  <div class="col-sm-4">
+    <div class="texto_enlace_busqueda text-right">
+      <b>{{ reporteavances.nombre_producto }}</b>
     </div>
-    <div class="col-sm-4">
-      <div class="progress">
-        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ reporteavances.sumatoria_por_avan }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ reporteavances.sumatoria_por_avan }}%;">
-          {{ reporteavances.sumatoria_por_avan }} %
-        </div>
+    <br />
+  </div>
+  <div class="col-sm-4">
+    <div class="progress">
+      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ reporteavances.sumatoria_por_avan }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ reporteavances.sumatoria_por_avan }}%;">
+        {{ reporteavances.sumatoria_por_avan }} %
       </div>
-    </div>
-    <div class="col-sm-4">
     </div>
   </div>
+  <div class="col-sm-4">
+  </div>
+</div>
 <script type="text/javascript">
 $("document").ready(function (){
   /*
