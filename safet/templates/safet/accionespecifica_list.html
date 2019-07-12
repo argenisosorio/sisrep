@@ -30,9 +30,12 @@
     <td></td>
     <td>{{ x.nombre_accion }}</td>
     <td>
-      <a href="{% url 'safet:editar_accion' x.id %}" title="Editar"><i class="glyphicon glyphicon-pencil"></i></a>
-      &nbsp; | &nbsp;
-      <a href="{% url 'safet:borrar_accion' x.id %}" title="Borrar"><i class="glyphicon glyphicon-trash"></i></a>
+    <div class="row">
+      <div class="col-sm-12">
+        <a href="{% url 'safet:editar_accion' x.id %}" title="Editar"><i class="glyphicon glyphicon-pencil"></i></a>
+        <a href="{% url 'safet:borrar_accion' x.id %}" title="Borrar"><i class="glyphicon glyphicon-trash"></i></a>
+      </div>
+    </div>
     </td>
   {% endfor %}
   </tbody>
