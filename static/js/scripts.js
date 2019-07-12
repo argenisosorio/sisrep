@@ -171,3 +171,12 @@ $("document").ready(function(){
     }
   })();
 });
+
+/*
+|----------------------------------------
+| Función que permite el uso de tooltips.
+|----------------------------------------
+*/
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});

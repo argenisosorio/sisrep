@@ -126,14 +126,14 @@
     <br />
     {% if request.user.is_authenticated %}
       <div class="text-center">
-        <a href="{% url 'inicio:index' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Inicio">
+        <a href="{% url 'inicio:index' %}" data-toggle="tooltip" title="Inicio">
           <i class="fa fa-home color-white"></i>
         </a>
         <br />
         <br />
         <br />
         {% if request.user.is_superuser %}
-        <a href="{% url 'safet:inicio_carga_inicial' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Carga inicial">
+        <a href="{% url 'safet:inicio_carga_inicial' %}" data-toggle="tooltip" title="Carga inicial">
           <i class="fa fa-tasks color-white"></i>
         </a>
         <br />
@@ -141,20 +141,20 @@
         <br />
         {% else %}
         {% endif %}
-        <a href="{% url 'safet:inicio_reporte_avances' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Reporte de avances">
+        <a href="{% url 'safet:inicio_reporte_avances' %}" data-toggle="tooltip" title="Reporte de avances">
           <i class="fa fa-line-chart color-white"></i>
         </a>
         <br />
         <br />
         <br />
-        <a href="{% url 'safet:inicio_reporte_actividades' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Reporte de actividades">
+        <a href="{% url 'safet:inicio_reporte_actividades' %}" data-toggle="tooltip" title="Reporte de actividades">
           <i class="fa fa-file-text color-white"></i>
         </a>
         {% if request.user.is_superuser %}
         <br />
         <br />
         <br />
-        <a href="{% url 'bitacora:bitacora' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Bitácora de eventos">
+        <a href="{% url 'bitacora:bitacora' %}" data-toggle="tooltip" title="Bitácora de eventos">
           <i class="fa fa-book color-white"></i>
         </a>
         {% else %}
@@ -162,7 +162,7 @@
         <br />
         <br />
         <br />
-        <a href="{% url 'usuarios:logout' %}" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Salir">
+        <a href="{% url 'usuarios:logout' %}" data-toggle="tooltip" title="Salir">
           <i class="fa fa-sign-out fa-sign-out-salir color-white"></i>
         </a>
       </div>

@@ -468,3 +468,25 @@ table.table_change_password td {
 .td_botonera_tabla {
   padding: 5px:;
 }
+
+body .ui-tooltip {
+  background: black;
+  color: white;
+  border-width: 0px;
+  border-color: #000
+  width: 100px;
+  font-size: 12px;
+}
+
+body .ui-tooltip:after {
+  content: "";
+  display: block; /* reduce the damage in FF3.0 */
+  position: absolute;
+  top: 10px;
+  left: -8px;
+  bottom: auto;
+  border-width: 8px 10px 8px 0;
+  width: 0;
+  border-style: solid;
+  border-color: transparent #000;
+}
