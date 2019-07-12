@@ -34,14 +34,14 @@
     <td>{{ x.nombre_caravisible }}</td>
     <td>{{ x.ano_ejecucion }}</td>
     {% if user.is_staff %}
-      <td>
+      <td class="text-center td_botonera_tabla">
         <a href="{% url 'safet:detallar_reporte_avances' x.id %}" title="Detallar">
           <i class="glyphicon glyphicon-eye-open"></i>
         </a>
       </td>
     {% else %}
       {% if x.autor == user.username %}
-        <td>
+        <td class="text-center td_botonera_tabla">
         <div class="row">
           <div class="col-sm-12">
             <a href="{% url 'safet:editar_reporte_avances_cv' x.id %}" title="Editar">
