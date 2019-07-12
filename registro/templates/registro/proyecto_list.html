@@ -30,12 +30,12 @@
     <td></td>
     <td>{{ x.nombre_proyecto }}</td>
     <td class="text-center td_botonera_tabla">
-    <div class="row">
-      <div class="col-sm-12">
-        <a href="{% url 'registro:editar_proyecto' x.id %}" title="Editar"><i class="glyphicon glyphicon-pencil"></i></a>
-        <a href="{% url 'registro:borrar_proyecto' x.id %}" title="Borrar"><i class="glyphicon glyphicon-trash"></i></a>
+      <div class="row">
+        <div class="col-sm-12">
+          <a href="{% url 'registro:editar_proyecto' x.id %}" title="Editar"><i class="glyphicon glyphicon-pencil"></i></a>
+          <a href="{% url 'registro:borrar_proyecto' x.id %}" title="Borrar"><i class="glyphicon glyphicon-trash"></i></a>
+        </div>
       </div>
-    </div>
     </td>
   {% endfor %}
   </tbody>

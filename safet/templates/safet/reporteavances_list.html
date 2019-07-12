@@ -34,19 +34,19 @@
     <td>{{ x.nombre_caravisible }}</td>
     <td>{{ x.ano_ejecucion }}</td>
     <td class="text-center td_botonera_tabla">
-    <div class="row">
-      <div class="col-sm-12">
-        <a href="{% url 'safet:editar_reporte_avances' x.id %}" title="Editar">
-          <i class="glyphicon glyphicon-pencil"></i>
-        </a>
-        <a href="{% url 'safet:detallar_reporte_avances' x.id %}" title="Detallar">
-          <i class="glyphicon glyphicon-eye-open"></i>
-        </a>
-        <a href="{% url 'safet:borrar_reporte_avances' x.id %}" title="Borrar">
-          <i class="glyphicon glyphicon-trash"></i>
-        </a>
+      <div class="row">
+        <div class="col-sm-12">
+          <a href="{% url 'safet:editar_reporte_avances' x.id %}" title="Editar">
+            <i class="glyphicon glyphicon-pencil"></i>
+          </a>
+          <a href="{% url 'safet:detallar_reporte_avances' x.id %}" title="Detallar">
+            <i class="glyphicon glyphicon-eye-open"></i>
+          </a>
+          <a href="{% url 'safet:borrar_reporte_avances' x.id %}" title="Borrar">
+            <i class="glyphicon glyphicon-trash"></i>
+          </a>
+        </div>
       </div>
-    </div>
     </td>
   </tr>
   {% endfor %}
