@@ -468,7 +468,6 @@ table.table_change_password td {
 .td_botonera_tabla {
   padding: 5px:;
 }
-
 body .ui-tooltip {
   background: black;
   color: white;
@@ -477,7 +476,6 @@ body .ui-tooltip {
   width: 100px;
   font-size: 12px;
 }
-
 body .ui-tooltip:after {
   content: "";
   display: block; /* reduce the damage in FF3.0 */
