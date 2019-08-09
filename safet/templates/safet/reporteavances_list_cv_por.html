@@ -2,7 +2,7 @@
 {% block titulo %}Reporte gráfico de (%){% endblock %}
 {% block cuerpo %}
 <br />
-<h1 class="color-white">Reporte de porcentajes de avance de los productos</h1>
+<h1 class="color-white"><a href="{% url 'safet:inicio_reporte_avances' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Reporte de porcentajes de avance de los productos</h1>
 <br />
 <form action="{% url 'safet:busqueda' %}" method="get">
   <label>Buscar productos por año</label>

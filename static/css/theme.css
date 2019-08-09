@@ -507,3 +507,11 @@ body .ui-tooltip:after {
   -o-transform:scale(1.2);
   filter: grayscale(80%);
 }
+
+.fa-mail-reply {
+  background: transparent;
+  color: white;
+  padding: 10px;
+  font-size: 27px !important;
+  margin-left: -20px;
+}

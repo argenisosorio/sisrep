@@ -2,7 +2,7 @@
 {% block titulo %}Registrar cargo{% endblock %}
 {% block cuerpo %}
 <br />
-<h1 class="color-white">Registrar cargo</h1>
+<h1 class="color-white"><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Registrar cargo</h1>
 <br />
 <form method="post">{% csrf_token %}
   <div class="">
@@ -14,7 +14,6 @@
     {% endif %}
   </div>
   <br />
-  <a href="{% url 'registro:consultar_cargo' %}"><button type="button" class="btn btn-primary">Volver</button></a>
   <button class="btn btn-info" type="reset">Limpiar</button>
   <button class="btn btn-success" type="submit">Registrar</button>
 </form>

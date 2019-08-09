@@ -2,7 +2,7 @@
 {% block titulo %}Bitácora{% endblock %}
 {% block cuerpo %}
 {% load staticfiles %}
-<h1 class="color-white">Bitácora de eventos</h1>
+<h1 class="color-white"><a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Bitácora de eventos</h1>
 <br />
 <table border="1px" id="examplee" class="display" cellspacing="0px" style="width:100%;">
   <thead>

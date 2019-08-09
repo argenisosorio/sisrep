@@ -2,7 +2,7 @@
 {% block titulo %}Lista de productos{% endblock %}
 {% block cuerpo %}
 <br />
-<h1 class="color-white">Lista de productos</h1>
+<h1 class="color-white"><a href="{% url 'safet:inicio_carga_inicial' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Lista de productos</h1>
 <br />
 <a href="{% url 'registro:registrar_proyecto' %}">
   <button class="btn btn-success">Registrar producto</button>

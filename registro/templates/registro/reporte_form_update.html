@@ -2,7 +2,7 @@
 {% block titulo %}Actualizar reporte de actividades{% endblock %}
 {% block cuerpo %}
 <br />
-<h1 class="color-white">Actualizar reporte de actividades</h1>
+<h1 class="color-white"><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Actualizar reporte de actividades</h1>
 <br />
 <form method="post">{% csrf_token %}
    
@@ -439,7 +439,6 @@
     </tbody>
   </table>
   <br />
-  <a href="{% url 'inicio:index' %}"><button type="button" class="btn btn-primary">Volver</button></a>
   <button class="btn btn-info" type="reset">Limpiar</button>
   <button class="btn btn-success" type="submit">Actualizar</button>
 </form>
