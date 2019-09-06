@@ -128,6 +128,46 @@
                 `{{ reporte.act_asig_trab_10 }}`,
                 `{{ reporte.act_rea_trab_10 }}`,
                 `{{ reporte.enlaces_trab_10 }}`,
+              ],
+              [
+                '11',
+                '{{ reporte.nombre_trab_11 }}',
+                '{{ reporte.cargo_trab_11 }}',
+                `{{ reporte.act_asig_trab_11 }}`,
+                `{{ reporte.act_rea_trab_11 }}`,
+                `{{ reporte.enlaces_trab_11 }}`,
+              ],
+              [
+                '12',
+                '{{ reporte.nombre_trab_12 }}',
+                '{{ reporte.cargo_trab_12 }}',
+                `{{ reporte.act_asig_trab_12 }}`,
+                `{{ reporte.act_rea_trab_12 }}`,
+                `{{ reporte.enlaces_trab_12 }}`,
+              ],
+              [
+                '13',
+                '{{ reporte.nombre_trab_13 }}',
+                '{{ reporte.cargo_trab_13 }}',
+                `{{ reporte.act_asig_trab_13 }}`,
+                `{{ reporte.act_rea_trab_13 }}`,
+                `{{ reporte.enlaces_trab_13 }}`,
+              ],
+              [
+                '14',
+                '{{ reporte.nombre_trab_14 }}',
+                '{{ reporte.cargo_trab_14 }}',
+                `{{ reporte.act_asig_trab_14 }}`,
+                `{{ reporte.act_rea_trab_14 }}`,
+                `{{ reporte.enlaces_trab_14 }}`,
+              ],
+              [
+                '15',
+                '{{ reporte.nombre_trab_15 }}',
+                '{{ reporte.cargo_trab_15 }}',
+                `{{ reporte.act_asig_trab_15 }}`,
+                `{{ reporte.act_rea_trab_15 }}`,
+                `{{ reporte.enlaces_trab_15 }}`,
               ]
             ]
           }
@@ -477,6 +517,106 @@
         </td>
         <td class="area_enlaces">
           {{ reporte.enlaces_trab_10 }}
+        </td>
+      </tr>
+    {% endif %}
+    {% if reporte.nombre_trab_11 %}
+      <tr>
+        <td>11</td>
+        <td>
+          {{ reporte.nombre_trab_11 }}
+        </td>
+        <td>
+          {{ reporte.cargo_trab_11 }}
+        </td>
+        <td align="justify">
+          {{ reporte.act_asig_trab_11 | linebreaksbr }}
+        </td>
+        <td align="justify">
+          {{ reporte.act_rea_trab_11 | linebreaksbr }}
+        </td>
+        <td class="area_enlaces">
+          {{ reporte.enlaces_trab_11 }}
+        </td>
+      </tr>
+    {% endif %}
+    {% if reporte.nombre_trab_12 %}
+      <tr>
+        <td>12</td>
+        <td>
+          {{ reporte.nombre_trab_12 }}
+        </td>
+        <td>
+          {{ reporte.cargo_trab_12 }}
+        </td>
+        <td align="justify">
+          {{ reporte.act_asig_trab_12 | linebreaksbr }}
+        </td>
+        <td align="justify">
+          {{ reporte.act_rea_trab_12 | linebreaksbr }}
+        </td>
+        <td class="area_enlaces">
+          {{ reporte.enlaces_trab_12 }}
+        </td>
+      </tr>
+    {% endif %}
+    {% if reporte.nombre_trab_13 %}
+      <tr>
+        <td>13</td>
+        <td>
+          {{ reporte.nombre_trab_13 }}
+        </td>
+        <td>
+          {{ reporte.cargo_trab_13 }}
+        </td>
+        <td align="justify">
+          {{ reporte.act_asig_trab_13 | linebreaksbr }}
+        </td>
+        <td align="justify">
+          {{ reporte.act_rea_trab_13 | linebreaksbr }}
+        </td>
+        <td class="area_enlaces">
+          {{ reporte.enlaces_trab_13 }}
+        </td>
+      </tr>
+    {% endif %}
+    {% if reporte.nombre_trab_14 %}
+      <tr>
+        <td>14</td>
+        <td>
+          {{ reporte.nombre_trab_14 }}
+        </td>
+        <td>
+          {{ reporte.cargo_trab_14 }}
+        </td>
+        <td align="justify">
+          {{ reporte.act_asig_trab_14 | linebreaksbr }}
+        </td>
+        <td align="justify">
+          {{ reporte.act_rea_trab_14 | linebreaksbr }}
+        </td>
+        <td class="area_enlaces">
+          {{ reporte.enlaces_trab_14 }}
+        </td>
+      </tr>
+    {% endif %}
+    {% if reporte.nombre_trab_15 %}
+      <tr>
+        <td>15</td>
+        <td>
+          {{ reporte.nombre_trab_15 }}
+        </td>
+        <td>
+          {{ reporte.cargo_trab_15 }}
+        </td>
+        <td align="justify">
+          {{ reporte.act_asig_trab_15 | linebreaksbr }}
+        </td>
+        <td align="justify">
+          {{ reporte.act_rea_trab_15 | linebreaksbr }}
+        </td>
+        <td class="area_enlaces">
+          {{ reporte.enlaces_trab_15 }}
         </td>
       </tr>
     {% endif %}
