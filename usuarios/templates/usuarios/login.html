@@ -1,15 +1,18 @@
 {% extends "base/base.html" %}
 {% block titulo %}Iniciar sesión{% endblock %}
 {% block cuerpo %}
+{% load staticfiles %}
 <div align="center">
   <br />
   <br />
   <br />
   <br />
+  <img class="img-lupa" src="{% static 'img/lupa.png' %}" width="20%">
+  <h2 class="color-white">SISREP - Sistema para reportar actividades</h2>
+</div>
+<div align="center">
+  <!--h1 class="color-white">Iniciar sesión</h1-->
   <br />
-  <br />
-  <br />
-  <h1 class="color-white">Iniciar sesión</h1>
   <form action="{% url 'usuarios:login' %}" method="post">{% csrf_token %}
     <br />
     <b>Usuario</b><br />

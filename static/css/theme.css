@@ -507,7 +507,6 @@ body .ui-tooltip:after {
   -o-transform:scale(1.2);
   filter: grayscale(80%);
 }
-
 .fa-mail-reply {
   background: transparent;
   color: white;
