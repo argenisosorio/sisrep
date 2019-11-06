@@ -159,3 +159,23 @@ LOGIN_URL = "../../usuarios/login"
 
 # Cerrar sesión cuando se cierra el navegador
 #SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+# Configuración de variables para envío de correo electrónico de recuperación de contraseña
+
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_HOST = 'smtp.gmail.com' # mail service smtp
+#EMAIL_HOST_USER = 'sisrepcenditel@gmail.com'
+#EMAIL_HOST_PASSWORD = 'sisrep123456' # password
+#EMAIL_PORT = 587
+#EMAIL_USE_TLS = True
+
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_HOST = 'smtp.cenditel.gob.ve' # mail service smtp
+#EMAIL_HOST_USER = 'pruebasistemas@cenditel.gob.ve'
+#EMAIL_HOST_PASSWORD = 'fOMlkeJT362LFMiRGFf' # password
+#DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+#EMAIL_PORT = 465
+#EMAIL_USE_TLS = False
+#EMAIL_USE_SSL = False
