@@ -160,6 +160,12 @@ LOGIN_URL = "../../usuarios/login"
 # Cerrar sesión cuando se cierra el navegador
 #SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
+# Configuración necesaria para el envío de correos con exim4
+EMAIL_HOST = 'localhost' # mail service smtp
+EMAIL_PORT = 25
+DEFAULT_FROM_EMAIL = 'pruebasistemas@cenditel.gob.ve'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 # Configuración de variables para envío de correo electrónico de recuperación de contraseña
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
