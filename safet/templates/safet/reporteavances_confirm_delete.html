@@ -1,7 +1,7 @@
 {% extends "base/base.html" %}
 {% block titulo %}Borrar reporte de avances{% endblock %}
 {% block cuerpo %}
-<h1 class="color-white"><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Borrar reporte de avances</h1>
+<h1><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Borrar reporte de avances</h1>
 <form method="post">{% csrf_token %}
   ¿Está seguro que desea eliminar a "{{ object }}"?
   <br />

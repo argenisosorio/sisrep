@@ -1,11 +1,11 @@
 {% extends "base/base.html" %}
 {% block titulo %}Reporte de actividades{% endblock %}
 {% block cuerpo %}
-<h1 class="color-white">Reporte de actividades</h1>
+<h1>Reporte de actividades</h1>
 <br />
 {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
 <div class="glyphicon-white">
-  <a href="{% url 'registro:registrar_reporte' %}">
+  <a href="{% url 'registro:registrar_reporte' %}" class="enlace_boton_panel">
     <div align="center">
       <i class="glyphicon glyphicon-file glyphicon-icon"></i>
       Registrar reporte
@@ -14,7 +14,7 @@
 </div>
 <br />
 <div class="glyphicon-white">
-  <a href="{% url 'registro:consultar_reporte' %}">
+  <a href="{% url 'registro:consultar_reporte' %}" class="enlace_boton_panel">
     <div align="center">
       <i class="glyphicon glyphicon-list glyphicon-icon"></i>
       Listar reportes
@@ -23,7 +23,7 @@
 </div>
 <br />
 <div class="glyphicon-white">
-  <a href="{% url 'registro:buscar' %}">
+  <a href="{% url 'registro:buscar' %}" class="enlace_boton_panel">
     <div align="center">
       <i class="glyphicon glyphicon-search glyphicon-icon"></i>
       Buscar reportes
@@ -33,7 +33,7 @@
 {% else %}
   {% if request.user.is_staff and request.user.is_active %}
   <div class="glyphicon-white">
-    <a href="{% url 'registro:consultar_reporte' %}">
+    <a href="{% url 'registro:consultar_reporte' %}" class="enlace_boton_panel">
       <div align="center">
         <i class="glyphicon glyphicon-list glyphicon-icon"></i>
         Listar reportes
@@ -42,7 +42,7 @@
   </div>
   <br />
   <div class="glyphicon-white">
-    <a href="{% url 'registro:buscar' %}">
+    <a href="{% url 'registro:buscar' %}" class="enlace_boton_panel">
       <div align="center">
         <i class="glyphicon glyphicon-search glyphicon-icon"></i>
         Buscar reportes
@@ -52,7 +52,7 @@
   {% else %}
     {% if request.user.is_active %}
     <div class="glyphicon-white">
-      <a href="{% url 'registro:registrar_reporte' %}">
+      <a href="{% url 'registro:registrar_reporte' %}" class="enlace_boton_panel">
         <div align="center">
           <i class="glyphicon glyphicon-file glyphicon-icon"></i>
           Registrar reporte
@@ -61,7 +61,7 @@
     </div>
     <br />
     <div class="glyphicon-white">
-      <a href="{% url 'registro:consultar_reporte' %}">
+      <a href="{% url 'registro:consultar_reporte' %}" class="enlace_boton_panel">
         <div align="center">
           <i class="glyphicon glyphicon-list glyphicon-icon"></i>
           Listar reportes
@@ -70,7 +70,7 @@
     </div>
     <br />
     <div class="glyphicon-white">
-      <a href="{% url 'registro:buscar' %}">
+      <a href="{% url 'registro:buscar' %}" class="enlace_boton_panel">
         <div align="center">
           <i class="glyphicon glyphicon-search glyphicon-icon"></i>
           Buscar reportes

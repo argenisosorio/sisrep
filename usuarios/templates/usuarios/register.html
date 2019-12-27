@@ -2,7 +2,7 @@
 {% block titulo %}Registrar usuario{% endblock %}
 {% block cuerpo %}
 <br />
-<h1 class="color-white"><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Registrar usuario</h1>
+<h1><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Registrar usuario</h1>
 <br />
 <form action="{% url 'usuarios:register' %}" method="post">{% csrf_token %}
   <div class="row">

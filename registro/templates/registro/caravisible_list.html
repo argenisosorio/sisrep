@@ -2,7 +2,7 @@
 {% block titulo %}Lista de caras visibles{% endblock %}
 {% block cuerpo %}
 <br />
-<h1 class="color-white"><a href="{% url 'safet:inicio_carga_inicial' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Lista de caras visibles</h1>
+<h1><a href="{% url 'safet:inicio_carga_inicial' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Lista de caras visibles</h1>
 <br />
 <a href="{% url 'registro:registrar_cara_visible' %}">
   <button class="btn btn-success">Registrar cara visible</button>
@@ -17,7 +17,7 @@
       <th>Acciones</th>
     </tr>
   </thead>
-  <tfoot>
+  <tfoot class="color-white">
     <tr>
       <th>N</th>
       <th>Nombre del cara visible</th>

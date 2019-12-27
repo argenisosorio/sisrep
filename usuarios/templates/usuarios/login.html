@@ -3,16 +3,11 @@
 {% block cuerpo %}
 {% load staticfiles %}
 <div align="center">
-  <br />
-  <br />
-  <br />
-  <br />
-  <img class="img-lupa" src="{% static 'img/logo_sisrep_blanco.png' %}" width="20%">
+  <img class="img-lupa" src="{% static 'img/logo_sisrep.png' %}" width="20%">
   <!--h2 class="color-white">SISREP - Sistema para reportar actividades</h2-->
 </div>
 <div align="center">
   <!--h1 class="color-white">Iniciar sesión</h1-->
-  <br />
   <form action="{% url 'usuarios:login' %}" method="post">{% csrf_token %}
     <br />
     <b>Usuario</b><br />
@@ -37,11 +32,9 @@
     </button>
     <br>
     <br>
-      <a class="color-white" href="{% url 'usuarios:password_reset' %}">¿Olvidó su contraseña?</a><br>
-    <br />
+    <a class="enlace_boton_panel" href="{% url 'usuarios:password_reset' %}">¿Olvidó su contraseña?</a>
   </form>
-  <br />
-  <br />
-  <b class="color-white">Desarrollado en CENDITEL</b>
+  <br>
+  <b>Desarrollado en CENDITEL</b>
 </div>
 {% endblock %}

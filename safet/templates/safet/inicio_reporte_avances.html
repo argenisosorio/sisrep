@@ -1,11 +1,11 @@
 {% extends "base/base.html" %}
 {% block titulo %}Reporte de avances{% endblock %}
 {% block cuerpo %}
-<h1 class="color-white">Reporte de avances</h1>
+<h1>Reporte de avances</h1>
 <br />
 {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
   <div class="glyphicon-white">
-    <a href="{% url 'safet:consultar_reporte_avances' %}">
+    <a href="{% url 'safet:consultar_reporte_avances' %}" class="enlace_boton_panel">
       <div align="center">
       <i class="glyphicon glyphicon-list glyphicon-icon"></i>
       Listar reportes
@@ -14,7 +14,7 @@
   </div>
   <br />
   <div class="glyphicon-white">
-    <a href="{% url 'safet:consultar_reporte_avances_cv_por' %}">
+    <a href="{% url 'safet:consultar_reporte_avances_cv_por' %}" class="enlace_boton_panel">
       <div align="center">
       <i class="glyphicon glyphicon-equalizer glyphicon-icon"></i>
       Avance de los Productos
@@ -24,7 +24,7 @@
 {% else %}
   {% if request.user.is_staff and request.user.is_active %}
     <div class="glyphicon-white">
-      <a href="{% url 'safet:consultar_reporte_avances' %}">
+      <a href="{% url 'safet:consultar_reporte_avances' %}" class="enlace_boton_panel">
         <div align="center">
         <i class="glyphicon glyphicon-list glyphicon-icon"></i>
         Listar reportes
@@ -34,7 +34,7 @@
   {% else %}
     {% if request.user.is_active %}
       <div class="glyphicon-white">
-        <a href="{% url 'safet:consultar_reporte_avances_cv' %}">
+        <a href="{% url 'safet:consultar_reporte_avances_cv' %}" class="enlace_boton_panel">
           <div align="center">
           <i class="glyphicon glyphicon-list glyphicon-icon"></i>
           Listar reportes

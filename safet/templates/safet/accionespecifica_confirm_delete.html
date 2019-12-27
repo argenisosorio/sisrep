@@ -2,7 +2,7 @@
 {% block titulo %}Borrar acción específica{% endblock %}
 {% block cuerpo %}
 <br />
-<h1 class="color-white"><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Borrar acción específica</h1>
+<h1><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Borrar acción específica</h1>
 <form method="post">{% csrf_token %}
   ¿Estás seguro que quieres eliminar la acción específica: <b>{{ object.nombre_accion }}</b>?
   <br />

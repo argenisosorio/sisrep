@@ -2,7 +2,7 @@
 {% block titulo %}Lista de acciones específicas{% endblock %}
 {% block cuerpo %}
 <br />
-<h1 class="color-white"><a href="{% url 'safet:inicio_carga_inicial' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Lista de acciones específicas</h1>
+<h1><a href="{% url 'safet:inicio_carga_inicial' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Lista de acciones específicas</h1>
 <br />
 <a href="{% url 'safet:registrar_accion' %}">
   <button class="btn btn-success">Registrar acción específica</button>
@@ -17,7 +17,7 @@
       <th>Acciones</th>
     </tr>
   </thead>
-  <tfoot>
+  <tfoot class="color-white">
     <tr>
       <th>N</th>
       <th>Nombre de la acción específica</th>
