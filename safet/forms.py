@@ -84,7 +84,7 @@ class ReporteAvancesForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_carasvisibles)
 
-    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este reporte', widget=TextInput(attrs={
+    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
@@ -649,7 +649,7 @@ class ReporteAvancesSoftwareForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_carasvisibles)
 
-    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este reporte', widget=TextInput(attrs={
+    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
@@ -1228,7 +1228,7 @@ class ReporteAvancesCursoLineaForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_carasvisibles)
 
-    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este reporte', widget=TextInput(attrs={
+    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
@@ -1804,7 +1804,7 @@ class ReporteAvancesJornadaForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_carasvisibles)
 
-    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este reporte', widget=TextInput(attrs={
+    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
@@ -2376,7 +2376,7 @@ class ReporteAvancesPublicacionForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_carasvisibles)
 
-    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este reporte', widget=TextInput(attrs={
+    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
@@ -2952,7 +2952,7 @@ class ReporteAvancesCVForm(forms.ModelForm):
             #'disabled': 'disabled',
         }), choices=lista_carasvisibles)
 
-    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este reporte', widget=TextInput(attrs={
+    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: none;',
         'required': 'True',

@@ -41,31 +41,37 @@ class MyRegistrationForm(UserCreationForm):
     username = forms.CharField(label='Nombre de usuario',widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'tabindex': '1'
     }), required = True)
 
     password1 = forms.CharField(label='Contraseña',widget=PasswordInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'tabindex': '5'
     }), required = True)
 
     password2 = forms.CharField(label='Confirmar contraseña',widget=PasswordInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'tabindex': '6'
     }), required = True)
 
     first_name = forms.CharField(label='Primer nombre',widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'tabindex': '3'
     }), required = True)
 
     last_name = forms.CharField(label='Primer apellido',widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'tabindex': '4'
     }), required = True)
 
     email = forms.EmailField(label='Correo electrónico',widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'tabindex': '2'
     }), required = True)
 
     """
@@ -98,21 +104,25 @@ class UserForm(forms.ModelForm):
     username = forms.CharField(label='Nombre de usuario',widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'tabindex': '1'
     }), required = True)
 
     first_name = forms.CharField(label='Primer nombre',widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'tabindex': '3'
     }), required = True)
 
     last_name = forms.CharField(label='Primer apellido',widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'tabindex': '4'
     }), required = True)
 
     email = forms.EmailField(label='Correo electrónico',widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'tabindex': '2'
     }), required = True)
 
     is_active = forms.BooleanField(label='Cara visible',widget=CheckboxInput(attrs={

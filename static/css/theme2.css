@@ -118,7 +118,7 @@ ul.errorlist {
 }
 .well {
   /*background: #FFFFFF;*/
-  background: rgba(41, 41, 41, 0.29);
+  /*background: rgba(41, 41, 41, 0.29);*/
   border: none !important;
   border-radius: 0px !important;
   -webkit-box-shadow: -1px 0px 3px 0px rgba(0,0,0,0.75);

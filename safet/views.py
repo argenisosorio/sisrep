@@ -394,7 +394,8 @@ class Editar_reporte_avances(SuccessMessageMixin,UpdateView):
     model = ReporteAvances
     form_class = ReporteAvancesForm
     success_url = reverse_lazy('safet:consultar_reporte_avances')
-    success_message = "Se actualizó el reporte con éxito"
+    success_message = "Se actualizó el plan de actividades con éxito"
+    template_name = "safet/reporteavances_update.html"
 
     def get(self, request, *args, **kwargs):
         """
@@ -512,7 +513,7 @@ class Editar_reporte_avances_cv(SuccessMessageMixin,UpdateView):
     form_class = ReporteAvancesCVForm
     success_url = reverse_lazy('safet:consultar_reporte_avances_cv')
     template_name = "safet/reporteavances_form_cv.html"
-    success_message = "Se actualizó el reporte con éxito"
+    success_message = "Se actualizó el plan de actividades con éxito"
 
     def form_valid(self, form):
         """

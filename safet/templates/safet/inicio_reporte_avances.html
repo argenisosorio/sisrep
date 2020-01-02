@@ -1,14 +1,14 @@
 {% extends "base/base.html" %}
-{% block titulo %}Reporte de avances{% endblock %}
+{% block titulo %}Actividades{% endblock %}
 {% block cuerpo %}
-<h1>Reporte de avances</h1>
+<h1>Actividades</h1>
 <br />
 {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
   <div class="glyphicon-white">
     <a href="{% url 'safet:consultar_reporte_avances' %}" class="enlace_boton_panel">
       <div align="center">
       <i class="glyphicon glyphicon-list glyphicon-icon"></i>
-      Listar reportes
+      Lista de productos
       </div>
     </a>
   </div>
@@ -16,8 +16,8 @@
   <div class="glyphicon-white">
     <a href="{% url 'safet:consultar_reporte_avances_cv_por' %}" class="enlace_boton_panel">
       <div align="center">
-      <i class="glyphicon glyphicon-equalizer glyphicon-icon"></i>
-      Avance de los Productos
+      <i class="fa fa-line-chart"></i>
+      Avance de los productos
       </div>
     </a>
   </div>
@@ -27,7 +27,7 @@
       <a href="{% url 'safet:consultar_reporte_avances' %}" class="enlace_boton_panel">
         <div align="center">
         <i class="glyphicon glyphicon-list glyphicon-icon"></i>
-        Listar reportes
+        Lista de productos
         </div>
       </a>
     </div>
@@ -37,7 +37,7 @@
         <a href="{% url 'safet:consultar_reporte_avances_cv' %}" class="enlace_boton_panel">
           <div align="center">
           <i class="glyphicon glyphicon-list glyphicon-icon"></i>
-          Listar reportes
+          Lista de productos
           </div>
         </a>
       </div>

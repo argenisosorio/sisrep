@@ -15,7 +15,8 @@ meses = (
     ('Diciembre','Diciembre'),
 )
 anos = (
-    ('2019','2019'),
+    #('2019','2019'),
+    ('2020','2020'),
 )
 usuarios = (
     ('is_active', 'Cara visible'),

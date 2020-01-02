@@ -2,12 +2,13 @@
 {% block titulo %}Reporte gráfico de (%){% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="{% url 'safet:inicio_reporte_avances' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Reporte de porcentajes de avance de los productos</h1>
+<h1><a href="{% url 'safet:inicio_reporte_avances' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Reporte gráfico de (%) de avance de los productos </h1>
 <br />
 <form action="{% url 'safet:busqueda' %}" method="get">
   <label>Buscar productos por año</label>
   <br />
   <select class="form form-control" name="ano" required>
+    <option value="2020">2020</option>
     <option value="2019">2019</option>
   </select>
   <button class="btn btn-success" type="submit">Buscar</button>
@@ -19,7 +20,7 @@
 ================================================== -->
 <div class="well-white">
   <h3 class="text-right"><b>Fecha: {{ fecha_humana }}</b></h3>
-  <h2 class="text-center">Reporte de porcentajes de avance de los productos</h2>
+  <h2 class="text-center">Reporte gráfico de (%) de avance de los productos</h2>
   <br />
   {% for x in reportes %}
   <div class="row">

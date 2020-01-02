@@ -141,13 +141,13 @@
         <br />
         {% else %}
         {% endif %}
-        <a href="{% url 'safet:inicio_reporte_avances' %}" data-toggle="tooltip" title="Reporte de avances">
+        <a href="{% url 'safet:inicio_reporte_avances' %}" data-toggle="tooltip" title="Actividades">
           <i class="fa fa-line-chart color-white"></i>
         </a>
         <br />
         <br />
         <br />
-        <a href="{% url 'safet:inicio_reporte_actividades' %}" data-toggle="tooltip" title="Reporte de actividades">
+        <a href="{% url 'safet:inicio_reporte_actividades' %}" data-toggle="tooltip" title="Tareas">
           <i class="fa fa-file-text color-white"></i>
         </a>
         {% if request.user.is_superuser %}
