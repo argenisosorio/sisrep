@@ -1,16 +1,16 @@
 <table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
   <thead>
     <tr>
-      <th>N</th>
-      <th>Producto</th>
-      <th>Cara visible</th>
-      <th>Mes</th>
-      <th>Año</th>
-      <th>Registrado</th>
-      <th>Acciones</th>
+      <th class="text-center">N</th>
+      <th class="text-center">Producto</th>
+      <th class="text-center">Cara visible</th>
+      <th class="text-center">Mes</th>
+      <th class="text-center">Año</th>
+      <th class="text-center">Registrado</th>
+      <th class="text-center">Acciones</th>
     </tr>
   </thead>
-  <tfoot class="color-white">
+  <!--tfoot class="color-white">
     <tr>
       <th>N</th>
       <th>Producto</th>
@@ -20,16 +20,16 @@
       <th>Registrado</th>
       <th>Acciones</th>
     </tr>
-  </tfoot>
+  </tfoot-->
   <tbody>
   {% for x in object_list %}
   <tr>
-    <td></td>
-    <td>{{ x.nombre_proyecto }}</td>
-    <td>{{ x.nombre_caravisible }}</td>
-    <td>{{ x.mes }}</td>
-    <td>{{ x.ano }}</td>
-    <td>{{ x.fecha_registro_reporte }}</td>
+    <td class="text-center"></td>
+    <td class="text-center">{{ x.nombre_proyecto }}</td>
+    <td class="text-center">{{ x.nombre_caravisible }}</td>
+    <td class="text-center">{{ x.mes }}</td>
+    <td class="text-center">{{ x.ano }}</td>
+    <td class="text-center">{{ x.fecha_registro_reporte }}</td>
     {% if request.user.is_superuser %}
       <td class="text-center td_botonera_tabla">
         <div class="row">

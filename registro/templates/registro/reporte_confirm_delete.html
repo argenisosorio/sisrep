@@ -1,10 +1,10 @@
 {% extends "base/base.html" %}
-{% block titulo %}Borrar Reporte{% endblock %}
+{% block titulo %}Borrar reporte de tareas{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Borrar reporte</h1>
+<h1><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Borrar reporte de tareas</h1>
 <form method="post">{% csrf_token %}
-  <h4>¿Estás seguro que quieres eliminar el reporte de tareas de: <b>{{ object.nombre_proyecto }} de {{ object.mes }} del {{ object.ano }}</b>?</h4>
+  <h4>¿Estás seguro que quieres eliminar el reporte de tareas de: <b>{{ object.nombre_proyecto }}</b> de <b>{{ object.mes }}</b> del <b>{{ object.ano }}</b>?</h4>
   <br />
   <button class="btn btn-danger" type="submit">Borrar</button>
 </form>

@@ -133,6 +133,12 @@
         <br />
         <br />
         {% if request.user.is_superuser %}
+        <a href="{% url 'usuarios:list_users' %}" data-toggle="tooltip" title="Gestión de usuarios">
+          <i class="fa fa-group color-white"></i>
+        </a>
+        <br />
+        <br />
+        <br />
         <a href="{% url 'safet:inicio_carga_inicial' %}" data-toggle="tooltip" title="Carga inicial">
           <i class="fa fa-upload color-white"></i>
         </a>

@@ -1,5 +1,5 @@
 {% extends "base/base.html" %}
-{% block titulo %}Bitácora{% endblock %}
+{% block titulo %}Bitácora de eventos{% endblock %}
 {% block cuerpo %}
 {% load staticfiles %}
 <h1><a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Bitácora de eventos</h1>
@@ -7,10 +7,10 @@
 <table border="1px" id="examplee" class="display" cellspacing="0px" style="width:100%;">
   <thead>
     <tr>
-      <th>N</th>
-      <th>Usuario</th>
-      <th>Evento</th>
-      <th>Fecha y hora</th>
+      <th class="text-center">N</th>
+      <th class="text-center">Usuario</th>
+      <th class="text-center">Evento</th>
+      <th class="text-center">Fecha y hora</th>
     </tr>
   </thead>
   <!--tfoot>
@@ -24,10 +24,10 @@
   <tbody>
   {% for x in object_list %}
   <tr>
-    <td class="bit_usuario">{{ x.id }}</td>
-    <td class="bit_usuario">{{ x.usuario }}</td>
+    <td class="bit_usuario text-center">{{ x.id }}</td>
+    <td class="bit_usuario text-center">{{ x.usuario }}</td>
     <td class="reg">{{ x.accion }}</td>
-    <td class="bit_fecha">{{ x.fecha }}</td>
+    <td class="bit_fecha text-center">{{ x.fecha }}</td>
   </tr>
   {% endfor %}
   </tbody>

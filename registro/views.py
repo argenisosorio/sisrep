@@ -458,13 +458,13 @@ class Borrar_cargo(SuccessMessageMixin,DeleteView):
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
-###############################################
-##### Crud de los reportes de actividades #####
-###############################################
+##########################################
+##### Crud de los reportes de tareas #####
+##########################################
 
 class Consultar_reporte(ListView):
     """
-    Clase que permite consultar la lista de reportes de actividades.
+    Clase que permite consultar la lista de reportes de tareas.
     """
     model = Reporte
 
@@ -504,12 +504,12 @@ class Consultar_reporte(ListView):
 
 class Registrar_reporte(SuccessMessageMixin,CreateView):
     """
-    Clase que permite registrar un reporte de actividades en el sistema.
+    Clase que permite registrar un reporte de tareas en el sistema.
     """
     model = Reporte
     form_class = ReporteForm
     success_url = reverse_lazy('registro:consultar_reporte')
-    success_message = "Se registro el reporte de actividades con éxito"
+    success_message = "Se registro el reporte de tareas con éxito"
 
     def form_valid(self, form):
         """
@@ -519,8 +519,8 @@ class Registrar_reporte(SuccessMessageMixin,CreateView):
         self.object = form.save()
         usuario = str(self.request.user)
         nombre_proyecto = self.object.nombre_proyecto
-        print nombre_proyecto
-        accion = "Registro un reporte de actividades del producto: "+nombre_proyecto
+        mes = self.object.mes
+        accion = "Registro un reporte de tareas del producto "+nombre_proyecto+" del mes de "+mes
         myDate = datetime.now()
         formatedDate = myDate.strftime("%d-%m-%Y %H:%M")
         fecha_humana = str(formatedDate)
@@ -530,7 +530,7 @@ class Registrar_reporte(SuccessMessageMixin,CreateView):
 
 class Editar_reporte(SuccessMessageMixin,UpdateView):
     """
-    Clase que permite editar la data guardada de un reporte.
+    Clase que permite editar la data guardada de un reporte de tareas.
     """
     model = Reporte
     form_class = ReporteForm
@@ -556,7 +556,7 @@ class Editar_reporte(SuccessMessageMixin,UpdateView):
 
 class Editar_reporte_analista(SuccessMessageMixin,UpdateView):
     """
-    Clase que permite editar la data guardada de un reporte por parte
+    Clase que permite editar la data guardada de un reporte por parte de un
     Analista del sistema.
     """
     model = Reporte
@@ -574,7 +574,7 @@ class Editar_reporte_analista(SuccessMessageMixin,UpdateView):
         if request.user.is_superuser:
             return super(Editar_reporte_analista, self).get(request, *args, **kwargs)
         else:
-            messages_alert = ['No tiene permisos para editar el reporte']
+            messages_alert = ['No tiene permisos para editar el reporte de tareas']
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 

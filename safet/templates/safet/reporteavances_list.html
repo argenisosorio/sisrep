@@ -7,12 +7,12 @@
 <table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
   <thead>
     <tr>
-      <th>N</th>
-      <th>Nombre del producto</th>
-      <th>Tipo de producto</th>
-      <th>Nombre del cara visible</th>
-      <th>Año de ejecución</th>
-      <th>Acciones</th>
+      <th class="text-center">N</th>
+      <th class="text-center">Nombre del producto</th>
+      <th class="text-center">Tipo de producto</th>
+      <th class="text-center">Nombre del cara visible</th>
+      <th class="text-center">Año de ejecución</th>
+      <th class="text-center">Acciones</th>
     </tr>
   </thead>
   <!--tfoot class="color-white">
@@ -28,26 +28,53 @@
   <tbody>
   {% for x in object_list %}
   <tr>
-    <td></td>
-    <td>{{ x.nombre_producto }}</td>
-    <td>{{ x.tipo_producto }}</td>
-    <td>{{ x.nombre_caravisible }}</td>
-    <td>{{ x.ano_ejecucion }}</td>
-    <td class="text-center td_botonera_tabla">
-      <div class="row">
-        <div class="col-sm-12">
-          <a href="{% url 'safet:editar_reporte_avances' x.id %}" title="Editar">
-            <i class="glyphicon glyphicon-pencil"></i>
-          </a>
+    <td class="text-center"></td>
+    <td class="text-center">{{ x.nombre_producto }}</td>
+    <td class="text-center">{{ x.tipo_producto }}</td>
+    <td class="text-center">{{ x.nombre_caravisible }}</td>
+    <td class="text-center">{{ x.ano_ejecucion }}</td>
+    {% if user.is_superuser %}
+      <td class="text-center td_botonera_tabla">
+        <div class="row">
+          <div class="col-sm-12">
+            <a href="{% url 'safet:editar_reporte_avances' x.id %}" title="Editar">
+              <i class="glyphicon glyphicon-pencil"></i>
+            </a>
+            <a href="{% url 'safet:detallar_reporte_avances' x.id %}" title="Detallar">
+              <i class="glyphicon glyphicon-eye-open"></i>
+            </a>
+            <a href="{% url 'safet:borrar_reporte_avances' x.id %}" title="Borrar">
+              <i class="glyphicon glyphicon-trash"></i>
+            </a>
+          </div>
+        </div>
+      </td>
+    {% else %}
+      {% if user.is_staff %}
+        <td class="text-center td_botonera_tabla">
           <a href="{% url 'safet:detallar_reporte_avances' x.id %}" title="Detallar">
             <i class="glyphicon glyphicon-eye-open"></i>
           </a>
-          <a href="{% url 'safet:borrar_reporte_avances' x.id %}" title="Borrar">
-            <i class="glyphicon glyphicon-trash"></i>
-          </a>
-        </div>
-      </div>
-    </td>
+        </td>
+      {% else %}
+        {% if x.autor == user.username %}
+          <td class="text-center td_botonera_tabla">
+            <div class="row">
+              <div class="col-sm-12">
+                <a href="{% url 'safet:editar_reporte_avances_cv' x.id %}" title="Editar">
+                  <i class="glyphicon glyphicon-pencil"></i>
+                </a>
+                <a href="{% url 'safet:detallar_reporte_avances' x.id %}" title="Detallar">
+                  <i class="glyphicon glyphicon-eye-open"></i>
+                </a>
+              </div>
+            </div>
+          </td>
+        {% else %}
+          <td>&nbsp;</td>
+        {% endif %}
+      {% endif %}
+    {% endif %}
   </tr>
   {% endfor %}
   </tbody>
