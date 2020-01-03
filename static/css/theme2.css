@@ -384,7 +384,7 @@ table.table_change_password td {
 .fa-sign-out-salir {
   font-size: 30px !important;
 }
-.fa-tasks {
+.fa-upload {
   font-size: 30px !important;
 }
 .fa-users {
@@ -397,6 +397,12 @@ table.table_change_password td {
   font-size: 30px !important;
 }
 .fa-book {
+  font-size: 30px !important;
+}
+.fa-tags {
+  font-size: 30px !important;
+}
+.fa-group {
   font-size: 30px !important;
 }
 .color-white {
