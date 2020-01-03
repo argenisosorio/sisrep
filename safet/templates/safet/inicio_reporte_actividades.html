@@ -1,18 +1,9 @@
 {% extends "base/base.html" %}
-{% block titulo %}Reporte de actividades{% endblock %}
+{% block titulo %}Tareas{% endblock %}
 {% block cuerpo %}
-<h1>Reporte de actividades</h1>
+<h1>Tareas</h1>
 <br />
 {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
-<div class="glyphicon-white">
-  <a href="{% url 'registro:registrar_reporte' %}" class="enlace_boton_panel">
-    <div align="center">
-      <i class="glyphicon glyphicon-file glyphicon-icon"></i>
-      Registrar reporte
-    </div>
-  </a>
-</div>
-<br />
 <div class="glyphicon-white">
   <a href="{% url 'registro:consultar_reporte' %}" class="enlace_boton_panel">
     <div align="center">
@@ -51,15 +42,6 @@
   </div>
   {% else %}
     {% if request.user.is_active %}
-    <div class="glyphicon-white">
-      <a href="{% url 'registro:registrar_reporte' %}" class="enlace_boton_panel">
-        <div align="center">
-          <i class="glyphicon glyphicon-file glyphicon-icon"></i>
-          Registrar reporte
-        </div>
-      </a>
-    </div>
-    <br />
     <div class="glyphicon-white">
       <a href="{% url 'registro:consultar_reporte' %}" class="enlace_boton_panel">
         <div align="center">

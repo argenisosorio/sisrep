@@ -1,5 +1,5 @@
 {% extends "base/base.html" %}
-{% block titulo %}Detalle de reporte{% endblock %}
+{% block titulo %}Detalle de reporte de tareas{% endblock %}
 {% block cuerpo %}
 <script type="text/javascript">
   function export_report_to_pdf() {
@@ -45,8 +45,8 @@
                 { text: 'N', bold: true },
                 { text: 'Nombre del trabajador', bold: true },
                 { text: 'Cargo', bold: true },
-                { text: 'Actividades asignadas', bold: true },
-                { text: 'Actividades realizadas', bold: true },
+                { text: 'Tareas asignadas', bold: true },
+                { text: 'Tareas realizadas', bold: true },
                 { text: 'Enlaces de verificación', bold: true },
               ],
               [
@@ -193,7 +193,7 @@
   }
 </script>
 <br />
-<h2><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Reporte de {{ reporte.nombre_proyecto }} de {{ reporte.mes }} del {{ reporte.ano }}</h2>
+<h2><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Reporte de tareas de "{{ reporte.nombre_proyecto }}" de {{ reporte.mes }} del {{ reporte.ano }}</h2>
 <br />
 
 <!-- Row class
@@ -314,8 +314,8 @@
       <th><b>N</b></th>
       <th><b>Nombre del trabajador</b></th>
       <th><b>Cargo</b></th>
-      <th><b>Actividades asignadas</b></th>
-      <th><b>Actividades realizadas</b></th>
+      <th><b>Tareas asignadas</b></th>
+      <th><b>Tareas realizadas</b></th>
       <th><b>Enlaces de verificación</b></th>
     </tr>
   </thead>

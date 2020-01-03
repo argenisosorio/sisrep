@@ -4,8 +4,7 @@
 <br />
 <h1><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Borrar reporte</h1>
 <form method="post">{% csrf_token %}
-  ¿Estás seguro que quieres eliminar el reporte de: <b>{{ object.nombre_proyecto }} de {{ object.mes }} del {{ object.ano }}</b>?
-  <br />
+  <h4>¿Estás seguro que quieres eliminar el reporte de tareas de: <b>{{ object.nombre_proyecto }} de {{ object.mes }} del {{ object.ano }}</b>?</h4>
   <br />
   <button class="btn btn-danger" type="submit">Borrar</button>
 </form>

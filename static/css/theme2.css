@@ -268,15 +268,14 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   margin-left: 0px;
   margin-right: 0px;
 }
-panel-default > .panel-heading {
-  /*color: #FFFFFF;
-  background-color: #275a9b;*/
+.panel-default > .panel-heading {
+  /*color:#fff;
+  background-color:#343e48;*/
   border-color: #ddd;
 }
 .col-sm-3 {
   /*border: ridge 1px lightgray;*/
 }
-
 .tabla_trabajadores {
   background: #FFFFFF;
 }

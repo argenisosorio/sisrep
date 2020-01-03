@@ -5,9 +5,8 @@
 <h1><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Resultados de la búsqueda</h1>
 <br />
 {% if reportes %}
-  <p>Estas buscado reportes del Año <strong>{{ query }}</strong> en el Mes de <strong>{{ query2}}</strong></p>
-  <p>Reportes encontrados: <strong>{{ reportes|length }}</strong>
-  <br />
+  <h4>Estas buscado reportes de tareas del año <strong>{{ query }}</strong> en el mes de <strong>{{ query2}}</strong></h4>
+  <p>Reportes encontrados: <strong>{{ reportes|length }}</strong></p>
   <br />
   <table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
     <thead>

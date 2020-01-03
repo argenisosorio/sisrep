@@ -1,34 +1,37 @@
 {% extends "base/base.html" %}
-{% block titulo %}Buscar reportes de actividades{% endblock %}
+{% block titulo %}Buscar reportes de tareas{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="{% url 'safet:inicio_reporte_actividades' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Buscar reportes de actividades</h1>
+<h1><a href="{% url 'safet:inicio_reporte_actividades' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Buscar reportes de tareas</h1>
 <br />
 <form action="{% url 'registro:busqueda' %}" method="get">
-  <label>Por año</label>
-  <br />
-  <select class="form form-control" name="ano" required>
-    <option value=""></option>
-    <option value="2018">2018</option>
-    <option value="2019">2019</option>
-  </select>
-  <label>Por mes</label>
-  <br />
-  <select class="form form-control" name="mes" required>
-    <option value=""></option>
-    <option value="Enero">Enero</option>
-    <option value="Febrero">Febrero</option>
-    <option value="Marzo">Marzo</option>
-    <option value="Abril">Abril</option>
-    <option value="Mayo">Mayo</option>
-    <option value="Junio">Junio</option>
-    <option value="Julio">Julio</option>
-    <option value="Agosto">Agosto</option>
-    <option value="Septiembre">Septiembre</option>
-    <option value="Octubre">Octubre</option>
-    <option value="Noviembre">Noviembre</option>
-    <option value="Diciembre">Diciembre</option>
-  </select>
-  <button class="btn btn-success" type="submit">Buscar</button>
+<div class="row">
+  <div class="col-sm-4">
+    <label>Por año</label>
+    <br />
+    <select class="form form-control" name="ano" required>
+      <option value="2020">2020</option>
+      <option value="2019">2019</option>
+      <option value="2018">2018</option>
+    </select>
+    <label>Por mes</label>
+    <br />
+    <select class="form form-control" name="mes" required>
+      <option value="Enero">Enero</option>
+      <option value="Febrero">Febrero</option>
+      <option value="Marzo">Marzo</option>
+      <option value="Abril">Abril</option>
+      <option value="Mayo">Mayo</option>
+      <option value="Junio">Junio</option>
+      <option value="Julio">Julio</option>
+      <option value="Agosto">Agosto</option>
+      <option value="Septiembre">Septiembre</option>
+      <option value="Octubre">Octubre</option>
+      <option value="Noviembre">Noviembre</option>
+      <option value="Diciembre">Diciembre</option>
+    </select>
+  </div>
+</div>
+<button class="btn btn-success" type="submit">Buscar</button>
 </form>
 {% endblock %}

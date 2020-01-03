@@ -48,6 +48,13 @@
         {% if form.fecha_entrega.errors %}
           <p>{{ form.fecha_entrega.errors}}</p>
         {% endif %}
+        <br />
+        <br />
+        <b>{{ form.tipo_producto.label }}</b>
+        {{ form.tipo_producto }}
+        {% if form.tipo_producto.errors %}
+          <p>{{ form.tipo_producto.errors}}</p>
+        {% endif %}
       </div>
       <div class="col-sm-6">
         <b>{{ form.ano_ejecucion.label }}</b>
@@ -71,12 +78,6 @@
         {% endif %}
       </div>
     </div>
-
-    <b>{{ form.tipo_producto.label }}</b>
-    {{ form.tipo_producto }}
-    {% if form.tipo_producto.errors %}
-      <p>{{ form.tipo_producto.errors}}</p>
-    {% endif %}
   </div>
 
 <!-- Accordion Panel Example
