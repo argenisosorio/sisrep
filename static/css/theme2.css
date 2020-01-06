@@ -278,6 +278,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .tabla_trabajadores {
   background: #FFFFFF;
+  font-size: 12px;
 }
 .tabla_trabajadores, th, td {
   border: 1px solid lightgray;

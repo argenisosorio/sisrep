@@ -12,15 +12,15 @@
 <table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
   <thead>
     <tr>
-      <th>N</th>
-      <th>Nombre de usuario</th>
-      <th>Primer nombre</th>
-      <th>Primer apellido</th>
-      <th>Correo electrónico</th>
-      <th>Fecha de registro</th>
-      <th>Último acceso</th>
-      <th>Tipo</th>
-      <th>Acciones</th>
+      <th class="text-center">N</th>
+      <th class="text-center">Nombre de usuario</th>
+      <th class="text-center">Primer nombre</th>
+      <th class="text-center">Primer apellido</th>
+      <th class="text-center">Correo electrónico</th>
+      <th class="text-center">Fecha de registro</th>
+      <th class="text-center">Último acceso</th>
+      <th class="text-center">Tipo</th>
+      <th class="text-center">Acciones</th>
     </tr>
   </thead>
   <!--tfoot class="color-white">
@@ -39,7 +39,7 @@
   <tbody>
   {% for user in object_list %}
   <tr>
-    <td></td>
+    <td class="text-center"></td>
     <td>{{ user.username }}</td>
     <td>{{ user.first_name }}</td>
     <td>{{ user.last_name }}</td>
