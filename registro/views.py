@@ -499,6 +499,7 @@ class Consultar_reporte(ListView):
                 return queryset
             else:
                 queryset = queryset.filter(autor=str(self.request.user))
+                queryset = queryset.filter(ano=str(2020))
                 return queryset
 
 
