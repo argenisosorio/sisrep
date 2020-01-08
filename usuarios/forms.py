@@ -115,15 +115,15 @@ class UserForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = True)
 
-    is_active = forms.BooleanField(label='Cara visible',widget=CheckboxInput(attrs={
+    is_active = forms.BooleanField(label='Administrador',widget=CheckboxInput(attrs={
         'class':'checkbox',
     }), required = False)
 
-    is_staff = forms.BooleanField(label='Director',widget=CheckboxInput(attrs={
+    is_staff = forms.BooleanField(label='Analista de servicios',widget=CheckboxInput(attrs={
         'class':'checkbox',
     }), required = False)
 
-    is_superuser = forms.BooleanField(label='Analista',widget=CheckboxInput(attrs={
+    is_superuser = forms.BooleanField(label='Administrador',widget=CheckboxInput(attrs={
         'class':'checkbox',
     }), required = False)
 
