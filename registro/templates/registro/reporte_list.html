@@ -1,8 +1,13 @@
 {% extends "base/base.html" %}
-{% block titulo %}Lista de reportes de actividades{% endblock %}
+{% block titulo %}Lista de reportes de tareas{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="{% url 'safet:inicio_reporte_actividades' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a>Lista de reportes de actividades</h1>
+<h1><a href="{% url 'safet:inicio_reporte_actividades' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a>Lista de reportes de tareas</h1>
+<br />
+<a href="{% url 'registro:registrar_reporte' %}">
+  <button class="btn btn-success">Registrar reporte de tareas</button>
+</a>
+<br />
 <br />
 {% include 'registro/tabla.html' %}
 {% endblock %}

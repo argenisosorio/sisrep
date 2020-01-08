@@ -1,25 +1,25 @@
 {% extends "base/base.html" %}
 {% block titulo %}Carga inicial{% endblock %}
 {% block cuerpo %}
-<h1>Carga inicial</h1>
+<br />
+<h1><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Carga inicial</h1>
 <br />
 {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
   <div class="row">
     <div class="col-sm-2">
       <div class="glyphicon-white">
-        <a href="{% url 'usuarios:list_users' %}" class="enlace_boton_panel">
-          <div align="center">
-            <i class="glyphicon glyphicon-list glyphicon-icon"></i>
-            Usuarios
-          </div>
-        </a>
-      </div>
-      <br>
-      <div class="glyphicon-white">
         <a href="{% url 'safet:consultar_proyecto' %}" class="enlace_boton_panel">
           <div align="center">
             <i class="glyphicon glyphicon-list glyphicon-icon"></i>
             Proyectos poa
+          </div>
+        </a>
+      </div>
+      <div class="glyphicon-white">
+        <a href="{% url 'registro:consultar_cargo' %}" class="enlace_boton_panel">
+          <div align="center">
+            <i class="glyphicon glyphicon-list glyphicon-icon"></i>
+            Cargos
           </div>
         </a>
       </div>
@@ -61,17 +61,9 @@
       </div>
     </div>
     <div class="col-sm-2">
-      <div class="glyphicon-white">
-        <a href="{% url 'registro:consultar_cargo' %}" class="enlace_boton_panel">
-          <div align="center">
-            <i class="glyphicon glyphicon-list glyphicon-icon"></i>
-            Cargos
-          </div>
-        </a>
-      </div>
     </div>
   </div>
-  <h2>Registrar reporte de avances</h2>
+  <h2>Registrar plan de actividades</h2>
   <br>
   <div class="row">
     <div class="col-sm-2">

@@ -1,8 +1,8 @@
 {% extends "base/base.html" %}
-{% block titulo %}Registrar plan de actividades{% endblock %}
+{% block titulo %}Actualizar plan de actividades{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Registrar plan de actividades</h1>
+<h1><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Actualizar plan de actividades</h1>
 <br />
 <form method="post">{% csrf_token %}
   <div class="well">
@@ -80,15 +80,15 @@
     </div>
   </div>
 
-  <!-- Accordion Panel Example
-  ================================================== -->
-  <h3>Actividades</h3>
+<!-- Accordion Panel Example
+================================================== -->
+<h3>Actividades</h3>
   <div class="panel-group" id="accordion">
     <div class="panel panel-default">
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 1 - Conceptualización
+           Actividad 1 - {{ form.nombre_act_1.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
@@ -139,7 +139,7 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 2 - Convocatoria a publicar
+           Actividad 2 - {{ form.nombre_act_2.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
@@ -190,7 +190,7 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 3 - Recepción revista comité editorial
+           Actividad 3 - {{ form.nombre_act_3.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
@@ -241,7 +241,7 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 4 - Arbitraje
+           Actividad 4 - {{ form.nombre_act_4.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
@@ -292,7 +292,7 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 5 - Edición
+           Actividad 5 - {{ form.nombre_act_5.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
@@ -343,7 +343,7 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 6 - Publicación
+           Actividad 6 - {{ form.nombre_act_6.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
@@ -394,7 +394,7 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 7 - Procesos de Apropiación
+           Actividad 7 - {{ form.nombre_act_7.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
@@ -439,13 +439,13 @@
       </div>
     </div>
   </div>
- <br />
+<br />
  <div class="panel-group" id="accordion">
     <div class="panel panel-default">
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 8 
+           Actividad 8 - {{ form.nombre_act_8.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
@@ -496,7 +496,7 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 9
+           Actividad 9 - {{ form.nombre_act_9.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
@@ -547,7 +547,7 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 10 
+           Actividad 10 - {{ form.nombre_act_10.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
@@ -598,7 +598,7 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 11 
+           Actividad 11 - {{ form.nombre_act_11.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
@@ -649,7 +649,7 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 12  
+           Actividad 12 - {{ form.nombre_act_12.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
@@ -700,7 +700,7 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse13">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 13 
+           Actividad 13 - {{ form.nombre_act_13.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
@@ -751,7 +751,7 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse14">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 14 
+           Actividad 14 - {{ form.nombre_act_14.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
@@ -802,7 +802,7 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse15">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 15
+           Actividad 15 - {{ form.nombre_act_15.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
@@ -848,8 +848,8 @@
     </div>
   </div>
 </div>
-  <!-- Accordion Panel Example end -->
+<!-- Accordion Panel Example end -->
 
-  <button class="btn btn-success" type="submit">Guardar</button>
+<button class="btn btn-success" type="submit">Actualizar</button>
 </form>
 {% endblock %}

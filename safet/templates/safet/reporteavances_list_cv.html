@@ -1,21 +1,21 @@
 {% extends "base/base.html" %}
-{% block titulo %}Lista de reportes de avances{% endblock %}
+{% block titulo %}Lista de productos{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="{% url 'safet:inicio_reporte_avances' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Lista de reportes de avances</h1>
+<h1><a href="{% url 'safet:inicio_reporte_avances' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Lista de productos</h1>
 <br />
 <table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
   <thead>
     <tr>
-      <th>N</th>
-      <th>Nombre del producto</th>
-      <th>Tipo de producto</th>
-      <th>Nombre del cara visible</th>
-      <th>Año de ejecución</th>
-      <th>Acciones</th>
+      <th class="text-center">N</th>
+      <th class="text-center">Nombre del producto</th>
+      <th class="text-center">Tipo de producto</th>
+      <th class="text-center">Nombre del cara visible</th>
+      <th class="text-center">Año de ejecución</th>
+      <th class="text-center">Acciones</th>
     </tr>
   </thead>
-  <tfoot class="color-white">
+  <!--tfoot class="color-white">
     <tr>
       <th>N</th>
       <th>Nombre del producto</th>
@@ -24,15 +24,15 @@
       <th>Año de ejecución</th>
       <th>Acciones</th>
     </tr>
-  </tfoot>
+  </tfoot-->
   <tbody>
   {% for x in object_list %}
   <tr>
-    <td></td>
-    <td>{{ x.nombre_producto }}</td>
-    <td>{{ x.tipo_producto }}</td>
-    <td>{{ x.nombre_caravisible }}</td>
-    <td>{{ x.ano_ejecucion }}</td>
+    <td class="text-center"></td>
+    <td class="text-center">{{ x.nombre_producto }}</td>
+    <td class="text-center">{{ x.tipo_producto }}</td>
+    <td class="text-center">{{ x.nombre_caravisible }}</td>
+    <td class="text-center">{{ x.ano_ejecucion }}</td>
     {% if user.is_staff %}
       <td class="text-center td_botonera_tabla">
         <a href="{% url 'safet:detallar_reporte_avances' x.id %}" title="Detallar">

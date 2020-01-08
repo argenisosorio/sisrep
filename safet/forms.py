@@ -84,7 +84,7 @@ class ReporteAvancesForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_carasvisibles)
 
-    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este reporte', widget=TextInput(attrs={
+    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
@@ -649,7 +649,7 @@ class ReporteAvancesSoftwareForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_carasvisibles)
 
-    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este reporte', widget=TextInput(attrs={
+    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
@@ -1228,7 +1228,7 @@ class ReporteAvancesCursoLineaForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_carasvisibles)
 
-    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este reporte', widget=TextInput(attrs={
+    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
@@ -1804,7 +1804,7 @@ class ReporteAvancesJornadaForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_carasvisibles)
 
-    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este reporte', widget=TextInput(attrs={
+    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
@@ -2376,7 +2376,7 @@ class ReporteAvancesPublicacionForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_carasvisibles)
 
-    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este reporte', widget=TextInput(attrs={
+    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
@@ -2952,7 +2952,7 @@ class ReporteAvancesCVForm(forms.ModelForm):
             #'disabled': 'disabled',
         }), choices=lista_carasvisibles)
 
-    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este reporte', widget=TextInput(attrs={
+    autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: none;',
         'required': 'True',
@@ -3080,77 +3080,77 @@ class ReporteAvancesCVForm(forms.ModelForm):
 
     # Nombres de los responsables de las actividades.
     resp_act_1 = forms.CharField(label='Nombre del responsable', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     resp_act_2 = forms.CharField(label='Nombre del responsable', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     resp_act_3 = forms.CharField(label='Nombre del responsable', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     resp_act_4 = forms.CharField(label='Nombre del responsable', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     resp_act_5 = forms.CharField(label='Nombre del responsable', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     resp_act_6 = forms.CharField(label='Nombre del responsable', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     resp_act_7 = forms.CharField(label='Nombre del responsable', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     resp_act_8 = forms.CharField(label='Nombre del responsable', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     resp_act_9 = forms.CharField(label='Nombre del responsable', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     resp_act_10 = forms.CharField(label='Nombre del responsable', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     resp_act_11 = forms.CharField(label='Nombre del responsable', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     resp_act_12 = forms.CharField(label='Nombre del responsable', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     resp_act_13 = forms.CharField(label='Nombre del responsable', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     resp_act_14 = forms.CharField(label='Nombre del responsable', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     resp_act_15 = forms.CharField(label='Nombre del responsable', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -3232,153 +3232,153 @@ class ReporteAvancesCVForm(forms.ModelForm):
 
     # Fechas de entrega de las actividades del proyecto.
     fecha_entrega_act_1 = forms.CharField(label='Fecha de entrega', widget=TextInput(attrs={
-        'class':'form-control input-md fechas',
+        'class':'form-control input-md fechas disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_2 = forms.CharField(label='Fecha de entrega', widget=TextInput(attrs={
-        'class':'form-control input-md fechas',
+        'class':'form-control input-md fechas disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_3 = forms.CharField(label='Fecha de entrega', widget=TextInput(attrs={
-        'class':'form-control input-md fechas',
+        'class':'form-control input-md fechas disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_4 = forms.CharField(label='Fecha de entrega', widget=TextInput(attrs={
-        'class':'form-control input-md fechas',
+        'class':'form-control input-md fechas disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_5 = forms.CharField(label='Fecha de entrega', widget=TextInput(attrs={
-        'class':'form-control input-md fechas',
+        'class':'form-control input-md fechas disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_6 = forms.CharField(label='Fecha de entrega', widget=TextInput(attrs={
-        'class':'form-control input-md fechas',
+        'class':'form-control input-md fechas disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_7 = forms.CharField(label='Fecha de entrega', widget=TextInput(attrs={
-        'class':'form-control input-md fechas',
+        'class':'form-control input-md fechas disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_8 = forms.CharField(label='Fecha de entrega', widget=TextInput(attrs={
-        'class':'form-control input-md fechas',
+        'class':'form-control input-md fechas disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_9 = forms.CharField(label='Fecha de entrega', widget=TextInput(attrs={
-        'class':'form-control input-md fechas',
+        'class':'form-control input-md fechas disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_10 = forms.CharField(label='Fecha de entrega', widget=TextInput(attrs={
-        'class':'form-control input-md fechas',
+        'class':'form-control input-md fechas disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_11 = forms.CharField(label='Fecha de entrega', widget=TextInput(attrs={
-        'class':'form-control input-md fechas',
+        'class':'form-control input-md fechas disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_12 = forms.CharField(label='Fecha de entrega', widget=TextInput(attrs={
-        'class':'form-control input-md fechas',
+        'class':'form-control input-md fechas disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_13 = forms.CharField(label='Fecha de entrega', widget=TextInput(attrs={
-        'class':'form-control input-md fechas',
+        'class':'form-control input-md fechas disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_14 = forms.CharField(label='Fecha de entrega', widget=TextInput(attrs={
-        'class':'form-control input-md fechas',
+        'class':'form-control input-md fechas disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     fecha_entrega_act_15 = forms.CharField(label='Fecha de entrega', widget=TextInput(attrs={
-        'class':'form-control input-md fechas',
+        'class':'form-control input-md fechas disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     # Ponderación asignada (%) de la planificación.
     porc_act_1 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     porc_act_2 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     porc_act_3 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     porc_act_4 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     porc_act_5 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     porc_act_6 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     porc_act_7 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     porc_act_8 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     porc_act_9 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     porc_act_10 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     porc_act_11 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     porc_act_12 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     porc_act_13 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     porc_act_14 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     porc_act_15 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
-        'class':'form-control input-md',
+        'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 

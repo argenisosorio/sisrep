@@ -189,7 +189,7 @@ class Registrar_accion(SuccessMessageMixin,CreateView):
     model = AccionEspecifica
     form_class = AccionEspecificaForm
     success_url = reverse_lazy('safet:consultar_accion')
-    success_message = "Se registro la Acción Específica con éxito"
+    success_message = "Se registro la acción específica con éxito"
 
     def get(self, request, *args, **kwargs):
         """
@@ -258,9 +258,9 @@ class Borrar_accion(SuccessMessageMixin,DeleteView):
                 messages_alert = ['No tiene permisos para borrar la acción específica']
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
-##############################################################
-##### Crud de los Reportes de Avances para los Analistas #####
-##############################################################
+################################################################
+##### Crud de los planes de actividades para los Analistas #####
+################################################################
 
 class Consultar_reporte_avances(ListView):
     """
@@ -271,12 +271,12 @@ class Consultar_reporte_avances(ListView):
 
 class Registrar_reporte_avances(SuccessMessageMixin,CreateView):
     """
-    Clase que permite registrar un Reporte de Avances.
+    Clase que permite registrar un reporte de avances.
     """
     model = ReporteAvances
     form_class = ReporteAvancesForm
     success_url = reverse_lazy('safet:consultar_reporte_avances')
-    success_message = "Se registro el reporte de avances con éxito"
+    success_message = "Se registro el plan de actividades con éxito"
 
     def get(self, request, *args, **kwargs):
         """
@@ -293,14 +293,13 @@ class Registrar_reporte_avances(SuccessMessageMixin,CreateView):
 
 class Registrar_reporte_avances_software(SuccessMessageMixin,CreateView):
     """
-    Clase que permite registrar un Reporte de Avances de un producto
-    del tipo Software.
+    Clase que permite registrar un plan de actividades de un producto del tipo Software.
     """
     model = ReporteAvances
     form_class = ReporteAvancesSoftwareForm
     template_name = "safet/reporteavances_software_form.html"
     success_url = reverse_lazy('safet:consultar_reporte_avances')
-    success_message = "Se registro el reporte de avances con éxito"
+    success_message = "Se registro el plan de actividades con éxito"
 
     def get(self, request, *args, **kwargs):
         """
@@ -317,14 +316,13 @@ class Registrar_reporte_avances_software(SuccessMessageMixin,CreateView):
 
 class Registrar_reporte_avances_cur_lin(SuccessMessageMixin,CreateView):
     """
-    Clase que permite registrar un Reporte de Avances de un producto
-    del tipo Curso en Línea.
+    Clase que permite registrar un plan de actividades de un producto del tipo Curso en Línea.
     """
     model = ReporteAvances
     form_class = ReporteAvancesCursoLineaForm
     template_name = "safet/reporteavances_cur_lin_form.html"
     success_url = reverse_lazy('safet:consultar_reporte_avances')
-    success_message = "Se registro el reporte de avances con éxito"
+    success_message = "Se registro el plan de actividades con éxito"
 
     def get(self, request, *args, **kwargs):
         """
@@ -341,14 +339,13 @@ class Registrar_reporte_avances_cur_lin(SuccessMessageMixin,CreateView):
 
 class Registrar_reporte_avances_jornada(SuccessMessageMixin,CreateView):
     """
-    Clase que permite registrar un reporte de avances de un producto
-    del tipo jornada.
+    Clase que permite registrar un plan de actividades de un producto del tipo jornada.
     """
     model = ReporteAvances
     form_class = ReporteAvancesJornadaForm
     template_name = "safet/reporteavances_jornada_form.html"
     success_url = reverse_lazy('safet:consultar_reporte_avances')
-    success_message = "Se registro el reporte de avances con éxito"
+    success_message = "Se registro el plan de actividades con éxito"
 
     def get(self, request, *args, **kwargs):
         """
@@ -365,14 +362,13 @@ class Registrar_reporte_avances_jornada(SuccessMessageMixin,CreateView):
 
 class Registrar_reporte_avances_publicacion(SuccessMessageMixin,CreateView):
     """
-    Clase que permite registrar un reporte de avances de un producto
-    del tipo publicación.
+    Clase que permite registrar un plan de actividades de un producto del tipo publicación.
     """
     model = ReporteAvances
     form_class = ReporteAvancesPublicacionForm
     template_name = "safet/reporteavances_publicacion_form.html"
     success_url = reverse_lazy('safet:consultar_reporte_avances')
-    success_message = "Se registro el reporte de avances con éxito"
+    success_message = "Se registro el plan de actividades con éxito"
 
     def get(self, request, *args, **kwargs):
         """
@@ -394,7 +390,8 @@ class Editar_reporte_avances(SuccessMessageMixin,UpdateView):
     model = ReporteAvances
     form_class = ReporteAvancesForm
     success_url = reverse_lazy('safet:consultar_reporte_avances')
-    success_message = "Se actualizó el reporte con éxito"
+    success_message = "Se actualizó el plan de actividades con éxito"
+    template_name = "safet/reporteavances_update.html"
 
     def get(self, request, *args, **kwargs):
         """
@@ -512,7 +509,7 @@ class Editar_reporte_avances_cv(SuccessMessageMixin,UpdateView):
     form_class = ReporteAvancesCVForm
     success_url = reverse_lazy('safet:consultar_reporte_avances_cv')
     template_name = "safet/reporteavances_form_cv.html"
-    success_message = "Se actualizó el reporte con éxito"
+    success_message = "Se actualizó el plan de actividades con éxito"
 
     def form_valid(self, form):
         """
@@ -521,7 +518,7 @@ class Editar_reporte_avances_cv(SuccessMessageMixin,UpdateView):
         """
         usuario = str(self.request.user)
         nombre_producto = self.object.nombre_producto
-        accion = "Actualizo un reporte de avances del producto: "+nombre_producto
+        accion = "Actualizo el plan de actividaes del producto "+nombre_producto
         myDate = datetime.now()
         formatedDate = myDate.strftime("%d-%m-%Y %H:%M")
         fecha_humana = str(formatedDate)

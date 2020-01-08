@@ -133,22 +133,28 @@
         <br />
         <br />
         {% if request.user.is_superuser %}
+        <a href="{% url 'usuarios:list_users' %}" data-toggle="tooltip" title="Gestión de usuarios">
+          <i class="fa fa-group color-white"></i>
+        </a>
+        <br />
+        <br />
+        <br />
         <a href="{% url 'safet:inicio_carga_inicial' %}" data-toggle="tooltip" title="Carga inicial">
-          <i class="fa fa-tasks color-white"></i>
+          <i class="fa fa-upload color-white"></i>
         </a>
         <br />
         <br />
         <br />
         {% else %}
         {% endif %}
-        <a href="{% url 'safet:inicio_reporte_avances' %}" data-toggle="tooltip" title="Reporte de avances">
-          <i class="fa fa-line-chart color-white"></i>
+        <a href="{% url 'safet:inicio_reporte_avances' %}" data-toggle="tooltip" title="Actividades">
+          <i class="fa fa-file-text color-white"></i>
         </a>
         <br />
         <br />
         <br />
-        <a href="{% url 'safet:inicio_reporte_actividades' %}" data-toggle="tooltip" title="Reporte de actividades">
-          <i class="fa fa-file-text color-white"></i>
+        <a href="{% url 'safet:inicio_reporte_actividades' %}" data-toggle="tooltip" title="Tareas">
+          <i class="fa fa-tags color-white"></i>
         </a>
         {% if request.user.is_superuser %}
         <br />
