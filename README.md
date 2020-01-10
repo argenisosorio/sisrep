@@ -76,3 +76,7 @@ $ python manage.py runserver
 
 ## Capturas
 ![captura-1.jpg](captura-1.jpg "captura-1.jpg")
+
+<br />
+
+![captura-2.jpg](captura-2.jpg "captura-2.jpg")
