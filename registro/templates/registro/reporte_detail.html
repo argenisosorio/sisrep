@@ -193,7 +193,7 @@
   }
 </script>
 <br />
-<h2><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Reporte de tareas de "{{ reporte.nombre_proyecto }}" de {{ reporte.mes }} del {{ reporte.ano }}</h2>
+<h1><a href="{% url 'registro:consultar_reporte' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Reporte de tareas de "{{ reporte.nombre_proyecto }}" de {{ reporte.mes }} del {{ reporte.ano }}</h2>
 <br />
 
 <!-- Row class

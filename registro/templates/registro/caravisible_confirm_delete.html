@@ -2,7 +2,7 @@
 {% block titulo %}Borrar Caravisible{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Borrar caravisible</h1>
+<h1><a href="{% url 'registro:consultar_cara_visible' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Borrar cara visible</h1>
 <form method="post">{% csrf_token %}
   ¿Estás seguro que quieres eliminar el Cara Visible: <b>{{ object.nombre_caravisible }}</b>?
   <br />

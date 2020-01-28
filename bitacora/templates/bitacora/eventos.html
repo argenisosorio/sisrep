@@ -3,7 +3,7 @@
 {% block cuerpo %}
 {% load staticfiles %}
 <br />
-<h1><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Bitácora de eventos</h1>
+<h1><a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Bitácora de eventos</h1>
 <br />
 <table border="1px" id="examplee" class="display" cellspacing="0px" style="width:100%;">
   <thead>
