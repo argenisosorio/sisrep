@@ -82,7 +82,7 @@ class ReporteAvancesForm(forms.ModelForm):
         self.fields['nombre_caravisible'] = forms.ChoiceField(label="Nombre del cara visible", widget=Select(attrs={
             'class':'form-control input-md',
             'style': 'min-width: 0; width: 100%; display: inline;',
-        }), choices=lista_carasvisibles)
+        }), choices=lista_caravisibles)
 
     autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
