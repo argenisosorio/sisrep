@@ -2,7 +2,7 @@
 {% block titulo %}Resultados de la búsqueda{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Resultados de la búsqueda</h1>
+<h1><a href="{% url 'registro:buscar' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Resultados de la búsqueda</h1>
 <br />
 {% if reportes %}
   <h4>Estas buscado reportes de tareas del año <strong>{{ query }}</strong> en el mes de <strong>{{ query2}}</strong></h4>

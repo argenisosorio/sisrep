@@ -2,7 +2,7 @@
 {% block titulo %}Registrar cara visible{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Registrar cara visible</h1>
+<h1><a href="{% url 'registro:consultar_cara_visible' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Registrar cara visible</h1>
 <br />
 <form method="post">{% csrf_token %}
 

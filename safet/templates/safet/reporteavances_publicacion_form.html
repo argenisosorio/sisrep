@@ -2,7 +2,7 @@
 {% block titulo %}Registrar plan de actividades{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Registrar plan de actividades</h1>
+<h1><a href="{% url 'safet:inicio_carga_inicial' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Registrar plan de actividades</h1>
 <br />
 <form method="post">{% csrf_token %}
   <div class="well">

@@ -55,8 +55,8 @@ class ReporteAvancesForm(forms.ModelForm):
         lista_proyectos_poa = ProyectoPoa.objects.all().values_list('nombre_proyecto','nombre_proyecto')
         lista_acciones_especificas = AccionEspecifica.objects.all().values_list('nombre_accion','nombre_accion')
         lista_productos = Proyecto.objects.all().values_list('nombre_proyecto','nombre_proyecto')
-        lista_directores = Director.objects.all().values_list('nombre_director','nombre_director')
-        lista_carasvisibles = Caravisible.objects.all().values_list('nombre_caravisible','nombre_caravisible')
+        lista_directores = Director.objects.all().order_by('nombre_director').values_list('nombre_director','nombre_director')
+        lista_caravisibles = Caravisible.objects.all().order_by('nombre_caravisible').values_list('nombre_caravisible','nombre_caravisible')
 
         self.fields['nombre_proyecto_poa'] = forms.ChoiceField(label="Nombre del proyecto poa", widget=Select(attrs={
             'class':'form-control input-md',
@@ -82,7 +82,7 @@ class ReporteAvancesForm(forms.ModelForm):
         self.fields['nombre_caravisible'] = forms.ChoiceField(label="Nombre del cara visible", widget=Select(attrs={
             'class':'form-control input-md',
             'style': 'min-width: 0; width: 100%; display: inline;',
-        }), choices=lista_carasvisibles)
+        }), choices=lista_caravisibles)
 
     autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
@@ -620,8 +620,8 @@ class ReporteAvancesSoftwareForm(forms.ModelForm):
         lista_proyectos_poa = ProyectoPoa.objects.all().values_list('nombre_proyecto','nombre_proyecto')
         lista_acciones_especificas = AccionEspecifica.objects.all().values_list('nombre_accion','nombre_accion')
         lista_productos = Proyecto.objects.all().values_list('nombre_proyecto','nombre_proyecto')
-        lista_directores = Director.objects.all().values_list('nombre_director','nombre_director')
-        lista_carasvisibles = Caravisible.objects.all().values_list('nombre_caravisible','nombre_caravisible')
+        lista_directores = Director.objects.all().order_by('nombre_director').values_list('nombre_director','nombre_director')
+        lista_caravisibles = Caravisible.objects.all().order_by('nombre_caravisible').values_list('nombre_caravisible','nombre_caravisible')
 
         self.fields['nombre_proyecto_poa'] = forms.ChoiceField(label="Nombre del proyecto poa", widget=Select(attrs={
             'class':'form-control input-md',
@@ -647,7 +647,7 @@ class ReporteAvancesSoftwareForm(forms.ModelForm):
         self.fields['nombre_caravisible'] = forms.ChoiceField(label="Nombre del cara visible", widget=Select(attrs={
             'class':'form-control input-md',
             'style': 'min-width: 0; width: 100%; display: inline;',
-        }), choices=lista_carasvisibles)
+        }), choices=lista_caravisibles)
 
     autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
@@ -1199,8 +1199,8 @@ class ReporteAvancesCursoLineaForm(forms.ModelForm):
         lista_proyectos_poa = ProyectoPoa.objects.all().values_list('nombre_proyecto','nombre_proyecto')
         lista_acciones_especificas = AccionEspecifica.objects.all().values_list('nombre_accion','nombre_accion')
         lista_productos = Proyecto.objects.all().values_list('nombre_proyecto','nombre_proyecto')
-        lista_directores = Director.objects.all().values_list('nombre_director','nombre_director')
-        lista_carasvisibles = Caravisible.objects.all().values_list('nombre_caravisible','nombre_caravisible')
+        lista_directores = Director.objects.all().order_by('nombre_director').values_list('nombre_director','nombre_director')
+        lista_caravisibles = Caravisible.objects.all().order_by('nombre_caravisible').values_list('nombre_caravisible','nombre_caravisible')
 
         self.fields['nombre_proyecto_poa'] = forms.ChoiceField(label="Nombre del proyecto poa", widget=Select(attrs={
             'class':'form-control input-md',
@@ -1226,7 +1226,7 @@ class ReporteAvancesCursoLineaForm(forms.ModelForm):
         self.fields['nombre_caravisible'] = forms.ChoiceField(label="Nombre del cara visible", widget=Select(attrs={
             'class':'form-control input-md',
             'style': 'min-width: 0; width: 100%; display: inline;',
-        }), choices=lista_carasvisibles)
+        }), choices=lista_caravisibles)
 
     autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
@@ -1775,8 +1775,8 @@ class ReporteAvancesJornadaForm(forms.ModelForm):
         lista_proyectos_poa = ProyectoPoa.objects.all().values_list('nombre_proyecto','nombre_proyecto')
         lista_acciones_especificas = AccionEspecifica.objects.all().values_list('nombre_accion','nombre_accion')
         lista_productos = Proyecto.objects.all().values_list('nombre_proyecto','nombre_proyecto')
-        lista_directores = Director.objects.all().values_list('nombre_director','nombre_director')
-        lista_carasvisibles = Caravisible.objects.all().values_list('nombre_caravisible','nombre_caravisible')
+        lista_directores = Director.objects.all().order_by('nombre_director').values_list('nombre_director','nombre_director')
+        lista_caravisibles = Caravisible.objects.all().order_by('nombre_caravisible').values_list('nombre_caravisible','nombre_caravisible')
 
         self.fields['nombre_proyecto_poa'] = forms.ChoiceField(label="Nombre del proyecto poa", widget=Select(attrs={
             'class':'form-control input-md',
@@ -1802,7 +1802,7 @@ class ReporteAvancesJornadaForm(forms.ModelForm):
         self.fields['nombre_caravisible'] = forms.ChoiceField(label="Nombre del cara visible", widget=Select(attrs={
             'class':'form-control input-md',
             'style': 'min-width: 0; width: 100%; display: inline;',
-        }), choices=lista_carasvisibles)
+        }), choices=lista_caravisibles)
 
     autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
@@ -2347,8 +2347,8 @@ class ReporteAvancesPublicacionForm(forms.ModelForm):
         lista_proyectos_poa = ProyectoPoa.objects.all().values_list('nombre_proyecto','nombre_proyecto')
         lista_acciones_especificas = AccionEspecifica.objects.all().values_list('nombre_accion','nombre_accion')
         lista_productos = Proyecto.objects.all().values_list('nombre_proyecto','nombre_proyecto')
-        lista_directores = Director.objects.all().values_list('nombre_director','nombre_director')
-        lista_carasvisibles = Caravisible.objects.all().values_list('nombre_caravisible','nombre_caravisible')
+        lista_directores = Director.objects.all().order_by('nombre_director').values_list('nombre_director','nombre_director')
+        lista_caravisibles = Caravisible.objects.all().order_by('nombre_caravisible').values_list('nombre_caravisible','nombre_caravisible')
 
         self.fields['nombre_proyecto_poa'] = forms.ChoiceField(label="Nombre del proyecto poa", widget=Select(attrs={
             'class':'form-control input-md',
@@ -2374,7 +2374,7 @@ class ReporteAvancesPublicacionForm(forms.ModelForm):
         self.fields['nombre_caravisible'] = forms.ChoiceField(label="Nombre del cara visible", widget=Select(attrs={
             'class':'form-control input-md',
             'style': 'min-width: 0; width: 100%; display: inline;',
-        }), choices=lista_carasvisibles)
+        }), choices=lista_caravisibles)
 
     autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',
@@ -2920,8 +2920,8 @@ class ReporteAvancesCVForm(forms.ModelForm):
         lista_proyectos_poa = ProyectoPoa.objects.all().values_list('nombre_proyecto','nombre_proyecto')
         lista_acciones_especificas = AccionEspecifica.objects.all().values_list('nombre_accion','nombre_accion')
         lista_productos = Proyecto.objects.all().values_list('nombre_proyecto','nombre_proyecto')
-        lista_directores = Director.objects.all().values_list('nombre_director','nombre_director')
-        lista_carasvisibles = Caravisible.objects.all().values_list('nombre_caravisible','nombre_caravisible')
+        lista_directores = Director.objects.all().order_by('nombre_director').values_list('nombre_director','nombre_director')
+        lista_caravisibles = Caravisible.objects.all().order_by('nombre_caravisible').values_list('nombre_caravisible','nombre_caravisible')
 
         self.fields['nombre_proyecto_poa'] = forms.ChoiceField(label="Nombre del proyecto poa", widget=Select(attrs={
             'class':'form-control input-md disabled-input',
@@ -2950,7 +2950,7 @@ class ReporteAvancesCVForm(forms.ModelForm):
             'class':'form-control input-md disabled-input',
             'style': 'min-width: 0; width: 100%; display: inline;',
             #'disabled': 'disabled',
-        }), choices=lista_carasvisibles)
+        }), choices=lista_caravisibles)
 
     autor = forms.CharField(label='Nombre de usuario que podrá cargar avances en este plan de actividades', widget=TextInput(attrs={
         'class':'form-control input-md',

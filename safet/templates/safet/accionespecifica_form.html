@@ -2,7 +2,7 @@
 {% block titulo %}Registrar acción específica{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Registrar acción específica</h1>
+<h1><a href="{% url 'safet:consultar_accion' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Registrar acción específica</h1>
 <br />
 <form method="post">{% csrf_token %}
 

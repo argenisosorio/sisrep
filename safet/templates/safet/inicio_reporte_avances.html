@@ -2,7 +2,7 @@
 {% block titulo %}Actividades{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="javascript:window.history.go(-1);" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Actividades</h1>
+<h1><a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Actividades</h1>
 <br />
 {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
   <div class="glyphicon-white">
