@@ -12,22 +12,15 @@
 <table border="1px" id="example" class="display">
   <thead>
     <tr>
-      <th>N</th>
+      <th class="text-center">N</th>
       <th>Nombre del cargo</th>
       <th>Acciones</th>
     </tr>
   </thead>
-  <!--tfoot class="color-white">
-    <tr>
-      <th>N</th>
-      <th>Nombre del cargo</th>
-      <th>Acciones</th>
-    </tr>
-  </tfoot-->
   <tbody>
   {% for x in object_list %}
   <tr>
-    <td></td>
+    <td class="text-center"></td>
     <td>{{ x.nombre_cargo }}</td>
     <td class="text-center td_botonera_tabla">
       <div class="row">
