@@ -2,7 +2,7 @@
 {% block titulo %}Actualizar reporte de tareas{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="{% url 'registro:consultar_reporte' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Actualizar reporte de tareas</h1>
+<h1><a href="{{ request.META.HTTP_REFERER }}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Actualizar reporte de tareas</h1>
 <br />
 <form method="post">{% csrf_token %}
    
