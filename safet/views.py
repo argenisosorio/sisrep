@@ -275,8 +275,14 @@ class Registrar_reporte_avances(SuccessMessageMixin,CreateView):
     """
     model = ReporteAvances
     form_class = ReporteAvancesForm
-    success_url = reverse_lazy('safet:consultar_reporte_avances')
     success_message = "Se registro el plan de actividades con éxito"
+
+    def get_success_url(self, **kwargs):
+        """
+        Metodo que redirige al detalle del formulario cuando se registra.
+        """
+        reporteid=self.object.id
+        return reverse_lazy('safet:detallar_reporte_avances', kwargs={'pk': reporteid})
 
     def get(self, request, *args, **kwargs):
         """
@@ -298,8 +304,14 @@ class Registrar_reporte_avances_software(SuccessMessageMixin,CreateView):
     model = ReporteAvances
     form_class = ReporteAvancesSoftwareForm
     template_name = "safet/reporteavances_software_form.html"
-    success_url = reverse_lazy('safet:consultar_reporte_avances')
     success_message = "Se registro el plan de actividades con éxito"
+
+    def get_success_url(self, **kwargs):
+        """
+        Metodo que redirige al detalle del formulario cuando se registra.
+        """
+        reporteid=self.object.id
+        return reverse_lazy('safet:detallar_reporte_avances', kwargs={'pk': reporteid})
 
     def get(self, request, *args, **kwargs):
         """
@@ -321,8 +333,14 @@ class Registrar_reporte_avances_cur_lin(SuccessMessageMixin,CreateView):
     model = ReporteAvances
     form_class = ReporteAvancesCursoLineaForm
     template_name = "safet/reporteavances_cur_lin_form.html"
-    success_url = reverse_lazy('safet:consultar_reporte_avances')
     success_message = "Se registro el plan de actividades con éxito"
+
+    def get_success_url(self, **kwargs):
+        """
+        Metodo que redirige al detalle del formulario cuando se registra.
+        """
+        reporteid=self.object.id
+        return reverse_lazy('safet:detallar_reporte_avances', kwargs={'pk': reporteid})
 
     def get(self, request, *args, **kwargs):
         """
@@ -344,8 +362,14 @@ class Registrar_reporte_avances_jornada(SuccessMessageMixin,CreateView):
     model = ReporteAvances
     form_class = ReporteAvancesJornadaForm
     template_name = "safet/reporteavances_jornada_form.html"
-    success_url = reverse_lazy('safet:consultar_reporte_avances')
     success_message = "Se registro el plan de actividades con éxito"
+
+    def get_success_url(self, **kwargs):
+        """
+        Metodo que redirige al detalle del formulario cuando se registra.
+        """
+        reporteid=self.object.id
+        return reverse_lazy('safet:detallar_reporte_avances', kwargs={'pk': reporteid})
 
     def get(self, request, *args, **kwargs):
         """
@@ -367,8 +391,14 @@ class Registrar_reporte_avances_publicacion(SuccessMessageMixin,CreateView):
     model = ReporteAvances
     form_class = ReporteAvancesPublicacionForm
     template_name = "safet/reporteavances_publicacion_form.html"
-    success_url = reverse_lazy('safet:consultar_reporte_avances')
     success_message = "Se registro el plan de actividades con éxito"
+
+    def get_success_url(self, **kwargs):
+        """
+        Metodo que redirige al detalle del formulario cuando se registra.
+        """
+        reporteid=self.object.id
+        return reverse_lazy('safet:detallar_reporte_avances', kwargs={'pk': reporteid})
 
     def get(self, request, *args, **kwargs):
         """
