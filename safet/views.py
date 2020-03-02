@@ -449,7 +449,7 @@ class Detallar_reporte_avances(DetailView):
     model = ReporteAvances
     template_name = "safet/reporteavances_detail.html"
 
-def get(self, request, *args, **kwargs):
+    def get(self, request, *args, **kwargs):
         """
         Método que redirecciona a index si el usuario
         que intenta ver el reporte no es admin.
