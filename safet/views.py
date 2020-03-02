@@ -419,9 +419,15 @@ class Editar_reporte_avances(SuccessMessageMixin,UpdateView):
     """
     model = ReporteAvances
     form_class = ReporteAvancesForm
-    success_url = reverse_lazy('safet:consultar_reporte_avances')
     success_message = "Se actualizó el plan de actividades con éxito"
     template_name = "safet/reporteavances_update.html"
+
+    def get_success_url(self, **kwargs):
+        """
+        Metodo que redirige al detalle del formulario cuando se edita.
+        """
+        reporteid=self.object.id
+        return reverse_lazy('safet:detallar_reporte_avances', kwargs={'pk': reporteid})
 
     def get(self, request, *args, **kwargs):
         """
