@@ -1,8 +1,19 @@
 {% extends "base/base.html" %}
 {% block titulo %}Actualizar usuario{% endblock %}
+{% block barra %}
+<!-- Breadcrumb
+================================================== -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb breadcrumb-margin-top">
+    <li class="breadcrumb-item"><a href="{% url 'usuarios:list_users' %}">Lista de usuarios del sistema</a></li>
+    <li class="breadcrumb-item"><a href="">Editar usuario</a></li>
+  </ol>
+</nav>
+<!-- End Breadcrumb -->
+{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="{% url 'usuarios:list_users' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Actualizar usuario</h1>
+<h1>Actualizar usuario</h1>
 <br />
 <form action="" method="post">{% csrf_token %}
   <div class="row">

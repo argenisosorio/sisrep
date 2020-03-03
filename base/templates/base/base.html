@@ -72,7 +72,7 @@
       <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand" href="{% url 'inicio:index' %}">
-      SISREP - Sistema para el seguimiento de actividades
+      SISREP
     </a>
   </div>
   <ul class="nav navbar-nav navbar-right">
@@ -113,6 +113,10 @@
       {% endif %}
     </li>
   </ul>
+  <div class="barra">
+    {% block barra %}
+    {% endblock %}
+  </div>
 </nav>
 <!-- Fixed navbar end -->
 

@@ -1,8 +1,18 @@
 {% extends "base/base.html" %}
 {% block titulo %}Lista de usuarios del sistema{% endblock %}
+{% block barra %}
+<!-- Breadcrumb
+================================================== -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb breadcrumb-margin-top">
+    <li class="breadcrumb-item"><a href="">Lista de usuarios</a></li>
+  </ol>
+</nav>
+<!-- End Breadcrumb -->
+{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Lista de usuarios del sistema</h1>
+<h1>Lista de usuarios del sistema</h1>
 <br />
 <a href="{% url 'usuarios:register' %}">
   <button class="btn btn-success">Registrar usuario</button>
