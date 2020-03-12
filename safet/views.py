@@ -17,6 +17,9 @@ from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
 from datetime import datetime
+#is_active = Cara visible
+#is_staff = Director
+#is_superuser = Analista
 
 
 class IndexCargaInicial(TemplateView):
@@ -452,11 +455,11 @@ class Detallar_reporte_avances(DetailView):
     def get(self, request, *args, **kwargs):
         """
         Método que redirecciona a index si el usuario
-        que intenta ver el reporte no es admin.
+        que intenta ver el reporte no es Cara visible o Director.
         """
         self.object = self.get_object()
         context = self.get_context_data(object=self.object)
-        if request.user.is_staff:
+        if request.user.is_active:
             return self.render_to_response(context)
         else:
             messages_alert = ['No tiene permisos para ver el reporte de Avances Porcentuales']

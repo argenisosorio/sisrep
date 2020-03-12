@@ -621,7 +621,6 @@ class Detallar_reporte(DetailView):
     model = Reporte
     template_name = "registro/reporte_detail.html"
 
-
     def get(self, request, *args, **kwargs):
         """
         Método que redirecciona a index si el usuario
