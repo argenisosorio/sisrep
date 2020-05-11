@@ -2,7 +2,7 @@
 {% block titulo %}Actualizar usuario{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="{{ request.META.HTTP_REFERER }}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Actualizar usuario</h1>
+<h1><a href="{% url 'usuarios:list_users' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Actualizar usuario</h1>
 <br />
 <form action="" method="post">{% csrf_token %}
   <div class="row">
@@ -69,7 +69,7 @@
     <div class="col-sm-4">
     </div>
   </div>
-  <button class="btn btn-success" type="submit">Actualizar</button>
-  <a href="{% url 'usuarios:user_change_password' user.pk %}"><button type="button" class="btn btn-primary">Cambiar contraseña</button>
+  <button class="btn btn-success" type="submit">ACTUALIZAR</button>
+  <a href="{% url 'usuarios:user_change_password' user.pk %}"><button type="button" class="btn btn-primary">CAMBIAR CONTRASEÑA</button>
 </form>
 {% endblock %}

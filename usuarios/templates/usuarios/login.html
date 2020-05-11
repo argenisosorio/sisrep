@@ -17,7 +17,6 @@
     {% if form.username.errors %}
       <p>{{ form.username.errors}}</p>
     {% endif %}
-    <br />
     <b>Contraseña</b>
     <br />
     {{ form.password }}
@@ -26,10 +25,7 @@
     {% if form.password.errors %}
       <p>{{ form.password.errors}}</p>
     {% endif %}
-    <br />
-    <button class="btn btn-success" type="submit">
-      Entrar&nbsp;<span class="glyphicon glyphicon-log-in"></span>
-    </button>
+    <button class="btn btn-success" type="submit">ENTRAR</button>
     <br>
     <br>
     <a class="enlace_boton_panel" href="{% url 'usuarios:password_reset' %}">¿Olvidó su contraseña?</a>

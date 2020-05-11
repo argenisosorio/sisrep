@@ -600,3 +600,30 @@ label[for=foto_personal-clear_id]{
 .breadcrumb > .active {
   color: #FFFFFF;
 }
+.btn-success {
+  background: none !important;
+  border: ridge 1px #343e48 !important;
+  color: #343e48 !important;
+}
+.btn-success:hover {
+  background: #343e48 !important;
+  color: #FFFFFF !important;
+}
+.btn-primary {
+  background: none !important;
+  border: ridge 1px #343e48 !important;
+  color: #343e48 !important;
+}
+.btn-primary:hover {
+  background: #343e48 !important;
+  color: #FFFFFF !important;
+}
+.btn-danger {
+  background: none !important;
+  border: ridge 1px #343e48 !important;
+  color: #343e48 !important;
+}
+.btn-danger:hover {
+  background: #343e48 !important;
+  color: #FFFFFF !important;
+}
