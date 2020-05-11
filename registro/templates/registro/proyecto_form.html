@@ -5,7 +5,6 @@
 <h1><a href="{% url 'registro:consultar_proyecto' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Registrar producto</h1>
 <br />
 <form method="post">{% csrf_token %}
-
   <div class="">
     <b>{{ form.nombre_proyecto.label }}</b>
     <br />
@@ -14,10 +13,6 @@
       <p>{{ form.nombre_proyecto.errors}}</p>
     {% endif %}
   </div>
-
-  <br />
-
-  <button class="btn btn-info" type="reset">Limpiar</button>
-  <button class="btn btn-success" type="submit">Registrar</button>
+  <button class="btn btn-success" type="submit">REGISTRAR</button>
 </form>
 {% endblock %}

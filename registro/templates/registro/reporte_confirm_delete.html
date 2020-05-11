@@ -4,8 +4,9 @@
 <br />
 <h1><a href="{{ request.META.HTTP_REFERER }}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Borrar reporte de tareas</h1>
 <form method="post">{% csrf_token %}
-  <h4>¿Estás seguro que quieres eliminar el reporte de tareas de: <b>{{ object.nombre_proyecto }}</b> de <b>{{ object.mes }}</b> del <b>{{ object.ano }}</b>?</h4>
+  ¿Estás seguro que quieres eliminar el reporte de tareas de: <b>{{ object.nombre_proyecto }}</b> de <b>{{ object.mes }}</b> del <b>{{ object.ano }}</b>?
   <br />
-  <button class="btn btn-danger" type="submit">Borrar</button>
+  <br />
+  <button class="btn btn-danger" type="submit">BORRAR</button>
 </form>
 {% endblock %}

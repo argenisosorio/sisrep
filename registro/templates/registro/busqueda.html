@@ -20,17 +20,6 @@
         <th class="text-center">Acciones</th>
       </tr>
     </thead>
-    <!--tfoot>
-      <tr>
-        <th>N</th>
-        <th>Producto</th>
-        <th>Cara visible</th>
-        <th>Mes</th>
-        <th>Año</th>
-        <th>Registrado</th>
-        <th>Acciones</th>
-      </tr>
-    </tfoot-->
     <tbody>
     {% for x in reportes %}
     <tr>
@@ -77,6 +66,6 @@
 {% else %}
   <p>Ningún reporte coincide con el criterio de búsqueda.</p>
   <br />
-  <a href="{% url 'registro:buscar' %}"><button type="button" class="btn btn-primary">Buscar de nuevo</button></a>
+  <a href="{% url 'registro:buscar' %}"><button type="button" class="btn btn-primary">BUSCAR</button></a>
 {% endif %}
 {% endblock %}
