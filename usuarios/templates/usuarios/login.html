@@ -4,23 +4,21 @@
 {% load staticfiles %}
 <div align="center">
   <img class="img-lupa" src="{% static 'img/logo_sisrep.png' %}" width="20%">
-  <!--h2 class="color-white">SISREP - Sistema para reportar actividades</h2-->
 </div>
 <div align="center">
-  <!--h1 class="color-white">Iniciar sesión</h1-->
   <form action="{% url 'usuarios:login' %}" method="post">{% csrf_token %}
     <br />
     <b>Usuario</b><br />
-    {{ form.username }}
     <span class="glyphicon glyphicon-user"></span>
+    {{ form.username }}
     <br />
     {% if form.username.errors %}
       <p>{{ form.username.errors}}</p>
     {% endif %}
     <b>Contraseña</b>
     <br />
-    {{ form.password }}
     <span class="glyphicon glyphicon-lock"></span>
+    {{ form.password }}
     <br />
     {% if form.password.errors %}
       <p>{{ form.password.errors}}</p>
