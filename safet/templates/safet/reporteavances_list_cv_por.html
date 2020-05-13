@@ -4,15 +4,21 @@
 <br />
 <h1><a href="{% url 'safet:inicio_reporte_avances' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Reporte gráfico de (%) de avance de los productos </h1>
 <br />
-<form action="{% url 'safet:busqueda' %}" method="get">
-  <label>Buscar productos por año</label>
-  <br />
-  <select class="form form-control" name="ano" required>
-    <option value="2020">2020</option>
-    <option value="2019">2019</option>
-  </select>
-  <button class="btn btn-success" type="submit">BUSCAR</button>
-</form>
+<div class="row">
+  <div class="col-sm-4">
+    <form action="{% url 'safet:busqueda' %}" method="get">
+      <label>Buscar productos por año</label>
+      <br />
+      <select class="form form-control" name="ano" required>
+        <option value="2020">2020</option>
+        <option value="2019">2019</option>
+      </select>
+      <button class="btn btn-success" type="submit">BUSCAR</button>
+    </form>
+  </div>
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4"></div>
+</div>
 <br />
 {% if reportes %}
 <div class="well-white">
@@ -51,7 +57,7 @@
   {% endfor %}
 </div>
 {% else %}
-  <br />
-  <b>No se encontraron productos</b>
+<br />
+<b>No se encontraron productos</b>
 {% endif %}
 {% endblock %}
