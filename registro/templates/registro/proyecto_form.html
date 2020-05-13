@@ -4,15 +4,20 @@
 <br />
 <h1><a href="{% url 'registro:consultar_proyecto' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Registrar producto</h1>
 <br />
-<form method="post">{% csrf_token %}
-  <div class="">
-    <b>{{ form.nombre_proyecto.label }}</b>
-    <br />
-    {{ form.nombre_proyecto }}
-    {% if form.nombre_proyecto.errors %}
-      <p>{{ form.nombre_proyecto.errors}}</p>
-    {% endif %}
+<div class="row">
+  <div class="col-sm-6">
+    <form method="post">{% csrf_token %}
+      <div class="">
+        <b>{{ form.nombre_proyecto.label }}</b>
+        <br />
+        {{ form.nombre_proyecto }}
+        {% if form.nombre_proyecto.errors %}
+          <p>{{ form.nombre_proyecto.errors}}</p>
+        {% endif %}
+      </div>
+      <button class="btn btn-success" type="submit">REGISTRAR</button>
+    </form>
   </div>
-  <button class="btn btn-success" type="submit">REGISTRAR</button>
-</form>
+  <div class="col-sm-6"></div>
+</div>
 {% endblock %}
