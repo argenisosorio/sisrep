@@ -161,7 +161,7 @@ class Consultar_cara_visible(ListView):
         if request.user.is_superuser:
             return self.render_to_response(context)
         else:
-            messages_alert = ['No tiene permisos para listar los caras visibles']
+            messages_alert = ['No tiene permisos para listar los trabajadores']
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
@@ -172,7 +172,7 @@ class Registrar_cara_visible(SuccessMessageMixin,CreateView):
     model = Caravisible
     form_class = CaravisibleForm
     success_url = reverse_lazy('registro:consultar_cara_visible')
-    success_message = "Se registro el cara visible con éxito"
+    success_message = "Se registro el trabajador con éxito"
 
     def get(self, request, *args, **kwargs):
         """
@@ -194,7 +194,7 @@ class Editar_cara_visible(SuccessMessageMixin,UpdateView):
     model = Caravisible
     form_class = CaravisibleForm
     success_url = reverse_lazy('registro:consultar_cara_visible')
-    success_message = "Se actualizo el cara visible con éxito"
+    success_message = "Se actualizo el trabajador con éxito"
 
     def get(self, request, *args, **kwargs):
         """
@@ -218,7 +218,7 @@ class Borrar_cara_visible(SuccessMessageMixin,DeleteView):
     """
     model = Caravisible
     success_url = reverse_lazy('registro:consultar_cara_visible')
-    success_message = "Se elimino el cara visible con éxito"
+    success_message = "Se elimino el trabajador con éxito"
 
     def get(self, request, *args, **kwargs):
         """

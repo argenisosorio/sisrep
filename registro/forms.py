@@ -29,7 +29,7 @@ class CaravisibleForm(forms.ModelForm):
     """
     Formulario con los campos de un cara visible.
     """
-    nombre_caravisible = forms.CharField(label='Nombre del cara visible', widget=TextInput(attrs={
+    nombre_caravisible = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
         'required': 'True',
