@@ -68,6 +68,12 @@ ul.errorlist {
 .alert.alert-success {
   border-left: 4px solid green !important;
 }
+.alert-success {
+  color: #343e48 !important;
+  background-color: #b9ffb9 !important;
+  border-color: #d6e9c6 !important;
+  border-left-color: rgb(214, 233, 198) !important;
+}
 .notificacion-emergente {
   margin-top: -12px;
   position: absolute;
