@@ -1,9 +1,19 @@
 {% extends "base/base.html" %}
-{% block titulo %}Lista de productos{% endblock %}
+{% block titulo %}Lista de planes de actividades de los productos{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="{% url 'safet:inicio_reporte_avances' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Lista de productos</h1>
-<br />
+<h1><a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Lista de planes de actividades de los productos</h1>
+{% if user.is_superuser and user.is_staff and user.is_active %}
+<div class="glyphicon-white">
+  <a href="{% url 'safet:consultar_reporte_avances_cv_por' %}" class="enlace_boton_panel">
+    <div align="center">
+    <i class="fa fa-line-chart"></i>
+    Avance de los productos
+    </div>
+  </a>
+</div>
+{% endif %}
+<br>
 <table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
   <thead>
     <tr>

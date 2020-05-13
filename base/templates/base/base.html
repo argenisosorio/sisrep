@@ -147,9 +147,23 @@
         <br />
         {% else %}
         {% endif %}
-        <a href="{% url 'safet:inicio_reporte_avances' %}" data-toggle="tooltip" title="Actividades">
-          <i class="fa fa-file-text color-white"></i>
-        </a>
+        {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
+          <a href="{% url 'safet:consultar_reporte_avances' %}" data-toggle="tooltip" title="Actividades">
+            <i class="fa fa-file-text color-white"></i>
+          </a>
+        {% else %}
+          {% if request.user.is_staff and request.user.is_active %}
+          <a href="{% url 'safet:consultar_reporte_avances' %}" data-toggle="tooltip" title="Actividades">
+            <i class="fa fa-file-text color-white"></i>
+          </a>
+          {% else %}
+            {% if request.user.is_active %}
+              <a href="{% url 'safet:consultar_reporte_avances_cv' %}" data-toggle="tooltip" title="Actividades">
+                <i class="fa fa-file-text color-white"></i>
+              </a>
+            {% endif %}
+          {% endif %}
+        {% endif %}
         <br />
         <br />
         <br />

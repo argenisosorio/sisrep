@@ -33,7 +33,7 @@ $("document").ready(function (){
 });
 </script>
 <br />
-<h1><a href="{% url 'safet:inicio_carga_inicial' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Actualizar plan de actividades</h1>
+<h1><a href="{{ request.META.HTTP_REFERER }}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Actualizar plan de actividades</h1>
 <br />
 <form class="myform" method="post">{% csrf_token %}
   <div class="well-white">

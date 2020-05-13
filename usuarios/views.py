@@ -30,7 +30,7 @@ class LoginView(SuccessMessageMixin,FormView):
     template_name = 'usuarios/login.html'
     form_class = LoginForm
     success_url = reverse_lazy('inicio:index')
-    success_message = "Bienvenido al sistema."
+    success_message = "Bienvenido al sistema"
 
     def form_invalid(self, form):
         """
