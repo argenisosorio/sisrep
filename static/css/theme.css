@@ -6,10 +6,8 @@ body {
   font-family: "OpenSans-Light", sans-serif;
   padding-top: 70px;
   padding-bottom: 30px;
-  background: #aaaebc;
-  /*background-image: url("../img/intro.svg") !important;*/
-  background: url("../img/bg2.png") no-repeat center center fixed;
-  /*background: url("../img/bg2.jpg") no-repeat center center fixed;*/
+  background: #FAFAFA;
+  background: url("../img/bg3.jpg") no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;

@@ -14,12 +14,9 @@
   <button class="btn btn-success" type="submit">BUSCAR</button>
 </form>
 <br />
-
 {% if reportes %}
-<!-- Well class
-================================================== -->
 <div class="well-white">
-  <h3 class="text-right"><b>Fecha: {{ fecha_humana }}</b></h3>
+  <h4 class="text-right"><b>Fecha: {{ fecha_humana }}</b></h4>
   <h2 class="text-center">Gráfico de (%) de avance de los productos del {{ ano }}</h2>
   <br />
   {% for x in reportes %}
@@ -50,9 +47,9 @@
     <div class="col-sm-4">
     </div>
   </div>
+  <br />
   {% endfor %}
 </div>
-<!-- End well -->
 {% else %}
   <br />
   <b>No se encontraron productos</b>
