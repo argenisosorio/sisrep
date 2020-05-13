@@ -167,9 +167,23 @@
         <br />
         <br />
         <br />
-        <a href="{% url 'safet:inicio_reporte_actividades' %}" data-toggle="tooltip" title="Tareas">
-          <i class="fa fa-tags color-white"></i>
-        </a>
+        {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
+          <a href="{% url 'registro:consultar_reporte' %}" data-toggle="tooltip" title="Tareas">
+            <i class="fa fa-tags color-white"></i>
+          </a>
+          {% else %}
+            {% if request.user.is_staff and request.user.is_active %}
+              <a href="{% url 'registro:consultar_reporte' %}" data-toggle="tooltip" title="Tareas">
+                <i class="fa fa-tags color-white"></i>
+              </a>
+            {% else %}
+            {% if request.user.is_active %}
+              <a href="{% url 'registro:consultar_reporte' %}" data-toggle="tooltip" title="Tareas">
+                <i class="fa fa-tags color-white"></i>
+              </a>
+            {% endif %}
+          {% endif %}
+        {% endif %}
         {% if request.user.is_superuser %}
         <br />
         <br />
