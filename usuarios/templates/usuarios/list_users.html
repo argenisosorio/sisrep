@@ -4,9 +4,8 @@
 <br />
 <h1><a href="{{ request.META.HTTP_REFERER }}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Lista de usuarios del sistema</h1>
 <br />
-<a href="{% url 'usuarios:register' %}">
-  <button class="btn btn-success">REGISTRAR</button>
-</a>
+<button class="btn btn-success" data-toggle="modal" data-target="#modal-registrar">REGISTRAR</button>
+{% include 'usuarios/modals.html' %}
 <br />
 <br />
 <table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
@@ -73,9 +72,4 @@
   {% endfor %}
   </tbody>
 </table>
-<script type="text/javascript">
-$(document).ready(function() {
-  $('[data-toggle="tooltip"]').tooltip();
-});
-</script>
 {% endblock %}
