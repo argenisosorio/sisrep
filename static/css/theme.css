@@ -409,6 +409,10 @@ table.table_change_password td {
 .fa-group {
   font-size: 30px !important;
 }
+.fa-times-circle {
+  font-size: 60px !important;
+  color: #343e48 !important;
+}
 .color-white {
   color: #FFFFFF;
 }
@@ -628,6 +632,15 @@ label[for=foto_personal-clear_id]{
   color: #343e48 !important;
 }
 .btn-danger:hover {
+  background: #343e48 !important;
+  color: #FFFFFF !important;
+}
+.btn-default {
+  background: none !important;
+  border: ridge 1px #343e48 !important;
+  color: #343e48 !important;
+}
+.btn-default:hover {
   background: #343e48 !important;
   color: #FFFFFF !important;
 }
