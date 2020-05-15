@@ -80,3 +80,7 @@ $ python manage.py runserver
 <br />
 
 ![captura-2.jpg](captura-2.jpg "captura-2.jpg")
+
+<br />
+
+![captura-3.jpg](captura-3.jpg "captura-3.jpg")
