@@ -8,6 +8,7 @@
   <input id="id_autor" name="autor" required="True" type="text" value="{{ user.username }}" />
   {{ form.fecha_registro_reporte }}
   <div class="">
+    <i class="fa fa-file-text-o color-blue-system"></i>
     <b>{{ form.autor.label }}</b>
     <br />
     {{ form.autor }}
@@ -16,6 +17,7 @@
     {% endif %}
   </div>
   <div class="">
+    <i class="fa fa-file-text-o color-blue-system"></i>
     <b>{{ form.nombre_proyecto.label }}</b>
     <br />
     {{ form.nombre_proyecto }}
@@ -26,6 +28,7 @@
   <div class="row">
     <div class="col-sm-6">
       <div class="">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_caravisible.label }}</b>
         <br />
         {{ form.nombre_caravisible }}
@@ -36,6 +39,7 @@
     </div>
     <div class="col-sm-6">
       <div class="">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_director.label }}</b>
         <br />
         {{ form.nombre_director }}
@@ -48,6 +52,7 @@
   <div class="row">
     <div class="col-sm-6">
       <div class="">
+        <i class="fa fa-calendar color-blue-system"></i>
         <b>{{ form.mes.label }}</b>
         <br />
         {{ form.mes }}
@@ -58,6 +63,7 @@
     </div>
     <div class="col-sm-6">
       <div class="">
+        <i class="fa fa-calendar color-blue-system"></i>
         <b>{{ form.ano.label }}</b>
         <br />
         {{ form.ano }}
@@ -72,6 +78,7 @@
       <a data-toggle="collapse" data-parent="#accordion" href="#collapse16">
         <div class="panel-heading">
           <b class="panel-title">
+            <i class="fa fa-file-text-o color-blue-system"></i>
             {{ form.desc_avance.label }}
             <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
           </b>
@@ -92,6 +99,7 @@
       <a data-toggle="collapse" data-parent="#accordion" href="#collapse17">
         <div class="panel-heading">
           <b class="panel-title">
+            <i class="fa fa-file-text-o color-blue-system"></i>
             {{ form.obstaculos.label }}
             <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
           </b>
@@ -133,7 +141,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>1</td>
+              <td class="text-center">1</td>
               <td>
                 {{ form.nombre_trab_1 }}
                 {% if form.nombre_trab_1.errors %}
@@ -196,7 +204,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>2</td>
+              <td class="text-center">2</td>
               <td>
                 {{ form.nombre_trab_2 }}
                 {% if form.nombre_trab_2.errors %}
@@ -259,7 +267,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>3</td>
+              <td class="text-center">3</td>
               <td>
                 {{ form.nombre_trab_3 }}
                 {% if form.nombre_trab_3.errors %}
@@ -322,7 +330,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>4</td>
+              <td class="text-center">4</td>
               <td>
                 {{ form.nombre_trab_4 }}
                 {% if form.nombre_trab_4.errors %}
@@ -385,7 +393,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>5</td>
+              <td class="text-center">5</td>
               <td>
                 {{ form.nombre_trab_5 }}
                 {% if form.nombre_trab_5.errors %}
@@ -448,7 +456,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>6</td>
+              <td class="text-center">6</td>
               <td>
                 {{ form.nombre_trab_6 }}
                 {% if form.nombre_trab_6.errors %}
@@ -511,7 +519,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>7</td>
+              <td class="text-center">7</td>
               <td>
                 {{ form.nombre_trab_7 }}
                 {% if form.nombre_trab_7.errors %}
@@ -574,7 +582,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>8</td>
+              <td class="text-center">8</td>
               <td>
                 {{ form.nombre_trab_8 }}
                 {% if form.nombre_trab_8.errors %}
@@ -637,7 +645,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>9</td>
+              <td class="text-center">9</td>
               <td>
                 {{ form.nombre_trab_9 }}
                 {% if form.nombre_trab_9.errors %}
@@ -700,7 +708,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>10</td>
+              <td class="text-center">10</td>
               <td>
                 {{ form.nombre_trab_10 }}
                 {% if form.nombre_trab_10.errors %}
@@ -763,7 +771,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>11</td>
+              <td class="text-center">11</td>
               <td>
                 {{ form.nombre_trab_11 }}
                 {% if form.nombre_trab_11.errors %}
@@ -826,7 +834,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>12</td>
+              <td class="text-center">12</td>
               <td>
                 {{ form.nombre_trab_12 }}
                 {% if form.nombre_trab_12.errors %}
@@ -889,7 +897,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>13</td>
+              <td class="text-center">13</td>
               <td>
                 {{ form.nombre_trab_13 }}
                 {% if form.nombre_trab_13.errors %}
@@ -952,7 +960,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>14</td>
+              <td class="text-center">14</td>
               <td>
                 {{ form.nombre_trab_14 }}
                 {% if form.nombre_trab_14.errors %}
@@ -1015,7 +1023,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>15</td>
+              <td class="text-center">15</td>
               <td>
                 {{ form.nombre_trab_15 }}
                 {% if form.nombre_trab_15.errors %}
