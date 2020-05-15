@@ -2,11 +2,12 @@
 {% block titulo %}Registrar usuario{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="{{ request.META.HTTP_REFERER }}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Registrar usuario</h1>
+<h1><a href="{% url 'usuarios:list_users' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Registrar usuario</h1>
 <br />
 <form action="{% url 'usuarios:register' %}" method="post">{% csrf_token %}
   <div class="row">
     <div class="col-sm-4">
+      <i class="fa fa-user color-blue-system"></i>
       <label>{{ form.username.label }}</label>
       <br />
       {{ form.username }}
@@ -15,6 +16,7 @@
         <b>Alert: </b>{{ form.username.errors}}
       {% endif %}
       <br />
+      <i class="fa fa-list-alt color-blue-system"></i>
       <label>{{ form.first_name.label }}</label>
       <br />
       {{ form.first_name }}
@@ -23,6 +25,7 @@
         <b>Alert: </b>{{ form.first_name.errors}}
       {% endif %}
       <br />
+      <i class="fa fa-lock color-blue-system"></i>
       <label>{{ form.password1.label }}</label>
       <br />
       {{ form.password1 }}
@@ -31,6 +34,7 @@
         <b>Alert: </b>{{ form.password1.errors}}
       {% endif %}
       <br />
+      <i class="fa fa-lock color-blue-system"></i>
       <label>{{ form.password2.label }}</label>
       <br />
       {{ form.password2 }}
@@ -40,6 +44,7 @@
       {% endif %}
     </div>
     <div class="col-sm-4">
+      <i class="fa fa-envelope color-blue-system"></i>
       <label>{{ form.email.label }}</label>
       <br />
       {{ form.email }}
@@ -48,6 +53,7 @@
         <b>Alert: </b>{{ form.email.errors}}
       {% endif %}
       <br />
+      <i class="fa fa-list-alt color-blue-system"></i>
       <label>{{ form.last_name.label }}</label>
       <br />
       {{ form.last_name }}
@@ -56,6 +62,7 @@
         <b>Alert: </b>{{ form.last_name.errors}}
       {% endif %}
       <br />
+      <i class="fa fa-wpforms color-blue-system"></i>
       <label>{{ form.rol.label }}</label>
       <br />
       {{ form.rol }}

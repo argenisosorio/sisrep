@@ -206,8 +206,8 @@ class ReporteForm(forms.ModelForm):
     obstaculos = forms.CharField(label='Dificultades y obstáculos', widget=Textarea(attrs={
         'class':'form-control input-md',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'required': 'True',
-    }), required = True)
+        'required': 'False',
+    }), required = False)
 
     nombre_trab_1 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
         'class':'form-control input-md',

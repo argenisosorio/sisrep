@@ -9,7 +9,7 @@
   <form action="{% url 'usuarios:login' %}" method="post">{% csrf_token %}
     <br />
     <b>Usuario</b><br />
-    <span class="glyphicon glyphicon-user"></span>
+    <span class="glyphicon glyphicon-user color-blue-system"></span>
     {{ form.username }}
     <br />
     {% if form.username.errors %}
@@ -17,7 +17,7 @@
     {% endif %}
     <b>Contraseña</b>
     <br />
-    <span class="glyphicon glyphicon-lock"></span>
+    <span class="glyphicon glyphicon-lock color-blue-system"></span>
     {{ form.password }}
     <br />
     {% if form.password.errors %}
