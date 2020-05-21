@@ -6,47 +6,48 @@
 <br />
 <form method="post">{% csrf_token %}
   <div class="well">
-
+    <i class="fa fa-file-text-o color-blue-system"></i>
     <b>{{ form.autor.label }}</b>
     {{ form.autor }}
     {% if form.autor.errors %}
       <p>{{ form.autor.errors}}</p>
     {% endif %}
-
+    <i class="fa fa-file-text-o color-blue-system"></i>
     <b>{{ form.nombre_proyecto_poa.label }}</b>
     {{ form.nombre_proyecto_poa }}
     {% if form.nombre_proyecto_poa.errors %}
       <p>{{ form.nombre_proyecto_poa.errors}}</p>
     {% endif %}
-
-    <br />
-
+    <i class="fa fa-file-text-o color-blue-system"></i>
     <b>{{ form.nombre_accion_especifica.label }}</b>
     {{ form.nombre_accion_especifica }}
     {% if form.nombre_accion_especifica.errors %}
       <p>{{ form.nombre_accion_especifica.errors}}</p>
     {% endif %}
-
     <div class="row">
       <div class="col-sm-6">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_producto.label }}</b>
         {{ form.nombre_producto }}
         {% if form.nombre_producto.errors %}
           <p>{{ form.nombre_producto.errors}}</p>
         {% endif %}
         <br />
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_director.label }}</b>
         {{ form.nombre_director }}
         {% if form.nombre_director.errors %}
           <p>{{ form.nombre_director.errors}}</p>
         {% endif %}
         <br />
+        <i class="fa fa-calendar color-blue-system"></i>
         <b>{{ form.fecha_entrega.label }}</b>
         {{ form.fecha_entrega }}
         {% if form.fecha_entrega.errors %}
           <p>{{ form.fecha_entrega.errors}}</p>
         {% endif %}
         <br />
+        <i class="fa fa-rocket color-blue-system"></i>
         <b>{{ form.tipo_producto.label }}</b>
         {{ form.tipo_producto }}
         {% if form.tipo_producto.errors %}
@@ -54,18 +55,21 @@
         {% endif %}
       </div>
       <div class="col-sm-6">
+        <i class="fa fa-calendar color-blue-system"></i>
         <b>{{ form.ano_ejecucion.label }}</b>
         {{ form.ano_ejecucion }}
         {% if form.ano_ejecucion.errors %}
           <p>{{ form.ano_ejecucion.errors}}</p>
         {% endif %}
         <br />
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_caravisible.label }}</b>
         {{ form.nombre_caravisible }}
         {% if form.nombre_caravisible.errors %}
           <p>{{ form.nombre_caravisible.errors}}</p>
         {% endif %}
         <br />
+        <i class="fa fa-group fa-group-small color-blue-system"></i>
         <b>{{ form.integrantes_equipo.label }}</b>
         {{ form.integrantes_equipo }}
         {% if form.integrantes_equipo.errors %}
@@ -74,52 +78,52 @@
       </div>
     </div>
   </div>
-
-  <!-- Accordion Panel Example
-  ================================================== -->
-  <h3>Actividades</h3>
+<!-- Accordion Panel Example
+================================================== -->
+<h3>Actividades</h3>
   <div class="panel-group" id="accordion">
     <div class="panel panel-default">
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 1 - Conceptualización o Justificación
+           Actividad 1 - {{ form.nombre_act_1.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
     <div id="collapse1" class="panel-collapse collapse">
       <div class="panel-body">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_act_1.label }}</b>
         {{ form.nombre_act_1 }}
         {% if form.nombre_act_1.errors %}
           <p>{{ form.nombre_act_1.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.fecha_entrega_act_1.label }}</b>
         {{ form.fecha_entrega_act_1 }}
         {% if form.fecha_entrega_act_1.errors %}
           <p>{{ form.fecha_entrega_act_1.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.resp_act_1.label }}</b>
         {{ form.resp_act_1 }}
         {% if form.resp_act_1.errors %}
           <p>{{ form.resp_act_1.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_act_1.label }}</b>
         {{ form.porc_act_1 }}
         {% if form.porc_act_1.errors %}
           <p>{{ form.porc_act_1.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_avan_act_1.label }}</b>
         {{ form.porc_avan_act_1 }}
         {% if form.porc_avan_act_1.errors %}
           <p>{{ form.porc_avan_act_1.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-link color-blue-system"></i>
         <b>{{ form.enlace_ver_act_1.label }}</b>
         {{ form.enlace_ver_act_1 }}
         {% if form.enlace_ver_avan_act_1.errors %}
@@ -134,43 +138,44 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 2 - Diseño Instruccional
+           Actividad 2 - {{ form.nombre_act_2.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
     <div id="collapse2" class="panel-collapse collapse">
       <div class="panel-body">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_act_2.label }}</b>
         {{ form.nombre_act_2 }}
         {% if form.nombre_act_2.errors %}
           <p>{{ form.nombre_act_2.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.fecha_entrega_act_2.label }}</b>
         {{ form.fecha_entrega_act_2 }}
         {% if form.fecha_entrega_act_2.errors %}
           <p>{{ form.fecha_entrega_act_2.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.resp_act_2.label }}</b>
         {{ form.resp_act_2 }}
         {% if form.resp_act_2.errors %}
           <p>{{ form.resp_act_2.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_act_2.label }}</b>
         {{ form.porc_act_2 }}
         {% if form.porc_act_2.errors %}
           <p>{{ form.porc_act_2.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_avan_act_2.label }}</b>
         {{ form.porc_avan_act_2 }}
         {% if form.porc_avan_act_2.errors %}
           <p>{{ form.porc_avan_act_2.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-link color-blue-system"></i>
         <b>{{ form.enlace_ver_act_2.label }}</b>
         {{ form.enlace_ver_act_2 }}
         {% if form.enlace_ver_avan_act_2.errors %}
@@ -185,43 +190,44 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 3 - Desarrollo de objetos de aprendizaje
+           Actividad 3 - {{ form.nombre_act_3.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
     <div id="collapse3" class="panel-collapse collapse">
       <div class="panel-body">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_act_3.label }}</b>
         {{ form.nombre_act_3 }}
         {% if form.nombre_act_3.errors %}
           <p>{{ form.nombre_act_3.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.fecha_entrega_act_3.label }}</b>
         {{ form.fecha_entrega_act_3 }}
         {% if form.fecha_entrega_act_3.errors %}
           <p>{{ form.fecha_entrega_act_3.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.resp_act_3.label }}</b>
         {{ form.resp_act_3 }}
         {% if form.resp_act_3.errors %}
           <p>{{ form.resp_act_3.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_act_3.label }}</b>
         {{ form.porc_act_3 }}
         {% if form.porc_act_3.errors %}
           <p>{{ form.porc_act_3.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_avan_act_3.label }}</b>
         {{ form.porc_avan_act_3 }}
         {% if form.porc_avan_act_3.errors %}
           <p>{{ form.porc_avan_act_3.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-link color-blue-system"></i>
         <b>{{ form.enlace_ver_act_3.label }}</b>
         {{ form.enlace_ver_act_3 }}
         {% if form.enlace_ver_avan_act_3.errors %}
@@ -230,49 +236,50 @@
       </div>
     </div>
   </div>
- <br />
+<br />
  <div class="panel-group" id="accordion">
     <div class="panel panel-default">
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 4 - Montaje del Curso en la Plataforma
+           Actividad 4 - {{ form.nombre_act_4.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
     <div id="collapse4" class="panel-collapse collapse">
       <div class="panel-body">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_act_4.label }}</b>
         {{ form.nombre_act_4 }}
         {% if form.nombre_act_4.errors %}
           <p>{{ form.nombre_act_4.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.fecha_entrega_act_4.label }}</b>
         {{ form.fecha_entrega_act_4 }}
         {% if form.fecha_entrega_act_4.errors %}
           <p>{{ form.fecha_entrega_act_4.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.resp_act_4.label }}</b>
         {{ form.resp_act_4 }}
         {% if form.resp_act_4.errors %}
           <p>{{ form.resp_act_4.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_act_4.label }}</b>
         {{ form.porc_act_4 }}
         {% if form.porc_act_4.errors %}
           <p>{{ form.porc_act_4.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_avan_act_4.label }}</b>
         {{ form.porc_avan_act_4 }}
         {% if form.porc_avan_act_4.errors %}
           <p>{{ form.porc_avan_act_4.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-link color-blue-system"></i>
         <b>{{ form.enlace_ver_act_4.label }}</b>
         {{ form.enlace_ver_act_4 }}
         {% if form.enlace_ver_avan_act_4.errors %}
@@ -287,43 +294,44 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 5 - Pruebas
+           Actividad 5 - {{ form.nombre_act_5.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
     <div id="collapse5" class="panel-collapse collapse">
       <div class="panel-body">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_act_5.label }}</b>
         {{ form.nombre_act_5 }}
         {% if form.nombre_act_5.errors %}
           <p>{{ form.nombre_act_5.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.fecha_entrega_act_5.label }}</b>
         {{ form.fecha_entrega_act_5 }}
         {% if form.fecha_entrega_act_5.errors %}
           <p>{{ form.fecha_entrega_act_5.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.resp_act_5.label }}</b>
         {{ form.resp_act_5 }}
         {% if form.resp_act_5.errors %}
           <p>{{ form.resp_act_5.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_act_5.label }}</b>
         {{ form.porc_act_5 }}
         {% if form.porc_act_5.errors %}
           <p>{{ form.porc_act_5.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_avan_act_5.label }}</b>
         {{ form.porc_avan_act_5 }}
         {% if form.porc_avan_act_5.errors %}
           <p>{{ form.porc_avan_act_5.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-link color-blue-system"></i>
         <b>{{ form.enlace_ver_act_5.label }}</b>
         {{ form.enlace_ver_act_5 }}
         {% if form.enlace_ver_avan_act_5.errors %}
@@ -338,43 +346,44 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 6 - Validación
+           Actividad 6 - {{ form.nombre_act_6.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
     <div id="collapse6" class="panel-collapse collapse">
       <div class="panel-body">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_act_6.label }}</b>
         {{ form.nombre_act_6 }}
         {% if form.nombre_act_6.errors %}
           <p>{{ form.nombre_act_6.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.fecha_entrega_act_6.label }}</b>
         {{ form.fecha_entrega_act_6 }}
         {% if form.fecha_entrega_act_6.errors %}
           <p>{{ form.fecha_entrega_act_6.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.resp_act_6.label }}</b>
         {{ form.resp_act_6 }}
         {% if form.resp_act_6.errors %}
           <p>{{ form.resp_act_6.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_act_6.label }}</b>
         {{ form.porc_act_6 }}
         {% if form.porc_act_6.errors %}
           <p>{{ form.porc_act_6.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_avan_act_6.label }}</b>
         {{ form.porc_avan_act_6 }}
         {% if form.porc_avan_act_6.errors %}
           <p>{{ form.porc_avan_act_6.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-link color-blue-system"></i>
         <b>{{ form.enlace_ver_act_6.label }}</b>
         {{ form.enlace_ver_act_6 }}
         {% if form.enlace_ver_avan_act_6.errors %}
@@ -389,43 +398,44 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 7 - Implementación del Curso
+           Actividad 7 - {{ form.nombre_act_7.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
     <div id="collapse7" class="panel-collapse collapse">
       <div class="panel-body">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_act_7.label }}</b>
         {{ form.nombre_act_7 }}
         {% if form.nombre_act_7.errors %}
           <p>{{ form.nombre_act_7.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.fecha_entrega_act_7.label }}</b>
         {{ form.fecha_entrega_act_7 }}
         {% if form.fecha_entrega_act_7.errors %}
           <p>{{ form.fecha_entrega_act_7.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.resp_act_7.label }}</b>
         {{ form.resp_act_7 }}
         {% if form.resp_act_7.errors %}
           <p>{{ form.resp_act_7.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_act_7.label }}</b>
         {{ form.porc_act_7 }}
         {% if form.porc_act_7.errors %}
           <p>{{ form.porc_act_7.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_avan_act_7.label }}</b>
         {{ form.porc_avan_act_7 }}
         {% if form.porc_avan_act_7.errors %}
           <p>{{ form.porc_avan_act_7.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-link color-blue-system"></i>
         <b>{{ form.enlace_ver_act_7.label }}</b>
         {{ form.enlace_ver_act_7 }}
         {% if form.enlace_ver_avan_act_7.errors %}
@@ -440,43 +450,44 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 8 - Gestión de Certificados
+           Actividad 8 - {{ form.nombre_act_8.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
     <div id="collapse8" class="panel-collapse collapse">
       <div class="panel-body">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_act_8.label }}</b>
         {{ form.nombre_act_8 }}
         {% if form.nombre_act_8.errors %}
           <p>{{ form.nombre_act_8.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.fecha_entrega_act_8.label }}</b>
         {{ form.fecha_entrega_act_8 }}
         {% if form.fecha_entrega_act_8.errors %}
           <p>{{ form.fecha_entrega_act_8.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.resp_act_8.label }}</b>
         {{ form.resp_act_8 }}
         {% if form.resp_act_8.errors %}
           <p>{{ form.resp_act_8.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_act_8.label }}</b>
         {{ form.porc_act_8 }}
         {% if form.porc_act_8.errors %}
           <p>{{ form.porc_act_8.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_avan_act_8.label }}</b>
         {{ form.porc_avan_act_8 }}
         {% if form.porc_avan_act_8.errors %}
           <p>{{ form.porc_avan_act_8.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-link color-blue-system"></i>
         <b>{{ form.enlace_ver_act_8.label }}</b>
         {{ form.enlace_ver_act_8 }}
         {% if form.enlace_ver_avan_act_8.errors %}
@@ -491,43 +502,44 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 9 - Evaluación de la Implementación del Curso
+           Actividad 9 - {{ form.nombre_act_9.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
     <div id="collapse9" class="panel-collapse collapse">
       <div class="panel-body">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_act_9.label }}</b>
         {{ form.nombre_act_9 }}
         {% if form.nombre_act_9.errors %}
           <p>{{ form.nombre_act_9.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.fecha_entrega_act_9.label }}</b>
         {{ form.fecha_entrega_act_9 }}
         {% if form.fecha_entrega_act_9.errors %}
           <p>{{ form.fecha_entrega_act_9.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.resp_act_9.label }}</b>
         {{ form.resp_act_9 }}
         {% if form.resp_act_9.errors %}
           <p>{{ form.resp_act_9.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_act_9.label }}</b>
         {{ form.porc_act_9 }}
         {% if form.porc_act_9.errors %}
           <p>{{ form.porc_act_9.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_avan_act_9.label }}</b>
         {{ form.porc_avan_act_9 }}
         {% if form.porc_avan_act_9.errors %}
           <p>{{ form.porc_avan_act_9.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-link color-blue-system"></i>
         <b>{{ form.enlace_ver_act_9.label }}</b>
         {{ form.enlace_ver_act_9 }}
         {% if form.enlace_ver_avan_act_9.errors %}
@@ -542,43 +554,44 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 10 - Procesos de Apropiación 
+           Actividad 10 - {{ form.nombre_act_10.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
     <div id="collapse10" class="panel-collapse collapse">
       <div class="panel-body">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_act_10.label }}</b>
         {{ form.nombre_act_10 }}
         {% if form.nombre_act_10.errors %}
           <p>{{ form.nombre_act_10.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.fecha_entrega_act_10.label }}</b>
         {{ form.fecha_entrega_act_10 }}
         {% if form.fecha_entrega_act_10.errors %}
           <p>{{ form.fecha_entrega_act_10.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.resp_act_10.label }}</b>
         {{ form.resp_act_10 }}
         {% if form.resp_act_10.errors %}
           <p>{{ form.resp_act_10.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_act_10.label }}</b>
         {{ form.porc_act_10 }}
         {% if form.porc_act_10.errors %}
           <p>{{ form.porc_act_10.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_avan_act_10.label }}</b>
         {{ form.porc_avan_act_10 }}
         {% if form.porc_avan_act_10.errors %}
           <p>{{ form.porc_avan_act_10.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-link color-blue-system"></i>
         <b>{{ form.enlace_ver_act_10.label }}</b>
         {{ form.enlace_ver_act_10 }}
         {% if form.enlace_ver_avan_act_10.errors %}
@@ -593,43 +606,44 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 11
+           Actividad 11 - {{ form.nombre_act_11.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
     <div id="collapse11" class="panel-collapse collapse">
       <div class="panel-body">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_act_11.label }}</b>
         {{ form.nombre_act_11 }}
         {% if form.nombre_act_11.errors %}
           <p>{{ form.nombre_act_11.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.fecha_entrega_act_11.label }}</b>
         {{ form.fecha_entrega_act_11 }}
         {% if form.fecha_entrega_act_11.errors %}
           <p>{{ form.fecha_entrega_act_11.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.resp_act_11.label }}</b>
         {{ form.resp_act_11 }}
         {% if form.resp_act_11.errors %}
           <p>{{ form.resp_act_11.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_act_11.label }}</b>
         {{ form.porc_act_11 }}
         {% if form.porc_act_11.errors %}
           <p>{{ form.porc_act_11.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_avan_act_11.label }}</b>
         {{ form.porc_avan_act_11 }}
         {% if form.porc_avan_act_11.errors %}
           <p>{{ form.porc_avan_act_11.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-link color-blue-system"></i>
         <b>{{ form.enlace_ver_act_11.label }}</b>
         {{ form.enlace_ver_act_11 }}
         {% if form.enlace_ver_avan_act_11.errors %}
@@ -644,43 +658,44 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 12
+           Actividad 12 - {{ form.nombre_act_12.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
     <div id="collapse12" class="panel-collapse collapse">
       <div class="panel-body">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_act_12.label }}</b>
         {{ form.nombre_act_12 }}
         {% if form.nombre_act_12.errors %}
           <p>{{ form.nombre_act_12.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.fecha_entrega_act_12.label }}</b>
         {{ form.fecha_entrega_act_12 }}
         {% if form.fecha_entrega_act_12.errors %}
           <p>{{ form.fecha_entrega_act_12.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.resp_act_12.label }}</b>
         {{ form.resp_act_12 }}
         {% if form.resp_act_12.errors %}
           <p>{{ form.resp_act_12.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_act_12.label }}</b>
         {{ form.porc_act_12 }}
         {% if form.porc_act_12.errors %}
           <p>{{ form.porc_act_12.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_avan_act_12.label }}</b>
         {{ form.porc_avan_act_12 }}
         {% if form.porc_avan_act_12.errors %}
           <p>{{ form.porc_avan_act_12.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-link color-blue-system"></i>
         <b>{{ form.enlace_ver_act_12.label }}</b>
         {{ form.enlace_ver_act_12 }}
         {% if form.enlace_ver_avan_act_12.errors %}
@@ -695,43 +710,44 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse13">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 13
+           Actividad 13 - {{ form.nombre_act_13.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
     <div id="collapse13" class="panel-collapse collapse">
       <div class="panel-body">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_act_13.label }}</b>
         {{ form.nombre_act_13 }}
         {% if form.nombre_act_13.errors %}
           <p>{{ form.nombre_act_13.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.fecha_entrega_act_13.label }}</b>
         {{ form.fecha_entrega_act_13 }}
         {% if form.fecha_entrega_act_13.errors %}
           <p>{{ form.fecha_entrega_act_13.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.resp_act_13.label }}</b>
         {{ form.resp_act_13 }}
         {% if form.resp_act_13.errors %}
           <p>{{ form.resp_act_13.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_act_13.label }}</b>
         {{ form.porc_act_13 }}
         {% if form.porc_act_13.errors %}
           <p>{{ form.porc_act_13.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_avan_act_13.label }}</b>
         {{ form.porc_avan_act_13 }}
         {% if form.porc_avan_act_13.errors %}
           <p>{{ form.porc_avan_act_13.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-link color-blue-system"></i>
         <b>{{ form.enlace_ver_act_13.label }}</b>
         {{ form.enlace_ver_act_13 }}
         {% if form.enlace_ver_avan_act_13.errors %}
@@ -746,43 +762,44 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse14">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 14
+           Actividad 14 - {{ form.nombre_act_14.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
     <div id="collapse14" class="panel-collapse collapse">
       <div class="panel-body">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_act_14.label }}</b>
         {{ form.nombre_act_14 }}
         {% if form.nombre_act_14.errors %}
           <p>{{ form.nombre_act_14.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.fecha_entrega_act_14.label }}</b>
         {{ form.fecha_entrega_act_14 }}
         {% if form.fecha_entrega_act_14.errors %}
           <p>{{ form.fecha_entrega_act_14.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.resp_act_14.label }}</b>
         {{ form.resp_act_14 }}
         {% if form.resp_act_14.errors %}
           <p>{{ form.resp_act_14.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_act_14.label }}</b>
         {{ form.porc_act_14 }}
         {% if form.porc_act_14.errors %}
           <p>{{ form.porc_act_14.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_avan_act_14.label }}</b>
         {{ form.porc_avan_act_14 }}
         {% if form.porc_avan_act_14.errors %}
           <p>{{ form.porc_avan_act_14.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-link color-blue-system"></i>
         <b>{{ form.enlace_ver_act_14.label }}</b>
         {{ form.enlace_ver_act_14 }}
         {% if form.enlace_ver_avan_act_14.errors %}
@@ -797,43 +814,44 @@
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse15">
        <div class="panel-heading">
          <h4 class="panel-title">
-           Actividad 15
+           Actividad 15 - {{ form.nombre_act_15.value }}
            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
     <div id="collapse15" class="panel-collapse collapse">
       <div class="panel-body">
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.nombre_act_15.label }}</b>
         {{ form.nombre_act_15 }}
         {% if form.nombre_act_15.errors %}
           <p>{{ form.nombre_act_15.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.fecha_entrega_act_15.label }}</b>
         {{ form.fecha_entrega_act_15 }}
         {% if form.fecha_entrega_act_15.errors %}
           <p>{{ form.fecha_entrega_act_15.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-file-text-o color-blue-system"></i>
         <b>{{ form.resp_act_15.label }}</b>
         {{ form.resp_act_15 }}
         {% if form.resp_act_15.errors %}
           <p>{{ form.resp_act_15.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_act_15.label }}</b>
         {{ form.porc_act_15 }}
         {% if form.porc_act_15.errors %}
           <p>{{ form.porc_act_15.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-bar-chart-o color-blue-system"></i>
         <b>{{ form.porc_avan_act_15.label }}</b>
         {{ form.porc_avan_act_15 }}
         {% if form.porc_avan_act_15.errors %}
           <p>{{ form.porc_avan_act_15.errors}}</p>
         {% endif %}
-
+        <i class="fa fa-link color-blue-system"></i>
         <b>{{ form.enlace_ver_act_15.label }}</b>
         {{ form.enlace_ver_act_15 }}
         {% if form.enlace_ver_avan_act_15.errors %}
@@ -843,8 +861,6 @@
     </div>
   </div>
 </div>
-  <!-- Accordion Panel Example end -->
-
-  <button class="btn btn-success" type="submit">GUARDAR</button>
+<button class="btn btn-success" type="submit">GUARDAR</button>
 </form>
 {% endblock %}
