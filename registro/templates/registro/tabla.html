@@ -62,7 +62,9 @@
         <td class="text-center td_botonera_tabla">
           <div class="row">
             <div class="col-sm-12">
-              <a href="{% url 'registro:editar_reporte' x.id %}" title="Editar"><i class="glyphicon glyphicon-pencil"></i></a>
+              {% if x.estatus == "act" %}
+                <a href="{% url 'registro:editar_reporte' x.id %}" title="Editar"><i class="glyphicon glyphicon-pencil"></i></a>
+              {% endif %}
               <a href="{% url 'registro:detallar_reporte' x.id %}" title="Detallar"><i class="glyphicon glyphicon-eye-open"></i></a>
             </div>
           </div>
