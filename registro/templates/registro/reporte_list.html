@@ -3,11 +3,28 @@
 {% block cuerpo %}
 <br />
 <h1><a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a>Lista de reportes de tareas</h1>
-<br />
-<a href="{% url 'registro:registrar_reporte' %}">
-  <button class="btn btn-success">REGISTRAR</button>
-</a>
-<br />
-<br />
+{% if user.is_superuser and user.is_staff and user.is_active %}
+  <br />
+  <a href="{% url 'registro:registrar_reporte' %}">
+    <button class="btn btn-success">REGISTRAR</button>
+  </a>
+  <br />
+  <br />
+{% else %}
+  {% if user.is_staff and user.is_active %}
+  <br />
+  {% else %}
+    {% if user.is_active %}
+      <br />
+      <a href="{% url 'registro:registrar_reporte' %}">
+        <button class="btn btn-success">REGISTRAR</button>
+      </a>
+      <br />
+      <br />
+    {% else %}
+      xxx
+    {% endif %}
+  {% endif %}
+{% endif %}
 {% include 'registro/tabla.html' %}
 {% endblock %}
