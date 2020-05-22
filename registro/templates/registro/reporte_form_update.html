@@ -18,6 +18,15 @@
   </div>
   <div class="">
     <i class="fa fa-file-text-o color-blue-system"></i>
+    <b>{{ form.estatus.label }}</b>
+    <br />
+    {{ form.estatus }}
+    {% if form.estatus.errors %}
+      <p>{{ form.estatus.errors}}</p>
+    {% endif %}
+  </div>
+  <div class="">
+    <i class="fa fa-file-text-o color-blue-system"></i>
     <b>{{ form.nombre_proyecto.label }}</b>
     <br />
     {{ form.nombre_proyecto }}

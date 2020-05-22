@@ -23,3 +23,7 @@ usuarios = (
     ('is_staff', 'Director'),
     ('is_superuser', 'Analista'),
 )
+estatus_reportes_tareas = (
+    ('act', 'Activo'),
+    ('ina', 'Inactivo'),
+)

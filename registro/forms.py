@@ -509,6 +509,12 @@ class ReporteForm(forms.ModelForm):
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
+    estatus = forms.ChoiceField(label='Estatus del reporte', widget=Select(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+        'required': 'False',
+    }), choices = estatus_reportes_tareas)
+
     class Meta:
 
         model = Reporte

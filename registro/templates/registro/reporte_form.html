@@ -6,6 +6,7 @@
 <br />
 <form method="post">{% csrf_token %}
   <input id="id_autor" name="autor" required="True" type="text" value="{{ user.username }}" />
+  <input id="id_estatus" name="estatus" required="True" type="text" value="act" style="display: none;" />
   {{ form.fecha_registro_reporte }}
   <div class="">
     <i class="fa fa-file-text-o color-blue-system"></i>

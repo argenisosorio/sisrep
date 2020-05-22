@@ -2,10 +2,11 @@
 {% block titulo %}Actualizar reporte de tareas{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="{{ request.META.HTTP_REFERER }}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Actualizar reporte de tareas</h1>
+<h1><a href="{% url 'registro:consultar_reporte' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Actualizar reporte de tareas</h1>
 <br />
 <form method="post">{% csrf_token %}   
   <input id="id_autor" name="autor" required="True" type="text" value="{{ user.username }}" />
+  <input id="id_estatus" name="estatus" required="True" type="text" value="{{ form.estatus.value }}" style="display: none;" />
   {{ form.fecha_registro_reporte }}
   <div class="">
     <i class="fa fa-file-text-o color-blue-system"></i>
@@ -1051,7 +1052,9 @@
       </div>
     </div>
   </div>
-  <br>
-  <button class="btn btn-success" type="submit">ACTUALIZAR</button>
+  {% if form.estatus.value = "act" %}
+    <br>
+    <button class="btn btn-success" type="submit">ACTUALIZAR</button>
+  {% endif %}
 </form>
 {% endblock %}

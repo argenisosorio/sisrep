@@ -144,6 +144,7 @@ class Reporte(models.Model):
     act_rea_trab_15 = models.CharField(max_length=5000, blank=True,null=True)
     enlaces_trab_15 = models.CharField(max_length=5000, blank=True,null=True)
     fecha_registro_reporte = models.DateField(default=datetime.now)
+    estatus = models.CharField(max_length=400,default="act")
 
     def __unicode__(self):
         return self.autor
