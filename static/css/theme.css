@@ -877,3 +877,9 @@ textarea {
   border-color: #275a9b;
   outline: 0;
 }
+#example_filter {
+  color: #000000;
+}
+#example_length {
+  color: #000000;
+}
