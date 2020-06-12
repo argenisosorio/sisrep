@@ -549,7 +549,14 @@ class Editar_reporte(SuccessMessageMixin,UpdateView):
             return super(Editar_reporte, self).get(request, *args, **kwargs)
         else:
             if str(self.object) == str(self.request.user):
-                return super(Editar_reporte, self).get(request, *args, **kwargs)
+                if str(self.object.estatus) == "act":
+                    """
+                    Validación del reporte, si está inactivo no tiene permiso de editar.
+                    """
+                    return super(Editar_reporte, self).get(request, *args, **kwargs)
+                else:
+                    messages_alert = ['No tiene permisos para editar el reporte']
+                    return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
             else:
                 messages_alert = ['No tiene permisos para editar el reporte']
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))

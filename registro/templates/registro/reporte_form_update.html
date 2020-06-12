@@ -82,47 +82,23 @@
       </div>
     </div>
   </div>
-  <div class="panel-group" id="accordion">
-    <div class="panel panel-default">
-      <a data-toggle="collapse" data-parent="#accordion" href="#collapse16">
-        <div class="panel-heading">
-          <b class="panel-title">
-            <i class="fa fa-file-text-o color-blue-system"></i>
-            {{ form.desc_avance.label }}
-            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
-          </b>
-        </div>
-      </a>
-      <div id="collapse16" class="panel-collapse collapse">
-        <div class="panel-body">
-          {{ form.desc_avance }}
-          {% if form.desc_avance.errors %}
-          <p>{{ form.desc_avance.errors}}</p>
-          {% endif %}
-        </div>
-      </div>
-    </div>
+  <div class="">
+    <i class="fa fa-file-text-o color-blue-system"></i>
+    <b>{{ form.desc_avance.label }}</b>
+    <br />
+    {{ form.desc_avance }}
+    {% if form.desc_avance.errors %}
+      <p>{{ form.desc_avance.errors}}</p>
+    {% endif %}
   </div>
-  <div class="panel-group" id="accordion">
-    <div class="panel panel-default">
-      <a data-toggle="collapse" data-parent="#accordion" href="#collapse17">
-        <div class="panel-heading">
-          <b class="panel-title">
-            <i class="fa fa-file-text-o color-blue-system"></i>
-            {{ form.obstaculos.label }}
-            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
-          </b>
-        </div>
-      </a>
-      <div id="collapse17" class="panel-collapse collapse">
-        <div class="panel-body">
-          {{ form.obstaculos }}
-          {% if form.obstaculos.errors %}
-            <p>{{ form.obstaculos.errors}}</p>
-          {% endif %}
-        </div>
-      </div>
-    </div>
+  <div class="">
+    <i class="fa fa-file-text-o color-blue-system"></i>
+    <b>{{ form.obstaculos.label }}</b>
+    <br />
+    {{ form.obstaculos }}
+    {% if form.obstaculos.errors %}
+      <p>{{ form.obstaculos.errors}}</p>
+    {% endif %}
   </div>
   <h3>Integrantes del equipo</h3>
   <div class="panel-group" id="accordion">
