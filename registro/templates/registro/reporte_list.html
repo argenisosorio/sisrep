@@ -2,7 +2,7 @@
 {% block titulo %}Lista de reportes de tareas{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a>Lista de reportes de tareas</h1>
+<h1><a href="{% url 'registro:buscar' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a>Lista de reportes de tareas</h1>
 {% if user.is_superuser and user.is_staff and user.is_active %}
   <br />
   <a href="{% url 'registro:registrar_reporte' %}">

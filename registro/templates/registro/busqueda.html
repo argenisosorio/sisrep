@@ -7,8 +7,6 @@
   <a href="{% url 'registro:registrar_reporte' %}">
     <button class="btn btn-success">REGISTRAR</button>
   </a>
-  <br />
-  <br />
 {% else %}
   {% if user.is_staff and user.is_active %}
   <br />
@@ -18,8 +16,6 @@
       <a href="{% url 'registro:registrar_reporte' %}">
         <button class="btn btn-success">REGISTRAR</button>
       </a>
-      <br />
-      <br />
     {% else %}
       xxx
     {% endif %}
