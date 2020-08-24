@@ -664,16 +664,135 @@ def busqueda(request):
     if 'ano' in request.GET and request.GET['ano'] and 'mes' in request.GET and request.GET['mes']:
         ano = request.GET['ano']
         mes = request.GET['mes']
-        reportes_ano = Reporte.objects.filter(ano__icontains=ano)
         if request.user.is_superuser:
-            reportes = reportes_ano.filter(mes__icontains=mes)
-            return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
-        else:
-            if request.user.is_staff:
-                reportes = reportes_ano.filter(mes__icontains=mes)
+            if ano == "Todos" and mes == "Todos":
+                reportes = Reporte.objects.all()
+                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+            if ano == "Todos" and mes == "Enero":
+                reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+            if ano == "Todos" and mes == "Febrero":
+                reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+            if ano == "Todos" and mes == "Marzo":
+                reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+            if ano == "Todos" and mes == "Abril":
+                reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+            if ano == "Todos" and mes == "Mayo":
+                reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+            if ano == "Todos" and mes == "Junio":
+                reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+            if ano == "Todos" and mes == "Julio":
+                reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+            if ano == "Todos" and mes == "Agosto":
+                reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+            if ano == "Todos" and mes == "Septiembre":
+                reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+            if ano == "Todos" and mes == "Octubre":
+                reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+            if ano == "Todos" and mes == "Noviembre":
+                reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+            if ano == "Todos" and mes == "Diciembre":
+                reportes = Reporte.objects.all().filter(mes__icontains=mes)
                 return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
             else:
-                reportes = reportes_ano.filter(mes__icontains=mes, autor=str(request.user))
+                reportes = reportes_ano.filter(mes__icontains=mes)
                 return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+        else:
+            if request.user.is_staff:
+                if ano == "Todos" and mes == "Todos":
+                    reportes = Reporte.objects.all()
+                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Enero":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Febrero":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Marzo":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Abril":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Mayo":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Junio":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Julio":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Agosto":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Septiembre":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Octubre":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Noviembre":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Diciembre":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes)
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                else:
+                    reportes = reportes_ano.filter(mes__icontains=mes)
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+            else:
+                if ano == "Todos" and mes == "Todos":
+                    reportes = Reporte.objects.all()
+                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Enero":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes, autor=str(request.user))
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Febrero":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes, autor=str(request.user))
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Marzo":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes, autor=str(request.user))
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Abril":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes, autor=str(request.user))
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Mayo":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes, autor=str(request.user))
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Junio":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes, autor=str(request.user))
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Julio":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes, autor=str(request.user))
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Agosto":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes, autor=str(request.user))
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Septiembre":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes, autor=str(request.user))
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Octubre":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes, autor=str(request.user))
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Noviembre":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes, autor=str(request.user))
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                if ano == "Todos" and mes == "Diciembre":
+                    reportes = Reporte.objects.all().filter(mes__icontains=mes, autor=str(request.user))
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                else:
+                    reportes = reportes_ano.filter(mes__icontains=mes, autor=str(request.user))
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
     else:
         return HttpResponse('Por favor introduce un termino de búsqueda.')

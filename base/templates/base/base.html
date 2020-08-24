@@ -168,17 +168,17 @@
         <br />
         <br />
         {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
-          <a href="{% url 'registro:consultar_reporte' %}" data-toggle="tooltip" title="Tareas">
+          <a href="{% url 'registro:buscar' %}" data-toggle="tooltip" title="Tareas">
             <i class="fa fa-tags color-white"></i>
           </a>
           {% else %}
             {% if request.user.is_staff and request.user.is_active %}
-              <a href="{% url 'registro:consultar_reporte' %}" data-toggle="tooltip" title="Tareas">
+              <a href="{% url 'registro:buscar' %}" data-toggle="tooltip" title="Tareas">
                 <i class="fa fa-tags color-white"></i>
               </a>
             {% else %}
             {% if request.user.is_active %}
-              <a href="{% url 'registro:consultar_reporte' %}" data-toggle="tooltip" title="Tareas">
+              <a href="{% url 'registro:buscar' %}" data-toggle="tooltip" title="Tareas">
                 <i class="fa fa-tags color-white"></i>
               </a>
             {% endif %}

@@ -2,6 +2,29 @@
 {% block titulo %}Resultados de la búsqueda{% endblock %}
 {% block cuerpo %}
 <br />
+{% if user.is_superuser and user.is_staff and user.is_active %}
+  <br />
+  <a href="{% url 'registro:registrar_reporte' %}">
+    <button class="btn btn-success">REGISTRAR</button>
+  </a>
+  <br />
+  <br />
+{% else %}
+  {% if user.is_staff and user.is_active %}
+  <br />
+  {% else %}
+    {% if user.is_active %}
+      <br />
+      <a href="{% url 'registro:registrar_reporte' %}">
+        <button class="btn btn-success">REGISTRAR</button>
+      </a>
+      <br />
+      <br />
+    {% else %}
+      xxx
+    {% endif %}
+  {% endif %}
+{% endif %}
 <h1><a href="{% url 'registro:buscar' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Resultados de la búsqueda</h1>
 <br />
 {% if reportes %}
@@ -17,6 +40,7 @@
         <th class="text-center">Mes</th>
         <th class="text-center">Año</th>
         <th class="text-center">Registrado</th>
+        <th class="text-center">Estatus</th>
         <th class="text-center">Acciones</th>
       </tr>
     </thead>
@@ -29,6 +53,14 @@
       <td class="text-center">{{ x.mes }}</td>
       <td class="text-center">{{ x.ano }}</td>
       <td class="text-center">{{ x.fecha_registro_reporte }}</td>
+      {% if user.is_superuser and user.is_staff and user.is_active %}
+        {% if x.estatus == "act" %}
+          <td class="text-center">Activo</td>
+        {% elif x.estatus == "ina" %}
+          <td class="text-center">Inactivo</td>
+        {% else %}
+        {% endif %}
+      {% endif %}
       {% if request.user.is_superuser %}
       <td class="text-center td_botonera_tabla">
         <div class="row">
