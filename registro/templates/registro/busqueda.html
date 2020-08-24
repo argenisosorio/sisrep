@@ -2,11 +2,18 @@
 {% block titulo %}Resultados de la búsqueda{% endblock %}
 {% block cuerpo %}
 <br />
+<h1><a href="{% url 'registro:buscar' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Resultados de la búsqueda</h1>
+<br />
+{% if reportes %}
+  <h4>Estas buscado reportes de tareas del año <strong>{{ query }}</strong> en el mes de <strong>{{ query2}}</strong></h4>
+  <p>Reportes encontrados: <strong>{{ reportes|length }}</strong></p>
 {% if user.is_superuser and user.is_staff and user.is_active %}
   <br />
   <a href="{% url 'registro:registrar_reporte' %}">
     <button class="btn btn-success">REGISTRAR</button>
   </a>
+  <br>
+  <br>
 {% else %}
   {% if user.is_staff and user.is_active %}
   <br />
@@ -16,16 +23,13 @@
       <a href="{% url 'registro:registrar_reporte' %}">
         <button class="btn btn-success">REGISTRAR</button>
       </a>
+      <br>
+      <br>
     {% else %}
       xxx
     {% endif %}
   {% endif %}
 {% endif %}
-<h1><a href="{% url 'registro:buscar' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Resultados de la búsqueda</h1>
-<br />
-{% if reportes %}
-  <h4>Estas buscado reportes de tareas del año <strong>{{ query }}</strong> en el mes de <strong>{{ query2}}</strong></h4>
-  <p>Reportes encontrados: <strong>{{ reportes|length }}</strong></p>
   <br />
   <table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
     <thead>
