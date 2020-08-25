@@ -721,7 +721,7 @@ def busqueda(request):
             if request.user.is_staff:
                 if ano == "Todos" and mes == "Todos":
                     reportes = Reporte.objects.all()
-                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
                 if ano == "Todos" and mes == "Enero":
                     reportes = Reporte.objects.all().filter(mes__icontains=mes)
                     return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
