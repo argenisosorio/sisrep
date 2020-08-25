@@ -664,6 +664,7 @@ def busqueda(request):
     if 'ano' in request.GET and request.GET['ano'] and 'mes' in request.GET and request.GET['mes']:
         ano = request.GET['ano']
         mes = request.GET['mes']
+        reportes_ano = Reporte.objects.filter(ano__icontains=ano)
         if request.user.is_superuser:
             if ano == "Todos" and mes == "Todos":
                 reportes = Reporte.objects.all()
