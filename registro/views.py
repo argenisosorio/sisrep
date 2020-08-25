@@ -772,8 +772,8 @@ def busqueda(request):
                     return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
             else:
                 if ano == "Todos" and mes == "Todos":
-                    reportes = Reporte.objects.all()
-                return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
+                    reportes = Reporte.objects.all().filter(autor=str(request.user))
+                    return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
                 if ano == "Todos" and mes == "Enero":
                     reportes = Reporte.objects.all().filter(mes__icontains=mes, autor=str(request.user))
                     return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
@@ -811,13 +811,13 @@ def busqueda(request):
                     reportes = Reporte.objects.all().filter(mes__icontains=mes, autor=str(request.user))
                     return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
                 if ano == "2020" and mes == "Todos":
-                    reportes = reportes_ano.all().filter(ano__icontains=ano)
+                    reportes = reportes_ano.all().filter(ano__icontains=ano, autor=str(request.user))
                     return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
                 if ano == "2019" and mes == "Todos":
-                    reportes = reportes_ano.all().filter(ano__icontains=ano)
+                    reportes = reportes_ano.all().filter(ano__icontains=ano, autor=str(request.user))
                     return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
                 if ano == "2018" and mes == "Todos":
-                    reportes = reportes_ano.all().filter(ano__icontains=ano)
+                    reportes = reportes_ano.all().filter(ano__icontains=ano, autor=str(request.user))
                     return render(request, 'registro/busqueda.html',  {'reportes': reportes, 'query': ano,'query2': mes})
                 else:
                     reportes = reportes_ano.filter(mes__icontains=mes, autor=str(request.user))

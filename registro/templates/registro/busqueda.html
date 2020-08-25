@@ -40,7 +40,9 @@
         <th class="text-center">Mes</th>
         <th class="text-center">Año</th>
         <th class="text-center">Registrado</th>
-        <th class="text-center">Estatus</th>
+        {% if user.is_superuser and user.is_staff and user.is_active %}
+          <th class="text-center">Estatus</th>
+        {% endif %}
         <th class="text-center">Acciones</th>
       </tr>
     </thead>
