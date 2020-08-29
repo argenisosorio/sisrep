@@ -2,7 +2,33 @@
 {% block titulo %}Buscar reportes de tareas{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Consultar reportes de tareas</h1>
+{% if user.is_superuser and user.is_staff and user.is_active %}
+  <h1><a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a>Gestión de tareas</h1>
+  <br />
+  <a href="{% url 'registro:registrar_reporte' %}">
+    <button class="btn btn-success">REGISTRAR</button>
+  </a>
+  <br>
+  <hr>
+  <h2>Buscar reporte de tareas</h2>
+{% else %}
+  {% if user.is_staff and user.is_active %}
+    <h1><a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a>Buscar reporte de tareas</h1>
+  {% else %}
+    {% if user.is_active %}
+      <h1><a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a>Gestión de tareas</h1>
+      <br />
+      <a href="{% url 'registro:registrar_reporte' %}">
+        <button class="btn btn-success">REGISTRAR</button>
+      </a>
+      <br>
+      <hr>
+      <h2>Buscar reporte de tareas</h2>
+    {% else %}
+      xxx
+    {% endif %}
+  {% endif %}
+{% endif %}
 <br />
 <form action="{% url 'registro:busqueda' %}" method="get">
 <div class="row">
