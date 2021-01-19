@@ -108,9 +108,6 @@ $("document").ready(function () {
   });
 });
 
-let enlaces = document.querySelector('.area_enlaces');
-console.log(enlaces[enlaces.length-1])
-
 /*
 |-------------------------------------------------------------
 | Función que permite cargar el calendario en el formulario de
