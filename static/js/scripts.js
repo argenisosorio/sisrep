@@ -103,10 +103,13 @@ $("document").ready(function () {
   var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
   var exp2 =/(^|[^\/])(www\.[\S]+(\b|$))/gim;
   $(".area_enlaces").each(function (index){
-    var text1=$(this).text().replace(exp, "<a href='$1'>$1</a>");
-    $(this).html(text1.replace(exp2, '$1<a target="_blank"href="http://$2">$2</a>'));
+    var text1=$(this).text().replace(exp, "<a href='$1'>$1</a><br><br>");
+    $(this).html(text1.replace(exp2, '$1<a target="_blank"href="http://$2">$2</a><br><br>'));
   });
 });
+
+let enlaces = document.querySelector('.area_enlaces');
+console.log(enlaces[enlaces.length-1])
 
 /*
 |-------------------------------------------------------------

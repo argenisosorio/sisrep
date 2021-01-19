@@ -883,3 +883,6 @@ textarea {
 #example_length {
   color: #000000;
 }
+.area_enlaces {
+  word-break: break-all;
+}
