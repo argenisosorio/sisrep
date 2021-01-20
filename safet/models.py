@@ -144,7 +144,7 @@ class ReporteAvances(models.Model):
     def sumatoria_por_avan(self):
         sumatoria_por_avan = self.porc_avan_act_1+self.porc_avan_act_2+self.porc_avan_act_3+self.porc_avan_act_4+self.porc_avan_act_5+self.porc_avan_act_6+self.porc_avan_act_7+self.porc_avan_act_8+self.porc_avan_act_9+self.porc_avan_act_10+self.porc_avan_act_11+self.porc_avan_act_12+self.porc_avan_act_13+self.porc_avan_act_14+self.porc_avan_act_15
         if sumatoria_por_avan <= 100:
-            return sumatoria_por_avan
+            return str(sumatoria_por_avan)
 
     def __unicode__(self):
         return self.autor
