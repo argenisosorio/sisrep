@@ -125,25 +125,26 @@ class ReporteAvances(models.Model):
     porc_act_14 = models.CharField(max_length=100, blank=True,null=True)
     porc_act_15 = models.CharField(max_length=100, blank=True,null=True)
     # Porcentaje de avance de las actividades del proyecto.
-    porc_avan_act_1 = models.IntegerField()
-    porc_avan_act_2 = models.IntegerField()
-    porc_avan_act_3 = models.IntegerField()
-    porc_avan_act_4 = models.IntegerField()
-    porc_avan_act_5 = models.IntegerField()
-    porc_avan_act_6 = models.IntegerField()
-    porc_avan_act_7 = models.IntegerField()
-    porc_avan_act_8 = models.IntegerField()
-    porc_avan_act_9 = models.IntegerField()
-    porc_avan_act_10 = models.IntegerField()
-    porc_avan_act_11 = models.IntegerField()
-    porc_avan_act_12 = models.IntegerField()
-    porc_avan_act_13 = models.IntegerField()
-    porc_avan_act_14 = models.IntegerField()
-    porc_avan_act_15 = models.IntegerField()
+    porc_avan_act_1 = models.DecimalField(max_digits=3, decimal_places=1)
+    porc_avan_act_2 = models.DecimalField(max_digits=3, decimal_places=1)
+    porc_avan_act_3 = models.DecimalField(max_digits=3, decimal_places=1)
+    porc_avan_act_4 = models.DecimalField(max_digits=3, decimal_places=1)
+    porc_avan_act_5 = models.DecimalField(max_digits=3, decimal_places=1)
+    porc_avan_act_6 = models.DecimalField(max_digits=3, decimal_places=1)
+    porc_avan_act_7 = models.DecimalField(max_digits=3, decimal_places=1)
+    porc_avan_act_8 = models.DecimalField(max_digits=3, decimal_places=1)
+    porc_avan_act_9 = models.DecimalField(max_digits=3, decimal_places=1)
+    porc_avan_act_10 = models.DecimalField(max_digits=3, decimal_places=1)
+    porc_avan_act_11 = models.DecimalField(max_digits=3, decimal_places=1)
+    porc_avan_act_12 = models.DecimalField(max_digits=3, decimal_places=1)
+    porc_avan_act_13 = models.DecimalField(max_digits=3, decimal_places=1)
+    porc_avan_act_14 = models.DecimalField(max_digits=3, decimal_places=1)
+    porc_avan_act_15 = models.DecimalField(max_digits=3, decimal_places=1)
 
     def sumatoria_por_avan(self):
         sumatoria_por_avan = self.porc_avan_act_1+self.porc_avan_act_2+self.porc_avan_act_3+self.porc_avan_act_4+self.porc_avan_act_5+self.porc_avan_act_6+self.porc_avan_act_7+self.porc_avan_act_8+self.porc_avan_act_9+self.porc_avan_act_10+self.porc_avan_act_11+self.porc_avan_act_12+self.porc_avan_act_13+self.porc_avan_act_14+self.porc_avan_act_15
-        return sumatoria_por_avan
+        if sumatoria_por_avan <= 100:
+            return sumatoria_por_avan
 
     def __unicode__(self):
         return self.autor

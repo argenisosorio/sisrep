@@ -534,7 +534,8 @@ $("document").ready(function (){
   for (var i=0; i<Lista.length; i++){  
     contador=contador+Lista[i];
   }
-  suma_porc_act = contador;
+  if (contador <= 100)
+    suma_porc_act = contador;
   $(".suma").html(suma_porc_act+" %");
 });
 </script>
