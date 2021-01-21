@@ -128,7 +128,7 @@
     {% if reporteavances.nombre_act_1 %}
     <tr class="text-center">
       <td>1</td>
-      <td>
+      <td class="text-left">
         {{ reporteavances.nombre_act_1 }}
       </td>
       <td>
@@ -151,7 +151,7 @@
     {% if reporteavances.nombre_act_2 %}
     <tr class="text-center">
       <td>2</td>
-      <td>
+      <td class="text-left">
         {{ reporteavances.nombre_act_2 }}
       </td>
       <td>
@@ -174,7 +174,7 @@
     {% if reporteavances.nombre_act_3 %}
     <tr class="text-center">
       <td>3</td>
-      <td>
+      <td class="text-left">
         {{ reporteavances.nombre_act_3 }}
       </td>
       <td>
@@ -197,7 +197,7 @@
     {% if reporteavances.nombre_act_4 %}
     <tr class="text-center">
       <td>4</td>
-      <td>
+      <td class="text-left">
         {{ reporteavances.nombre_act_4 }}
       </td>
       <td>
@@ -220,7 +220,7 @@
     {% if reporteavances.nombre_act_5 %}
     <tr class="text-center">
       <td>5</td>
-      <td>
+      <td class="text-left">
         {{ reporteavances.nombre_act_5 }}
       </td>
       <td>
@@ -243,7 +243,7 @@
     {% if reporteavances.nombre_act_6 %}
     <tr class="text-center">
       <td>6</td>
-      <td>
+      <td class="text-left">
         {{ reporteavances.nombre_act_6 }}
       </td>
       <td>
@@ -266,7 +266,7 @@
     {% if reporteavances.nombre_act_7 %}
     <tr class="text-center">
       <td>7</td>
-      <td>
+      <td class="text-left">
         {{ reporteavances.nombre_act_7 }}
       </td>
       <td>
@@ -289,7 +289,7 @@
     {% if reporteavances.nombre_act_8 %}
     <tr class="text-center">
       <td>8</td>
-      <td>
+      <td class="text-left">
         {{ reporteavances.nombre_act_8 }}
       </td>
       <td>
@@ -312,7 +312,7 @@
     {% if reporteavances.nombre_act_9 %}
     <tr class="text-center">
       <td>9</td>
-      <td>
+      <td class="text-left">
         {{ reporteavances.nombre_act_9 }}
       </td>
       <td>
@@ -335,7 +335,7 @@
     {% if reporteavances.nombre_act_10 %}
     <tr class="text-center">
       <td>10</td>
-      <td>
+      <td class="text-left">
         {{ reporteavances.nombre_act_10 }}
       </td>
       <td>
@@ -358,7 +358,7 @@
     {% if reporteavances.nombre_act_11 %}
     <tr class="text-center">
       <td>11</td>
-      <td>
+      <td class="text-left">
         {{ reporteavances.nombre_act_11 }}
       </td>
       <td>
@@ -381,7 +381,7 @@
     {% if reporteavances.nombre_act_12 %}
     <tr class="text-center">
       <td>12</td>
-      <td>
+      <td class="text-left">
         {{ reporteavances.nombre_act_12 }}
       </td>
       <td>
@@ -404,7 +404,7 @@
     {% if reporteavances.nombre_act_13 %}
     <tr class="text-center">
       <td>13</td>
-      <td>
+      <td class="text-left">
         {{ reporteavances.nombre_act_13 }}
       </td>
       <td>
@@ -427,7 +427,7 @@
     {% if reporteavances.nombre_act_14 %}
     <tr class="text-center">
       <td>14</td>
-      <td>
+      <td class="text-left">
         {{ reporteavances.nombre_act_14 }}
       </td>
       <td>
@@ -450,7 +450,7 @@
     {% if reporteavances.nombre_act_15 %}
     <tr class="text-center">
       <td>15</td>
-      <td>
+      <td class="text-left">
         {{ reporteavances.nombre_act_15 }}
       </td>
       <td>
@@ -534,9 +534,10 @@ $("document").ready(function (){
   for (var i=0; i<Lista.length; i++){  
     contador=contador+Lista[i];
   }
-  if (contador <= 100)
+  if (contador <= 100) {
     suma_porc_act = contador;
-  $(".suma").html(suma_porc_act+" %");
+    $(".suma").html(suma_porc_act+" %");
+  }
 });
 </script>
 {% endblock %}
