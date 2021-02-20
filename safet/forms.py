@@ -3,7 +3,7 @@ from django import forms
 from safet.models import ProyectoPoa, AccionEspecifica, ReporteAvances
 from registro.models import Proyecto, Director, Caravisible
 from django.forms import (
-    TextInput, CharField, Select, RadioSelect, Textarea, CheckboxInput, DateTimeField
+    TextInput, CharField, Select, RadioSelect, Textarea, CheckboxInput, DateTimeField, NumberInput
 )
 from datetime import *
 from django.contrib.admin.widgets import AdminDateWidget
@@ -419,186 +419,529 @@ class ReporteAvancesForm(forms.ModelForm):
     }), required = False)
 
     # Ponderación asignada (%) de la planificación.
-    porc_act_1 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_2 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_2 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_3 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_3 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_4 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_4 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_5 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_5 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_6 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_6 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_7 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_7 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_8 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_8 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_9 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_9 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_10 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_10 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_11 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_11 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_12 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_12 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_13 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_13 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_14 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_14 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_15 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_15 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    # Porcentaje de avance de la actividad.
-    porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    # Porcentaje de avance de las actividades del proyecto.
+    porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1', 'value': '0',
     }), required = False)
 
-    porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
+
+    def clean(self):
+        """
+        Método que permite validar el porcentaje de actividades y avances
+        """
+
+        cleaned_data = super(ReporteAvancesForm, self).clean()
+        
+        porc_act_1 = float(self.cleaned_data['porc_act_1'])
+        porc_act_2 = float(self.cleaned_data['porc_act_2'])
+        porc_act_3 = float(self.cleaned_data['porc_act_3'])
+        porc_act_4 = float(self.cleaned_data['porc_act_4'])
+        porc_act_5 = float(self.cleaned_data['porc_act_5'])
+        porc_act_6 = float(self.cleaned_data['porc_act_6'])
+        porc_act_7 = float(self.cleaned_data['porc_act_7'])
+        porc_act_8 = float(self.cleaned_data['porc_act_8'])
+        porc_act_9 = float(self.cleaned_data['porc_act_9'])
+        porc_act_10 = float(self.cleaned_data['porc_act_10'])
+        porc_act_11 = float(self.cleaned_data['porc_act_11'])
+        porc_act_12 = float(self.cleaned_data['porc_act_12'])
+        porc_act_13 = float(self.cleaned_data['porc_act_13'])
+        porc_act_14 = float(self.cleaned_data['porc_act_14'])
+        porc_act_15 = float(self.cleaned_data['porc_act_15'])
+
+        porc_avan_act_1 = float(self.cleaned_data['porc_avan_act_1'])
+        porc_avan_act_2 = float(self.cleaned_data['porc_avan_act_2'])
+        porc_avan_act_3 = float(self.cleaned_data['porc_avan_act_3'])
+        porc_avan_act_4 = float(self.cleaned_data['porc_avan_act_4'])
+        porc_avan_act_5 = float(self.cleaned_data['porc_avan_act_5'])
+        porc_avan_act_6 = float(self.cleaned_data['porc_avan_act_6'])
+        porc_avan_act_7 = float(self.cleaned_data['porc_avan_act_7'])
+        porc_avan_act_8 = float(self.cleaned_data['porc_avan_act_8'])
+        porc_avan_act_9 = float(self.cleaned_data['porc_avan_act_9'])
+        porc_avan_act_10 = float(self.cleaned_data['porc_avan_act_10'])
+        porc_avan_act_11 = float(self.cleaned_data['porc_avan_act_11'])
+        porc_avan_act_12 = float(self.cleaned_data['porc_avan_act_12'])
+        porc_avan_act_13 = float(self.cleaned_data['porc_avan_act_13'])
+        porc_avan_act_14 = float(self.cleaned_data['porc_avan_act_14'])
+        porc_avan_act_15 = float(self.cleaned_data['porc_avan_act_15'])
+
+        if (porc_act_1) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_1', msg)
+
+        if (porc_act_1) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_1', msg)
+
+        if (porc_act_2) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_2', msg)
+
+        if (porc_act_2) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_2', msg)
+
+        if (porc_act_3) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_3', msg)
+
+        if (porc_act_3) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_3', msg)
+
+        if (porc_act_4) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_4', msg)
+
+        if (porc_act_4) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_4', msg)
+
+        if (porc_act_5) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_5', msg)
+
+        if (porc_act_5) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_5', msg)
+
+        if (porc_act_6) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_6', msg)
+
+        if (porc_act_6) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_6', msg)
+
+        if (porc_act_7) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_7', msg)
+
+        if (porc_act_7) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_7', msg)
+
+        if (porc_act_8) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_8', msg)
+
+        if (porc_act_8) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_8', msg)
+
+        if (porc_act_9) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_9', msg)
+
+        if (porc_act_9) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_9', msg)
+
+        if (porc_act_10) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_10', msg)
+
+        if (porc_act_10) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_10', msg)
+
+        if (porc_act_11) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_11', msg)
+
+        if (porc_act_11) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_11', msg)
+
+        if (porc_act_12) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_12', msg)
+
+        if (porc_act_12) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_12', msg)
+
+        if (porc_act_13) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_13', msg)
+
+        if (porc_act_13) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_13', msg)
+
+        if (porc_act_14) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_14', msg)
+
+        if (porc_act_14) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_14', msg)
+
+        if (porc_act_15) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_15', msg)
+
+        if (porc_act_15) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_15', msg)
+
+        """
+        Validación de los porcentajes de avances
+        """
+
+        if (porc_avan_act_1) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_1) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_1) > (porc_act_1):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_2) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_2) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_2) > (porc_act_2):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_3) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_3) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_3) > (porc_act_3):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_4) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_4) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_4) > (porc_act_4):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_5) < 0.0:
+            msg = str(_('El valor del porcentaje debe ser mayor o igual a 0'))
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_5) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_5) > (porc_act_5):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_6) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_6) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_6) > (porc_act_6):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_7) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_7) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_7) > (porc_act_7):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_8) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_8) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_8) > (porc_act_8):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_9) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_ act_9', msg)
+
+        if (porc_avan_act_9) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_9', msg)
+
+        if (porc_avan_act_9) > (porc_act_9):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_9', msg)
+
+        if (porc_avan_act_10) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_10) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_10) > (porc_act_10):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_11) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_11) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_11) > (porc_act_11):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_12) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_12) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_12) > (porc_act_12):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_13) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_13) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_13) > (porc_act_13):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_14) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_14) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_14) > (porc_act_14):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_15) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_15', msg)
+
+        if (porc_avan_act_15) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_15', msg)
+
+        if (porc_avan_act_15) > (porc_act_15):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_15', msg)
 
     class Meta:
 
@@ -998,186 +1341,529 @@ class ReporteAvancesSoftwareForm(forms.ModelForm):
     }), required = False)
 
     # Ponderación asignada (%) de la planificación.
-    porc_act_1 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_2 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_2 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_3 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_3 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_4 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_4 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_5 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_5 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_6 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_6 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_7 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_7 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_8 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_8 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_9 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_9 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_10 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_10 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_11 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_11 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_12 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_12 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_13 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_13 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_14 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_14 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_15 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_15 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
     # Porcentaje de avance de las actividades del proyecto.
-    porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1', 'value': '0',
     }), required = False)
 
-    porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
+
+    def clean(self):
+        """
+        Método que permite validar el porcentaje de actividades y avances
+        """
+
+        cleaned_data = super(ReporteAvancesSoftwareForm, self).clean()
+        
+        porc_act_1 = float(self.cleaned_data['porc_act_1'])
+        porc_act_2 = float(self.cleaned_data['porc_act_2'])
+        porc_act_3 = float(self.cleaned_data['porc_act_3'])
+        porc_act_4 = float(self.cleaned_data['porc_act_4'])
+        porc_act_5 = float(self.cleaned_data['porc_act_5'])
+        porc_act_6 = float(self.cleaned_data['porc_act_6'])
+        porc_act_7 = float(self.cleaned_data['porc_act_7'])
+        porc_act_8 = float(self.cleaned_data['porc_act_8'])
+        porc_act_9 = float(self.cleaned_data['porc_act_9'])
+        porc_act_10 = float(self.cleaned_data['porc_act_10'])
+        porc_act_11 = float(self.cleaned_data['porc_act_11'])
+        porc_act_12 = float(self.cleaned_data['porc_act_12'])
+        porc_act_13 = float(self.cleaned_data['porc_act_13'])
+        porc_act_14 = float(self.cleaned_data['porc_act_14'])
+        porc_act_15 = float(self.cleaned_data['porc_act_15'])
+
+        porc_avan_act_1 = float(self.cleaned_data['porc_avan_act_1'])
+        porc_avan_act_2 = float(self.cleaned_data['porc_avan_act_2'])
+        porc_avan_act_3 = float(self.cleaned_data['porc_avan_act_3'])
+        porc_avan_act_4 = float(self.cleaned_data['porc_avan_act_4'])
+        porc_avan_act_5 = float(self.cleaned_data['porc_avan_act_5'])
+        porc_avan_act_6 = float(self.cleaned_data['porc_avan_act_6'])
+        porc_avan_act_7 = float(self.cleaned_data['porc_avan_act_7'])
+        porc_avan_act_8 = float(self.cleaned_data['porc_avan_act_8'])
+        porc_avan_act_9 = float(self.cleaned_data['porc_avan_act_9'])
+        porc_avan_act_10 = float(self.cleaned_data['porc_avan_act_10'])
+        porc_avan_act_11 = float(self.cleaned_data['porc_avan_act_11'])
+        porc_avan_act_12 = float(self.cleaned_data['porc_avan_act_12'])
+        porc_avan_act_13 = float(self.cleaned_data['porc_avan_act_13'])
+        porc_avan_act_14 = float(self.cleaned_data['porc_avan_act_14'])
+        porc_avan_act_15 = float(self.cleaned_data['porc_avan_act_15'])
+
+        if (porc_act_1) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_1', msg)
+
+        if (porc_act_1) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_1', msg)
+
+        if (porc_act_2) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_2', msg)
+
+        if (porc_act_2) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_2', msg)
+
+        if (porc_act_3) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_3', msg)
+
+        if (porc_act_3) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_3', msg)
+
+        if (porc_act_4) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_4', msg)
+
+        if (porc_act_4) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_4', msg)
+
+        if (porc_act_5) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_5', msg)
+
+        if (porc_act_5) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_5', msg)
+
+        if (porc_act_6) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_6', msg)
+
+        if (porc_act_6) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_6', msg)
+
+        if (porc_act_7) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_7', msg)
+
+        if (porc_act_7) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_7', msg)
+
+        if (porc_act_8) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_8', msg)
+
+        if (porc_act_8) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_8', msg)
+
+        if (porc_act_9) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_9', msg)
+
+        if (porc_act_9) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_9', msg)
+
+        if (porc_act_10) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_10', msg)
+
+        if (porc_act_10) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_10', msg)
+
+        if (porc_act_11) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_11', msg)
+
+        if (porc_act_11) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_11', msg)
+
+        if (porc_act_12) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_12', msg)
+
+        if (porc_act_12) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_12', msg)
+
+        if (porc_act_13) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_13', msg)
+
+        if (porc_act_13) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_13', msg)
+
+        if (porc_act_14) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_14', msg)
+
+        if (porc_act_14) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_14', msg)
+
+        if (porc_act_15) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_15', msg)
+
+        if (porc_act_15) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_15', msg)
+
+        """
+        Validación de los porcentajes de avances
+        """
+
+        if (porc_avan_act_1) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_1) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_1) > (porc_act_1):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_2) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_2) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_2) > (porc_act_2):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_3) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_3) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_3) > (porc_act_3):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_4) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_4) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_4) > (porc_act_4):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_5) < 0.0:
+            msg = str(_('El valor del porcentaje debe ser mayor o igual a 0'))
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_5) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_5) > (porc_act_5):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_6) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_6) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_6) > (porc_act_6):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_7) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_7) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_7) > (porc_act_7):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_8) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_8) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_8) > (porc_act_8):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_9) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_ act_9', msg)
+
+        if (porc_avan_act_9) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_9', msg)
+
+        if (porc_avan_act_9) > (porc_act_9):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_9', msg)
+
+        if (porc_avan_act_10) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_10) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_10) > (porc_act_10):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_11) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_11) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_11) > (porc_act_11):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_12) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_12) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_12) > (porc_act_12):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_13) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_13) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_13) > (porc_act_13):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_14) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_14) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_14) > (porc_act_14):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_15) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_15', msg)
+
+        if (porc_avan_act_15) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_15', msg)
+
+        if (porc_avan_act_15) > (porc_act_15):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_15', msg)
 
     class Meta:
 
@@ -1574,186 +2260,529 @@ class ReporteAvancesCursoLineaForm(forms.ModelForm):
     }), required = False)
 
     # Ponderación asignada (%) de la planificación.
-    porc_act_1 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_2 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_2 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_3 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_3 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_4 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_4 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_5 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_5 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_6 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_6 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_7 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_7 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_8 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_8 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_9 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_9 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_10 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_10 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_11 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_11 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_12 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_12 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_13 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_13 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_14 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_14 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_15 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_15 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
     # Porcentaje de avance de las actividades del proyecto.
-    porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1', 'value': '0',
     }), required = False)
 
-    porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
+
+    def clean(self):
+        """
+        Método que permite validar el porcentaje de actividades y avances
+        """
+
+        cleaned_data = super(ReporteAvancesCursoLineaForm, self).clean()
+        
+        porc_act_1 = float(self.cleaned_data['porc_act_1'])
+        porc_act_2 = float(self.cleaned_data['porc_act_2'])
+        porc_act_3 = float(self.cleaned_data['porc_act_3'])
+        porc_act_4 = float(self.cleaned_data['porc_act_4'])
+        porc_act_5 = float(self.cleaned_data['porc_act_5'])
+        porc_act_6 = float(self.cleaned_data['porc_act_6'])
+        porc_act_7 = float(self.cleaned_data['porc_act_7'])
+        porc_act_8 = float(self.cleaned_data['porc_act_8'])
+        porc_act_9 = float(self.cleaned_data['porc_act_9'])
+        porc_act_10 = float(self.cleaned_data['porc_act_10'])
+        porc_act_11 = float(self.cleaned_data['porc_act_11'])
+        porc_act_12 = float(self.cleaned_data['porc_act_12'])
+        porc_act_13 = float(self.cleaned_data['porc_act_13'])
+        porc_act_14 = float(self.cleaned_data['porc_act_14'])
+        porc_act_15 = float(self.cleaned_data['porc_act_15'])
+
+        porc_avan_act_1 = float(self.cleaned_data['porc_avan_act_1'])
+        porc_avan_act_2 = float(self.cleaned_data['porc_avan_act_2'])
+        porc_avan_act_3 = float(self.cleaned_data['porc_avan_act_3'])
+        porc_avan_act_4 = float(self.cleaned_data['porc_avan_act_4'])
+        porc_avan_act_5 = float(self.cleaned_data['porc_avan_act_5'])
+        porc_avan_act_6 = float(self.cleaned_data['porc_avan_act_6'])
+        porc_avan_act_7 = float(self.cleaned_data['porc_avan_act_7'])
+        porc_avan_act_8 = float(self.cleaned_data['porc_avan_act_8'])
+        porc_avan_act_9 = float(self.cleaned_data['porc_avan_act_9'])
+        porc_avan_act_10 = float(self.cleaned_data['porc_avan_act_10'])
+        porc_avan_act_11 = float(self.cleaned_data['porc_avan_act_11'])
+        porc_avan_act_12 = float(self.cleaned_data['porc_avan_act_12'])
+        porc_avan_act_13 = float(self.cleaned_data['porc_avan_act_13'])
+        porc_avan_act_14 = float(self.cleaned_data['porc_avan_act_14'])
+        porc_avan_act_15 = float(self.cleaned_data['porc_avan_act_15'])
+
+        if (porc_act_1) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_1', msg)
+
+        if (porc_act_1) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_1', msg)
+
+        if (porc_act_2) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_2', msg)
+
+        if (porc_act_2) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_2', msg)
+
+        if (porc_act_3) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_3', msg)
+
+        if (porc_act_3) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_3', msg)
+
+        if (porc_act_4) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_4', msg)
+
+        if (porc_act_4) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_4', msg)
+
+        if (porc_act_5) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_5', msg)
+
+        if (porc_act_5) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_5', msg)
+
+        if (porc_act_6) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_6', msg)
+
+        if (porc_act_6) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_6', msg)
+
+        if (porc_act_7) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_7', msg)
+
+        if (porc_act_7) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_7', msg)
+
+        if (porc_act_8) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_8', msg)
+
+        if (porc_act_8) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_8', msg)
+
+        if (porc_act_9) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_9', msg)
+
+        if (porc_act_9) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_9', msg)
+
+        if (porc_act_10) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_10', msg)
+
+        if (porc_act_10) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_10', msg)
+
+        if (porc_act_11) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_11', msg)
+
+        if (porc_act_11) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_11', msg)
+
+        if (porc_act_12) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_12', msg)
+
+        if (porc_act_12) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_12', msg)
+
+        if (porc_act_13) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_13', msg)
+
+        if (porc_act_13) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_13', msg)
+
+        if (porc_act_14) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_14', msg)
+
+        if (porc_act_14) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_14', msg)
+
+        if (porc_act_15) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_15', msg)
+
+        if (porc_act_15) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_15', msg)
+
+        """
+        Validación de los porcentajes de avances
+        """
+
+        if (porc_avan_act_1) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_1) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_1) > (porc_act_1):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_2) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_2) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_2) > (porc_act_2):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_3) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_3) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_3) > (porc_act_3):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_4) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_4) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_4) > (porc_act_4):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_5) < 0.0:
+            msg = str(_('El valor del porcentaje debe ser mayor o igual a 0'))
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_5) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_5) > (porc_act_5):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_6) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_6) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_6) > (porc_act_6):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_7) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_7) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_7) > (porc_act_7):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_8) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_8) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_8) > (porc_act_8):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_9) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_ act_9', msg)
+
+        if (porc_avan_act_9) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_9', msg)
+
+        if (porc_avan_act_9) > (porc_act_9):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_9', msg)
+
+        if (porc_avan_act_10) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_10) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_10) > (porc_act_10):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_11) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_11) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_11) > (porc_act_11):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_12) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_12) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_12) > (porc_act_12):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_13) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_13) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_13) > (porc_act_13):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_14) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_14) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_14) > (porc_act_14):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_15) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_15', msg)
+
+        if (porc_avan_act_15) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_15', msg)
+
+        if (porc_avan_act_15) > (porc_act_15):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_15', msg)
 
     class Meta:
 
@@ -2146,186 +3175,529 @@ class ReporteAvancesJornadaForm(forms.ModelForm):
     }), required = False)
 
     # Ponderación asignada (%) de la planificación.
-    porc_act_1 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_2 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_2 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_3 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_3 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_4 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_4 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_5 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_5 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_6 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_6 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_7 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_7 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_8 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_8 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_9 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_9 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_10 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_10 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_11 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_11 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_12 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_12 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_13 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_13 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_14 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_14 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_15 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_15 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
     # Porcentaje de avance de las actividades del proyecto.
-    porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1', 'value': '0',
     }), required = False)
 
-    porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
+
+    def clean(self):
+        """
+        Método que permite validar el porcentaje de actividades y avances
+        """
+
+        cleaned_data = super(ReporteAvancesJornadaForm, self).clean()
+        
+        porc_act_1 = float(self.cleaned_data['porc_act_1'])
+        porc_act_2 = float(self.cleaned_data['porc_act_2'])
+        porc_act_3 = float(self.cleaned_data['porc_act_3'])
+        porc_act_4 = float(self.cleaned_data['porc_act_4'])
+        porc_act_5 = float(self.cleaned_data['porc_act_5'])
+        porc_act_6 = float(self.cleaned_data['porc_act_6'])
+        porc_act_7 = float(self.cleaned_data['porc_act_7'])
+        porc_act_8 = float(self.cleaned_data['porc_act_8'])
+        porc_act_9 = float(self.cleaned_data['porc_act_9'])
+        porc_act_10 = float(self.cleaned_data['porc_act_10'])
+        porc_act_11 = float(self.cleaned_data['porc_act_11'])
+        porc_act_12 = float(self.cleaned_data['porc_act_12'])
+        porc_act_13 = float(self.cleaned_data['porc_act_13'])
+        porc_act_14 = float(self.cleaned_data['porc_act_14'])
+        porc_act_15 = float(self.cleaned_data['porc_act_15'])
+
+        porc_avan_act_1 = float(self.cleaned_data['porc_avan_act_1'])
+        porc_avan_act_2 = float(self.cleaned_data['porc_avan_act_2'])
+        porc_avan_act_3 = float(self.cleaned_data['porc_avan_act_3'])
+        porc_avan_act_4 = float(self.cleaned_data['porc_avan_act_4'])
+        porc_avan_act_5 = float(self.cleaned_data['porc_avan_act_5'])
+        porc_avan_act_6 = float(self.cleaned_data['porc_avan_act_6'])
+        porc_avan_act_7 = float(self.cleaned_data['porc_avan_act_7'])
+        porc_avan_act_8 = float(self.cleaned_data['porc_avan_act_8'])
+        porc_avan_act_9 = float(self.cleaned_data['porc_avan_act_9'])
+        porc_avan_act_10 = float(self.cleaned_data['porc_avan_act_10'])
+        porc_avan_act_11 = float(self.cleaned_data['porc_avan_act_11'])
+        porc_avan_act_12 = float(self.cleaned_data['porc_avan_act_12'])
+        porc_avan_act_13 = float(self.cleaned_data['porc_avan_act_13'])
+        porc_avan_act_14 = float(self.cleaned_data['porc_avan_act_14'])
+        porc_avan_act_15 = float(self.cleaned_data['porc_avan_act_15'])
+
+        if (porc_act_1) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_1', msg)
+
+        if (porc_act_1) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_1', msg)
+
+        if (porc_act_2) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_2', msg)
+
+        if (porc_act_2) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_2', msg)
+
+        if (porc_act_3) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_3', msg)
+
+        if (porc_act_3) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_3', msg)
+
+        if (porc_act_4) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_4', msg)
+
+        if (porc_act_4) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_4', msg)
+
+        if (porc_act_5) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_5', msg)
+
+        if (porc_act_5) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_5', msg)
+
+        if (porc_act_6) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_6', msg)
+
+        if (porc_act_6) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_6', msg)
+
+        if (porc_act_7) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_7', msg)
+
+        if (porc_act_7) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_7', msg)
+
+        if (porc_act_8) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_8', msg)
+
+        if (porc_act_8) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_8', msg)
+
+        if (porc_act_9) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_9', msg)
+
+        if (porc_act_9) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_9', msg)
+
+        if (porc_act_10) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_10', msg)
+
+        if (porc_act_10) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_10', msg)
+
+        if (porc_act_11) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_11', msg)
+
+        if (porc_act_11) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_11', msg)
+
+        if (porc_act_12) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_12', msg)
+
+        if (porc_act_12) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_12', msg)
+
+        if (porc_act_13) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_13', msg)
+
+        if (porc_act_13) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_13', msg)
+
+        if (porc_act_14) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_14', msg)
+
+        if (porc_act_14) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_14', msg)
+
+        if (porc_act_15) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_15', msg)
+
+        if (porc_act_15) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_15', msg)
+
+        """
+        Validación de los porcentajes de avances
+        """
+
+        if (porc_avan_act_1) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_1) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_1) > (porc_act_1):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_2) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_2) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_2) > (porc_act_2):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_3) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_3) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_3) > (porc_act_3):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_4) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_4) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_4) > (porc_act_4):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_5) < 0.0:
+            msg = str(_('El valor del porcentaje debe ser mayor o igual a 0'))
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_5) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_5) > (porc_act_5):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_6) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_6) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_6) > (porc_act_6):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_7) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_7) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_7) > (porc_act_7):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_8) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_8) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_8) > (porc_act_8):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_9) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_ act_9', msg)
+
+        if (porc_avan_act_9) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_9', msg)
+
+        if (porc_avan_act_9) > (porc_act_9):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_9', msg)
+
+        if (porc_avan_act_10) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_10) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_10) > (porc_act_10):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_11) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_11) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_11) > (porc_act_11):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_12) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_12) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_12) > (porc_act_12):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_13) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_13) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_13) > (porc_act_13):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_14) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_14) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_14) > (porc_act_14):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_15) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_15', msg)
+
+        if (porc_avan_act_15) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_15', msg)
+
+        if (porc_avan_act_15) > (porc_act_15):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_15', msg)
 
     class Meta:
 
@@ -2719,186 +4091,529 @@ class ReporteAvancesPublicacionForm(forms.ModelForm):
     }), required = False)
 
     # Ponderación asignada (%) de la planificación.
-    porc_act_1 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_2 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_2 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_3 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_3 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_4 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_4 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_5 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_5 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_6 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_6 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_7 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_7 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_8 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_8 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_9 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_9 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_10 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_10 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_11 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_11 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_12 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_12 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_13 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_13 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_14 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_14 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_15 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_15 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
     # Porcentaje de avance de las actividades del proyecto.
-    porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1', 'value': '0',
     }), required = False)
 
-    porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
+
+    def clean(self):
+        """
+        Método que permite validar el porcentaje de actividades y avances
+        """
+
+        cleaned_data = super(ReporteAvancesPublicacionForm, self).clean()
+        
+        porc_act_1 = float(self.cleaned_data['porc_act_1'])
+        porc_act_2 = float(self.cleaned_data['porc_act_2'])
+        porc_act_3 = float(self.cleaned_data['porc_act_3'])
+        porc_act_4 = float(self.cleaned_data['porc_act_4'])
+        porc_act_5 = float(self.cleaned_data['porc_act_5'])
+        porc_act_6 = float(self.cleaned_data['porc_act_6'])
+        porc_act_7 = float(self.cleaned_data['porc_act_7'])
+        porc_act_8 = float(self.cleaned_data['porc_act_8'])
+        porc_act_9 = float(self.cleaned_data['porc_act_9'])
+        porc_act_10 = float(self.cleaned_data['porc_act_10'])
+        porc_act_11 = float(self.cleaned_data['porc_act_11'])
+        porc_act_12 = float(self.cleaned_data['porc_act_12'])
+        porc_act_13 = float(self.cleaned_data['porc_act_13'])
+        porc_act_14 = float(self.cleaned_data['porc_act_14'])
+        porc_act_15 = float(self.cleaned_data['porc_act_15'])
+
+        porc_avan_act_1 = float(self.cleaned_data['porc_avan_act_1'])
+        porc_avan_act_2 = float(self.cleaned_data['porc_avan_act_2'])
+        porc_avan_act_3 = float(self.cleaned_data['porc_avan_act_3'])
+        porc_avan_act_4 = float(self.cleaned_data['porc_avan_act_4'])
+        porc_avan_act_5 = float(self.cleaned_data['porc_avan_act_5'])
+        porc_avan_act_6 = float(self.cleaned_data['porc_avan_act_6'])
+        porc_avan_act_7 = float(self.cleaned_data['porc_avan_act_7'])
+        porc_avan_act_8 = float(self.cleaned_data['porc_avan_act_8'])
+        porc_avan_act_9 = float(self.cleaned_data['porc_avan_act_9'])
+        porc_avan_act_10 = float(self.cleaned_data['porc_avan_act_10'])
+        porc_avan_act_11 = float(self.cleaned_data['porc_avan_act_11'])
+        porc_avan_act_12 = float(self.cleaned_data['porc_avan_act_12'])
+        porc_avan_act_13 = float(self.cleaned_data['porc_avan_act_13'])
+        porc_avan_act_14 = float(self.cleaned_data['porc_avan_act_14'])
+        porc_avan_act_15 = float(self.cleaned_data['porc_avan_act_15'])
+
+        if (porc_act_1) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_1', msg)
+
+        if (porc_act_1) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_1', msg)
+
+        if (porc_act_2) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_2', msg)
+
+        if (porc_act_2) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_2', msg)
+
+        if (porc_act_3) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_3', msg)
+
+        if (porc_act_3) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_3', msg)
+
+        if (porc_act_4) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_4', msg)
+
+        if (porc_act_4) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_4', msg)
+
+        if (porc_act_5) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_5', msg)
+
+        if (porc_act_5) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_5', msg)
+
+        if (porc_act_6) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_6', msg)
+
+        if (porc_act_6) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_6', msg)
+
+        if (porc_act_7) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_7', msg)
+
+        if (porc_act_7) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_7', msg)
+
+        if (porc_act_8) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_8', msg)
+
+        if (porc_act_8) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_8', msg)
+
+        if (porc_act_9) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_9', msg)
+
+        if (porc_act_9) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_9', msg)
+
+        if (porc_act_10) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_10', msg)
+
+        if (porc_act_10) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_10', msg)
+
+        if (porc_act_11) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_11', msg)
+
+        if (porc_act_11) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_11', msg)
+
+        if (porc_act_12) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_12', msg)
+
+        if (porc_act_12) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_12', msg)
+
+        if (porc_act_13) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_13', msg)
+
+        if (porc_act_13) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_13', msg)
+
+        if (porc_act_14) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_14', msg)
+
+        if (porc_act_14) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_14', msg)
+
+        if (porc_act_15) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_15', msg)
+
+        if (porc_act_15) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_15', msg)
+
+        """
+        Validación de los porcentajes de avances
+        """
+
+        if (porc_avan_act_1) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_1) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_1) > (porc_act_1):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_2) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_2) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_2) > (porc_act_2):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_3) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_3) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_3) > (porc_act_3):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_4) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_4) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_4) > (porc_act_4):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_5) < 0.0:
+            msg = str(_('El valor del porcentaje debe ser mayor o igual a 0'))
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_5) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_5) > (porc_act_5):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_6) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_6) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_6) > (porc_act_6):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_7) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_7) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_7) > (porc_act_7):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_8) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_8) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_8) > (porc_act_8):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_9) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_ act_9', msg)
+
+        if (porc_avan_act_9) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_9', msg)
+
+        if (porc_avan_act_9) > (porc_act_9):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_9', msg)
+
+        if (porc_avan_act_10) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_10) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_10) > (porc_act_10):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_11) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_11) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_11) > (porc_act_11):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_12) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_12) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_12) > (porc_act_12):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_13) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_13) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_13) > (porc_act_13):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_14) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_14) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_14) > (porc_act_14):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_15) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_15', msg)
+
+        if (porc_avan_act_15) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_15', msg)
+
+        if (porc_avan_act_15) > (porc_act_15):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_15', msg)
 
     class Meta:
 
@@ -3307,171 +5022,529 @@ class ReporteAvancesCVForm(forms.ModelForm):
     }), required = False)
 
     # Ponderación asignada (%) de la planificación.
-    porc_act_1 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_2 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_2 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_3 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_3 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_4 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_4 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_5 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_5 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_6 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_6 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_7 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_7 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_8 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_8 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_9 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_9 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_10 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_10 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_11 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_11 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_12 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_12 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_13 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_13 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_14 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_14 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_act_15 = forms.IntegerField(label='Ponderación asignada (%)', widget=TextInput(attrs={
+    porc_act_15 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
     # Porcentaje de avance de las actividades del proyecto.
-    porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1', 'value': '0',
     }), required = False)
 
-    porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
 
-    porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=TextInput(attrs={
+    porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'value': '0',
+        'min':'0', 'step':'0.1','value': '0',
     }), required = False)
+
+    def clean(self):
+        """
+        Método que permite validar el porcentaje de actividades y avances
+        """
+
+        cleaned_data = super(ReporteAvancesCVForm, self).clean()
+
+        porc_act_1 = float(self.cleaned_data['porc_act_1'])
+        porc_act_2 = float(self.cleaned_data['porc_act_2'])
+        porc_act_3 = float(self.cleaned_data['porc_act_3'])
+        porc_act_4 = float(self.cleaned_data['porc_act_4'])
+        porc_act_5 = float(self.cleaned_data['porc_act_5'])
+        porc_act_6 = float(self.cleaned_data['porc_act_6'])
+        porc_act_7 = float(self.cleaned_data['porc_act_7'])
+        porc_act_8 = float(self.cleaned_data['porc_act_8'])
+        porc_act_9 = float(self.cleaned_data['porc_act_9'])
+        porc_act_10 = float(self.cleaned_data['porc_act_10'])
+        porc_act_11 = float(self.cleaned_data['porc_act_11'])
+        porc_act_12 = float(self.cleaned_data['porc_act_12'])
+        porc_act_13 = float(self.cleaned_data['porc_act_13'])
+        porc_act_14 = float(self.cleaned_data['porc_act_14'])
+        porc_act_15 = float(self.cleaned_data['porc_act_15'])
+
+        porc_avan_act_1 = float(self.cleaned_data['porc_avan_act_1'])
+        porc_avan_act_2 = float(self.cleaned_data['porc_avan_act_2'])
+        porc_avan_act_3 = float(self.cleaned_data['porc_avan_act_3'])
+        porc_avan_act_4 = float(self.cleaned_data['porc_avan_act_4'])
+        porc_avan_act_5 = float(self.cleaned_data['porc_avan_act_5'])
+        porc_avan_act_6 = float(self.cleaned_data['porc_avan_act_6'])
+        porc_avan_act_7 = float(self.cleaned_data['porc_avan_act_7'])
+        porc_avan_act_8 = float(self.cleaned_data['porc_avan_act_8'])
+        porc_avan_act_9 = float(self.cleaned_data['porc_avan_act_9'])
+        porc_avan_act_10 = float(self.cleaned_data['porc_avan_act_10'])
+        porc_avan_act_11 = float(self.cleaned_data['porc_avan_act_11'])
+        porc_avan_act_12 = float(self.cleaned_data['porc_avan_act_12'])
+        porc_avan_act_13 = float(self.cleaned_data['porc_avan_act_13'])
+        porc_avan_act_14 = float(self.cleaned_data['porc_avan_act_14'])
+        porc_avan_act_15 = float(self.cleaned_data['porc_avan_act_15'])
+
+        if (porc_act_1) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_1', msg)
+
+        if (porc_act_1) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_1', msg)
+
+        if (porc_act_2) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_2', msg)
+
+        if (porc_act_2) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_2', msg)
+
+        if (porc_act_3) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_3', msg)
+
+        if (porc_act_3) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_3', msg)
+
+        if (porc_act_4) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_4', msg)
+
+        if (porc_act_4) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_4', msg)
+
+        if (porc_act_5) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_5', msg)
+
+        if (porc_act_5) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_5', msg)
+
+        if (porc_act_6) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_6', msg)
+
+        if (porc_act_6) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_6', msg)
+
+        if (porc_act_7) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_7', msg)
+
+        if (porc_act_7) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_7', msg)
+
+        if (porc_act_8) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_8', msg)
+
+        if (porc_act_8) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_8', msg)
+
+        if (porc_act_9) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_9', msg)
+
+        if (porc_act_9) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_9', msg)
+
+        if (porc_act_10) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_10', msg)
+
+        if (porc_act_10) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_10', msg)
+
+        if (porc_act_11) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_11', msg)
+
+        if (porc_act_11) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_11', msg)
+
+        if (porc_act_12) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_12', msg)
+
+        if (porc_act_12) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_12', msg)
+
+        if (porc_act_13) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_13', msg)
+
+        if (porc_act_13) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_13', msg)
+
+        if (porc_act_14) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_14', msg)
+
+        if (porc_act_14) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_14', msg)
+
+        if (porc_act_15) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_act_15', msg)
+
+        if (porc_act_15) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_act_15', msg)
+
+        """
+        Validación de los porcentajes de avances
+        """
+
+        if (porc_avan_act_1) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_1) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_1) > (porc_act_1):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_1', msg)
+
+        if (porc_avan_act_2) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_2) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_2) > (porc_act_2):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_2', msg)
+
+        if (porc_avan_act_3) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_3) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_3) > (porc_act_3):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_3', msg)
+
+        if (porc_avan_act_4) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_4) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_4) > (porc_act_4):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_4', msg)
+
+        if (porc_avan_act_5) < 0.0:
+            msg = str(_('El valor del porcentaje debe ser mayor o igual a 0'))
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_5) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_5) > (porc_act_5):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_5', msg)
+
+        if (porc_avan_act_6) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_6) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_6) > (porc_act_6):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_6', msg)
+
+        if (porc_avan_act_7) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_7) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_7) > (porc_act_7):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_7', msg)
+
+        if (porc_avan_act_8) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_8) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_8) > (porc_act_8):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_8', msg)
+
+        if (porc_avan_act_9) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_ act_9', msg)
+
+        if (porc_avan_act_9) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_9', msg)
+
+        if (porc_avan_act_9) > (porc_act_9):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_9', msg)
+
+        if (porc_avan_act_10) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_10) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_10) > (porc_act_10):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_10', msg)
+
+        if (porc_avan_act_11) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_11) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_11) > (porc_act_11):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_11', msg)
+
+        if (porc_avan_act_12) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_12) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_12) > (porc_act_12):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_12', msg)
+
+        if (porc_avan_act_13) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_13) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_13) > (porc_act_13):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_13', msg)
+
+        if (porc_avan_act_14) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_14) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_14) > (porc_act_14):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_14', msg)
+
+        if (porc_avan_act_15) < 0.0:
+            msg = str('El valor del porcentaje debe ser mayor o igual a 0')
+            self.add_error('porc_avan_act_15', msg)
+
+        if (porc_avan_act_15) > 99.9:
+            msg = str('El valor del porcentaje debe ser menor que 100')
+            self.add_error('porc_avan_act_15', msg)
+
+        if (porc_avan_act_15) > (porc_act_15):
+            msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
+            self.add_error('porc_avan_act_15', msg)
 
     class Meta:
 

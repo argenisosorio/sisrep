@@ -180,3 +180,49 @@ $("document").ready(function(){
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
 });
+
+$(document).ready(function()) {
+  var f = $("#id_porc_avan_act").val();
+  function valid(f) {
+    if (!/^(?:\d*\.\d{0,1}|\d+)$/.test(f.value)) {
+      f.value = f.value.replace(/^(?:\d*\.\d{0,1}|\d+)$/g,"");
+      alert("Invalid number");
+    }
+  }
+}
+/*
+
+  function CreateFloatFilterCustom(elementID, onChange, onblur){
+    try{
+      inputKeyFilter.Create(elementID
+        , onChange
+        , function(elementInput, value){//customFilter
+          if(value.match(/^(-?\d*)((\.(\d{0,2})?)?)$/i) == null){
+            inputKeyFilter.TextAdd(isRussian() ?
+                "Допустимый формат: -[0...9].[0...9] или -[0...9]e-[0...9]. Например: -12.34 1234"
+                : "Acceptable formats: -[0...9].[0...9] or -[0...9]e-[0...9]. Examples: -12.34 1234"
+              , elementInput);
+            return false;
+          }
+          return true;
+        }
+        , onblur
+      )
+    } catch(e) {
+      consoleError("Create float filter failed. " + e);
+    }
+  }
+  
+  CreateFloatFilterCustom("Float");
+  
+  function onChangeFloat(input){
+    inputKeyFilter.RemoveMyTooltip();
+    var elementNewFloat = document.getElementById("NewFloat");
+    var float = parseFloat(input.value);
+    if(inputKeyFilter.isNaN(float, input)){
+      elementNewFloat.innerHTML = "";
+      return;
+    }
+    elementNewFloat.innerHTML = float;
+  }
+  */
