@@ -422,182 +422,182 @@ class ReporteAvancesForm(forms.ModelForm):
     porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_2 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_3 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_4 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_5 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_6 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_7 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_8 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_9 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_10 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_11 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_12 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_13 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_14 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_15 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     # Porcentaje de avance de las actividades del proyecto.
     porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1', 'value': '0',
+        'min':'0', 'step':'0.1', 'value': '0.0',
     }), required = False)
 
     porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     def clean(self):
@@ -1344,182 +1344,182 @@ class ReporteAvancesSoftwareForm(forms.ModelForm):
     porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_2 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_3 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_4 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_5 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_6 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_7 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_8 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_9 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_10 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_11 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_12 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_13 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_14 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_15 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     # Porcentaje de avance de las actividades del proyecto.
     porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1', 'value': '0',
+        'min':'0', 'step':'0.1', 'value': '0.0',
     }), required = False)
 
     porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     def clean(self):
@@ -2263,182 +2263,182 @@ class ReporteAvancesCursoLineaForm(forms.ModelForm):
     porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_2 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_3 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_4 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_5 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_6 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_7 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_8 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_9 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_10 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_11 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_12 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_13 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_14 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_15 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     # Porcentaje de avance de las actividades del proyecto.
     porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1', 'value': '0',
+        'min':'0', 'step':'0.1', 'value': '0.0',
     }), required = False)
 
     porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     def clean(self):
@@ -3178,182 +3178,182 @@ class ReporteAvancesJornadaForm(forms.ModelForm):
     porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_2 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_3 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_4 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_5 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_6 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_7 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_8 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_9 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_10 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_11 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_12 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_13 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_14 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_15 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     # Porcentaje de avance de las actividades del proyecto.
     porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1', 'value': '0',
+        'min':'0', 'step':'0.1', 'value': '0.0',
     }), required = False)
 
     porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     def clean(self):
@@ -4094,182 +4094,182 @@ class ReporteAvancesPublicacionForm(forms.ModelForm):
     porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_2 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_3 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_4 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_5 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_6 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_7 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_8 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_9 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_10 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_11 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_12 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_13 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_14 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_15 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     # Porcentaje de avance de las actividades del proyecto.
     porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1', 'value': '0',
+        'min':'0', 'step':'0.1', 'value': '0.0',
     }), required = False)
 
     porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     def clean(self):
@@ -5025,182 +5025,182 @@ class ReporteAvancesCVForm(forms.ModelForm):
     porc_act_1 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_2 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_3 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_4 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_5 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_6 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_7 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_8 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_9 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_10 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_11 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_12 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_13 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_14 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_act_15 = forms.CharField(label='Ponderación asignada (%)', widget=NumberInput(attrs={
         'class':'form-control input-md disabled-input',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     # Porcentaje de avance de las actividades del proyecto.
     porc_avan_act_1 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_2 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_3 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1', 'value': '0',
+        'min':'0', 'step':'0.1', 'value': '0.0',
     }), required = False)
 
     porc_avan_act_4 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_5 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_6 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_7 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_8 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_9 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_10 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_11 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_12 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_13 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_14 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     porc_avan_act_15 = forms.CharField(label='Porcentaje de avance (%)', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
-        'min':'0', 'step':'0.1','value': '0',
+        'min':'0', 'step':'0.1','value': '0.0',
     }), required = False)
 
     def clean(self):
