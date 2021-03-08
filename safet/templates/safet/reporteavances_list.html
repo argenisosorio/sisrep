@@ -20,7 +20,7 @@
       <th class="text-center">N</th>
       <th class="text-center">Nombre del producto</th>
       <th class="text-center">Tipo de producto</th>
-      <th class="text-center">Nombre del cara visible</th>
+      <th class="text-center">Cara visible</th>
       <th class="text-center">Año de ejecución</th>
       <th class="text-center">Acciones</th>
     </tr>
@@ -31,7 +31,7 @@
     <td class="text-center"></td>
     <td class="">{{ x.nombre_producto }}</td>
     <td class="text-center">{{ x.tipo_producto }}</td>
-    <td class="text-center">{{ x.nombre_caravisible }}</td>
+    <td class="">{{ x.nombre_caravisible }}</td>
     <td class="text-center">{{ x.ano_ejecucion }}</td>
     {% if user.is_superuser %}
       <td class="text-center td_botonera_tabla">
