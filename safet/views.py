@@ -557,7 +557,7 @@ class Editar_reporte_avances_cv(SuccessMessageMixin,UpdateView):
         """
         usuario = str(self.request.user)
         nombre_producto = self.object.nombre_producto
-        accion = "Actualizo el plan de actividaes del producto "+nombre_producto
+        accion = "Actualizo el plan de actividades del producto "+nombre_producto
         myDate = datetime.now()
         formatedDate = myDate.strftime("%d-%m-%Y %H:%M")
         fecha_humana = str(formatedDate)
