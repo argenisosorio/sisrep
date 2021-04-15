@@ -759,6 +759,10 @@ class ReporteAvancesForm(forms.ModelForm):
             msg = str('El valor del porcentaje debe ser menor que 100')
             self.add_error('porc_act_15', msg)
 
+        suma = porc_act_1+porc_act_2+porc_act_3+porc_act_4+porc_act_5+porc_act_6+porc_act_7+porc_act_8+porc_act_9+porc_act_10+porc_act_11+porc_act_12+porc_act_13+porc_act_14+porc_act_15
+        if (suma) > 100:
+            raise forms.ValidationError('El porcentaje no debe exceder de 100%')
+
         """
         Validación de los porcentajes de avances
         """
@@ -942,6 +946,10 @@ class ReporteAvancesForm(forms.ModelForm):
         if (porc_avan_act_15) > (porc_act_15):
             msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
             self.add_error('porc_avan_act_15', msg)
+
+        suma = porc_avan_act_1+porc_avan_act_2+porc_avan_act_3+porc_avan_act_4+porc_avan_act_5+porc_avan_act_6+porc_avan_act_7+porc_avan_act_8+porc_avan_act_9+porc_avan_act_10+porc_avan_act_11+porc_avan_act_12+porc_avan_act_13+porc_avan_act_14+porc_avan_act_15
+        if (suma) > 100:
+            raise forms.ValidationError('El porcentaje no debe exceder de 100%')
 
     class Meta:
 
@@ -1681,6 +1689,10 @@ class ReporteAvancesSoftwareForm(forms.ModelForm):
             msg = str('El valor del porcentaje debe ser menor que 100')
             self.add_error('porc_act_15', msg)
 
+        suma = porc_act_1+porc_act_2+porc_act_3+porc_act_4+porc_act_5+porc_act_6+porc_act_7+porc_act_8+porc_act_9+porc_act_10+porc_act_11+porc_act_12+porc_act_13+porc_act_14+porc_act_15
+        if (suma) > 100:
+            raise forms.ValidationError('El porcentaje no debe exceder de 100%')
+
         """
         Validación de los porcentajes de avances
         """
@@ -1864,6 +1876,10 @@ class ReporteAvancesSoftwareForm(forms.ModelForm):
         if (porc_avan_act_15) > (porc_act_15):
             msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
             self.add_error('porc_avan_act_15', msg)
+
+        suma = porc_avan_act_1+porc_avan_act_2+porc_avan_act_3+porc_avan_act_4+porc_avan_act_5+porc_avan_act_6+porc_avan_act_7+porc_avan_act_8+porc_avan_act_9+porc_avan_act_10+porc_avan_act_11+porc_avan_act_12+porc_avan_act_13+porc_avan_act_14+porc_avan_act_15
+        if (suma) > 100:
+            raise forms.ValidationError('El porcentaje no debe exceder de 100%')
 
     class Meta:
 
@@ -2600,6 +2616,10 @@ class ReporteAvancesCursoLineaForm(forms.ModelForm):
             msg = str('El valor del porcentaje debe ser menor que 100')
             self.add_error('porc_act_15', msg)
 
+        suma = porc_act_1+porc_act_2+porc_act_3+porc_act_4+porc_act_5+porc_act_6+porc_act_7+porc_act_8+porc_act_9+porc_act_10+porc_act_11+porc_act_12+porc_act_13+porc_act_14+porc_act_15
+        if (suma) > 100:
+            raise forms.ValidationError('El porcentaje no debe exceder de 100%')
+
         """
         Validación de los porcentajes de avances
         """
@@ -2783,6 +2803,10 @@ class ReporteAvancesCursoLineaForm(forms.ModelForm):
         if (porc_avan_act_15) > (porc_act_15):
             msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
             self.add_error('porc_avan_act_15', msg)
+
+        suma = porc_avan_act_1+porc_avan_act_2+porc_avan_act_3+porc_avan_act_4+porc_avan_act_5+porc_avan_act_6+porc_avan_act_7+porc_avan_act_8+porc_avan_act_9+porc_avan_act_10+porc_avan_act_11+porc_avan_act_12+porc_avan_act_13+porc_avan_act_14+porc_avan_act_15
+        if (suma) > 100:
+            raise forms.ValidationError('El porcentaje no debe exceder de 100%')
 
     class Meta:
 
@@ -3515,6 +3539,10 @@ class ReporteAvancesJornadaForm(forms.ModelForm):
             msg = str('El valor del porcentaje debe ser menor que 100')
             self.add_error('porc_act_15', msg)
 
+        suma = porc_act_1+porc_act_2+porc_act_3+porc_act_4+porc_act_5+porc_act_6+porc_act_7+porc_act_8+porc_act_9+porc_act_10+porc_act_11+porc_act_12+porc_act_13+porc_act_14+porc_act_15
+        if (suma) > 100:
+            raise forms.ValidationError('El porcentaje no debe exceder de 100%')
+
         """
         Validación de los porcentajes de avances
         """
@@ -3698,6 +3726,10 @@ class ReporteAvancesJornadaForm(forms.ModelForm):
         if (porc_avan_act_15) > (porc_act_15):
             msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
             self.add_error('porc_avan_act_15', msg)
+
+        suma = porc_avan_act_1+porc_avan_act_2+porc_avan_act_3+porc_avan_act_4+porc_avan_act_5+porc_avan_act_6+porc_avan_act_7+porc_avan_act_8+porc_avan_act_9+porc_avan_act_10+porc_avan_act_11+porc_avan_act_12+porc_avan_act_13+porc_avan_act_14+porc_avan_act_15
+        if (suma) > 100:
+            raise forms.ValidationError('El porcentaje no debe exceder de 100%')
 
     class Meta:
 
@@ -4431,6 +4463,10 @@ class ReporteAvancesPublicacionForm(forms.ModelForm):
             msg = str('El valor del porcentaje debe ser menor que 100')
             self.add_error('porc_act_15', msg)
 
+        suma = porc_act_1+porc_act_2+porc_act_3+porc_act_4+porc_act_5+porc_act_6+porc_act_7+porc_act_8+porc_act_9+porc_act_10+porc_act_11+porc_act_12+porc_act_13+porc_act_14+porc_act_15
+        if (suma) > 100:
+            raise forms.ValidationError('El porcentaje no debe exceder de 100%')
+
         """
         Validación de los porcentajes de avances
         """
@@ -4614,6 +4650,10 @@ class ReporteAvancesPublicacionForm(forms.ModelForm):
         if (porc_avan_act_15) > (porc_act_15):
             msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
             self.add_error('porc_avan_act_15', msg)
+
+        suma = porc_avan_act_1+porc_avan_act_2+porc_avan_act_3+porc_avan_act_4+porc_avan_act_5+porc_avan_act_6+porc_avan_act_7+porc_avan_act_8+porc_avan_act_9+porc_avan_act_10+porc_avan_act_11+porc_avan_act_12+porc_avan_act_13+porc_avan_act_14+porc_avan_act_15
+        if (suma) > 100:
+            raise forms.ValidationError('El porcentaje no debe exceder de 100%')
 
     class Meta:
 
@@ -5362,6 +5402,10 @@ class ReporteAvancesCVForm(forms.ModelForm):
             msg = str('El valor del porcentaje debe ser menor que 100')
             self.add_error('porc_act_15', msg)
 
+        suma = porc_act_1+porc_act_2+porc_act_3+porc_act_4+porc_act_5+porc_act_6+porc_act_7+porc_act_8+porc_act_9+porc_act_10+porc_act_11+porc_act_12+porc_act_13+porc_act_14+porc_act_15
+        if (suma) > 100:
+            raise forms.ValidationError('El porcentaje no debe exceder de 100%')
+
         """
         Validación de los porcentajes de avances
         """
@@ -5545,6 +5589,10 @@ class ReporteAvancesCVForm(forms.ModelForm):
         if (porc_avan_act_15) > (porc_act_15):
             msg = str('Error: el porcentaje de avance debe ser menor o igual al porcentaje asignado a la actividad')
             self.add_error('porc_avan_act_15', msg)
+
+        suma = porc_avan_act_1+porc_avan_act_2+porc_avan_act_3+porc_avan_act_4+porc_avan_act_5+porc_avan_act_6+porc_avan_act_7+porc_avan_act_8+porc_avan_act_9+porc_avan_act_10+porc_avan_act_11+porc_avan_act_12+porc_avan_act_13+porc_avan_act_14+porc_avan_act_15
+        if (suma) > 100:
+            raise forms.ValidationError('El porcentaje no debe exceder de 100%')
 
     class Meta:
 
