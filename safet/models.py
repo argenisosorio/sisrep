@@ -145,7 +145,7 @@ class ReporteAvances(models.Model):
         sumatoria_por_act = 0
         sumatoria_por_act = self.porc_act_1+self.porc_act_2+self.porc_act_3+self.porc_act_4+self.porc_act_5+self.porc_act_6+self.porc_act_7+self.porc_act_8+self.porc_act_9+self.porc_act_10+self.porc_act_11+self.porc_act_12+self.porc_act_13+self.porc_act_14+self.porc_act_15
         if sumatoria_por_act <= 100:
-            return str(sumatoria_por_avan)
+            return str(sumatoria_por_act)
 
     def sumatoria_por_avan(self):
         sumatoria_por_avan = 0

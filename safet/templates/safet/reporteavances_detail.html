@@ -479,7 +479,8 @@
       </td>
       <td>
       </td>
-      <td class="suma">
+      <td>
+        {{ reporteavances.sumatoria_por_act }} %
       </td>
       <td>
         {{ reporteavances.sumatoria_por_avan }} %
@@ -506,6 +507,8 @@
   <div class="col-sm-4">
   </div>
 </div>
+
+<!--
 <script type="text/javascript">
 $("document").ready(function (){
   /*
@@ -533,12 +536,14 @@ $("document").ready(function (){
   var contador = 0;
   var suma_porc_act = 0;
   for (var i=0; i<Lista.length; i++){
+    console.log(contador)
     contador=contador+Lista[i];
   }
   if (contador <= 100) {
     suma_porc_act = contador;
-    $(".suma").html(suma_porc_act+" %");
+    $(".suma").html(suma_porc_act.toFixed(1)+" %");
   }
 });
 </script>
 {% endblock %}
+-->
