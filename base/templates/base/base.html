@@ -193,6 +193,15 @@
         </a>
         {% else %}
         {% endif %}
+        {% if request.user.is_superuser %}
+        <br />
+        <br />
+        <br />
+        <a href="{% url 'reportes:reportes_inicio' %}" data-toggle="tooltip" title="Reportes">
+          <i class="fa fa-book color-white"></i>
+        </a>
+        {% else %}
+        {% endif %}
         <br />
         <br />
         <br />

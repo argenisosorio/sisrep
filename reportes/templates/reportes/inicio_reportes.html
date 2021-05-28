@@ -1,0 +1,21 @@
+{% extends "base/base.html" %}
+{% block titulo %}Reportes{% endblock %}
+{% block cuerpo %}
+<br />
+<h1><a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Reportes </h1>
+<br />
+{% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
+  <div class="row">
+  	<div class="col-sm-2">
+      <div class="glyphicon-white">
+        <a href="{% url 'reportes:consultar_indicadores' %}" class="enlace_boton_panel">
+          <div align="center">
+            <i class="glyphicon glyphicon-list glyphicon-icon"></i>
+            Indicadores
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+{% endif %}
+{% endblock %}

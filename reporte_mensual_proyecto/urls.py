@@ -9,5 +9,6 @@ urlpatterns = [
     url(r'^sisrep/', include('registro.urls', namespace='registro')),
     url(r'^safet/', include('safet.urls', namespace='safet')),
     url(r'^bitacora/', include('bitacora.urls', namespace='bitacora')),
+    url(r'^reportes/', include('reportes.urls', namespace='reportes')),
     url(r'^admin/', include(admin.site.urls)),
 ]
