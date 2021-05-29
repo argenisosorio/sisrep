@@ -4,14 +4,10 @@
 <br />
 <h1><a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Lista de indicadores de los proyectos</h1>
 {% if user.is_superuser and user.is_staff and user.is_active %}
-<div class="glyphicon-white">
-  <a href="{% url 'safet:consultar_reporte_avances_cv_por' %}" class="enlace_boton_panel">
-    <div align="center">
-    <i class="fa fa-line-chart"></i>
-    Avance de los productos
-    </div>
-  </a>
-</div>
+<button class="btn btn-success" data-toggle="modal" data-target="#modal-registrar">REGISTRAR INDICADORES</button>
+{% include 'usuarios/modals.html' %}
+<br />
+<br />
 {% endif %}
 <br>
 <table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
