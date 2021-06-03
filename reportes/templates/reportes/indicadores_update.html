@@ -1,0 +1,134 @@
+{% extends "base/base.html" %}
+{% block titulo %}Actualizar indicadores{% endblock %}
+{% block cuerpo %}
+<br />
+<h1><a href="{{ request.META.HTTP_REFERER }}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Actualizar indicadores</h1>
+<h3> Beneficios </h3>
+<br />
+<form method="post">{% csrf_token %}
+  <div class="">
+    <i class="fa fa-file-text-o color-blue-system"></i>
+    <b>{{ form.beneficio.label }}</b>
+    <br />
+    {{ form.beneficio }}
+    {% if form.beneficio.errors %}
+      <p>{{ form.beneficio.errors}}</p>
+    {% endif %}
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="">
+        <i class="fa fa-calendar color-blue-system"></i>
+        <b>{{ form.mes_beneficio.label }}</b>
+        <br />
+        {{ form.mes_beneficio }}
+        {% if form.mes_beneficio.errors %}
+          <p>{{ form.mes_beneficio.errors}}</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="">
+        <i class="fa fa-calendar color-blue-system"></i>
+        <b>{{ form.ano_beneficio.label }}</b>
+        <br />
+        {{ form.ano_beneficio }}
+        {% if form.ano_beneficio.errors %}
+          <p>{{ form.ano_beneficio.errors}}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <i class="fa fa-bar-chart-o color-blue-system"></i>
+      <b>{{ form.cantidad.label }}</b>
+      <br />
+      {{ form.cantidad }}
+      {% if form.cantidad.errors %}
+        <p>{{ form.cantidad.errors}}</p>
+      {% endif %}
+    </div>
+  </div>
+  <h3>Impacto del proyecto</h3>
+  <br />
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="">
+        <i class="fa fa-file-text-o color-blue-system"></i>
+        <b>{{ form.social.label }}</b>
+        <br />
+        {{ form.social }}
+        {% if form.social.errors %}
+          <p>{{ form.social.errors}}</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="">
+        <i class="fa fa-file-text-o color-blue-system"></i>
+        <b>{{ form.economico.label }}</b>
+        <br />
+        {{ form.economico }}
+        {% if form.economico.errors %}
+          <p>{{ form.economico.errors}}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="">
+        <i class="fa fa-file-text-o color-blue-system"></i>
+        <b>{{ form.productivo.label }}</b>
+        <br />
+        {{ form.productivo }}
+        {% if form.productivo.errors %}
+          <p>{{ form.productivo.errors}}</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="">
+        <i class="fa fa-file-text-o color-blue-system"></i>
+        <b>{{ form.ambiental.label }}</b>
+        <br />
+        {{ form.ambiental }}
+        {% if form.ambiental.errors %}
+          <p>{{ form.ambiental.errors}}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <h3>Beneficiarios del proyecto</h3>
+  <br />
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="">
+        <i class="fa fa-file-text-o color-blue-system"></i>
+        <b>{{ form.quienes.label }}</b>
+        <br />
+        {{ form.quienes }}
+        {% if form.quienes.errors %}
+          <p>{{ form.quienes.errors}}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="">
+        <i class="fa fa-file-text-o color-blue-system"></i>
+        <b>{{ form.cuantos.label }}</b>
+        <br />
+        {{ form.cuantos }}
+        {% if form.cuantos.errors %}
+          <p>{{ form.cuantos.errors}}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <br>
+  <button class="btn btn-success" type="submit">ACTUALIZAR</button>
+</form>
+{% endblock %}

@@ -85,6 +85,7 @@ class Editar_indicadores(SuccessMessageMixin,UpdateView):
     """
     model = Indicadores
     form_class = IndicadoresForm
+    template_name = "reportes/indicadores_update.html"
     success_url = reverse_lazy('reportes:consultar_indicadores')
     success_message = "Se actualizo el indicador con éxito"
 
@@ -95,7 +96,7 @@ class Editar_indicadores(SuccessMessageMixin,UpdateView):
         """
         self.object = self.get_object()
         if request.user.is_superuser:
-            return super(Editar_indicador, self).get(request, *args, **kwargs)
+            return super(Editar_indicadores, self).get(request, *args, **kwargs)
         else:
             if str(self.object) == str(self.request.user):
                 return super(Editar_indicador, self).get(request, *args, **kwargs)
@@ -104,7 +105,31 @@ class Editar_indicadores(SuccessMessageMixin,UpdateView):
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
-class Borrar_beneficios(SuccessMessageMixin,DeleteView):
+class Detallar_indicadores(DetailView):
+    """
+    Clase que muestra los detalles de los indicadores
+    """
+    model = Indicadores
+    template_name = "reportes/modals.html"
+
+    def get(self, request, *args, **kwargs):
+        """
+        Método que redirecciona a index si el usuario
+        que intenta ver el reporte no es el autor/creador o un director o admin.
+        """
+        self.object = self.get_object()
+        context = self.get_context_data(object=self.object)
+        if request.user.is_staff:
+            return self.render_to_response(context)
+        else:
+            if str(self.object) == str(self.request.user):
+                return self.render_to_response(context)
+            else:
+                messages_alert = ['No tiene permisos para ver el reporte']
+                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+
+
+class Borrar_indicadores(SuccessMessageMixin,DeleteView):
     """
     Clase que permite eliminar un beneficio registrad.
     """
