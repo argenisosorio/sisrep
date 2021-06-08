@@ -14,7 +14,7 @@ echo "Removidas migraciones del la bitacora"
 
 rm -rf db.sqlite3
 
-echo "Removidas la base de datos"
+echo "Removida la base de datos sqlite si existe"
 
 python manage.py makemigrations registro
 
@@ -26,7 +26,7 @@ echo "Migrados los modelos del safet"
 
 python manage.py makemigrations bitacora
 
-echo "Migrada la bitacora"
+echo "Migrados los modelos de la bitacora"
 
 python manage.py migrate
 
