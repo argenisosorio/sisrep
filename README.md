@@ -46,7 +46,7 @@ $ source mi_env/bin/activate
 ```
 # apt-get install postgresql libpq-dev python-psycopg2
 
-$ cd reporte_mensual_proyecto
+$ cd sisrep
 
 $ pip install -r requirements.txt 
 ```
