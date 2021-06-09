@@ -71,6 +71,7 @@ INSTALLED_APPS = (
     'registro',
     'safet',
     'bitacora',
+    'reportes',
 )
 
 MIDDLEWARE_CLASSES = (
