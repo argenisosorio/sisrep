@@ -1,10 +1,12 @@
 {% extends "base/base.html" %}
-{% block titulo %}Lista de planes de actividades de los productos{% endblock %}
+{% block titulo %}Lista de indicadores{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Lista de indicadores de los proyectos</h1>
-<a href="{% url 'reportes:registrar_indicadores' %}">
-  <button class="btn btn-success" data-toggle="modal" data-target="#modal-registrar">REGISTRAR INDICADORES</button>
+<h1>
+  <a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Lista de indicadores
+</h1>
+<a href="{% url 'reportes:registrar_indicador' %}">
+  <button class="btn btn-success" data-toggle="modal" data-target="#modal-registrar">REGISTRAR</button>
 </a>
 <br />
 <br />
@@ -20,31 +22,31 @@
     </tr>
   </thead>
   <tbody>
-  {% for x in object_list %}
-  <tr>
-    <td class="text-center"></td>
-    <td class="">{{ x.ano_beneficio }}</td>
-    <td class="text-center">{{ x.mes_beneficio }}</td>
-    <td class="">{{ x.beneficio }}</td>
-    <td class="text-center td_botonera_tabla">
-      <div class="row">
-        <div class="col-sm-12">
-
-          <a href="{% url 'reportes:editar_indicadores' x.id %}" title="Editar">
-            <i class="glyphicon glyphicon-pencil"></i>
-          </a>
-
-          <a href="{{ indicadores.id }}" title="Detallar" data-toggle="modal" data-target="#modal-detallar{{ indicadores.id }}"><i class="glyphicon glyphicon-eye-open"></i></a>
-          {% include 'reportes/modals.html' %}
-            
-          <a href="{{ indicadores.id }}" title="Borrar" data-toggle="modal" data-target="#myModal{{ indicadores.id }}"><i class="glyphicon glyphicon-trash"></i></a>
-          {% include 'reportes/modals.html' %}
-
+    {% for x in object_list %}
+    <tr>
+      <td class="text-center"></td>
+      <td class="">{{ x.ano_beneficio }}</td>
+      <td class="text-center">{{ x.mes_beneficio }}</td>
+      <td class="">{{ x.beneficio }}</td>
+      <td class="text-center td_botonera_tabla">
+        <div class="row">
+          <div class="col-sm-12">
+            <a href="{% url 'reportes:editar_indicador' x.id %}" title="Editar">
+              <i class="glyphicon glyphicon-pencil"></i>
+            </a>
+            <a href="{{ indicador.id }}" title="Detallar" data-toggle="modal" data-target="#modal-detallar{{ indicador.id }}">
+              <i class="glyphicon glyphicon-eye-open"></i>
+            </a>
+            {% include 'reportes/modals.html' %}
+            <a href="{{ indicador.id }}" title="Borrar" data-toggle="modal" data-target="#myModal{{ indicador.id }}">
+              <i class="glyphicon glyphicon-trash"></i>
+            </a>
+            {% include 'reportes/modals.html' %}
+          </div>
         </div>
-      </div>
-    </td>
-  </tr>
-  {% endfor %}
-</tbody>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
 </table>
 {% endblock %}

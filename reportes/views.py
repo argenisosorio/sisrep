@@ -16,6 +16,9 @@ from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
 from datetime import datetime
+#is_superuser = Analista
+#is_staff = Director
+#is_active = Cara visible
 
 
 #################################

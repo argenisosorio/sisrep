@@ -1,4 +1,4 @@
-<!-- Modal DETAIL button -->
+<!-- Modal Detail button -->
 <div class="modal fade" id="modal-detallar" tabindex="-1" role="dialog" aria-labelledby="modal-newTitle" aria-hidden="true">
   <div class="modal-dialog" role="document" style="width:1250px">
     <div class="modal-content">
@@ -6,176 +6,158 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h2 class="modal-title" id="modal-newTitle"> Detalles de los indicadores </h2>
+        <h2 class="modal-title" id="modal-newTitle">Detalles del indicador</h2>
       </div>
       <div class="modal-body">
-        <br />
-        <form action="{% url 'reportes:detallar_indicadores' x.id %}" method="post">{% csrf_token %}
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-              <i class="fa fa-file-text-o color-blue-system"></i>
-              <b>Beneficio</b>
-              </h3>
-            </div>
-            <div class="panel-body">
-              {{ x.beneficio }}
-            </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+            <i class="fa fa-file-text-o color-blue-system"></i>
+            <b>Beneficio</b>
+            </h3>
           </div>
-
-          <div class="row">
-
-            <div class="col-sm-4">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">
-                    <i class="fa fa-calendar color-blue-system"></i>
-                    <b>Año</b>
-                  </h3>
-                </div>
-                <div class="panel-body">
-                  {{ x.ano_beneficio }}
-                </div>
+          <div class="panel-body">
+            {{ x.beneficio }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <i class="fa fa-calendar color-blue-system"></i>
+                  <b>Año</b>
+                </h3>
               </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">
-                    <i class="fa fa-calendar color-blue-system"></i>
-                    <b>Mes</b>
-                  </h3>
-                </div>
-                <div class="panel-body">
-                  {{ x.mes_beneficio }}
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">
-                    <i class="fa fa-file-text-o color-blue-system"></i>
-                    <b>Cantidad</b>
-                  </h3>
-                </div>
-                <div class="panel-body">
-                  {{ x.cantidad }}
-                </div>
+              <div class="panel-body">
+                {{ x.ano_beneficio }}
               </div>
             </div>
           </div>
-
-          <h5>Impacto del proyecto</h5>
-          <div class="row">
-
-            <div class="col-sm-6">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">
-                    <i class="fa fa-file-text-o color-blue-system"></i>
-                    <b>Social</b>
-                  </h3>
-                </div>
-                <div class="panel-body">
-                  {{ x.social }}
-                </div>
+          <div class="col-sm-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <i class="fa fa-calendar color-blue-system"></i>
+                  <b>Mes</b>
+                </h3>
+              </div>
+              <div class="panel-body">
+                {{ x.mes_beneficio }}
               </div>
             </div>
-
-            <div class="col-sm-6">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">
-                    <i class="fa fa-file-text-o color-blue-system"></i>
-                    <b>Económico</b>
-                  </h3>
-                </div>
-                <div class="panel-body">
-                  {{ x.economico }}
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">
-                    <i class="fa fa-file-text-o color-blue-system"></i>
-                    <b>Productivo</b>
-                  </h3>
-                </div>
-                <div class="panel-body">
-                  {{ x.productivo }}
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">
-                    <i class="fa fa-file-text-o color-blue-system"></i>
-                    <b>Ambiental</b>
-                  </h3>
-                </div>
-                <div class="panel-body">
-                  {{ x.ambiental }}
-                </div>
-              </div>
-            </div>
-
           </div>
-
-          <h5>Beneficiarios del proyecto</h5>
-          <div class="row">
-
-            <div class="col-sm-6">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">
-                    <i class="fa fa-file-text-o color-blue-system"></i>
-                    <b>Quienes</b>
-                  </h3>
-                </div>
-                <div class="panel-body">
-                  {{ x.quienes }}
-                </div>
+          <div class="col-sm-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <i class="fa fa-file-text-o color-blue-system"></i>
+                  <b>Cantidad</b>
+                </h3>
+              </div>
+              <div class="panel-body">
+                {{ x.cantidad }}
               </div>
             </div>
-
-            <div class="col-sm-6">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">
-                    <i class="fa fa-file-text-o color-blue-system"></i>
-                    <b>Cuantos</b>
-                  </h3>
-                </div>
-                <div class="panel-body">
-                  {{ x.cuantos }}
-                </div>
-              </div>
-            </div>
-
           </div>
-
-        <br />
-        </form>
+        </div>
+        <h5>Impacto del proyecto</h5>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <i class="fa fa-file-text-o color-blue-system"></i>
+                  <b>Social</b>
+                </h3>
+              </div>
+              <div class="panel-body">
+                {{ x.social }}
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <i class="fa fa-file-text-o color-blue-system"></i>
+                  <b>Económico</b>
+                </h3>
+              </div>
+              <div class="panel-body">
+                {{ x.economico }}
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <i class="fa fa-file-text-o color-blue-system"></i>
+                  <b>Productivo</b>
+                </h3>
+              </div>
+              <div class="panel-body">
+                {{ x.productivo }}
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <i class="fa fa-file-text-o color-blue-system"></i>
+                  <b>Ambiental</b>
+                </h3>
+              </div>
+              <div class="panel-body">
+                {{ x.ambiental }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <h5>Beneficiarios del proyecto</h5>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <i class="fa fa-file-text-o color-blue-system"></i>
+                  <b>Quienes</b>
+                </h3>
+              </div>
+              <div class="panel-body">
+                {{ x.quienes }}
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <i class="fa fa-file-text-o color-blue-system"></i>
+                  <b>Cuantos</b>
+                </h3>
+              </div>
+              <div class="panel-body">
+                {{ x.cuantos }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-default" data-dismiss="modal">CERRAR</button>
       </div>
     </div>
   </div>
 </div>
-<!-- Modal DETAIL button end -->
+<!-- Modal Detail button end -->
 
-<!-- Modal DELETE button -->
-<div class="modal fade" id="myModal{{indicadores.id}}" role="dialog">
+<!-- Modal Delete button -->
+<div class="modal fade" id="myModal{{indicador.id}}" role="dialog">
   <div class="modal-dialog modal-md">
     <div class="modal-content">
       <div class="modal-body">
-        <form action="{% url 'reportes:borrar_indicadores' x.id %}" method="post">{% csrf_token %}
+        <form action="{% url 'reportes:borrar_indicador' x.id %}" method="post">{% csrf_token %}
           <br>
           <i class="fa fa-times-circle fa-lg"></i>
           <br><br>
@@ -188,4 +170,4 @@
     </div>
   </div>
 </div>
-<!-- Modal DELETE button end -->
+<!-- Modal Delete button end -->

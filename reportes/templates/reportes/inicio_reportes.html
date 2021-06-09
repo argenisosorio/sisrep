@@ -4,7 +4,7 @@
 <br />
 <h1><a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Reportes </h1>
 <br />
-{% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
+{% if request.user.is_active %}
   <div class="row">
   	<div class="col-sm-2">
       <div class="glyphicon-white">

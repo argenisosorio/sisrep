@@ -125,97 +125,142 @@
   <div class="col-sm-1 left-column">
     <br />
     {% if request.user.is_authenticated %}
-      <div class="text-center">
-        <a href="{% url 'inicio:index' %}" data-toggle="tooltip" title="Inicio">
-          <i class="fa fa-home color-white"></i>
+    <div class="text-center">
+      <!-- Inicio -->
+      <a href="{% url 'inicio:index' %}" data-toggle="tooltip" title="Inicio">
+        <i class="fa fa-home color-white"></i>
+      </a>
+      <!-- Fin Inicio -->
+      <br />
+      <br />
+      <br />
+      {% if request.user.is_superuser %}
+      <!-- Gestión de usuarios -->
+      <a href="{% url 'usuarios:list_users' %}" data-toggle="tooltip" title="Gestión de usuarios">
+        <i class="fa fa-group color-white"></i>
+      </a>
+      <!-- Fin Gestión de usuarios -->
+      <br />
+      <br />
+      <br />
+      <!-- Carga inicial -->
+      <a href="{% url 'safet:inicio_carga_inicial' %}" data-toggle="tooltip" title="Carga inicial">
+        <i class="fa fa-upload color-white"></i>
+      </a>
+      <!-- Fin Carga inicial -->
+      <br />
+      <br />
+      <br />
+      {% else %}
+      {% endif %}
+      {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
+      <!-- Actividades -->
+      <a href="{% url 'safet:consultar_reporte_avances' %}" data-toggle="tooltip" title="Actividades">
+        <i class="fa fa-file-text color-white"></i>
+      </a>
+      <!-- Fin Actividades -->
+      {% else %}
+        {% if request.user.is_staff and request.user.is_active %}
+        <!-- Actividades -->
+        <a href="{% url 'safet:consultar_reporte_avances' %}" data-toggle="tooltip" title="Actividades">
+          <i class="fa fa-file-text color-white"></i>
         </a>
-        <br />
-        <br />
-        <br />
-        {% if request.user.is_superuser %}
-        <a href="{% url 'usuarios:list_users' %}" data-toggle="tooltip" title="Gestión de usuarios">
-          <i class="fa fa-group color-white"></i>
-        </a>
-        <br />
-        <br />
-        <br />
-        <a href="{% url 'safet:inicio_carga_inicial' %}" data-toggle="tooltip" title="Carga inicial">
-          <i class="fa fa-upload color-white"></i>
-        </a>
-        <br />
-        <br />
-        <br />
+        <!-- Fin Actividades -->
         {% else %}
-        {% endif %}
-        {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
-          <a href="{% url 'safet:consultar_reporte_avances' %}" data-toggle="tooltip" title="Actividades">
+          {% if request.user.is_active %}
+          <!-- Actividades CV -->
+          <a href="{% url 'safet:consultar_reporte_avances_cv' %}" data-toggle="tooltip" title="Actividades">
             <i class="fa fa-file-text color-white"></i>
           </a>
-        {% else %}
-          {% if request.user.is_staff and request.user.is_active %}
-          <a href="{% url 'safet:consultar_reporte_avances' %}" data-toggle="tooltip" title="Actividades">
-            <i class="fa fa-file-text color-white"></i>
-          </a>
-          {% else %}
-            {% if request.user.is_active %}
-              <a href="{% url 'safet:consultar_reporte_avances_cv' %}" data-toggle="tooltip" title="Actividades">
-                <i class="fa fa-file-text color-white"></i>
-              </a>
-            {% endif %}
+          <!-- Fin Actividades CV -->
           {% endif %}
         {% endif %}
-        <br />
-        <br />
-        <br />
-        {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
+      {% endif %}
+      <br />
+      <br />
+      <br />
+      {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
+      <!-- Tareas -->
+      <a href="{% url 'registro:buscar' %}" data-toggle="tooltip" title="Tareas">
+        <i class="fa fa-tags color-white"></i>
+      </a>
+      <!-- Fin Tareas -->
+      {% else %}
+        {% if request.user.is_staff and request.user.is_active %}
+        <!-- Tareas -->
+        <a href="{% url 'registro:buscar' %}" data-toggle="tooltip" title="Tareas">
+          <i class="fa fa-tags color-white"></i>
+        </a>
+        <!-- Fin Tareas -->
+        {% else %}
+          {% if request.user.is_active %}
+          <!-- Tareas -->
           <a href="{% url 'registro:buscar' %}" data-toggle="tooltip" title="Tareas">
             <i class="fa fa-tags color-white"></i>
           </a>
-          {% else %}
-            {% if request.user.is_staff and request.user.is_active %}
-              <a href="{% url 'registro:buscar' %}" data-toggle="tooltip" title="Tareas">
-                <i class="fa fa-tags color-white"></i>
-              </a>
-            {% else %}
-            {% if request.user.is_active %}
-              <a href="{% url 'registro:buscar' %}" data-toggle="tooltip" title="Tareas">
-                <i class="fa fa-tags color-white"></i>
-              </a>
-            {% endif %}
+          <!-- Fin Tareas -->
           {% endif %}
         {% endif %}
-        {% if request.user.is_superuser %}
+      {% endif %}
+      {% if request.user.is_superuser %}
+      <br />
+      <br />
+      <br />
+      <!-- Reportes -->
+      <a href="{% url 'reportes:reportes_inicio' %}" data-toggle="tooltip" title="Reportes">
+        <i class="fa fa-book color-white"></i>
+      </a>
+      <!-- Fin Reportes -->
+      {% else %}
+        {% if user.is_staff and user.is_active %}
         <br />
         <br />
         <br />
-        <a href="{% url 'bitacora:bitacora' %}" data-toggle="tooltip" title="Bitácora de eventos">
-          <i class="fa fa-compass color-white"></i>
-        </a>
-        {% else %}
-        {% endif %}
-        {% if request.user.is_superuser %}
-        <br />
-        <br />
-        <br />
+        <!-- Reportes -->
         <a href="{% url 'reportes:reportes_inicio' %}" data-toggle="tooltip" title="Reportes">
           <i class="fa fa-book color-white"></i>
         </a>
+        <!-- Fin Reportes -->
         {% else %}
+          {% if user.is_active %}
+          <br />
+          <br />
+          <br />
+          <!-- Reportes -->
+          <a href="{% url 'reportes:reportes_inicio' %}" data-toggle="tooltip" title="Reportes">
+            <i class="fa fa-book color-white"></i>
+          </a>
+          <!-- Fin Reportes -->
+          {% endif %}
         {% endif %}
-        <br />
-        <br />
-        <br />
-        <a href="{% url 'usuarios:logout' %}" data-toggle="tooltip" title="Salir">
-          <i class="fa fa-sign-out fa-sign-out-salir color-white"></i>
-        </a>
-      </div>
-      {% else %}
-        <div class="text-center">
-        <a href="{% url 'inicio:index' %}" data-toggle="tooltip" title="Inicio">
-          <i class="fa fa-home color-white"></i>
-        </a>
-        </div>
       {% endif %}
+      <!-- Bitácora de eventos -->
+      {% if request.user.is_superuser %}
+      <br />
+      <br />
+      <br />
+      <a href="{% url 'bitacora:bitacora' %}" data-toggle="tooltip" title="Bitácora de eventos">
+        <i class="fa fa-compass color-white"></i>
+      </a>
+      {% else %}
+      {% endif %}
+      <!-- Fin Bitácora de eventos -->
+      <br />
+      <br />
+      <br />
+      <!-- Salir -->
+      <a href="{% url 'usuarios:logout' %}" data-toggle="tooltip" title="Salir">
+        <i class="fa fa-sign-out fa-sign-out-salir color-white"></i>
+      </a>
+      <!-- Fin Salir -->
+    </div>
+    {% else %}
+      <!-- Inicio -->
+      <a href="{% url 'inicio:index' %}" data-toggle="tooltip" title="Inicio">
+        <i class="fa fa-home color-white"></i>
+      </a>
+      <!-- Fin Inicio -->
+    {% endif %}
   </div>
   <!-- End col-1 -->
 
