@@ -34,9 +34,10 @@ class IndicadoresForm(forms.ModelForm):
         'required': 'True',
     }), required = True)
 
-    cantidad = forms.IntegerField(label='Cantidad', widget=NumberInput(attrs={
+    cantidad = forms.CharField(label='Cantidad', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'min':'0', 'step':'1','value': '0',
         'required': 'True',
     }), required = True)
 
@@ -81,6 +82,7 @@ class IndicadoresForm(forms.ModelForm):
     cuantos = forms.CharField(label='Cuántos', widget=NumberInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
+        'min':'0', 'step':'1','value': '0',
         'required': 'True',
     }), required = True)
 

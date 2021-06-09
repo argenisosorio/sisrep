@@ -29,30 +29,17 @@
     <td class="text-center td_botonera_tabla">
       <div class="row">
         <div class="col-sm-12">
+
           <a href="{% url 'reportes:editar_indicadores' x.id %}" title="Editar">
             <i class="glyphicon glyphicon-pencil"></i>
           </a>
-          <a href="{% url 'reportes:detallar_indicadores' x.id %}" title="Detallar" data-toggle="modal" data-target="modal-detallar"><i class="glyphicon glyphicon-eye-open"></i></a>
+
+          <a href="{{ indicadores.id }}" title="Detallar" data-toggle="modal" data-target="#modal-detallar{{ indicadores.id }}"><i class="glyphicon glyphicon-eye-open"></i></a>
           {% include 'reportes/modals.html' %}
             
-          <a href="{{ indicadores.id }}" title="Borrar" data-toggle="modal" data-target="#myModal{{indicadores.id}}"><i class="glyphicon glyphicon-trash"></i></a>
-            <div class="modal fade" id="myModal{{indicadores.id}}" role="dialog">
-              <div class="modal-dialog modal-md">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <form action="{% url 'reportes:borrar_indicadores' x.id %}" method="post">{% csrf_token %}
-                      <br>
-                      <i class="fa fa-times-circle fa-lg"></i>
-                      <br><br>
-                      <h4>¿Estás seguro que quieres eliminar el indicador: <b>{{ indicadores.beneficio }}</b>?</h4>
-                      <br>
-                      <button type="button" class="btn btn-default" data-dismiss="modal">CANCELAR</button>
-                      <button class="btn btn-danger" type="submit">BORRAR</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <a href="{{ indicadores.id }}" title="Borrar" data-toggle="modal" data-target="#myModal{{ indicadores.id }}"><i class="glyphicon glyphicon-trash"></i></a>
+          {% include 'reportes/modals.html' %}
+
         </div>
       </div>
     </td>
