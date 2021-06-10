@@ -20,20 +20,20 @@ from datetime import datetime
 #is_staff = Director
 #is_active = Cara visible
 
-
-#################################
-##### Crud de los Beneficios ####
-#################################
+##################################
+##### Crud de los Indicadores ####
+##################################
 
 class IndexReportes(TemplateView):
     """
-    Plantilla de inicio del módulo de carga inicial
+    Plantilla de inicio del módulo de reportes.
     """
     template_name = "reportes/inicio_reportes.html"
 
+
 class Consultar_indicadores(ListView):
     """
-    Clase que permite consultar los beneficios.
+    Clase que permite consultar los indicadores registrados.
     """
     model = Indicadores
 
@@ -60,9 +60,9 @@ class Consultar_indicadores(ListView):
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
-class Registrar_indicadores(SuccessMessageMixin,CreateView):
+class Registrar_indicador(SuccessMessageMixin,CreateView):
     """
-    Clase que permite registrar uno o varios beneficios.
+    Clase que permite registrar un indicador.
     """
     model = Indicadores
     form_class = IndicadoresForm
@@ -76,15 +76,15 @@ class Registrar_indicadores(SuccessMessageMixin,CreateView):
         """
         self.object = None
         if request.user.is_superuser:
-            return super(Registrar_indicadores, self).get(request, *args, **kwargs)
+            return super(Registrar_indicador, self).get(request, *args, **kwargs)
         else:
             messages_alert = ['No tiene permisos para registrar indicadores']
             return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
-class Editar_indicadores(SuccessMessageMixin,UpdateView):
+class Editar_indicador(SuccessMessageMixin,UpdateView):
     """
-    Clase que permite editar los beneficios guardados.
+    Clase que permite editar los datos de un indicador guardado.
     """
     model = Indicadores
     form_class = IndicadoresForm
@@ -99,7 +99,7 @@ class Editar_indicadores(SuccessMessageMixin,UpdateView):
         """
         self.object = self.get_object()
         if request.user.is_superuser:
-            return super(Editar_indicadores, self).get(request, *args, **kwargs)
+            return super(Editar_indicador, self).get(request, *args, **kwargs)
         else:
             if str(self.object) == str(self.request.user):
                 return super(Editar_indicador, self).get(request, *args, **kwargs)
@@ -108,9 +108,9 @@ class Editar_indicadores(SuccessMessageMixin,UpdateView):
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
-class Detallar_indicadores(DetailView):
+class Detallar_indicador(DetailView):
     """
-    Clase que muestra los detalles de los indicadores
+    Clase que muestra los datos detallados de los indicador guardado.
     """
     model = Indicadores
     template_name = "reportes/modals.html"
@@ -132,9 +132,9 @@ class Detallar_indicadores(DetailView):
                 return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
 
-class Borrar_indicadores(SuccessMessageMixin,DeleteView):
+class Borrar_indicador(SuccessMessageMixin,DeleteView):
     """
-    Clase que permite eliminar un beneficio registrad.
+    Clase que permite eliminar un indicador registrado.
     """
     model = Indicadores
     success_url = reverse_lazy('reportes:consultar_indicadores')
@@ -142,7 +142,7 @@ class Borrar_indicadores(SuccessMessageMixin,DeleteView):
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message)
-        return super(Borrar_indicadores, self).delete(request, *args, **kwargs)
+        return super(Borrar_indicador, self).delete(request, *args, **kwargs)
 
     def get(self, request, *args, **kwargs):
         """
