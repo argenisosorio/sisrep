@@ -34,14 +34,13 @@
             <a href="{% url 'reportes:editar_indicador' x.id %}" title="Editar">
               <i class="glyphicon glyphicon-pencil"></i>
             </a>
-            <a href="{{ indicador.id }}" title="Detallar" data-toggle="modal" data-target="#modal-detallar{{ indicador.id }}">
+            <a href="{{ x.id }}" title="Detallar" data-toggle="modal" data-target="#modal-detallar{{ x.id }}">
               <i class="glyphicon glyphicon-eye-open"></i>
             </a>
             {% include 'reportes/modals.html' %}
-            <a href="{{ indicador.id }}" title="Borrar" data-toggle="modal" data-target="#myModal{{ indicador.id }}">
+            <a href="{{ x.id }}" title="Borrar" data-toggle="modal" data-target="#myModal{{ x.id }}">
               <i class="glyphicon glyphicon-trash"></i>
             </a>
-            {% include 'reportes/modals.html' %}
           </div>
         </div>
       </td>
