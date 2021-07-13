@@ -10,18 +10,18 @@
       <i class="fa fa-search color-blue-system"></i>
       <label>Buscar productos por año</label>
       <br />
-      <select class="form form-control" name="ano" required>
+      <select class="form form-control" name="ano" onchange="this.form.submit()" required>
+        <option value="">Seleccione</option>
         <option value="2021">2021</option>
         <option value="2020">2020</option>
         <option value="2019">2019</option>
       </select>
-      <button class="btn btn-success" type="submit">BUSCAR</button>
+      <!--button class="btn btn-success" type="submit">BUSCAR</button-->
     </form>
   </div>
   <div class="col-sm-4"></div>
   <div class="col-sm-4"></div>
 </div>
-<br />
 {% if reportes %}
 <div class="well-white">
   <h4 class="text-right"><b>Fecha: {{ fecha_humana }}</b></h4>
@@ -63,6 +63,6 @@
 </div>
 {% else %}
 <br />
-<b>No se encontraron productos</b>
+<!--b>No se encontraron productos</b-->
 {% endif %}
 {% endblock %}
