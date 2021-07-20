@@ -78,9 +78,22 @@
       </div>
     </div>
   </div>
-<!-- Accordion Panel Example
-================================================== -->
-<h3>Actividades</h3>
+
+  <!-- Accordion Panel Example
+  ================================================== -->
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Actividades</h3>
+    </div>
+    <div class="col-sm-6"></div>
+    <div class="col-sm-6">
+      <div align="right">
+        <button class="btn btn-success" type="button" onclick="expand()" data-toggle="tooltip" title="Expandir/Contraer todos">
+          <i class="fa fa-expand fa-lg ollapsed"></i>
+        </button>
+      </div>
+    </div>
+  </div>
   <div class="panel-group" id="accordion">
     <div class="panel panel-default">
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
@@ -863,4 +876,15 @@
 </div>
 <button class="btn btn-success" type="submit">GUARDAR</button>
 </form>
+<script type="text/javascript">
+/*
+|--------------------------------------
+| Función que permite expandir/contraer
+| los collapse.
+|--------------------------------------
+*/
+function expand() {
+  $(".collapse").collapse('toggle');
+}
+</script>
 {% endblock %}
