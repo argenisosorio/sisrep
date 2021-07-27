@@ -604,7 +604,11 @@ def busqueda(request):
     if 'ano' in request.GET and request.GET['ano']:
         ano = request.GET['ano']
         reportes_ano = ReporteAvances.objects.order_by('nombre_producto').filter(ano_ejecucion__icontains=ano)
-        return render(request, 'safet/reporteavances_list_cv_por.html',
-            {'reportes':reportes_ano,'ano':ano,'fecha_humana':fecha_humana})
+        if request.user.is_staff:
+            return render(request, 'safet/reporteavances_list_cv_por.html',
+                {'reportes':reportes_ano,'ano':ano,'fecha_humana':fecha_humana})
+        else:
+            messages_alert = ['No tiene permisos para acceder']
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
     else:
         return HttpResponse('Por favor introduce un termino de búsqueda.')

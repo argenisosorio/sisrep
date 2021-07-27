@@ -180,3 +180,14 @@ $("document").ready(function(){
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
 });
+
+/*
+|-----------------------------------------
+| Función que rota el ícono del accordion.
+|-----------------------------------------
+*/
+$(document).ready(function(){
+  $('.panel-heading').click(function() {
+    $(this).find('.glyphicon-menu-down').toggleClass('fa-rotate-180');
+  });
+});

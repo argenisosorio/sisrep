@@ -78,16 +78,30 @@
       </div>
     </div>
   </div>
-<!-- Accordion Panel Example
-================================================== -->
-<h3>Actividades</h3>
+
+  <!-- Accordion Panel Example
+  ================================================== -->
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Actividades</h3>
+    </div>
+    <div class="col-sm-6"></div>
+    <div class="col-sm-6">
+      <div align="right">
+        <button class="btn btn-success" type="button" onclick="expand()" data-toggle="tooltip" title="Expandir/Contraer todos">
+          <i class="fa fa-expand fa-lg ollapsed"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <div class="panel-group" id="accordion">
     <div class="panel panel-default">
      <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
        <div class="panel-heading">
          <h4 class="panel-title">
            Actividad 1 - {{ form.nombre_act_1.value }}
-           <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+           <span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
@@ -139,7 +153,7 @@
        <div class="panel-heading">
          <h4 class="panel-title">
            Actividad 2 - {{ form.nombre_act_2.value }}
-           <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+           <span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
@@ -191,7 +205,7 @@
        <div class="panel-heading">
          <h4 class="panel-title">
            Actividad 3 - {{ form.nombre_act_3.value }}
-           <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+           <span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
@@ -243,7 +257,7 @@
        <div class="panel-heading">
          <h4 class="panel-title">
            Actividad 4 - {{ form.nombre_act_4.value }}
-           <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+           <span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
@@ -295,7 +309,7 @@
        <div class="panel-heading">
          <h4 class="panel-title">
            Actividad 5 - {{ form.nombre_act_5.value }}
-           <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+           <span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
@@ -347,7 +361,7 @@
        <div class="panel-heading">
          <h4 class="panel-title">
            Actividad 6 - {{ form.nombre_act_6.value }}
-           <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+           <span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
@@ -399,7 +413,7 @@
        <div class="panel-heading">
          <h4 class="panel-title">
            Actividad 7 - {{ form.nombre_act_7.value }}
-           <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+           <span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
@@ -451,7 +465,7 @@
        <div class="panel-heading">
          <h4 class="panel-title">
            Actividad 8 - {{ form.nombre_act_8.value }}
-           <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+           <span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
@@ -503,7 +517,7 @@
        <div class="panel-heading">
          <h4 class="panel-title">
            Actividad 9 - {{ form.nombre_act_9.value }}
-           <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+           <span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
@@ -555,7 +569,7 @@
        <div class="panel-heading">
          <h4 class="panel-title">
            Actividad 10 - {{ form.nombre_act_10.value }}
-           <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+           <span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
@@ -607,7 +621,7 @@
        <div class="panel-heading">
          <h4 class="panel-title">
            Actividad 11 - {{ form.nombre_act_11.value }}
-           <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+           <span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
@@ -659,7 +673,7 @@
        <div class="panel-heading">
          <h4 class="panel-title">
            Actividad 12 - {{ form.nombre_act_12.value }}
-           <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+           <span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
@@ -711,7 +725,7 @@
        <div class="panel-heading">
          <h4 class="panel-title">
            Actividad 13 - {{ form.nombre_act_13.value }}
-           <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+           <span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
@@ -763,7 +777,7 @@
        <div class="panel-heading">
          <h4 class="panel-title">
            Actividad 14 - {{ form.nombre_act_14.value }}
-           <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+           <span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
@@ -815,7 +829,7 @@
        <div class="panel-heading">
          <h4 class="panel-title">
            Actividad 15 - {{ form.nombre_act_15.value }}
-           <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+           <span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
          </h4>
        </div>
      </a>
@@ -863,4 +877,15 @@
 </div>
 <button class="btn btn-success" type="submit">GUARDAR</button>
 </form>
+<script type="text/javascript">
+/*
+|--------------------------------------
+| Función que permite expandir/contraer
+| los collapse.
+|--------------------------------------
+*/
+function expand() {
+  $(".collapse").collapse('toggle');
+}
+</script>
 {% endblock %}
