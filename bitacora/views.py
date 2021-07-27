@@ -32,11 +32,11 @@ class Bitacora(ListView):
                 raise Http404(_("Empty list and '%(class_name)s.allow_empty' is False.")
                         % {'class_name': self.__class__.__name__})
         context = self.get_context_data()
-        if request.user.is_superuser:
+        if request.user.is_staff:
             return self.render_to_response(context)
         else:
             messages_alert = ['No tiene permisos para ver la Bitácora']
-            return render_to_response("usuarios/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
 
     def get_queryset(self):
         """
