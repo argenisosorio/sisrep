@@ -90,92 +90,92 @@ class ReporteForm(forms.ModelForm):
         lista_cargos = Cargo.objects.all().order_by('nombre_cargo').values_list('nombre_cargo','nombre_cargo')
 
         self.fields['nombre_proyecto'] = forms.ChoiceField(label="Producto", widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_proyectos)
 
         self.fields['nombre_caravisible'] = forms.ChoiceField(label="Cara visible", widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         self.fields['nombre_director'] = forms.ChoiceField(label="Director", widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_directores)
 
         self.fields['cargo_trab_1'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_cargos)
 
         self.fields['cargo_trab_2'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_cargos)
 
         self.fields['cargo_trab_3'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_cargos)
 
         self.fields['cargo_trab_4'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_cargos)
 
         self.fields['cargo_trab_5'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_cargos)
 
         self.fields['cargo_trab_6'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_cargos)
 
         self.fields['cargo_trab_7'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_cargos)
 
         self.fields['cargo_trab_8'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_cargos)
 
         self.fields['cargo_trab_9'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_cargos)
 
         self.fields['cargo_trab_10'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_cargos)
 
         self.fields['cargo_trab_11'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_cargos)
 
         self.fields['cargo_trab_12'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_cargos)
 
         self.fields['cargo_trab_13'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_cargos)
 
         self.fields['cargo_trab_14'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_cargos)
 
         self.fields['cargo_trab_15'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
-            'class':'form-control input-md form_style',
+            'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_cargos)
 

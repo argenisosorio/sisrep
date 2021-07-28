@@ -886,3 +886,10 @@ textarea {
 .area_enlaces {
   word-break: break-all;
 }
+
+.select2-container--default .select2-selection--single {
+  background-color: transparent !important;
+  border: 0px solid #aaa !important;
+  border-radius: 0px !important;
+  border-bottom: 1px solid #9e9e9e !important;
+}

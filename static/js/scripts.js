@@ -191,3 +191,12 @@ $(document).ready(function(){
     $(this).find('.glyphicon-menu-down').toggleClass('fa-rotate-180');
   });
 });
+
+/*
+|-----------------------------------
+| Función que inicializa js-select2.
+|-----------------------------------
+*/
+$(document).ready(function() {
+  $('.js-select2').select2();
+});
