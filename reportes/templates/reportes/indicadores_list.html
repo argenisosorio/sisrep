@@ -2,15 +2,13 @@
 {% block titulo %}Lista de indicadores{% endblock %}
 {% block cuerpo %}
 <br />
-<h1>
-  <a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Lista de indicadores
-</h1>
+<h1><a href="{% url 'inicio:index' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a>Lista de indicadores</h1>
+<br />
 <a href="{% url 'reportes:registrar_indicador' %}">
-  <button class="btn btn-success" data-toggle="modal" data-target="#modal-registrar">REGISTRAR</button>
+  <button class="btn btn-success">REGISTRAR</button>
 </a>
 <br />
 <br />
-<br>
 <table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
   <thead>
     <tr>
