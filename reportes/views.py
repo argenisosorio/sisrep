@@ -113,7 +113,7 @@ class Detallar_indicador(DetailView):
     Clase que muestra los datos detallados de los indicador guardado.
     """
     model = Indicadores
-    template_name = "reportes/modals.html"
+    template_name = "reportes/indicadores_detallar.html"
 
     def get(self, request, *args, **kwargs):
         """

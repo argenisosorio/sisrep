@@ -1,0 +1,226 @@
+{% extends "base/base.html" %}
+{% block titulo %}Detallar indicadores{% endblock %}
+{% block cuerpo %}
+
+<script type="text/javascript">
+  function downloadCSV(csv, filename) {
+  var csvFile;
+  var downloadLink;
+
+  // CSV file
+  csvFile = new Blob([csv], {type: "text/csv"});
+
+  // Download link
+  downloadLink = document.createElement("a");
+
+  // File name
+  downloadLink.download = filename;
+
+  // Create a link to the file
+  downloadLink.href = window.URL.createObjectURL(csvFile);
+
+  // Hide download link
+  downloadLink.style.display = "none";
+
+  // Add the link to DOM
+  document.body.appendChild(downloadLink);
+
+  // Click download link
+  downloadLink.click();
+}
+
+function exportTableToCSV(filename) {
+  var csv = [];
+  var rows = document.querySelectorAll("table tr");  
+  for (var i = 0; i < rows.length; i++) {
+    var row = [], cols = rows[i].querySelectorAll("td, th");
+    for (var j = 0; j < cols.length; j++) 
+      row.push(cols[j].innerText);    
+    csv.push(row.join(","));    
+  }
+  // Download CSV file
+  downloadCSV(csv.join("\n"), filename);
+}
+</script>
+
+<br />
+<h1>
+  <a href="{{ request.META.HTTP_REFERER }}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Detallar indicador
+</h1>
+<h3>Detalles</h3>
+<br />
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <i class="fa fa-file-text-o color-blue-system"></i>
+      <b>Beneficio</b>
+    </h3>
+  </div>
+  <div class="panel-body">
+    {{ indicadores.beneficio }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="fa fa-calendar color-blue-system"></i>
+          <b>Año</b>
+        </h3>
+      </div>
+    <div class="panel-body">
+      {{ indicadores.ano_beneficio }}
+    </div>
+  </div>
+</div>
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="fa fa-calendar color-blue-system"></i>
+          <b>Mes</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ indicadores.mes_beneficio }}
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="fa fa-file-text-o color-blue-system"></i>
+          <b>Cantidad</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ indicadores.cantidad }}
+      </div>
+    </div>
+  </div>
+</div>
+<h5>Impacto del proyecto</h5>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="fa fa-file-text-o color-blue-system"></i>
+          <b>Social</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ indicadores.social }}
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <i class="fa fa-file-text-o color-blue-system"></i>
+            <b>Económico</b>
+          </h3>
+        </div>
+        <div class="panel-body">
+          {{ indicadores.economico }}
+        </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="fa fa-file-text-o color-blue-system"></i>
+          <b>Productivo</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ indicadores.productivo }}
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="fa fa-file-text-o color-blue-system"></i>
+          <b>Ambiental</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ indicadores.ambiental }}
+      </div>
+    </div>
+  </div>
+</div>
+<h5>Beneficiarios del proyecto</h5>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="fa fa-file-text-o color-blue-system"></i>
+          <b>Quienes</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ indicadores.quienes }}
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="fa fa-file-text-o color-blue-system"></i>
+          <b>Cuantos</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ indicadores.cuantos }}
+      </div>
+    </div>
+  </div>
+</div>
+<div style="display:none;">
+  <table border="1px" class="display" cellspacing="0px" style="width:100%;">
+    <thead>
+      <tr>
+        <th class="text-center">N</th>
+        <th class="text-center">Año</th>
+        <th class="text-center">Mes</th>
+        <th class="text-center">Beneficio</th>
+        <th class="text-center">Cantidad</th>
+        <th class="text-center">Impacto social</th>
+        <th class="text-center">Impacto económico</th>
+        <th class="text-center">Impacto productivo</th>
+        <th class="text-center">Impacto ambiental</th>
+        <th class="text-center">Quienes</th>
+        <th class="text-center">Cuántos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="text-center"></td>
+        <td class="text-center">{{ indicadores.ano_beneficio }}</td>
+        <td class="text-center">{{ indicadores.mes_beneficio }}</td>
+        <td class="text-center">{{ indicadores.beneficio }}</td>
+        <td class="text-center">{{ indicadores.cantidad }}</td>
+        <td class="text-center">{{ indicadores.social }}</td>
+        <td class="text-center">{{ indicadores.economico }}</td>
+        <td class="text-center">{{ indicadores.productivo }}</td>
+        <td class="text-center">{{ indicadores.ambiental }}</td>
+        <td class="text-center">{{ indicadores.quienes }}</td>
+        <td class="text-center">{{ indicadores.cuantos }}</td>
+    </tbody>
+  </table>
+</div>
+<br />
+<br>
+<a href="javascript:exportTableToCSV('file.csv')"><button type="button" class="btn btn-success">Exportar en CSV</button></a>
+
+{% endblock %}
