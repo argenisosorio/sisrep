@@ -36,7 +36,7 @@
       <td class="td_si">Analista</td>
     {% else %}
       {% if user.is_superuser == False and user.is_staff == True and user.is_active == True %}
-        <td class="td_si">Director</td>
+        <td class="td_si">Supervisor</td>
       {% else %}
         {% if user.is_superuser == False and user.is_staff == False and user.is_active == True %}
           <td class="td_si">Cara visible</td>

@@ -31,13 +31,13 @@
       {% if form.is_active.value == True and form.is_staff.value == True and form.is_superuser.value == True %}
         <select class="form-control input-md form_style" id="id_rol" name="rol" style="min-width: 0; width: 100%; display: inline;">
           <option value="is_superuser">Analista</option>
-          <option value="is_staff">Director</option>
+          <option value="is_staff">Supervisor</option>
           <option value="is_active">Cara visible</option>
         </select>
       {% else %}
         {% if form.is_active.value == True and form.is_staff.value == True and form.is_superuser.value == False %}
           <select class="form-control input-md form_style" id="id_rol" name="rol" style="min-width: 0; width: 100%; display: inline;">
-            <option value="is_staff">Director</option>
+            <option value="is_staff">Supervisor</option>
             <option value="is_active">Cara visible</option>
             <option value="is_superuser">Analista</option>
           </select>
@@ -45,7 +45,7 @@
           {% if form.is_active.value == True and form.is_staff.value == False and form.is_superuser.value == False %}
             <select class="form-control input-md form_style" id="id_rol" name="rol" style="min-width: 0; width: 100%; display: inline;">
               <option value="is_active">Cara visible</option>
-              <option value="is_staff">Director</option>
+              <option value="is_staff">Supervisor</option>
               <option value="is_superuser">Analista</option>
             </select>
           {% endif %}

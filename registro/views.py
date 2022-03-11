@@ -17,9 +17,9 @@ from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
 from datetime import datetime
-#is_active = Cara visible
-#is_staff = Director
 #is_superuser = Analista
+#is_staff = Supervisor
+#is_active = Cara visible
 
 
 #################################
@@ -654,6 +654,18 @@ class Buscar_reporte(TemplateView):
     Plantilla que tiene el formulario para buscar reportes.
     """
     template_name = "registro/buscar.html"
+
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+        if request.user.is_superuser:
+            return self.render_to_response(context)
+        else:
+            if request.user.is_staff:
+                messages_alert = ['No tiene permisos para acceder']
+                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+            else:
+                if request.user.is_active:
+                    return self.render_to_response(context)
 
 
 def busqueda(request):

@@ -88,10 +88,10 @@
             {{ request.user.username }} (Analista) <span class="caret"></span>
           {% else %}
             {% if user.is_staff and user.is_active %}
-              {{ request.user.username }} (Director) <span class="caret"></span>
+              {{ request.user.username }} (Supervisor) <span class="caret"></span>
             {% else %}
               {% if user.is_active %}
-                {{ request.user.username }} (Cara Visible) <span class="caret"></span>
+                {{ request.user.username }} (Cara visible) <span class="caret"></span>
               {% else %}
                 xxx
               {% endif %}
@@ -136,6 +136,7 @@
         <br />
         <br />
         <br />
+        <!-- GESTIÓN DE USUARIOS -->
         {% if request.user.is_superuser %}
         <a href="{% url 'usuarios:list_users' %}" data-toggle="tooltip" title="Gestión de usuarios">
           <i class="fa fa-group color-white"></i>
@@ -143,6 +144,7 @@
         <br />
         <br />
         <br />
+        <!-- CARGA INICIAL -->
         <a href="{% url 'safet:inicio_carga_inicial' %}" data-toggle="tooltip" title="Carga inicial">
           <i class="fa fa-upload color-white"></i>
         </a>
@@ -168,27 +170,32 @@
             {% endif %}
           {% endif %}
         {% endif %}
-        <br />
-        <br />
-        <br />
+        <!-- TAREAS -->
+        <!-- Analista -->
         {% if request.user.is_superuser and request.user.is_staff and request.user.is_active %}
+          <br />
+          <br />
+          <br />
           <a href="{% url 'registro:buscar' %}" data-toggle="tooltip" title="Tareas">
             <i class="fa fa-tags color-white"></i>
           </a>
           {% else %}
+            <!-- Supervisor -->
             {% if request.user.is_staff and request.user.is_active %}
-              <a href="{% url 'registro:buscar' %}" data-toggle="tooltip" title="Tareas">
-                <i class="fa fa-tags color-white"></i>
-              </a>
             {% else %}
+            <!-- Cara visible -->
             {% if request.user.is_active %}
+              <br />
+              <br />
+              <br />
               <a href="{% url 'registro:buscar' %}" data-toggle="tooltip" title="Tareas">
                 <i class="fa fa-tags color-white"></i>
               </a>
             {% endif %}
           {% endif %}
         {% endif %}
-        {% if request.user.is_staff %}
+        <!-- BITÁCORA DE EVENTOS -->
+        {% if request.user.is_superuser %}
         <br />
         <br />
         <br />

@@ -22,7 +22,7 @@ anos = (
 )
 usuarios = (
     ('is_active', 'Cara visible'),
-    ('is_staff', 'Director'),
+    ('is_staff', 'Supervisor'),
     ('is_superuser', 'Analista'),
 )
 estatus_reportes_tareas = (

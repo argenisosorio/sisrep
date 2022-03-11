@@ -18,7 +18,7 @@ from django.contrib.auth.models import User
 from django.shortcuts import redirect
 from datetime import datetime
 #is_active = Cara visible
-#is_staff = Director
+#is_staff = Supervisor
 #is_superuser = Analista
 
 
@@ -455,7 +455,7 @@ class Detallar_reporte_avances(DetailView):
     def get(self, request, *args, **kwargs):
         """
         Método que redirecciona a index si el usuario
-        que intenta ver el reporte no es Cara visible o Director.
+        que intenta ver el reporte no es Cara visible o Supervisor.
         """
         self.object = self.get_object()
         context = self.get_context_data(object=self.object)
