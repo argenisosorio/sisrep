@@ -204,6 +204,56 @@ class ReporteForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_cargos)
 
+        self.fields['cargo_trab_21'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md form_style js-select2',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices=lista_cargos)
+
+        self.fields['cargo_trab_22'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md form_style js-select2',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices=lista_cargos)
+
+        self.fields['cargo_trab_23'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md form_style js-select2',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices=lista_cargos)
+
+        self.fields['cargo_trab_24'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md form_style js-select2',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices=lista_cargos)
+
+        self.fields['cargo_trab_25'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md form_style js-select2',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices=lista_cargos)
+
+        self.fields['cargo_trab_26'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md form_style js-select2',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices=lista_cargos)
+
+        self.fields['cargo_trab_27'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md form_style js-select2',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices=lista_cargos)
+
+        self.fields['cargo_trab_28'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md form_style js-select2',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices=lista_cargos)
+
+        self.fields['cargo_trab_29'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md form_style js-select2',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices=lista_cargos)
+
+        self.fields['cargo_trab_30'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
+            'class':'form-control input-md form_style js-select2',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices=lista_cargos)
+
     autor = forms.CharField(label='Autor', widget=TextInput(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
@@ -630,6 +680,206 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     enlaces_trab_20 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    nombre_trab_21 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_asig_trab_21 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_rea_trab_21 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlaces_trab_21 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    nombre_trab_22 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_asig_trab_22 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_rea_trab_22 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlaces_trab_22 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    nombre_trab_23 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_asig_trab_23 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_rea_trab_23 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlaces_trab_23 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    nombre_trab_24 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_asig_trab_24 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_rea_trab_24 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlaces_trab_24 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    nombre_trab_25 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_asig_trab_25 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_rea_trab_25 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlaces_trab_25 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    nombre_trab_26 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_asig_trab_26 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_rea_trab_26 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlaces_trab_26 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    nombre_trab_27 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_asig_trab_27 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_rea_trab_27 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlaces_trab_27 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    nombre_trab_28 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_asig_trab_28 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_rea_trab_28 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlaces_trab_28 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    nombre_trab_29 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_asig_trab_29 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_rea_trab_29 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlaces_trab_29 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    nombre_trab_30 = forms.CharField(label='Nombre del trabajador', widget=TextInput(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_asig_trab_30 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    act_rea_trab_30 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
+        'class':'form-control input-md form_style',
+        'style': 'min-width: 0; width: 100%; display: inline;',
+    }), required = False)
+
+    enlaces_trab_30 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
         'class':'form-control input-md form_style',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
