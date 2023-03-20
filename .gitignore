@@ -4,6 +4,7 @@
 *.pyc
 *.log
 *.swp
+*.sqlite3
 db.sqlite3
 registro/migrations
 safet/migrations
