@@ -1,4 +1,4 @@
-{% extends "base/base.html" %}
+<!-- {% extends "base/base.html" %} -->
 {% block titulo %}Plan de actividades{% endblock %}
 {% block cuerpo %}
 <script type="text/javascript">
@@ -15,29 +15,100 @@
         },
         { text: '\nPlan de actividades de {{ reporteavances.nombre_producto }}\n\n',style: 'header'},
         // Nombre del proyecto poa
-        { text: 'Nombre del proyecto poa:', style: 'subheader' },
-        { text: '{{ reporteavances.nombre_proyecto_poa }}\n\n', style: 'text_query' },
-        // Nombre de la acción específica
-        { text: 'Nombre de la acción específica:', style: 'subheader' },
-        { text: '{{ reporteavances.nombre_accion_especifica }}\n\n', style: 'text_query' },
-        // Nombre del producto
-        { text: 'Nombre del producto:', style: 'subheader'},
-        { text: '{{ reporteavances.nombre_producto }}\n\n', style: 'text_query'},
-        // Año de ejecución
-        { text: 'Año de ejecución:', style: 'subheader' },
-        { text: '{{ reporteavances.ano_ejecucion }}\n\n', style: 'text_query' },
-        // Nombre del director
-        { text: 'Nombre del director:', style: 'subheader' },
-        { text: '{{ reporteavances.nombre_director }}\n\n', style: 'text_query' },
-        // Nombre del cara visible
-        { text: 'Nombre del cara visible:', style: 'subheader' },
-        { text: '{{ reporteavances.nombre_caravisible }}\n\n', style: 'text_query' },
-        // Fecha de entrega
-        { text: 'Fecha de entrega:', style: 'subheader' },
-        { text: `{{ reporteavances.fecha_entrega }}\n\n`, style: 'text_query' },
-        // Integrantes del equipo
-        { text: 'Integrantes del equipo:', style: 'subheader' },
-        { text: `{{ reporteavances.integrantes_equipo }}\n\n`, style: 'text_query' },
+        {
+          columns: [
+            {
+              text: 'Nombre del proyecto poa:', style: 'subheader'
+            },
+            {
+              text: 'Nombre de la acción específica:', style: 'subheader'
+            },
+            {
+              text: 'Nombre del producto:', style: 'subheader'
+            }
+          ]
+        },
+        {
+          columns: [
+            {
+              text: '{{ reporteavances.nombre_proyecto_poa }}\n\n', style: 'text_query'
+            },
+            {
+              text: '{{ reporteavances.nombre_accion_especifica }}\n\n', style: 'text_query'
+            },
+            {
+              text: '{{ reporteavances.nombre_producto }}\n\n', style: 'text_query'
+            },
+          ]
+        },
+        {
+          columns: [
+            {
+              //Vacio
+              text: ' ', style: 'text_query'
+            },
+            {
+              //Vacio
+              text: ' ', style: 'text_query'
+            },
+            {
+              //Vacio
+              text: ' ', style: 'text_query'
+            },
+          ]
+        },
+        {
+          columns: [
+            {
+              text: 'Año de ejecución:', style: 'subheader'
+            },
+            {
+              text: 'Nombre del director:', style: 'subheader'
+            },
+            {
+              text: 'Nombre del cara visible:', style: 'subheader'
+            },
+          ]
+        },
+        {
+          columns: [
+            {
+              text: '{{ reporteavances.ano_ejecucion }}\n\n', style: 'text_query'
+            },
+            {
+              text: '{{ reporteavances.nombre_director }}\n\n', style: 'text_query'
+            },
+            {
+              text: '{{ reporteavances.nombre_caravisible }}\n\n', style: 'text_query'
+            },
+          ]
+        },
+        {
+          columns: [
+            {
+              text: 'Fecha de entrega:', style: 'subheader'
+            },
+            {
+              text: 'Integrantes del equipo:', style: 'subheader'
+            },
+            {
+              text: ' ', style: 'text_query'
+            },
+          ]
+        },
+        {
+          columns: [
+            {
+              text: `{{ reporteavances.fecha_entrega }}\n\n`, style: 'text_query'
+            },
+            {
+              text: `{{ reporteavances.integrantes_equipo }}\n\n`, style: 'text_query'
+            },
+            {
+              text: ' ', style: 'text_query'
+            },
+          ]
+        },
         { text: '\n\nLista de actividades:\n\n', style: 'subheader' },
         // Tabla
         {
