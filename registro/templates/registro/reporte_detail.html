@@ -15,29 +15,79 @@
         },
         { text: '\nReporte de {{ reporte.nombre_proyecto }} de {{ reporte.mes }} del {{ reporte.ano }}\n\n',style: 'header'},
         // Producto
-        { text: 'Proyecto:', style: 'subheader' },
-        { text: '{{ reporte.nombre_proyecto }}\n\n', style: 'text_query' },
-        // Registrado
-        { text: 'Registrado:', style: 'subheader' },
-        { text: '{{ reporte.fecha_registro_reporte }}\n\n', style: 'text_query' },
-        // Cara visible
-        { text: 'Cara Visible:', style: 'subheader'},
-        { text: '{{ reporte.nombre_caravisible }}\n\n', style: 'text_query'},
-        // Director
-        { text: 'Director:', style: 'subheader' },
-        { text: '{{ reporte.nombre_director }}\n\n', style: 'text_query' },
-        // Mes
-        { text: 'Mes:', style: 'subheader' },
-        { text: '{{ reporte.mes }}\n\n', style: 'text_query' },
-        // Año
-        { text: 'Año:', style: 'subheader' },
-        { text: '{{ reporte.ano }}\n\n', style: 'text_query' },
-        // Descripción general del avance del producto
-        { text: 'Descripción general del avance del producto:', style: 'subheader' },
-        { text: `{{ reporte.desc_avance }}\n\n`, style: 'text_query' },
-        // Dificultades y obstáculos
-        { text: 'Dificultades y obstáculos:', style: 'subheader' },
-        { text: `{{ reporte.obstaculos }}\n\n`, style: 'text_query' },
+        {
+          columns:[
+            {
+              text: 'Proyecto: ', style: 'subheader'
+            },
+            {
+              text: 'Registrado:', style: 'subheader'
+            },
+            {
+              text: 'Cara Visible:', style: 'subheader'
+            },
+
+          ],
+        },
+        {
+          columns:[
+            {
+              text: '{{ reporte.nombre_proyecto }}\n\n', style: 'text_query' 
+            },
+            {
+              text: '{{ reporte.fecha_registro_reporte }}\n\n', style: 'text_query'
+            },
+            {
+              text: '{{ reporte.nombre_caravisible }}\n\n', style: 'text_query'
+            },
+          ]
+        },
+        {
+          columns:[
+            {
+              text: 'Director:', style: 'subheader'
+            },
+            {
+              text: 'Mes:', style: 'subheader' 
+            },
+            {
+              text: 'Año:', style: 'subheader'
+            },
+          ]
+        },
+        {
+          columns:[
+            {
+              text: '{{ reporte.nombre_director }}\n\n', style: 'text_query'
+            },
+            {
+              text: '{{ reporte.mes }}\n\n', style: 'text_query' 
+            },
+            {
+              text: '{{ reporte.ano }}\n\n', style: 'text_query'
+            },
+          ]
+        },
+        {
+          columns:[
+            {
+              text: 'Descripción general del avance del producto:', style: 'subheader'
+            },
+            {
+              text: 'Dificultades y obstáculos:', style: 'subheader'
+            },
+          ]
+        },
+        {
+          columns:[
+            {
+              text: `{{ reporte.desc_avance }}\n\n`, style: 'text_query'
+            },
+            {
+              text: `{{ reporte.obstaculos }}\n\n`, style: 'text_query' 
+            },
+          ],
+        },
         { text: '\n\nIntegrantes del equipo:\n\n', style: 'subheader' },
         // Tabla
         {
