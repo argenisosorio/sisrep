@@ -182,6 +182,12 @@
           {% else %}
             <!-- Supervisor -->
             {% if request.user.is_staff and request.user.is_active %}
+              <br />
+              <br />
+              <br />
+              <a href="{% url 'registro:buscar' %}" data-toggle="tooltip" title="Tareas">
+                <i class="fa fa-tags color-white"></i>
+              </a>
             {% else %}
             <!-- Cara visible -->
             {% if request.user.is_active %}

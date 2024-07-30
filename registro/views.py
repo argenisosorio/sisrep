@@ -661,8 +661,9 @@ class Buscar_reporte(TemplateView):
             return self.render_to_response(context)
         else:
             if request.user.is_staff:
-                messages_alert = ['No tiene permisos para acceder']
-                return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+                # messages_alert = ['No tiene permisos para acceder']
+                # return render_to_response("inicio/index.html",{'messages_alert': messages_alert}, context_instance=RequestContext(request))
+                return self.render_to_response(context)
             else:
                 if request.user.is_active:
                     return self.render_to_response(context)
