@@ -1,6 +1,12 @@
 {% extends "base/base.html" %}
 {% block titulo %}Registrar reporte de tareas{% endblock %}
 {% block cuerpo %}
+<style>
+  /* Agrandar el área de texto de las tareas */
+  .act {
+    height: 200px !important;
+  }
+</style>
 <br />
 <h1><a href="{{ request.META.HTTP_REFERER }}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Registrar reporte de tareas</h1>
 <br />

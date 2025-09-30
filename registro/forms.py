@@ -290,17 +290,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_1 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_1 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_1 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -310,17 +310,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_2 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_2 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_2 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -330,17 +330,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_3 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_3 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_3 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -350,17 +350,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_4 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_4 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_4 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -370,17 +370,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_5 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_5 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_5 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -390,17 +390,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_6 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_6 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_6 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -410,17 +410,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_7 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_7 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_7 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -430,17 +430,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_8 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_8 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_8 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -450,17 +450,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_9 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_9 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_9 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -470,17 +470,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_10 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_10 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_10 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -490,17 +490,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_11 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_11 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_11 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -510,17 +510,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_12 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_12 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_12 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -530,17 +530,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_13 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_13 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_13 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -550,17 +550,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_14 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_14 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_14 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -570,17 +570,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_15 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_15 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_15 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -590,17 +590,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_16 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_16 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_16 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -610,17 +610,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_17 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_17 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_17 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -630,17 +630,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_18 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_18 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_18 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -650,17 +650,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_19 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_19 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_19 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -670,17 +670,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_20 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_20 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_20 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -690,17 +690,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_21 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_21 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_21 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -710,17 +710,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_22 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_22 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_22 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -730,17 +730,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_23 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_23 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_23 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -750,17 +750,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_24 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_24 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_24 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -770,17 +770,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_25 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_25 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_25 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -790,17 +790,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_26 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_26 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_26 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -810,17 +810,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_27 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_27 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_27 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -830,17 +830,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_28 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_28 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_28 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -850,17 +850,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_29 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_29 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_29 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
@@ -870,17 +870,17 @@ class ReporteForm(forms.ModelForm):
     }), required = False)
 
     act_asig_trab_30 = forms.CharField(label='Actividades asignadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     act_rea_trab_30 = forms.CharField(label='Actividades realizadas', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
     enlaces_trab_30 = forms.CharField(label='Enlaces de verificación', widget=Textarea(attrs={
-        'class':'form-control input-md form_style',
+        'class':'form-control input-md form_style act',
         'style': 'min-width: 0; width: 100%; display: inline;',
     }), required = False)
 
