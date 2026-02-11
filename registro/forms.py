@@ -104,6 +104,12 @@ class ReporteForm(forms.ModelForm):
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_directores)
 
+        # Trabajador 1
+        self.fields['nombre_trab_1'] = forms.ChoiceField(label="Trabajador 1", widget=Select(attrs={
+            'class':'form-control input-md form_style js-select2',
+            'style': 'min-width: 0; width: 100%; display: inline;',
+        }), choices=lista_caravisibles)
+
         self.fields['cargo_trab_1'] = forms.ChoiceField(label='Cargo', widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
