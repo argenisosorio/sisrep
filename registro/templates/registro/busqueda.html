@@ -2,11 +2,20 @@
 {% block titulo %}Resultados de la búsqueda{% endblock %}
 {% block cuerpo %}
 <br />
-<h1><a href="{% url 'registro:buscar' %}" class="regresar"><i class="fa fa-mail-reply fa-lg ollapsed"></i></a> Resultados de la búsqueda</h1>
+<h1>
+  <a
+    href="{% url 'registro:buscar' %}"
+    class="regresar"
+  >
+    <i class="fa fa-mail-reply fa-lg ollapsed"></i>
+  </a> Resultados de la búsqueda
+</h1>
 <br />
+
 {% if reportes %}
   <h4>Estas buscado reportes de tareas del año <strong>{{ query }}</strong> en el mes de <strong>{{ query2}}</strong></h4>
   <p>Reportes encontrados: <strong>{{ reportes|length }}</strong></p>
+
 {% if user.is_superuser and user.is_staff and user.is_active %}
   <br />
   <a href="{% url 'registro:registrar_reporte' %}">
@@ -30,6 +39,7 @@
     {% endif %}
   {% endif %}
 {% endif %}
+
   <br />
   <table border="1px" id="example" class="display" cellspacing="0px" style="width:100%;">
     <thead>
@@ -55,6 +65,7 @@
       <td class="">{{ x.mes }}</td>
       <td class="text-center">{{ x.ano }}</td>
       <td class="">{{ x.fecha_registro_reporte }}</td>
+
       {% if user.is_superuser and user.is_staff and user.is_active %}
         {% if x.estatus == "act" %}
           <td class="text-center">Activo</td>
@@ -63,13 +74,39 @@
         {% else %}
         {% endif %}
       {% endif %}
+
+      <!-- Bloque para el superusuario -->
       {% if request.user.is_superuser %}
       <td class="text-center td_botonera_tabla">
         <div class="row">
           <div class="col-sm-12">
-            <a href="{% url 'registro:editar_reporte_analista' x.id %}" title="Editar"><i class="glyphicon glyphicon-pencil"></i></a>
-            <a href="{% url 'registro:detallar_reporte' x.id %}" title="Detallar"><i class="glyphicon glyphicon-eye-open"></i></a>
-            <a href="{% url 'registro:borrar_reporte' x.id %}" title="Borrar"><i class="glyphicon glyphicon-trash"></i></a>
+            <!-- Si el año del reporte es 2026, mostrar el ícono de edición -->
+            {% if x.ano == 2026 or x.ano == "2026" %}
+              <!-- Botón Editar -->
+              <a
+                href="{% url 'registro:editar_reporte_analista' x.id %}"
+                title="Editar"
+              >
+                <i class="glyphicon glyphicon-pencil"></i>
+              </a>
+            {% endif %}
+            <!-- Botón Detallar -->
+            <a
+              href="{% url 'registro:detallar_reporte' x.id %}"
+              title="Detallar"
+            >
+              <i class="glyphicon glyphicon-eye-open"></i>
+            </a>
+            <!-- Si el año del reporte es 2026, mostrar el ícono de borrar -->
+            {% if x.ano == 2026 or x.ano == "2026" %}
+              <!-- Botón Borrar -->
+              <a
+                href="{% url 'registro:borrar_reporte' x.id %}"
+                title="Borrar"
+              >
+                <i class="glyphicon glyphicon-trash"></i>
+              </a>
+            {% endif %}
           </div>
         </div>
       </td>
@@ -78,15 +115,36 @@
           <td class="text-center td_botonera_tabla">
             <div class="row">
               <div class="col-sm-12">
-                <a href="{% url 'registro:editar_reporte' x.id %}" title="Editar"><i class="glyphicon glyphicon-pencil"></i></a>
-                <a href="{% url 'registro:detallar_reporte' x.id %}" title="Detallar"><i class="glyphicon glyphicon-eye-open"></i></a>
+                <!-- Si el año del reporte es 2026, mostrar el ícono de edición -->
+                {% if x.ano == 2026 or x.ano == "2026" %}
+                  <!-- Botón Editar -->
+                  <a
+                    href="{% url 'registro:editar_reporte' x.id %}"
+                    title="Editar"
+                  >
+                    <i class="glyphicon glyphicon-pencil"></i>
+                  </a>
+                {% endif %}
+                <!-- Botón Detallar -->
+                <a
+                  href="{% url 'registro:detallar_reporte' x.id %}"
+                  title="Detallar"
+                >
+                  <i class="glyphicon glyphicon-eye-open"></i>
+                </a>
               </div>
             </div>
           </td>
         {% else %}
           {% if request.user.is_staff %}
             <td class="text-center td_botonera_tabla">
-              <a href="{% url 'registro:detallar_reporte' x.id %}" title="Detallar"><i class="glyphicon glyphicon-eye-open"></i></a>
+              <!-- Botón Detallar -->
+              <a
+                href="{% url 'registro:detallar_reporte' x.id %}"
+                title="Detallar"
+              >
+                <i class="glyphicon glyphicon-eye-open"></i>
+              </a>
             </td>
           {% else %}
             <td></td>
@@ -100,6 +158,8 @@
 {% else %}
   <p>Ningún reporte coincide con el criterio de búsqueda.</p>
   <br />
-  <a href="{% url 'registro:buscar' %}"><button type="button" class="btn btn-primary">BUSCAR</button></a>
+  <a href="{% url 'registro:buscar' %}">
+    <button type="button" class="btn btn-primary">BUSCAR</button>
+  </a>
 {% endif %}
 {% endblock %}
