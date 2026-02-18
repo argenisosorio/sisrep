@@ -71,13 +71,13 @@
           text: 'Descripción general del avance del producto:', style: 'subheader'
         },
         {
-          text: `{{ reporte.desc_avance }}\n\n`, style: 'text_query'
+          text: `{{ reporte.desc_avance|safe|escapejs }}\n\n`, style: 'text_query'
         },
         {
           text: 'Dificultades y obstáculos:', style: 'subheader'
         },
         {
-          text: `{{ reporte.obstaculos }}\n\n`, style: 'text_query' 
+          text: `{{ reporte.obstaculos|safe|escapejs }}\n\n`, style: 'text_query'
         },
         { text: '\n\nIntegrantes del equipo:\n\n', style: 'subheader' },
         // Tabla
