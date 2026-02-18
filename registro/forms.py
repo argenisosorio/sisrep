@@ -85,9 +85,15 @@ class ReporteForm(forms.ModelForm):
         """
         super(ReporteForm, self).__init__(*args, **kwargs)
         lista_proyectos = Proyecto.objects.all().order_by('nombre_proyecto').values_list('nombre_proyecto','nombre_proyecto')
-        lista_caravisibles = Caravisible.objects.all().order_by('nombre_caravisible').values_list('nombre_caravisible','nombre_caravisible')
-        lista_directores = Director.objects.all().order_by('nombre_director').values_list('nombre_director','nombre_director')
+        query_caravisibles = Caravisible.objects.all().order_by('nombre_caravisible').values_list('nombre_caravisible','nombre_caravisible')
+        query_directores = Director.objects.all().order_by('nombre_director').values_list('nombre_director','nombre_director')
         lista_cargos = Cargo.objects.all().order_by('nombre_cargo').values_list('nombre_cargo','nombre_cargo')
+
+        # Hacer que el primer valor de la lista sea vacío para que el campo no tenga un valor preseleccionado
+        lista_caravisibles = [('', '---------')] + list(query_caravisibles)
+
+        # Hacer que el primer valor de la lista sea vacío para que el campo no tenga un valor preseleccionado
+        lista_directores = [('', '---------')] + list(query_directores)
 
         self.fields['nombre_proyecto'] = forms.ChoiceField(label="Producto", widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
@@ -109,181 +115,181 @@ class ReporteForm(forms.ModelForm):
         #----------------------------
 
         # Trabajador 1
-        self.fields['nombre_trab_1'] = forms.ChoiceField(label="Trabajador 1", widget=Select(attrs={
+        self.fields['nombre_trab_1'] = forms.ChoiceField(label="Trabajador 1", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 2
-        self.fields['nombre_trab_2'] = forms.ChoiceField(label="Trabajador 2", widget=Select(attrs={
+        self.fields['nombre_trab_2'] = forms.ChoiceField(label="Trabajador 2", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 3
-        self.fields['nombre_trab_3'] = forms.ChoiceField(label="Trabajador 3", widget=Select(attrs={
+        self.fields['nombre_trab_3'] = forms.ChoiceField(label="Trabajador 3", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 4
-        self.fields['nombre_trab_4'] = forms.ChoiceField(label="Trabajador 4", widget=Select(attrs={
+        self.fields['nombre_trab_4'] = forms.ChoiceField(label="Trabajador 4", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 5
-        self.fields['nombre_trab_5'] = forms.ChoiceField(label="Trabajador 5", widget=Select(attrs={
+        self.fields['nombre_trab_5'] = forms.ChoiceField(label="Trabajador 5", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 6
-        self.fields['nombre_trab_6'] = forms.ChoiceField(label="Trabajador 6", widget=Select(attrs={
+        self.fields['nombre_trab_6'] = forms.ChoiceField(label="Trabajador 6", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 7
-        self.fields['nombre_trab_7'] = forms.ChoiceField(label="Trabajador 7", widget=Select(attrs={
+        self.fields['nombre_trab_7'] = forms.ChoiceField(label="Trabajador 7", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 8
-        self.fields['nombre_trab_8'] = forms.ChoiceField(label="Trabajador 8", widget=Select(attrs={
+        self.fields['nombre_trab_8'] = forms.ChoiceField(label="Trabajador 8", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 9
-        self.fields['nombre_trab_9'] = forms.ChoiceField(label="Trabajador 9", widget=Select(attrs={
+        self.fields['nombre_trab_9'] = forms.ChoiceField(label="Trabajador 9", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 10
-        self.fields['nombre_trab_10'] = forms.ChoiceField(label="Trabajador 10", widget=Select(attrs={
+        self.fields['nombre_trab_10'] = forms.ChoiceField(label="Trabajador 10", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 11
-        self.fields['nombre_trab_11'] = forms.ChoiceField(label="Trabajador 11", widget=Select(attrs={
+        self.fields['nombre_trab_11'] = forms.ChoiceField(label="Trabajador 11", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 12
-        self.fields['nombre_trab_12'] = forms.ChoiceField(label="Trabajador 12", widget=Select(attrs={
+        self.fields['nombre_trab_12'] = forms.ChoiceField(label="Trabajador 12", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 13
-        self.fields['nombre_trab_13'] = forms.ChoiceField(label="Trabajador 13", widget=Select(attrs={
+        self.fields['nombre_trab_13'] = forms.ChoiceField(label="Trabajador 13", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 14
-        self.fields['nombre_trab_14'] = forms.ChoiceField(label="Trabajador 14", widget=Select(attrs={
+        self.fields['nombre_trab_14'] = forms.ChoiceField(label="Trabajador 14", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 15
-        self.fields['nombre_trab_15'] = forms.ChoiceField(label="Trabajador 15", widget=Select(attrs={
+        self.fields['nombre_trab_15'] = forms.ChoiceField(label="Trabajador 15", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 16
-        self.fields['nombre_trab_16'] = forms.ChoiceField(label="Trabajador 16", widget=Select(attrs={
+        self.fields['nombre_trab_16'] = forms.ChoiceField(label="Trabajador 16", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 17
-        self.fields['nombre_trab_17'] = forms.ChoiceField(label="Trabajador 17", widget=Select(attrs={
+        self.fields['nombre_trab_17'] = forms.ChoiceField(label="Trabajador 17", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 18
-        self.fields['nombre_trab_18'] = forms.ChoiceField(label="Trabajador 18", widget=Select(attrs={
+        self.fields['nombre_trab_18'] = forms.ChoiceField(label="Trabajador 18", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 19
-        self.fields['nombre_trab_19'] = forms.ChoiceField(label="Trabajador 19", widget=Select(attrs={
+        self.fields['nombre_trab_19'] = forms.ChoiceField(label="Trabajador 19", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 20
-        self.fields['nombre_trab_20'] = forms.ChoiceField(label="Trabajador 20", widget=Select(attrs={
+        self.fields['nombre_trab_20'] = forms.ChoiceField(label="Trabajador 20", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 21
-        self.fields['nombre_trab_21'] = forms.ChoiceField(label="Trabajador 21", widget=Select(attrs={
+        self.fields['nombre_trab_21'] = forms.ChoiceField(label="Trabajador 21", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 22
-        self.fields['nombre_trab_22'] = forms.ChoiceField(label="Trabajador 22", widget=Select(attrs={
+        self.fields['nombre_trab_22'] = forms.ChoiceField(label="Trabajador 22", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 23
-        self.fields['nombre_trab_23'] = forms.ChoiceField(label="Trabajador 23", widget=Select(attrs={
+        self.fields['nombre_trab_23'] = forms.ChoiceField(label="Trabajador 23", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 24
-        self.fields['nombre_trab_24'] = forms.ChoiceField(label="Trabajador 24", widget=Select(attrs={
+        self.fields['nombre_trab_24'] = forms.ChoiceField(label="Trabajador 24", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 25
-        self.fields['nombre_trab_25'] = forms.ChoiceField(label="Trabajador 25", widget=Select(attrs={
+        self.fields['nombre_trab_25'] = forms.ChoiceField(label="Trabajador 25", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 26
-        self.fields['nombre_trab_26'] = forms.ChoiceField(label="Trabajador 26", widget=Select(attrs={
+        self.fields['nombre_trab_26'] = forms.ChoiceField(label="Trabajador 26", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 27
-        self.fields['nombre_trab_27'] = forms.ChoiceField(label="Trabajador 27", widget=Select(attrs={
+        self.fields['nombre_trab_27'] = forms.ChoiceField(label="Trabajador 27", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 28
-        self.fields['nombre_trab_28'] = forms.ChoiceField(label="Trabajador 28", widget=Select(attrs={
+        self.fields['nombre_trab_28'] = forms.ChoiceField(label="Trabajador 28", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 29
-        self.fields['nombre_trab_29'] = forms.ChoiceField(label="Trabajador 29", widget=Select(attrs={
+        self.fields['nombre_trab_29'] = forms.ChoiceField(label="Trabajador 29", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
 
         # Trabajador 30
-        self.fields['nombre_trab_30'] = forms.ChoiceField(label="Trabajador 30", widget=Select(attrs={
+        self.fields['nombre_trab_30'] = forms.ChoiceField(label="Trabajador 30", required=False, widget=Select(attrs={
             'class':'form-control input-md form_style js-select2',
             'style': 'min-width: 0; width: 100%; display: inline;',
         }), choices=lista_caravisibles)
